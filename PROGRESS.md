@@ -41,7 +41,7 @@ GIGANT Agro — сайт-каталог электропастухов и эле
 - Судьба витрины Satu после запуска: оставить как канал + перелинковка.
 
 ## Пути и команды
-- GitHub (приватный): https://github.com/farik9797/gigant-agro-site — ветка `main`. `password.md`, `.playwright-mcp/` в .gitignore.
+- GitHub (публичный): https://github.com/farik9797/gigant-agro-site — ветка `main`. GitHub Pages: https://farik9797.github.io/gigant-agro-site/ (деплой с `main`, корень). `password.md`, `.playwright-mcp/` в .gitignore.
 - Главная: `index.html`; картинки `assets/img/`, иконки `assets/icons/`.
 - Артефакт (самодостаточная копия с data-URI, собирается скриптом из index.html): https://claude.ai/code/artifact/a0015ea0-bc7c-46e3-a6bd-c7be78439ea0
 - Промт: `PROMPT_site_design.md`
