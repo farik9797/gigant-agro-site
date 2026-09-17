@@ -108,7 +108,7 @@ tailwind.config = {
   }
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"GIGANT Agro","url":"https://farik9797.github.io/gigant-agro-site/","logo":"assets/img/logo-gigant.png","telephone":["+77054285707","+77757716024"],"address":{"@type":"PostalAddress","streetAddress":"микрорайон Атырау, 159/8, склад № 1","addressLocality":"Алматы","addressCountry":"KZ"},"openingHours":["Mo-Fr 10:00-18:00","Sa 10:00-16:00"]}
+{"@context":"https://schema.org","@type":"Organization","name":"GIGANT Agro","url":"https://farik9797.github.io/gigant-agro-site/","logo":"assets/img/logo-gigant.png","telephone":["+77054285707","+77757716024"],"address":{"@type":"PostalAddress","streetAddress":"микрорайон Атырау, 159/8, склад №&nbsp;1","addressLocality":"Алматы","addressCountry":"KZ"},"openingHours":["Mo-Fr 10:00-18:00","Sa 10:00-16:00"]}
 </script>
 </head>
 <body class="pb-[calc(72px+env(safe-area-inset-bottom))] md:pb-0">
@@ -147,7 +147,7 @@ tailwind.config = {
       <a href="#kak-rabotaet" class="px-4 py-3 rounded-xl hover:bg-ink/5">Как это работает</a>
       <a href="#dostavka" class="px-4 py-3 rounded-xl hover:bg-ink/5">Доставка и оплата</a>
       <a href="#faq" class="px-4 py-3 rounded-xl hover:bg-ink/5">Вопросы и ответы</a>
-      <div class="px-4 pt-3 pb-2 text-[14px] text-muted border-t border-line mt-1">Алматы, мкр. Атырау, 159/8, склад № 1 · Пн–Пт 10–18, Сб 10–16</div>
+      <div class="px-4 pt-3 pb-2 text-[14px] text-muted border-t border-line mt-1">Алматы, мкр. Атырау, 159/8, склад №&nbsp;1 · Пн–Пт 10–18, Сб 10–16</div>
       <a href="tel:+77054285707" class="px-4 py-2 font-semibold">+7 (705) 428-57-07</a>
       <a href="tel:+77757716024" class="px-4 pb-3 font-semibold">+7 (775) 771-60-24</a>
     </nav>
@@ -348,28 +348,69 @@ tailwind.config = {
 <section id="catalog" class="section pt-0 scroll-mt-24">
   <div class="container-site">
     <div class="rv flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-      <div><h2 class="h2">Всё для электроизгороди</h2><p class="lead mt-3">От прибора до последнего изолятора — со склада в Алматы.</p></div>
-      <a href="#catalog" class="link whitespace-nowrap">Все товары<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+      <div>
+        <p class="flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.12em] text-muted"><span class="w-2 h-2 rounded-full bg-pulse" aria-hidden="true"></span>Каталог</p>
+        <h2 class="h2 mt-3">Популярные категории</h2>
+      </div>
+      <a href="#catalog" class="link whitespace-nowrap">Весь каталог<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
     </div>
-    <div class="rv-stagger mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 md:auto-rows-[minmax(150px,auto)]">
-      <a href="#flagmany" class="card lift col-span-2 md:row-span-2 overflow-hidden group flex flex-col">
-        <div class="flex-1 min-h-[170px] overflow-hidden"><img src="assets/img/cow-tape.jpg" alt="Корова у ленты электроизгороди" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-start justify-between gap-3 shrink-0"><div><h3 class="h3">Электропастухи</h3><p class="text-muted text-[14px] mt-1">GIGANT и Bekci, 6,9 · 14,5 · 15 · 25&nbsp;Дж</p></div><span class="text-[13px] text-muted whitespace-nowrap">4 модели</span></div>
+    <div class="rv-stagger mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+      <a href="#flagmany" class="card lift overflow-hidden group flex flex-col">
+        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/product-gigant15.jpg" alt="Электропастух GIGANT 15 Дж" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="p-4 md:p-5 flex items-end justify-between gap-3"><div><h3 class="font-extrabold text-[17px] leading-tight">Электропастухи</h3><p class="text-muted text-[14px] mt-1">GIGANT 15&nbsp;Дж и Bekci 25&nbsp;Дж</p></div><i data-lucide="arrow-right" class="w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i></div>
       </a>
-      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between gap-3 min-h-[140px]"><i data-lucide="layers" class="w-6 h-6 shrink-0 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Сетки и шнуры</h3><p class="text-muted text-[13px] mt-1">Шнур 6 жил, проволока 1,6&nbsp;мм</p></div></a>
-      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between gap-3 min-h-[140px]"><i data-lucide="milestone" class="w-6 h-6 shrink-0 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Изоляторы и колышки</h3><p class="text-muted text-[13px] mt-1">Под проволоку, шнур, ленту</p></div></a>
-      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between gap-3 min-h-[140px]"><i data-lucide="cable" class="w-6 h-6 shrink-0 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Кабели и аксессуары</h3><p class="text-muted text-[13px] mt-1">Подключение, заземление, ворота</p></div></a>
-      <a href="#avtonomno" class="card lift p-4 md:p-5 flex flex-col justify-between gap-3 min-h-[140px]"><i data-lucide="sun" class="w-6 h-6 shrink-0 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Солнечное питание</h3><p class="text-muted text-[13px] mt-1">Панели, контроллеры, АКБ</p></div></a>
-      <a href="#komplekty" class="card lift col-span-2 md:row-span-2 overflow-hidden group flex flex-col">
-        <div class="flex-1 min-h-[170px] overflow-hidden"><img src="assets/img/solar-netting.jpg" alt="Электропастух с солнечной панелью у сетки" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-start justify-between gap-3 shrink-0"><div><h3 class="h3">Готовые комплекты</h3><p class="text-muted text-[14px] mt-1">Овцы 1&nbsp;га · КРС 5&nbsp;га · Лошади 6&nbsp;га · автономные</p></div><span class="text-[13px] text-muted whitespace-nowrap">от 125 000 ₸</span></div>
+      <a href="#komplekty" class="card lift overflow-hidden group flex flex-col">
+        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/solar-netting.jpg" alt="Электропастух с солнечной панелью и сеткой" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="p-4 md:p-5 flex items-end justify-between gap-3"><div><h3 class="font-extrabold text-[17px] leading-tight">Готовые комплекты</h3><p class="text-muted text-[14px] mt-1">Для овец, КРС и лошадей</p></div><i data-lucide="arrow-right" class="w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i></div>
       </a>
-      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between gap-3 min-h-[140px]"><i data-lucide="scissors" class="w-6 h-6 shrink-0 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Стрижка овец</h3><p class="text-muted text-[13px] mt-1">Машинки и ножи</p></div></a>
-      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between gap-3 min-h-[140px]"><i data-lucide="flashlight" class="w-6 h-6 shrink-0 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Электропогоняла</h3><p class="text-muted text-[13px] mt-1">GIGANT, 44 500 ₸</p></div></a>
-      <a href="#podbor" class="col-span-2 rounded-2xl bg-deep text-cream p-5 flex items-center justify-between gap-4 transition-colors hover:bg-[#1f3323] min-h-[140px] md:min-h-0">
-        <div><p class="font-extrabold text-[18px] leading-tight">Не знаете, что нужно?</p><p class="text-cream/70 text-[14px] mt-1">Три вопроса — покажем комплект и цену.</p></div>
-        <span class="btn-primary h-11 px-4 shrink-0">Подобрать</span>
+      <a href="#catalog" class="card lift overflow-hidden group flex flex-col">
+        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/fence-tape.jpg" alt="Линии электроизгороди на пастбище" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="p-4 md:p-5 flex items-end justify-between gap-3"><div><h3 class="font-extrabold text-[17px] leading-tight">Сетки и шнуры</h3><p class="text-muted text-[14px] mt-1">Для электроизгородей</p></div><i data-lucide="arrow-right" class="w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i></div>
       </a>
+      <a href="#catalog" class="card lift overflow-hidden group flex flex-col">
+        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/insulator.jpg" alt="Изолятор на столбе электроизгороди" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="p-4 md:p-5 flex items-end justify-between gap-3"><div><h3 class="font-extrabold text-[17px] leading-tight">Изоляторы и колышки</h3><p class="text-muted text-[14px] mt-1">Надёжное крепление</p></div><i data-lucide="arrow-right" class="w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i></div>
+      </a>
+      <a href="#catalog" class="card lift overflow-hidden group flex flex-col">
+        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/accessories.jpg" alt="Клеммы, кабель и пульт электропастуха" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="p-4 md:p-5 flex items-end justify-between gap-3"><div><h3 class="font-extrabold text-[17px] leading-tight">Кабели и аксессуары</h3><p class="text-muted text-[14px] mt-1">Для подключения и заземления</p></div><i data-lucide="arrow-right" class="w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i></div>
+      </a>
+      <a href="#avtonomno" class="card lift overflow-hidden group flex flex-col">
+        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/solar-line.jpg" alt="Солнечная панель на линии электроизгороди" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="p-4 md:p-5 flex items-end justify-between gap-3"><div><h3 class="font-extrabold text-[17px] leading-tight">Солнечные системы</h3><p class="text-muted text-[14px] mt-1">Панели, контроллеры, АКБ</p></div><i data-lucide="arrow-right" class="w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i></div>
+      </a>
+      <a href="#catalog" class="card lift overflow-hidden group flex flex-col">
+        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/shearing.jpg" alt="Стрижка овцы электрической машинкой" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="p-4 md:p-5 flex items-end justify-between gap-3"><div><h3 class="font-extrabold text-[17px] leading-tight">Стрижка овец</h3><p class="text-muted text-[14px] mt-1">Оборудование и запчасти</p></div><i data-lucide="arrow-right" class="w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i></div>
+      </a>
+      <a href="#podbor" class="relative rounded-2xl overflow-hidden bg-deep text-cream flex flex-col justify-between gap-4 p-5 min-h-[220px] transition-colors hover:bg-[#1f3323] group">
+        <img src="assets/img/cow-tape.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-right opacity-40 transition-opacity duration-300 group-hover:opacity-50" loading="lazy" width="900" height="675" aria-hidden="true">
+        <div class="absolute inset-0 bg-gradient-to-r from-deep via-deep/80 to-deep/20" aria-hidden="true"></div>
+        <div class="relative"><p class="font-extrabold text-[20px] leading-tight">Не знаете, что выбрать?</p><p class="text-cream/75 text-[14px] mt-2 max-w-[24ch]">Поможем подобрать комплект под ваших животных, площадь и условия.</p></div>
+        <span class="relative btn-primary h-11 px-4 self-start text-[15px]">Получить консультацию</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ПОЧЕМУ GIGANT AGRO ================= -->
+<section id="pochemu" class="bg-deep text-cream overflow-hidden scroll-mt-24">
+  <div class="grid grid-cols-1 lg:grid-cols-12">
+    <div class="lg:col-span-7 section px-5 md:px-12 lg:pr-12 lg:pl-[max(2rem,calc((100vw-1240px)/2+2rem))]">
+      <p class="rv flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.12em] text-cream/70"><span class="w-2 h-2 rounded-full bg-pulse" aria-hidden="true"></span>Почему GIGANT Agro</p>
+      <h2 class="rv h2 mt-3 max-w-[18ch]">Рабочие решения, а&nbsp;не просто товары</h2>
+      <ul class="rv-stagger mt-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-8">
+        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="zap" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Мощность 15 и 25&nbsp;Дж</p><p class="text-cream/70 text-[14px] mt-1">Держат любое стадо и большие периметры</p></div></li>
+        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="package" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Готовые комплекты</p><p class="text-cream/70 text-[14px] mt-1">Под вид животных и площадь</p></div></li>
+        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="sliders-horizontal" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Профессиональный подбор</p><p class="text-cream/70 text-[14px] mt-1">За минуту на сайте и консультация специалиста</p></div></li>
+        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="sun" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Автономность</p><p class="text-cream/70 text-[14px] mt-1">Солнечная панель + АКБ, работает без розетки</p></div></li>
+        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="layers" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Широкий ассортимент</p><p class="text-cream/70 text-[14px] mt-1">Комплектующих и расходников со склада в Алматы</p></div></li>
+        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="shield-check" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Гарантия и сервис</p><p class="text-cream/70 text-[14px] mt-1">Доставка по Казахстану и в РФ</p></div></li>
+      </ul>
+    </div>
+    <div class="lg:col-span-5 relative min-h-[300px] lg:min-h-0">
+      <img src="assets/img/solar-energizer.jpg" alt="Электропастух с солнечной панелью на столбе у пастбища" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="900" height="586">
+      <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-deep/70 lg:from-deep via-transparent lg:via-deep/10 to-transparent" aria-hidden="true"></div>
     </div>
   </div>
 </section>
@@ -620,7 +661,7 @@ tailwind.config = {
       <a href="#faq" class="link mt-5">Подробнее о доставке<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
     </div>
     <dl class="lg:col-span-7 rv-stagger grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2">
-      <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><i data-lucide="map-pin" class="w-5 h-5 text-brand-dark" aria-hidden="true"></i>Самовывоз</dt><dd class="text-muted text-[15px] mt-2">Алматы, мкр. Атырау, 159/8, склад № 1. Пн–Пт 10–18, Сб 10–16.</dd></div>
+      <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><i data-lucide="map-pin" class="w-5 h-5 text-brand-dark" aria-hidden="true"></i>Самовывоз</dt><dd class="text-muted text-[15px] mt-2">Алматы, мкр. Атырау, 159/8, склад №&nbsp;1. Пн–Пт 10–18, Сб 10–16.</dd></div>
       <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><i data-lucide="truck" class="w-5 h-5 text-brand-dark" aria-hidden="true"></i>Доставка по Казахстану и СНГ</dt><dd class="text-muted text-[15px] mt-2">Транспортными компаниями во все регионы, а также в Россию и страны СНГ. Стоимость считаем индивидуально, отправка после оплаты.</dd></div>
       <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><i data-lucide="credit-card" class="w-5 h-5 text-brand-dark" aria-hidden="true"></i>Оплата</dt><dd class="text-muted text-[15px] mt-2">Наличными на складе или безналичным переводом по реквизитам для ИП и юрлиц.</dd></div>
       <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><i data-lucide="store" class="w-5 h-5 text-brand-dark" aria-hidden="true"></i>На маркетплейсах</dt><dd class="text-muted text-[15px] mt-2">Привычнее покупать там? Мы есть на площадках:</dd>
@@ -707,7 +748,7 @@ tailwind.config = {
         <li><a href="tel:+77054285707" class="hover:text-cream">+7 (705) 428-57-07</a></li>
         <li><a href="tel:+77757716024" class="hover:text-cream">+7 (775) 771-60-24</a></li>
         <li><a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:text-cream"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-4 h-4 opacity-80" width="16" height="16">WhatsApp</a></li>
-        <li class="text-cream/60">Алматы, мкр. Атырау, 159/8, склад № 1</li>
+        <li class="text-cream/60">Алматы, мкр. Атырау, 159/8,<br>склад №&nbsp;1</li>
         <li class="text-cream/60">Пн–Пт 10:00–18:00, Сб 10:00–16:00</li>
       </ul>
     </div>
@@ -754,8 +795,7 @@ tailwind.config = {
       <p>© 2026 GIGANT Agro. Торговая компания, Алматы.</p>
       <div class="md:ml-auto flex flex-wrap items-center gap-x-5 gap-y-1">
         <a href="#" class="hover:text-cream" title="Страница в разработке">Политика конфиденциальности</a>
-        <span>Фото пастбищ — Wikimedia Commons, CC BY / CC BY-SA (временно)</span>
-        <span class="inline-flex rounded-full border border-cream/20 overflow-hidden"><span class="px-2.5 py-0.5 bg-cream/15 text-cream">RU</span><span class="px-2.5 py-0.5">KZ</span></span>
+        <!-- Фото пастбищ: Wikimedia Commons, CC BY / CC BY-SA — временные, список в assets/img/CREDITS.md; заменить на собственную съёмку до запуска -->
       </div>
     </div>
   </div>

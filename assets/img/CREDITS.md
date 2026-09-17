@@ -20,3 +20,5 @@
 | fence-berry.jpg | File:Electric fence, Berry Farm - geograph.org.uk - 7776180.jpg | CC BY-SA 2.0 |
 
 Иконка WhatsApp: Simple Icons (CC0). UI-иконки: Lucide (ISC).
+| shearing.jpg | File:Schafschur Savognin.jpg | CC BY-SA 4.0 |
+| accessories.jpg | фрагмент фото GIGANT 15 с Satu (клеммы, кабель, пульт) | заказчик |
