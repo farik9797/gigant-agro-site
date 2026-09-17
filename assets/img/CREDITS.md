@@ -24,3 +24,4 @@
 | accessories.jpg | фрагмент фото GIGANT 15 с Satu (клеммы, кабель, пульт) | заказчик |
 | why-cow-fence.jpg | изображение от заказчика (прислано 17.09.2026) | заказчик |
 | kit-sheep-poultry.jpg, kit-sheep-poultry-full.jpg | изображение от заказчика «Готовые комплекты» (17.09.2026) | заказчик |
+| cat-insulators.jpg, cat-cables.jpg, cat-shearing.jpg, cat-nets.jpg | изображения от заказчика для плиток каталога (17.09.2026) | заказчик |
