@@ -64,9 +64,9 @@ tailwind.config = {
     .link { @apply inline-flex items-center gap-1.5 font-semibold text-brand-dark hover:underline underline-offset-4; }
   }
   /* ---------- preloader ---------- */
-  #preloader { position:fixed; inset:0; z-index:100; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.5rem; background:#17261B; transition:opacity .5s ease, visibility .5s ease; }
+  #preloader { position:fixed; inset:0; z-index:100; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.75rem; background:#17261B; transition:opacity .5s ease, visibility .5s ease; }
   #preloader.is-hidden { opacity:0; visibility:hidden; }
-  .pre-mark { display:flex; align-items:center; gap:.75rem; }
+  #preloader img { width:72px; height:72px; }
   .pre-fence { position:relative; width:min(260px,60vw); height:2px; background:rgba(243,248,214,.2); overflow:visible; }
   .pre-fence .post { position:absolute; top:-8px; width:3px; height:18px; border-radius:2px; background:#F3F8D6; opacity:.45; }
   .pre-fence::after { content:""; position:absolute; top:-2px; left:-70px; width:70px; height:6px; border-radius:3px; background:#FFC400; box-shadow:0 0 16px rgba(255,196,0,.9); animation:pre-run 1.4s linear infinite; }
@@ -131,12 +131,8 @@ tailwind.config = {
 </head>
 <body class="pb-[calc(72px+env(safe-area-inset-bottom))] md:pb-0">
 <div id="preloader" role="status" aria-label="Загрузка сайта">
-  <span class="pre-mark">
-    <img src="assets/img/logo-gigant.png" alt="" width="56" height="56" class="w-14 h-14 rounded-full">
-    <span class="font-black text-[22px] tracking-[-0.02em] text-cream">GIGANT <span class="text-pulse">Agro</span></span>
-  </span>
+  <img src="assets/img/logo-gigant.png" alt="" width="72" height="72" class="w-18 h-18 rounded-full">
   <span class="pre-fence" aria-hidden="true"><span class="post" style="left:0"></span><span class="post" style="left:50%"></span><span class="post" style="right:0"></span></span>
-  <span class="text-[14px] text-cream/60">Подаём импульс…</span>
 </div>
 <script>
 (function(){
