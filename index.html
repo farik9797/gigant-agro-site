@@ -57,7 +57,7 @@ tailwind.config = {
     .chip[aria-pressed="true"], .chip[aria-selected="true"] { @apply bg-ink text-white border-ink; }
     .card { @apply bg-white rounded-2xl border border-line; }
     .lift { @apply transition-[transform,border-color] duration-300 ease-out hover:-translate-y-0.5 hover:border-ink/50; }
-    .input { @apply w-full h-12 rounded-xl border border-line bg-white px-4 text-[16px] text-ink placeholder:text-muted/80 focus:border-ink focus:outline-none; }
+    .input { @apply w-full h-12 rounded-xl border border-line bg-white px-4 text-[16px] text-ink placeholder:text-muted focus:border-ink focus:outline-none; }
     .spec { @apply inline-flex items-baseline gap-1 font-extrabold text-[15px] leading-none tracking-[-0.01em] tabular-nums whitespace-nowrap; }
     .link { @apply inline-flex items-center gap-1.5 font-semibold text-brand-dark hover:underline underline-offset-4; }
   }
@@ -121,7 +121,7 @@ tailwind.config = {
         <img src="assets/img/logo-gigant.png" alt="" width="40" height="40" class="w-10 h-10 rounded-full">
         <span class="font-black text-[17px] leading-none tracking-[-0.02em]">GIGANT <span class="text-brand-dark">Agro</span></span>
       </a>
-      <div class="hidden lg:flex items-center gap-0.5 ml-3 text-[15px] font-medium whitespace-nowrap">
+      <div class="hidden xl:flex items-center gap-0.5 ml-3 text-[15px] font-medium whitespace-nowrap">
         <a href="#catalog" class="px-3 py-2 rounded-full hover:bg-ink/5">Каталог</a>
         <a href="#podbor" class="px-3 py-2 rounded-full hover:bg-ink/5">Подбор</a>
         <a href="#komplekty" class="px-3 py-2 rounded-full hover:bg-ink/5">Комплекты</a>
@@ -131,13 +131,13 @@ tailwind.config = {
       </div>
       <div class="ml-auto flex items-center gap-1.5 md:gap-2">
         <a href="tel:+77054285707" class="hidden 2xl:inline-flex items-center gap-2 px-3 py-2 rounded-full font-semibold text-[15px] whitespace-nowrap hover:bg-ink/5"><i data-lucide="phone" class="w-4 h-4" aria-hidden="true"></i>+7 (705) 428-57-07</a>
-        <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-full bg-brand-dark hover:bg-[#356A2D] transition-colors" aria-label="Написать в WhatsApp"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20"></a>
+        <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-brand-dark hover:bg-[#356A2D] transition-colors" aria-label="Написать в WhatsApp"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20"></a>
         <a href="#podbor" class="btn-primary h-10 md:h-11 px-4 md:px-5 hidden md:inline-flex">Подобрать комплект</a>
-        <button id="burger" class="lg:hidden inline-flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-full hover:bg-ink/5" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu"><i data-lucide="menu" class="w-6 h-6" aria-hidden="true"></i></button>
+        <button id="burger" class="xl:hidden inline-flex items-center justify-center w-11 h-11 rounded-full hover:bg-ink/5" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu"><i data-lucide="menu" class="w-6 h-6" aria-hidden="true"></i></button>
       </div>
     </div>
   </nav>
-  <div id="mobileMenu" hidden class="lg:hidden mx-auto max-w-site mt-2 rounded-2xl border border-white/50 bg-white/95 backdrop-blur-xl p-2 z-menu">
+  <div id="mobileMenu" hidden class="xl:hidden mx-auto max-w-site mt-2 rounded-2xl border border-white/50 bg-white/95 backdrop-blur-xl p-2 z-menu">
     <nav class="flex flex-col text-[16px] font-medium">
       <a href="#catalog" class="px-4 py-3 rounded-xl hover:bg-ink/5">Каталог</a>
       <a href="#podbor" class="px-4 py-3 rounded-xl hover:bg-ink/5">Подбор комплекта</a>
@@ -163,7 +163,7 @@ tailwind.config = {
   <div id="heroContent" class="relative container-site w-full pt-32 pb-12 md:pb-16 lg:pb-20 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
     <div class="lg:col-span-8">
       <a href="https://www.ozon.ru/product/elektropastuh-gigant-15-dzh-dlya-korov-ovets-loshadey-kabanov-1632680883/" target="_blank" rel="noopener" class="hero-in d1 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-md pl-2 pr-4 py-1.5 text-[14px] font-medium hover:bg-white/20 transition-colors">
-        <span class="inline-flex items-center gap-0.5 rounded-full bg-pulse text-ink px-2 py-1 text-[12px] font-extrabold tabular-nums"><i data-lucide="star" class="w-3 h-3 fill-current" aria-hidden="true"></i>4,8</span>
+        <span class="inline-flex items-center gap-0.5 rounded-full bg-pulse text-ink px-2 py-1 text-[13px] font-extrabold tabular-nums"><i data-lucide="star" class="w-3 h-3 fill-current" aria-hidden="true"></i>4,8</span>
         <span>82 отзыва на Ozon</span>
       </a>
       <h1 class="hero-in d2 mt-6 font-black tracking-[-0.03em] text-[clamp(2.6rem,6.2vw,5.5rem)] leading-[0.98] max-w-[13ch]">Электроизгородь, которая держит <span class="accent text-pulse font-bold tracking-normal">стадо</span></h1>
@@ -183,9 +183,9 @@ tailwind.config = {
     <a href="#flagmany" class="hero-in d5 hidden lg:flex lg:col-span-4 justify-self-end w-full max-w-[380px] items-center gap-4 rounded-2xl border border-white/25 bg-white/10 backdrop-blur-xl p-3 pr-5 hover:bg-white/15 transition-colors">
       <span class="w-20 h-20 rounded-xl bg-white overflow-hidden shrink-0"><img src="assets/img/product-gigant15.jpg" alt="" class="w-full h-full object-cover" width="800" height="533"></span>
       <span class="flex-1">
-        <span class="block text-[12px] font-semibold text-white/70">Флагман собственной марки</span>
+        <span class="block text-[13px] font-semibold text-white/85">Флагман собственной марки</span>
         <span class="block font-extrabold text-[18px] leading-tight mt-0.5">GIGANT 15&nbsp;Дж</span>
-        <span class="mt-2 flex gap-4 text-white/90"><span class="spec">15<span class="text-[12px] font-semibold text-white/70">Дж</span></span><span class="spec">12&nbsp;000<span class="text-[12px] font-semibold text-white/70">В</span></span><span class="spec">220/12<span class="text-[12px] font-semibold text-white/70">В</span></span></span>
+        <span class="mt-2 flex gap-4 text-white/90"><span class="spec">15<span class="text-[13px] font-semibold text-white/85">Дж</span></span><span class="spec">12&nbsp;000<span class="text-[13px] font-semibold text-white/85">В</span></span><span class="spec">220/12<span class="text-[13px] font-semibold text-white/85">В</span></span></span>
       </span>
       <i data-lucide="arrow-up-right" class="w-5 h-5 text-white/70" aria-hidden="true"></i>
     </a>
@@ -214,8 +214,8 @@ tailwind.config = {
       <p class="lg:col-span-4 text-[15px] text-muted lg:text-right">Не хотите заполнять — напишите в WhatsApp, что за животные и сколько гектаров.</p>
     </div>
 
-    <div class="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-      <fieldset>
+    <div class="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      <fieldset class="md:col-span-2 lg:col-span-1">
         <legend class="font-extrabold text-[15px] text-brand-dark">Животные</legend>
         <div id="pickAnimal" class="mt-3 flex flex-wrap gap-2" role="group" aria-label="Вид животных">
           <button class="chip" data-v="krs" aria-pressed="true">КРС</button>
@@ -229,13 +229,13 @@ tailwind.config = {
       <fieldset>
         <legend class="font-extrabold text-[15px] text-brand-dark">Площадь или периметр</legend>
         <div class="mt-3 flex gap-2">
-          <label class="relative flex-1"><span class="sr-only">Значение</span><input id="pickArea" type="number" min="0.1" step="0.1" value="5" class="input" inputmode="decimal"></label>
+          <label class="relative flex-1 min-w-[96px]"><span class="sr-only">Площадь или периметр</span><input id="pickArea" type="number" min="0.1" step="0.1" value="5" class="input" inputmode="decimal" aria-describedby="pickAreaHint" autocomplete="off"></label>
           <div id="pickUnit" class="inline-flex rounded-xl border border-line bg-white p-1" role="group" aria-label="Единицы">
             <button class="h-10 px-3 rounded-lg text-[15px] font-medium bg-ink text-white" data-v="ha" aria-pressed="true">га</button>
-            <button class="h-10 px-3 rounded-lg text-[15px] font-medium" data-v="m" aria-pressed="false">м периметра</button>
+            <button class="h-10 px-3 rounded-lg text-[15px] font-medium whitespace-nowrap" data-v="m" aria-pressed="false">м периметра</button>
           </div>
         </div>
-        <p class="mt-2 text-[14px] text-muted">Не знаете периметр — укажите площадь, мы посчитаем.</p>
+        <p id="pickAreaHint" class="mt-2 text-[14px] text-muted">Не знаете периметр — укажите площадь, мы посчитаем.</p>
       </fieldset>
       <fieldset>
         <legend class="font-extrabold text-[15px] text-brand-dark">Питание</legend>
@@ -251,7 +251,7 @@ tailwind.config = {
       <button id="pickGo" class="btn-primary btn-lg">Показать решение<i data-lucide="arrow-right" class="w-5 h-5" aria-hidden="true"></i></button>
     </div>
 
-    <div id="pickResult" hidden aria-live="polite" class="mt-6 card p-5 md:p-6 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-5 md:gap-8 items-center">
+    <div id="pickResult" hidden aria-live="polite" tabindex="-1" class="mt-6 card p-5 md:p-6 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-5 md:gap-8 items-center">
       <div>
         <p class="text-[13px] font-semibold text-brand-dark">Рекомендуем</p>
         <p id="resModel" class="h3 mt-1"></p>
@@ -282,7 +282,7 @@ tailwind.config = {
       <article class="card lift overflow-hidden flex flex-col">
         <div class="bg-white aspect-[16/10] relative">
           <img src="assets/img/product-gigant15.jpg" alt="Электропастух GIGANT 15&nbsp;Дж с адаптером, пультом и клеммами" class="absolute inset-0 w-full h-full object-contain p-6" loading="lazy" width="800" height="533">
-          <span class="absolute left-4 top-4 rounded-full bg-cream text-brand-dark text-[12px] font-bold px-2.5 py-1">Собственная марка</span>
+          <span class="absolute left-4 top-4 rounded-full bg-cream text-brand-dark text-[13px] font-bold px-2.5 py-1">Собственная марка</span>
         </div>
         <div class="p-6 md:p-7 flex flex-col flex-1 border-t border-line">
           <div class="flex items-start justify-between gap-4">
@@ -306,7 +306,7 @@ tailwind.config = {
       <article class="card lift overflow-hidden flex flex-col">
         <div class="bg-white aspect-[16/10] relative">
           <img src="assets/img/product-bekci25.jpg" alt="Электропастух Bekci 25&nbsp;Дж" class="absolute inset-0 w-full h-full object-contain p-6" loading="lazy" width="800" height="1073">
-          <span class="absolute left-4 top-4 rounded-full bg-pulse text-ink text-[12px] font-bold px-2.5 py-1">Максимальная мощность</span>
+          <span class="absolute left-4 top-4 rounded-full bg-pulse text-ink text-[13px] font-bold px-2.5 py-1">Максимальная мощность</span>
         </div>
         <div class="p-6 md:p-7 flex flex-col flex-1 border-t border-line">
           <div class="flex items-start justify-between gap-4">
@@ -341,23 +341,23 @@ tailwind.config = {
   <div class="container-site">
     <div class="rv flex flex-col md:flex-row md:items-end md:justify-between gap-4">
       <div><h2 class="h2">Всё для электроизгороди</h2><p class="lead mt-3">От прибора до последнего изолятора — со склада в Алматы.</p></div>
-      <a href="#" class="link whitespace-nowrap">Все товары<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+      <a href="#catalog" class="link whitespace-nowrap">Все товары<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
     </div>
-    <div class="rv-stagger mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 md:auto-rows-[150px]">
+    <div class="rv-stagger mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 md:auto-rows-[minmax(150px,auto)]">
       <a href="#flagmany" class="card lift col-span-2 md:row-span-2 overflow-hidden group flex flex-col">
         <div class="flex-1 min-h-[170px] overflow-hidden"><img src="assets/img/cow-tape.jpg" alt="Корова у ленты электроизгороди" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
         <div class="p-4 md:p-5 flex items-start justify-between gap-3 shrink-0"><div><h3 class="h3">Электропастухи</h3><p class="text-muted text-[14px] mt-1">GIGANT и Bekci, 6,9 · 14,5 · 15 · 25&nbsp;Дж</p></div><span class="text-[13px] text-muted whitespace-nowrap">4 модели</span></div>
       </a>
-      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between min-h-[140px]"><i data-lucide="layers" class="w-6 h-6 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Сетки и шнуры</h3><p class="text-muted text-[13px] mt-1">Шнур 6 жил, проволока 1,6&nbsp;мм</p></div></a>
-      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between min-h-[140px]"><i data-lucide="milestone" class="w-6 h-6 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Изоляторы и колышки</h3><p class="text-muted text-[13px] mt-1">Под проволоку, шнур, ленту</p></div></a>
-      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between min-h-[140px]"><i data-lucide="cable" class="w-6 h-6 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Кабели и аксессуары</h3><p class="text-muted text-[13px] mt-1">Подключение, заземление, ворота</p></div></a>
-      <a href="#avtonomno" class="card lift p-4 md:p-5 flex flex-col justify-between min-h-[140px]"><i data-lucide="sun" class="w-6 h-6 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Солнечное питание</h3><p class="text-muted text-[13px] mt-1">Панели, контроллеры, АКБ</p></div></a>
+      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between gap-3 min-h-[140px]"><i data-lucide="layers" class="w-6 h-6 shrink-0 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Сетки и шнуры</h3><p class="text-muted text-[13px] mt-1">Шнур 6 жил, проволока 1,6&nbsp;мм</p></div></a>
+      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between gap-3 min-h-[140px]"><i data-lucide="milestone" class="w-6 h-6 shrink-0 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Изоляторы и колышки</h3><p class="text-muted text-[13px] mt-1">Под проволоку, шнур, ленту</p></div></a>
+      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between gap-3 min-h-[140px]"><i data-lucide="cable" class="w-6 h-6 shrink-0 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Кабели и аксессуары</h3><p class="text-muted text-[13px] mt-1">Подключение, заземление, ворота</p></div></a>
+      <a href="#avtonomno" class="card lift p-4 md:p-5 flex flex-col justify-between gap-3 min-h-[140px]"><i data-lucide="sun" class="w-6 h-6 shrink-0 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Солнечное питание</h3><p class="text-muted text-[13px] mt-1">Панели, контроллеры, АКБ</p></div></a>
       <a href="#komplekty" class="card lift col-span-2 md:row-span-2 overflow-hidden group flex flex-col">
         <div class="flex-1 min-h-[170px] overflow-hidden"><img src="assets/img/solar-netting.jpg" alt="Электропастух с солнечной панелью у сетки" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
         <div class="p-4 md:p-5 flex items-start justify-between gap-3 shrink-0"><div><h3 class="h3">Готовые комплекты</h3><p class="text-muted text-[14px] mt-1">Овцы 1&nbsp;га · КРС 5&nbsp;га · Лошади 6&nbsp;га · автономные</p></div><span class="text-[13px] text-muted whitespace-nowrap">от 125 000 ₸</span></div>
       </a>
-      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between min-h-[140px]"><i data-lucide="scissors" class="w-6 h-6 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Стрижка овец</h3><p class="text-muted text-[13px] mt-1">Машинки и ножи</p></div></a>
-      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between min-h-[140px]"><i data-lucide="flashlight" class="w-6 h-6 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Электропогоняла</h3><p class="text-muted text-[13px] mt-1">GIGANT, 44 500 ₸</p></div></a>
+      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between gap-3 min-h-[140px]"><i data-lucide="scissors" class="w-6 h-6 shrink-0 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Стрижка овец</h3><p class="text-muted text-[13px] mt-1">Машинки и ножи</p></div></a>
+      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between gap-3 min-h-[140px]"><i data-lucide="flashlight" class="w-6 h-6 shrink-0 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Электропогоняла</h3><p class="text-muted text-[13px] mt-1">GIGANT, 44 500 ₸</p></div></a>
       <a href="#podbor" class="col-span-2 rounded-2xl bg-deep text-cream p-5 flex items-center justify-between gap-4 transition-colors hover:bg-[#1f3323] min-h-[140px] md:min-h-0">
         <div><p class="font-extrabold text-[18px] leading-tight">Не знаете, что нужно?</p><p class="text-cream/70 text-[14px] mt-1">Три вопроса — покажем комплект и цену.</p></div>
         <span class="btn-primary h-11 px-4 shrink-0">Подобрать</span>
@@ -375,16 +375,16 @@ tailwind.config = {
     </div>
     <div class="mt-8 -mx-5 px-5 md:mx-0 md:px-0 overflow-x-auto">
       <div id="animalTabs" class="flex gap-2 min-w-max" role="tablist" aria-label="Вид животных">
-        <button class="chip h-10" role="tab" aria-selected="true" aria-controls="tab-krs" id="tabbtn-krs">КРС</button>
-        <button class="chip h-10" role="tab" aria-selected="false" aria-controls="tab-horse" id="tabbtn-horse">Лошади</button>
-        <button class="chip h-10" role="tab" aria-selected="false" aria-controls="tab-sheep" id="tabbtn-sheep">Овцы и козы</button>
-        <button class="chip h-10" role="tab" aria-selected="false" aria-controls="tab-pig" id="tabbtn-pig">Свиньи</button>
-        <button class="chip h-10" role="tab" aria-selected="false" aria-controls="tab-bird" id="tabbtn-bird">Птица</button>
-        <button class="chip h-10" role="tab" aria-selected="false" aria-controls="tab-wild" id="tabbtn-wild">Дикие животные</button>
+        <button class="chip h-10" role="tab" aria-selected="true" tabindex="0" aria-controls="tab-krs" id="tabbtn-krs">КРС</button>
+        <button class="chip h-10" role="tab" aria-selected="false" tabindex="-1" aria-controls="tab-horse" id="tabbtn-horse">Лошади</button>
+        <button class="chip h-10" role="tab" aria-selected="false" tabindex="-1" aria-controls="tab-sheep" id="tabbtn-sheep">Овцы и козы</button>
+        <button class="chip h-10" role="tab" aria-selected="false" tabindex="-1" aria-controls="tab-pig" id="tabbtn-pig">Свиньи</button>
+        <button class="chip h-10" role="tab" aria-selected="false" tabindex="-1" aria-controls="tab-bird" id="tabbtn-bird">Птица</button>
+        <button class="chip h-10" role="tab" aria-selected="false" tabindex="-1" aria-controls="tab-wild" id="tabbtn-wild">Дикие животные</button>
       </div>
     </div>
     <div class="mt-6">
-      <div id="tab-krs" role="tabpanel" aria-labelledby="tabbtn-krs" class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+      <div id="tab-krs" role="tabpanel" tabindex="0" aria-labelledby="tabbtn-krs" class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
         <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/cattle-meadow.jpg" alt="Коровы на пастбище" class="w-full h-full object-cover" loading="lazy" width="900" height="600"></div>
         <div class="lg:col-span-6">
           <h3 class="h3">Крупный рогатый скот</h3>
@@ -398,7 +398,7 @@ tailwind.config = {
           <a href="#komplekty" class="link mt-5">Комплект для КРС — 145 000 ₸<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
         </div>
       </div>
-      <div id="tab-horse" role="tabpanel" aria-labelledby="tabbtn-horse" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+      <div id="tab-horse" role="tabpanel" tabindex="0" aria-labelledby="tabbtn-horse" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
         <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/horses-steppe.jpg" alt="Лошади на пастбище в казахстанской степи" class="w-full h-full object-cover" loading="lazy" width="900" height="458"></div>
         <div class="lg:col-span-6">
           <h3 class="h3">Лошади</h3>
@@ -412,7 +412,7 @@ tailwind.config = {
           <a href="#komplekty" class="link mt-5">Комплект для лошадей — 125 000 ₸<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
         </div>
       </div>
-      <div id="tab-sheep" role="tabpanel" aria-labelledby="tabbtn-sheep" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+      <div id="tab-sheep" role="tabpanel" tabindex="0" aria-labelledby="tabbtn-sheep" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
         <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/sheep.jpg" alt="Овца на выпасе" class="w-full h-full object-cover" loading="lazy" width="900" height="631"></div>
         <div class="lg:col-span-6">
           <h3 class="h3">Овцы и козы</h3>
@@ -426,7 +426,7 @@ tailwind.config = {
           <a href="#komplekty" class="link mt-5">Комплект для овец — 125 000 ₸<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
         </div>
       </div>
-      <div id="tab-pig" role="tabpanel" aria-labelledby="tabbtn-pig" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+      <div id="tab-pig" role="tabpanel" tabindex="0" aria-labelledby="tabbtn-pig" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
         <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/fence-tape.jpg" alt="Линии электроизгороди на пастбище" class="w-full h-full object-cover" loading="lazy" width="900" height="296"></div>
         <div class="lg:col-span-6">
           <h3 class="h3">Свиньи</h3>
@@ -440,7 +440,7 @@ tailwind.config = {
           <a href="#podbor" class="link mt-5">Подобрать комплект<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
         </div>
       </div>
-      <div id="tab-bird" role="tabpanel" aria-labelledby="tabbtn-bird" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+      <div id="tab-bird" role="tabpanel" tabindex="0" aria-labelledby="tabbtn-bird" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
         <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/solar-netting.jpg" alt="Электросетка с генератором на солнечной панели" class="w-full h-full object-cover" loading="lazy" width="900" height="675"></div>
         <div class="lg:col-span-6">
           <h3 class="h3">Птица</h3>
@@ -454,7 +454,7 @@ tailwind.config = {
           <a href="#podbor" class="link mt-5">Подобрать комплект<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
         </div>
       </div>
-      <div id="tab-wild" role="tabpanel" aria-labelledby="tabbtn-wild" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+      <div id="tab-wild" role="tabpanel" tabindex="0" aria-labelledby="tabbtn-wild" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
         <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/fence-berry.jpg" alt="Электроизгородь по периметру поля" class="w-full h-full object-cover" loading="lazy" width="900" height="512"></div>
         <div class="lg:col-span-6">
           <h3 class="h3">Защита от диких животных</h3>
@@ -477,11 +477,11 @@ tailwind.config = {
   <div class="container-site">
     <div class="rv flex flex-col md:flex-row md:items-end md:justify-between gap-4">
       <div><h2 class="h2">Распаковал и поставил</h2><p class="lead mt-3">Всё нужное в одной коробке. При покупке полного комплекта аккумулятор — в подарок.</p></div>
-      <a href="#" class="link whitespace-nowrap">Все комплекты<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+      <a href="#komplekty" class="link whitespace-nowrap">Все комплекты<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
     </div>
     <div class="rv-stagger mt-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5">
       <article class="card lift overflow-hidden flex flex-col">
-        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/sheep.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="631"><span class="absolute left-3 top-3 rounded-full bg-pulse text-ink text-[12px] font-bold px-2.5 py-1">Аккумулятор в подарок</span></div>
+        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/sheep.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="631"><span class="absolute left-3 top-3 rounded-full bg-pulse text-ink text-[13px] font-bold px-2.5 py-1">Аккумулятор в подарок</span></div>
         <div class="p-5 flex flex-col flex-1">
           <p class="text-[13px] text-muted">Овцы и козы · до 1&nbsp;га</p>
           <h3 class="font-extrabold text-[20px] leading-tight mt-1">Комплект «Для овец»</h3>
@@ -495,7 +495,7 @@ tailwind.config = {
         </div>
       </article>
       <article class="card lift overflow-hidden flex flex-col">
-        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/cattle-meadow.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="600"><span class="absolute left-3 top-3 rounded-full bg-pulse text-ink text-[12px] font-bold px-2.5 py-1">Аккумулятор в подарок</span></div>
+        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/cattle-meadow.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="600"><span class="absolute left-3 top-3 rounded-full bg-pulse text-ink text-[13px] font-bold px-2.5 py-1">Аккумулятор в подарок</span></div>
         <div class="p-5 flex flex-col flex-1">
           <p class="text-[13px] text-muted">КРС · до 5&nbsp;га</p>
           <h3 class="font-extrabold text-[20px] leading-tight mt-1">Комплект «Для КРС»</h3>
@@ -509,7 +509,7 @@ tailwind.config = {
         </div>
       </article>
       <article class="card lift overflow-hidden flex flex-col">
-        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/horses-steppe-2.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="675"><span class="absolute left-3 top-3 rounded-full bg-pulse text-ink text-[12px] font-bold px-2.5 py-1">Аккумулятор в подарок</span></div>
+        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/horses-steppe-2.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="675"><span class="absolute left-3 top-3 rounded-full bg-pulse text-ink text-[13px] font-bold px-2.5 py-1">Аккумулятор в подарок</span></div>
         <div class="p-5 flex flex-col flex-1">
           <p class="text-[13px] text-muted">Лошади · до 6&nbsp;га</p>
           <h3 class="font-extrabold text-[20px] leading-tight mt-1">Комплект «Для лошадей»</h3>
@@ -523,7 +523,7 @@ tailwind.config = {
         </div>
       </article>
       <article class="card lift overflow-hidden flex flex-col">
-        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/solar-energizer.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="586"><span class="absolute left-3 top-3 rounded-full bg-deep text-cream text-[12px] font-bold px-2.5 py-1">Без розетки</span></div>
+        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/solar-energizer.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="586"><span class="absolute left-3 top-3 rounded-full bg-deep text-cream text-[13px] font-bold px-2.5 py-1">Без розетки</span></div>
         <div class="p-5 flex flex-col flex-1">
           <p class="text-[13px] text-muted">Любые животные · дальние пастбища</p>
           <h3 class="font-extrabold text-[20px] leading-tight mt-1">Автономный комплект</h3>
@@ -548,11 +548,12 @@ tailwind.config = {
         <h2 class="h2 rv">Как это работает</h2>
         <p class="lead mt-3 rv">Электроизгородь — не стена, а граница, которую животное запоминает после первого касания. Импульс идёт по кругу: прибор, линия, животное, земля.</p>
         <div class="rv mt-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/insulator.jpg" alt="Изолятор на столбе держит проволоку электроизгороди" class="w-full h-full object-cover" loading="lazy" width="900" height="900"></div>
-        <a href="#" class="rv btn-outline mt-6">Схемы подключения<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+        <a href="#faq" class="rv btn-outline mt-6">Как сделать заземление<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
       </div>
     </div>
-    <ol class="lg:col-span-7 relative rv-stagger">
+    <div class="lg:col-span-7 relative">
       <div class="fence-v hidden md:block" aria-hidden="true"></div>
+      <ol class="rv-stagger">
       <li class="relative md:pl-20 py-6 md:py-8 border-b border-line">
         <span class="hidden md:flex absolute left-0 top-6 md:top-8 w-12 h-12 rounded-full bg-cream border-2 border-brand items-center justify-center font-black text-brand-dark tabular-nums">1</span>
         <h3 class="h3">Электропастух даёт импульс</h3>
@@ -573,7 +574,8 @@ tailwind.config = {
         <h3 class="h3">Заземление замыкает круг</h3>
         <p class="mt-2 text-muted max-w-[52ch]">Импульс уходит в землю через штыри заземления. Без хорошего заземления изгородь не работает — это половина успеха установки.</p>
       </li>
-    </ol>
+      </ol>
+    </div>
   </div>
 </section>
 
@@ -584,15 +586,15 @@ tailwind.config = {
       <img src="assets/img/solar-line.jpg" alt="Солнечная панель на линии электроизгороди" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="1100" height="736">
       <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-deep/70 lg:from-transparent via-transparent lg:via-transparent lg:to-deep/80" aria-hidden="true"></div>
     </div>
-    <div class="section px-5 md:px-12 lg:px-16 xl:px-24">
+    <div class="section px-5 md:px-12 lg:px-10 xl:px-20 2xl:px-24">
       <h2 class="h2 rv">Работает там, где нет розетки</h2>
       <p class="rv mt-4 text-cream/80 text-[17px] md:text-[18px] leading-[1.6] max-w-[52ch]">Дальнее пастбище, летняя стоянка, участок без сети — прибор питается от аккумулятора, а солнечная панель заряжает его днём. Возить аккумулятор на зарядку не нужно.</p>
       <dl class="rv-stagger mt-8 divide-y divide-cream/15 border-y border-cream/15">
-        <div class="py-4 flex gap-4"><i data-lucide="battery-charging" class="w-6 h-6 text-pulse shrink-0 mt-0.5" aria-hidden="true"></i><div><dt class="font-extrabold">Аккумулятор 12&nbsp;В</dt><dd class="text-cream/70 text-[15px] mt-0.5">Запас энергии на ночь и пасмурные дни.</dd></div></div>
-        <div class="py-4 flex gap-4"><i data-lucide="sun" class="w-6 h-6 text-pulse shrink-0 mt-0.5" aria-hidden="true"></i><div><dt class="font-extrabold">Солнечная панель</dt><dd class="text-cream/70 text-[15px] mt-0.5">Восполняет заряд, пока прибор работает.</dd></div></div>
-        <div class="py-4 flex gap-4"><i data-lucide="gauge" class="w-6 h-6 text-pulse shrink-0 mt-0.5" aria-hidden="true"></i><div><dt class="font-extrabold">MPPT-контроллер</dt><dd class="text-cream/70 text-[15px] mt-0.5">Бережёт аккумулятор от перезаряда и глубокого разряда.</dd></div></div>
+        <div class="py-4"><dt class="font-extrabold flex items-center gap-3"><i data-lucide="battery-charging" class="w-6 h-6 text-pulse shrink-0" aria-hidden="true"></i>Аккумулятор 12&nbsp;В</dt><dd class="text-cream/75 text-[15px] mt-1 pl-9">Запас энергии на ночь и пасмурные дни.</dd></div>
+        <div class="py-4"><dt class="font-extrabold flex items-center gap-3"><i data-lucide="sun" class="w-6 h-6 text-pulse shrink-0" aria-hidden="true"></i>Солнечная панель</dt><dd class="text-cream/75 text-[15px] mt-1 pl-9">Восполняет заряд, пока прибор работает.</dd></div>
+        <div class="py-4"><dt class="font-extrabold flex items-center gap-3"><i data-lucide="gauge" class="w-6 h-6 text-pulse shrink-0" aria-hidden="true"></i>MPPT-контроллер</dt><dd class="text-cream/75 text-[15px] mt-1 pl-9">Бережёт аккумулятор от перезаряда и глубокого разряда.</dd></div>
       </dl>
-      <div class="rv mt-8 flex flex-col sm:flex-row gap-3">
+      <div class="rv mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-3">
         <a href="#podbor" class="btn-primary btn-lg" data-preset-power="sun">Собрать автономный комплект<i data-lucide="arrow-right" class="w-5 h-5" aria-hidden="true"></i></a>
         <a href="https://wa.me/77054285707?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D0%B0%D0%B2%D1%82%D0%BE%D0%BD%D0%BE%D0%BC%D0%BD%D1%8B%D0%B9%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%20%D1%81%20%D1%81%D0%BE%D0%BB%D0%BD%D0%B5%D1%87%D0%BD%D0%BE%D0%B9%20%D0%BF%D0%B0%D0%BD%D0%B5%D0%BB%D1%8C%D1%8E" target="_blank" rel="noopener" class="btn-glass btn-lg"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Спросить в WhatsApp</a>
       </div>
@@ -607,18 +609,18 @@ tailwind.config = {
     <div class="lg:col-span-5 rv">
       <h2 class="h2">Забрать в Алматы или получить в регионе</h2>
       <p class="lead mt-3">Основной ассортимент в наличии — отгружаем в день заказа.</p>
-      <a href="#" class="link mt-5">Подробнее о доставке<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+      <a href="#faq" class="link mt-5">Подробнее о доставке<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
     </div>
     <dl class="lg:col-span-7 rv-stagger grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2">
       <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><i data-lucide="map-pin" class="w-5 h-5 text-brand-dark" aria-hidden="true"></i>Самовывоз</dt><dd class="text-muted text-[15px] mt-2">Алматы, мкр. Атырау, 159/8, склад № 1. Пн–Пт 10–18, Сб 10–16.</dd></div>
       <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><i data-lucide="truck" class="w-5 h-5 text-brand-dark" aria-hidden="true"></i>Доставка по Казахстану и СНГ</dt><dd class="text-muted text-[15px] mt-2">Транспортными компаниями во все регионы, а также в Россию и страны СНГ. Стоимость считаем индивидуально, отправка после оплаты.</dd></div>
       <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><i data-lucide="credit-card" class="w-5 h-5 text-brand-dark" aria-hidden="true"></i>Оплата</dt><dd class="text-muted text-[15px] mt-2">Наличными на складе или безналичным переводом по реквизитам для ИП и юрлиц.</dd></div>
       <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><i data-lucide="store" class="w-5 h-5 text-brand-dark" aria-hidden="true"></i>На маркетплейсах</dt><dd class="text-muted text-[15px] mt-2">Привычнее покупать там? Мы есть на площадках:</dd>
-        <div class="mt-3 flex flex-wrap gap-2">
+        <dd class="mt-3 flex flex-wrap gap-2">
           <a href="https://elektropastuh.satu.kz/" target="_blank" rel="noopener" class="rounded-full border border-line px-3 py-1.5 text-[13px] font-bold hover:border-ink">Satu.kz</a>
           <a href="https://www.ozon.ru/product/elektropastuh-gigant-15-dzh-dlya-korov-ovets-loshadey-kabanov-1632680883/" target="_blank" rel="noopener" class="rounded-full border border-line px-3 py-1.5 text-[13px] font-bold hover:border-ink">Ozon · 4,8</a>
           <a href="https://www.wildberries.ru/catalog/694923616/detail.aspx" target="_blank" rel="noopener" class="rounded-full border border-line px-3 py-1.5 text-[13px] font-bold hover:border-ink">Wildberries</a>
-        </div>
+        </dd>
       </div>
     </dl>
   </div>
@@ -661,11 +663,12 @@ tailwind.config = {
       <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="btn-glass mt-6"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Написать в WhatsApp</a>
     </div>
     <form id="leadForm" class="lg:col-span-7 rv bg-white text-ink rounded-2xl p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 gap-4" novalidate>
-      <label class="block"><span class="text-[14px] font-semibold">Имя</span><input type="text" name="name" class="input mt-1.5" placeholder="Как к вам обращаться…" required autocomplete="name"></label>
-      <label class="block"><span class="text-[14px] font-semibold">Телефон</span><input type="tel" name="phone" class="input mt-1.5" placeholder="+7 (___) ___-__-__" required inputmode="tel" autocomplete="tel"></label>
+      <div><label for="fName" class="block text-[14px] font-semibold">Имя</label><input id="fName" type="text" name="name" class="input mt-1.5" placeholder="Как к вам обращаться…" required autocomplete="name" aria-describedby="nameErr"><p id="nameErr" class="mt-1.5 text-[14px] text-danger" hidden></p></div>
+      <div><label for="fPhone" class="block text-[14px] font-semibold">Телефон</label><input id="fPhone" type="tel" name="phone" class="input mt-1.5" placeholder="+7 (705) 000-00-00" required inputmode="tel" autocomplete="tel" aria-describedby="phoneErr"><p id="phoneErr" class="mt-1.5 text-[14px] text-danger" hidden></p></div>
       <div class="sm:col-span-2">
-        <span class="text-[14px] font-semibold">Животные</span>
-        <div class="mt-1.5 flex flex-wrap gap-2" id="formAnimals">
+        <span id="formAnimalsLabel" class="text-[14px] font-semibold">Животные</span>
+        <input type="hidden" name="animals" id="formAnimalsValue" value="">
+        <div class="mt-1.5 flex flex-wrap gap-2" id="formAnimals" role="group" aria-labelledby="formAnimalsLabel">
           <button type="button" class="chip h-10" data-v="КРС" aria-pressed="false">КРС</button>
           <button type="button" class="chip h-10" data-v="Лошади" aria-pressed="false">Лошади</button>
           <button type="button" class="chip h-10" data-v="Овцы и козы" aria-pressed="false">Овцы и козы</button>
@@ -674,14 +677,14 @@ tailwind.config = {
           <button type="button" class="chip h-10" data-v="Дикие" aria-pressed="false">От диких животных</button>
         </div>
       </div>
-      <label class="block"><span class="text-[14px] font-semibold">Площадь, га</span><input type="number" name="area" class="input mt-1.5" placeholder="Например, 5…" min="0" step="0.1" inputmode="decimal" autocomplete="off"></label>
-      <label class="block"><span class="text-[14px] font-semibold">Питание</span><select name="power" class="input mt-1.5" autocomplete="off"><option>220&nbsp;В</option><option>12&nbsp;В аккумулятор</option><option>Солнечная панель</option><option>Не знаю</option></select></label>
-      <label class="sm:col-span-2 flex items-start gap-3 text-[14px] text-muted"><input type="checkbox" name="consent" class="mt-1 w-4 h-4 accent-[#3E7A34]" required><span>Согласен на обработку персональных данных. <a href="#" class="underline hover:text-ink">Политика конфиденциальности</a></span></label>
+      <div><label for="fArea" class="block text-[14px] font-semibold">Площадь, га</label><input id="fArea" type="number" name="area" class="input mt-1.5" placeholder="Например, 5…" min="0" step="0.1" inputmode="decimal" autocomplete="off"></div>
+      <div><label for="fPower" class="block text-[14px] font-semibold">Питание</label><select id="fPower" name="power" class="input mt-1.5" autocomplete="off"><option>220&nbsp;В</option><option>12&nbsp;В аккумулятор</option><option>Солнечная панель</option><option>Не знаю</option></select></div>
+      <div class="sm:col-span-2"><label class="flex items-start gap-3 text-[14px] text-muted cursor-pointer"><input type="checkbox" name="consent" class="mt-1 w-4 h-4 accent-[#3E7A34] shrink-0" required aria-describedby="consentErr"><span>Согласен на обработку персональных данных. <a href="#" class="underline hover:text-ink">Политика конфиденциальности</a></span></label><p id="consentErr" class="mt-1.5 text-[14px] text-danger" hidden></p></div>
       <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-3">
         <button type="submit" class="btn-primary btn-lg">Получить подбор</button>
         <span class="text-[14px] text-muted">Перезвоним в рабочее время</span>
       </div>
-      <p id="formOk" hidden aria-live="polite" class="sm:col-span-2 rounded-xl bg-cream border border-brand/40 p-4 text-[15px]"><strong>Спасибо!</strong> Заявка принята. Перезвоним в рабочее время: Пн–Пт 10–18, Сб 10–16.</p>
+      <p id="formOk" hidden aria-live="polite" tabindex="-1" class="sm:col-span-2 rounded-xl bg-cream border border-brand/40 p-4 text-[15px]"><strong>Спасибо!</strong> Заявка принята. Перезвоним в рабочее время: Пн–Пт 10–18, Сб 10–16.</p>
     </form>
   </div>
 </section>
@@ -716,19 +719,19 @@ tailwind.config = {
       <p class="font-extrabold text-cream">Покупателям</p>
       <ul class="mt-4 space-y-2 text-[15px]">
         <li><a href="#podbor" class="hover:text-cream">Подбор комплекта</a></li>
-        <li><a href="#" class="hover:text-cream">Как выбрать электропастух</a></li>
-        <li><a href="#" class="hover:text-cream">Инструкции и схемы</a></li>
+        <li><a href="#zhivotnye" class="hover:text-cream">Как выбрать электропастух</a></li>
+        <li><a href="#kak-rabotaet" class="hover:text-cream">Как это работает</a></li>
         <li><a href="#dostavka" class="hover:text-cream">Доставка и оплата</a></li>
-        <li><a href="#" class="hover:text-cream">Гарантия и возврат</a></li>
+        <li><a href="#faq" class="hover:text-cream">Гарантия и возврат</a></li>
         <li><a href="#faq" class="hover:text-cream">Вопросы и ответы</a></li>
       </ul>
     </div>
     <div>
       <p class="font-extrabold text-cream">Компания</p>
       <ul class="mt-4 space-y-2 text-[15px]">
-        <li><a href="#" class="hover:text-cream">О компании</a></li>
-        <li><a href="#" class="hover:text-cream">Контакты</a></li>
-        <li><a href="#" class="hover:text-cream">Оптовым покупателям</a></li>
+        <li><a href="#" class="hover:text-cream" title="Страница в разработке">О компании</a></li>
+        <li><a href="#konsultaciya" class="hover:text-cream">Контакты</a></li>
+        <li><a href="https://wa.me/77054285707?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BE%D0%BF%D1%82" target="_blank" rel="noopener" class="hover:text-cream">Оптовым покупателям</a></li>
       </ul>
       <p class="mt-6 font-extrabold text-cream">Мы на площадках</p>
       <div class="mt-3 flex flex-wrap gap-2">
@@ -739,10 +742,10 @@ tailwind.config = {
     </div>
   </div>
   <div class="border-t border-cream/10">
-    <div class="container-site py-5 flex flex-col md:flex-row md:items-center gap-3 text-[13px] text-cream/50">
+    <div class="container-site py-5 flex flex-col md:flex-row md:items-center gap-3 text-[13px] text-cream/65">
       <p>© 2026 GIGANT Agro. Торговая компания, Алматы.</p>
       <div class="md:ml-auto flex flex-wrap items-center gap-x-5 gap-y-1">
-        <a href="#" class="hover:text-cream">Политика конфиденциальности</a>
+        <a href="#" class="hover:text-cream" title="Страница в разработке">Политика конфиденциальности</a>
         <span>Фото пастбищ — Wikimedia Commons, CC BY / CC BY-SA (временно)</span>
         <span class="inline-flex rounded-full border border-cream/20 overflow-hidden"><span class="px-2.5 py-0.5 bg-cream/15 text-cream">RU</span><span class="px-2.5 py-0.5">KZ</span></span>
       </div>
@@ -751,14 +754,14 @@ tailwind.config = {
 </footer>
 
 <!-- плавающий WhatsApp (desktop) -->
-<a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="hidden md:flex fixed right-6 bottom-6 z-float w-14 h-14 rounded-full bg-brand-dark items-center justify-center transition-transform duration-200 ease-out hover:scale-105 active:scale-95" aria-label="Написать в WhatsApp"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-7 h-7" width="28" height="28"></a>
+<aside aria-label="Быстрая связь"><a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="hidden md:flex fixed right-6 bottom-6 z-float w-14 h-14 rounded-full bg-brand-dark items-center justify-center transition-transform duration-200 ease-out hover:scale-105 active:scale-95" aria-label="Написать в WhatsApp"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-7 h-7" width="28" height="28"></a></aside>
 
 <!-- липкая панель действий (mobile) -->
 <nav class="md:hidden fixed bottom-0 inset-x-0 z-bar bg-white/95 backdrop-blur-xl border-t border-line grid grid-cols-4 pb-[env(safe-area-inset-bottom)]" aria-label="Быстрые действия">
-  <a href="#catalog" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[12px] font-medium"><i data-lucide="layout-grid" class="w-6 h-6" aria-hidden="true"></i>Каталог</a>
-  <a href="#podbor" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[12px] font-medium"><i data-lucide="sliders-horizontal" class="w-6 h-6" aria-hidden="true"></i>Подбор</a>
-  <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[12px] font-medium text-brand-dark"><img src="assets/icons/whatsapp-3E7A34.svg" alt="" class="w-6 h-6" width="24" height="24">WhatsApp</a>
-  <a href="tel:+77054285707" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[12px] font-semibold bg-pulse"><i data-lucide="phone" class="w-6 h-6" aria-hidden="true"></i>Позвонить</a>
+  <a href="#catalog" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[13px] font-medium"><i data-lucide="layout-grid" class="w-6 h-6" aria-hidden="true"></i>Каталог</a>
+  <a href="#podbor" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[13px] font-medium"><i data-lucide="sliders-horizontal" class="w-6 h-6" aria-hidden="true"></i>Подбор</a>
+  <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[13px] font-medium text-brand-dark"><img src="assets/icons/whatsapp-3E7A34.svg" alt="" class="w-6 h-6" width="24" height="24">WhatsApp</a>
+  <a href="tel:+77054285707" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[13px] font-semibold bg-pulse"><i data-lucide="phone" class="w-6 h-6" aria-hidden="true"></i>Позвонить</a>
 </nav>
 
 <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
@@ -782,9 +785,11 @@ tailwind.config = {
 
   // --- мобильное меню
   const burger=document.getElementById('burger'), mobileMenu=document.getElementById('mobileMenu');
-  burger.addEventListener('click',()=>{const open=mobileMenu.hidden;mobileMenu.hidden=!open;burger.setAttribute('aria-expanded',String(open));});
+  const setMenu=open=>{mobileMenu.hidden=!open;burger.setAttribute('aria-expanded',String(open)); if(open){mobileMenu.querySelector('a').focus();} else {burger.focus();}};
+  burger.addEventListener('click',()=>setMenu(mobileMenu.hidden));
   mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.hidden=true;burger.setAttribute('aria-expanded','false');}));
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!mobileMenu.hidden){mobileMenu.hidden=true;burger.setAttribute('aria-expanded','false');}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!mobileMenu.hidden) setMenu(false);});
+  document.addEventListener('click',e=>{if(!mobileMenu.hidden&&!mobileMenu.contains(e.target)&&!burger.contains(e.target)){mobileMenu.hidden=true;burger.setAttribute('aria-expanded','false');}});
 
   // --- scroll reveal (контент видим без JS; JS только добавляет вход)
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}}),{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
@@ -836,7 +841,7 @@ tailwind.config = {
     const areaTxt=pick.unit==='ha'?val+' га':val+' м периметра';
     const msg='Здравствуйте! Хочу подобрать электропастух. Животные: '+ANIMAL[pick.animal]+', '+areaTxt+', питание: '+POWER[pick.power]+'. Сайт предложил: '+r.model+'.';
     document.getElementById('resWa').href='https://wa.me/77054285707?text='+encodeURIComponent(msg);
-    const res=document.getElementById('pickResult'); res.hidden=false; res.scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'});
+    const res=document.getElementById('pickResult'); res.hidden=false; res.scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'}); res.focus({preventScroll:true});
   });
 
   // --- табы по животным
@@ -844,18 +849,28 @@ tailwind.config = {
   tabs.addEventListener('keydown',e=>{const list=[...tabs.querySelectorAll('[role="tab"]')]; const i=list.indexOf(document.activeElement); if(i<0) return;
     if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault(); const j=(i+(e.key==='ArrowRight'?1:-1)+list.length)%list.length; list[j].focus(); list[j].click();}});
   tabs.addEventListener('click',e=>{const b=e.target.closest('[role="tab"]'); if(!b) return;
-    tabs.querySelectorAll('[role="tab"]').forEach(t=>{t.setAttribute('aria-selected','false');document.getElementById(t.getAttribute('aria-controls')).hidden=true;});
-    b.setAttribute('aria-selected','true'); const p=document.getElementById(b.getAttribute('aria-controls')); p.hidden=false;
+    tabs.querySelectorAll('[role="tab"]').forEach(t=>{t.setAttribute('aria-selected','false');t.setAttribute('tabindex','-1');document.getElementById(t.getAttribute('aria-controls')).hidden=true;});
+    b.setAttribute('aria-selected','true'); b.setAttribute('tabindex','0'); const p=document.getElementById(b.getAttribute('aria-controls')); p.hidden=false;
     p.classList.remove('tabpanel'); void p.offsetWidth; p.classList.add('tabpanel');});
 
-  // --- чипы в форме (множественный выбор)
-  document.getElementById('formAnimals').addEventListener('click',e=>{const b=e.target.closest('button[data-v]'); if(!b) return;
-    b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');});
+  // --- чипы в форме (множественный выбор) → скрытое поле
+  const fa=document.getElementById('formAnimals'), faVal=document.getElementById('formAnimalsValue');
+  fa.addEventListener('click',e=>{const b=e.target.closest('button[data-v]'); if(!b) return;
+    b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');
+    faVal.value=[...fa.querySelectorAll('[aria-pressed="true"]')].map(x=>x.dataset.v).join(', ');});
 
-  // --- форма: прототип, без отправки
-  const form=document.getElementById('leadForm');
-  form.addEventListener('submit',e=>{e.preventDefault(); if(!form.checkValidity()){form.reportValidity();return;}
-    document.getElementById('formOk').hidden=false; form.querySelector('button[type=submit]').disabled=true;});
+  // --- форма: инлайн-ошибки, состояние отправки (прототип, без бэкенда)
+  const form=document.getElementById('leadForm'), formOk=document.getElementById('formOk');
+  const setErr=(el,id,msg)=>{const err=document.getElementById(id); if(msg){el.setAttribute('aria-invalid','true'); err.textContent=msg; err.hidden=false;} else {el.removeAttribute('aria-invalid'); err.hidden=true;}};
+  const validate=()=>{const f=form.elements; const digits=f.phone.value.replace(/\D/g,''); let first=null;
+    [[f.name,'nameErr',f.name.value.trim()?'':'Укажите имя — так мы будем к вам обращаться.'],
+     [f.phone,'phoneErr',digits.length>=10?'':'Введите номер телефона, например +7 705 000-00-00.'],
+     [f.consent,'consentErr',f.consent.checked?'':'Нужно согласие на обработку данных.']
+    ].forEach(([el,id,msg])=>{setErr(el,id,msg); if(msg&&!first) first=el;}); return first;};
+  ['name','phone','consent'].forEach(n=>form.elements[n].addEventListener('input',()=>{if(form.elements[n].getAttribute('aria-invalid')) validate();}));
+  form.addEventListener('submit',e=>{e.preventDefault(); const first=validate(); if(first){first.focus(); return;}
+    const btn=form.querySelector('button[type=submit]'); btn.disabled=true; btn.textContent='Отправляем…';
+    setTimeout(()=>{formOk.hidden=false; btn.textContent='Заявка отправлена'; formOk.focus({preventScroll:true});},700);});
 })();
 </script>
 </body>
