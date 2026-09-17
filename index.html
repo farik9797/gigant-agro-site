@@ -83,7 +83,7 @@ tailwind.config = {
   .fence-v::after { content:""; position:absolute; left:-2px; top:-72px; width:6px; height:72px; border-radius:3px; background:#FFC400; box-shadow:0 0 14px rgba(255,196,0,.85); animation:pulse-down 3.6s linear infinite; }
   @keyframes pulse-down { from { top:-72px; } to { top:100%; } }
   /* ---------- marquee ---------- */
-  .marquee { mask-image:linear-gradient(90deg, transparent, #000 8%, #000 84%, transparent); -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 84%, transparent); }
+  .marquee { mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
   .marquee-track { display:flex; width:max-content; animation:marquee 34s linear infinite; }
   .marquee:hover .marquee-track, .marquee.paused .marquee-track { animation-play-state:paused; }
   @keyframes marquee { to { transform:translateX(-50%); } }
@@ -209,11 +209,6 @@ tailwind.config = {
     <div class="lg:col-span-5 lg:py-2">
       <h2 class="h2">Подберите комплект под своё хозяйство</h2>
       <p class="lead mt-4">Три вопроса — и мы покажем модель, комплект и ориентировочную цену. Точный состав подтвердит менеджер.</p>
-      <ul class="mt-6 space-y-2.5 text-[15px] text-ink">
-        <li class="flex gap-2.5"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Ответ сразу на странице, без ожидания звонка</li>
-        <li class="flex gap-2.5"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Готовый запрос в WhatsApp с вашими параметрами</li>
-        <li class="flex gap-2.5"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Без обязательств и предоплаты</li>
-      </ul>
       <p class="mt-6 text-[15px] text-muted">Не хотите заполнять — <a href="https://wa.me/77054285707?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%BE%D0%BC%D0%BE%D0%B3%D0%B8%D1%82%D0%B5%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BF%D0%B0%D1%81%D1%82%D1%83%D1%85" target="_blank" rel="noopener" class="link">напишите в WhatsApp</a>, что за животные и сколько гектаров.</p>
     </div>
 
