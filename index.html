@@ -1,224 +1,222 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#17261B">
 <title>Электропастухи GIGANT и Bekci в Алматы — GIGANT Agro</title>
-<meta name="description" content="Электропастухи GIGANT и Bekci от 6,9 до 25 Дж, готовые комплекты для овец, лошадей и КРС, солнечное питание. Склад в Алматы, доставка по Казахстану, подбор комплекта за минуту.">
+<meta name="description" content="Электропастухи GIGANT и Bekci от 6,9 до 25&nbsp;Дж, готовые комплекты для овец, лошадей и КРС, солнечное питание. Склад в Алматы, доставка по Казахстану, подбор комплекта за минуту.">
 <meta property="og:title" content="Электроизгородь, которая держит стадо — GIGANT Agro">
-<meta property="og:description" content="Электропастухи от 6,9 до 25 Дж и готовые комплекты под вид животных и площадь. Подберём и поможем установить.">
-<meta property="og:image" content="assets/img/hero-cattle.jpg">
+<meta property="og:description" content="Электропастухи от 6,9 до 25&nbsp;Дж и готовые комплекты под вид животных и площадь. Подберём и поможем установить.">
+<meta property="og:image" content="assets/img/hero-cattle-1920.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="assets/img/favicon-64.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://cdn.tailwindcss.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@500;600;700&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;800;900&family=Vollkorn:ital,wght@1,700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.replace('no-js','js')</script>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: { extend: {
-    colors: { bg:'#F5F4EF', ink:'#16191C', muted:'#5B6167', brand:'#5A984B', 'brand-dark':'#3E7A34', cream:'#F3F8D6', pulse:'#FFC400', dark:'#17261B', line:'#D9D6CC', danger:'#C8372D' },
-    fontFamily: { display:['Geologica','system-ui','sans-serif'], body:['"Golos Text"','system-ui','sans-serif'] },
-    boxShadow: { card:'0 12px 28px -14px rgba(22,25,28,.22)', sticky:'0 -6px 20px -10px rgba(22,25,28,.25)' },
-    maxWidth: { site:'1280px' }
+    colors: { bg:'#F4F6F1', ink:'#16191C', muted:'#4F5A52', brand:'#5A984B', 'brand-dark':'#3E7A34', deep:'#17261B', cream:'#F3F8D6', pulse:'#FFC400', line:'#D6DCD2', danger:'#C8372D' },
+    fontFamily: { sans:['"Golos Text"','system-ui','sans-serif'], serif:['Vollkorn','Georgia','serif'] },
+    maxWidth: { site:'1240px' },
+    transitionTimingFunction: { out:'cubic-bezier(0.22, 1, 0.36, 1)' },
+    zIndex: { float:'30', nav:'40', menu:'45', bar:'40' }
   } }
 }
 </script>
 <style type="text/tailwindcss">
   @layer base {
-    html { scroll-behavior: smooth; }
-    body { @apply font-body text-ink bg-bg antialiased text-[16px] leading-[24px] md:text-[17px] md:leading-[26px]; }
-    h1,h2,h3,h4 { @apply font-display tracking-[-0.02em]; }
+    html { scroll-behavior: smooth; color-scheme: light; -webkit-tap-highlight-color: transparent; }
+    a, button, [role="tab"] { touch-action: manipulation; }
+    body { @apply font-sans text-ink bg-bg antialiased text-[16px] leading-[26px] md:text-[17px] md:leading-[27px]; }
+    h1,h2,h3 { text-wrap: balance; }
+    p { text-wrap: pretty; }
     ::selection { background:#FFC400; color:#16191C; }
-    :focus-visible { outline: 3px solid #FFC400; outline-offset: 2px; border-radius: 6px; }
+    :focus-visible { outline: 3px solid #FFC400; outline-offset: 3px; border-radius: 8px; }
     [hidden] { display: none !important; }
   }
   @layer components {
     .container-site { @apply max-w-site mx-auto px-5 md:px-8; }
-    .btn { @apply inline-flex items-center justify-center gap-2 h-12 px-6 rounded-lg font-semibold text-[16px] cursor-pointer transition-colors duration-200 select-none whitespace-nowrap; }
-    .btn-lg { @apply h-[52px] px-7; }
-    .btn-primary { @apply btn bg-pulse text-ink hover:bg-[#F2B900] active:bg-[#E5AF00]; }
+    .section { padding-block: clamp(4rem, 8vw, 7rem); }
+    .h2 { @apply font-black tracking-[-0.03em] text-[clamp(2rem,3.6vw,3rem)] leading-[1.06]; }
+    .h3 { @apply font-extrabold tracking-[-0.02em] text-[clamp(1.25rem,1.6vw,1.5rem)] leading-[1.15]; }
+    .lead { @apply text-muted text-[17px] md:text-[18px] leading-[1.55] max-w-[60ch]; }
+    .accent { @apply font-serif italic font-bold; }
+    .btn { @apply inline-flex items-center justify-center gap-2 h-12 px-6 rounded-full font-semibold text-[16px] cursor-pointer select-none whitespace-nowrap transition-[transform,background-color,border-color,color] duration-200 ease-out active:scale-[0.97]; }
+    .btn-lg { @apply h-14 px-8 text-[17px]; }
+    .btn-primary { @apply btn bg-pulse text-ink hover:bg-[#FFCF33]; }
     .btn-secondary { @apply btn bg-brand-dark text-white hover:bg-[#356A2D]; }
     .btn-outline { @apply btn bg-white border border-line text-ink hover:border-ink; }
-    .btn-ghost { @apply btn bg-transparent text-ink hover:bg-ink/5; }
-    .chip { @apply inline-flex items-center gap-2 h-11 px-4 rounded-full border border-line bg-white text-[15px] font-medium cursor-pointer transition-all duration-200 hover:border-ink; }
-    .chip[aria-pressed="true"] { @apply bg-ink text-white border-ink; }
-    .spec { @apply inline-flex items-center gap-1.5 rounded-md bg-white/95 border border-line px-3 py-1.5 font-display font-semibold text-[14px] leading-none tracking-normal text-ink; }
-    .overline { @apply font-display text-[13px] font-semibold uppercase tracking-[0.12em] text-brand-dark; }
-    .h2 { @apply text-[28px] leading-[34px] md:text-[32px] md:leading-[40px] font-bold; }
-    .h3 { @apply text-[20px] leading-[26px] md:text-[22px] md:leading-[28px] font-semibold; }
-    .lead { @apply text-muted text-[16px] md:text-[17px] max-w-[62ch]; }
-    .card { @apply bg-white rounded-xl border border-line; }
-    .card-hover { @apply transition-all duration-200 hover:-translate-y-0.5 hover:border-ink/40 hover:shadow-card; }
-    .section { @apply py-16 md:py-24; }
-    .kicker-num { @apply font-display font-bold text-brand-dark text-[15px]; }
-    .tab-btn { @apply chip h-10; }
-    .tab-btn[aria-selected="true"] { @apply bg-ink text-white border-ink; }
-    .input { @apply w-full h-12 rounded-lg border border-line bg-white px-4 text-[16px] placeholder:text-muted/70 focus:border-ink focus:outline-none; }
+    .btn-glass { @apply btn border border-white/40 text-white bg-white/10 backdrop-blur-md hover:bg-white/20; }
+    .chip { @apply inline-flex items-center gap-2 h-11 px-4 rounded-full border border-line bg-white text-[15px] font-medium cursor-pointer transition-[background-color,border-color,color,transform] duration-200 ease-out hover:border-ink active:scale-[0.97]; }
+    .chip[aria-pressed="true"], .chip[aria-selected="true"] { @apply bg-ink text-white border-ink; }
+    .card { @apply bg-white rounded-2xl border border-line; }
+    .lift { @apply transition-[transform,border-color] duration-300 ease-out hover:-translate-y-0.5 hover:border-ink/50; }
+    .input { @apply w-full h-12 rounded-xl border border-line bg-white px-4 text-[16px] text-ink placeholder:text-muted/80 focus:border-ink focus:outline-none; }
+    .spec { @apply inline-flex items-baseline gap-1 font-extrabold text-[15px] leading-none tracking-[-0.01em] tabular-nums whitespace-nowrap; }
+    .link { @apply inline-flex items-center gap-1.5 font-semibold text-brand-dark hover:underline underline-offset-4; }
   }
-  /* линия ограждения с бегущим импульсом */
-  .fence { height:2px; background:#D9D6CC; overflow:visible; }
-  .fence::after { content:""; position:absolute; top:-2px; left:-72px; width:72px; height:6px; border-radius:3px; background:#FFC400; box-shadow:0 0 14px rgba(255,196,0,.9); animation:pulse-run 3s linear infinite; }
+  /* ---------- hero load choreography ---------- */
+  .js .hero-in { opacity:0; transform:translateY(22px); animation:hero-rise .9s cubic-bezier(.22,1,.36,1) forwards; }
+  .js .hero-in.d1{animation-delay:.10s} .js .hero-in.d2{animation-delay:.22s} .js .hero-in.d3{animation-delay:.36s} .js .hero-in.d4{animation-delay:.50s} .js .hero-in.d5{animation-delay:.66s}
+  @keyframes hero-rise { to { opacity:1; transform:none; } }
+  .hero-img { animation:hero-zoom 8s cubic-bezier(.22,1,.36,1) forwards; transform:scale(1.06); }
+  @keyframes hero-zoom { to { transform:scale(1); } }
+  /* ---------- scroll reveal (visible by default; JS opts in) ---------- */
+  .js .rv { opacity:0; transform:translateY(24px); transition:opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1); }
+  .js .rv.is-in { opacity:1; transform:none; }
+  .js .rv-stagger > * { opacity:0; transform:translateY(18px); transition:opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
+  .js .rv-stagger.is-in > * { opacity:1; transform:none; }
+  .js .rv-stagger.is-in > *:nth-child(2){transition-delay:.06s} .js .rv-stagger.is-in > *:nth-child(3){transition-delay:.12s} .js .rv-stagger.is-in > *:nth-child(4){transition-delay:.18s} .js .rv-stagger.is-in > *:nth-child(5){transition-delay:.24s} .js .rv-stagger.is-in > *:nth-child(6){transition-delay:.30s} .js .rv-stagger.is-in > *:nth-child(7){transition-delay:.36s} .js .rv-stagger.is-in > *:nth-child(8){transition-delay:.42s} .js .rv-stagger.is-in > *:nth-child(9){transition-delay:.48s}
+  /* ---------- fence line with running pulse ---------- */
+  .fence { position:relative; height:2px; background:rgba(22,25,28,.14); }
+  .fence::after { content:""; position:absolute; top:-2px; left:-72px; width:72px; height:6px; border-radius:3px; background:#FFC400; box-shadow:0 0 14px rgba(255,196,0,.85); animation:pulse-run 3.2s linear infinite; }
   .fence .post { position:absolute; top:-9px; width:4px; height:20px; border-radius:2px; background:#5A984B; }
-  .fence.on-dark { background:rgba(243,248,214,.25); }
-  .fence.on-dark .post { background:#F3F8D6; }
+  .fence.on-dark { background:rgba(243,248,214,.22); } .fence.on-dark .post { background:#F3F8D6; }
   @keyframes pulse-run { from { left:-72px; } to { left:100%; } }
-  /* появление главного экрана */
-  .reveal { opacity:0; transform:translateY(14px); animation:rise .6s cubic-bezier(.2,.7,.2,1) forwards; }
-  .d1{animation-delay:.05s} .d2{animation-delay:.18s} .d3{animation-delay:.31s} .d4{animation-delay:.44s} .d5{animation-delay:.6s}
-  @keyframes rise { to { opacity:1; transform:none; } }
-  /* аккордеон */
-  details > summary { list-style:none; cursor:pointer; }
-  details > summary::-webkit-details-marker { display:none; }
-  details[open] .faq-icon { transform:rotate(45deg); }
-  .faq-icon { transition:transform .2s ease; }
-  /* шапка при прокрутке */
-  .header-shrink #topbar { display:none; }
-  .header-shrink #mainbar { height:56px; }
-  #mainbar { height:72px; transition:height .2s ease; }
-  /* табличка */
-  .sign { @apply inline-flex items-center gap-2 bg-pulse text-ink font-display font-bold text-[12px] uppercase tracking-[0.08em] px-3 py-1.5 rounded-sm border-2 border-ink/80 shadow-card; transform:rotate(-3deg); }
+  .fence-v { position:absolute; left:23px; top:24px; bottom:24px; width:2px; background:rgba(22,25,28,.14); overflow:hidden; }
+  .fence-v::after { content:""; position:absolute; left:-2px; top:-72px; width:6px; height:72px; border-radius:3px; background:#FFC400; box-shadow:0 0 14px rgba(255,196,0,.85); animation:pulse-down 3.6s linear infinite; }
+  @keyframes pulse-down { from { top:-72px; } to { top:100%; } }
+  /* ---------- marquee ---------- */
+  .marquee { mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+  .marquee-track { display:flex; width:max-content; animation:marquee 34s linear infinite; }
+  .marquee:hover .marquee-track, .marquee.paused .marquee-track { animation-play-state:paused; }
+  @keyframes marquee { to { transform:translateX(-50%); } }
+  /* ---------- nav ---------- */
+  #nav { transition:background-color .3s ease, box-shadow .3s ease, border-color .3s ease; }
+  #nav.scrolled { background:rgba(255,255,255,.88); box-shadow:0 8px 24px -16px rgba(22,25,28,.35); border-color:rgba(22,25,28,.08); }
+  /* ---------- accordion ---------- */
+  details > summary { list-style:none; cursor:pointer; } details > summary::-webkit-details-marker { display:none; }
+  details[open] .faq-icon { transform:rotate(45deg); } .faq-icon { transition:transform .2s ease-out; }
+  /* ---------- tab panel crossfade ---------- */
+  .tabpanel { animation:tab-in .35s cubic-bezier(.22,1,.36,1); }
+  @keyframes tab-in { from { opacity:0; transform:translateY(6px); } }
+  @media (hover:none) { .lift:hover { transform:none; } }
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation:none !important; transition:none !important; }
-    .reveal { opacity:1; transform:none; }
-    .fence::after { display:none; }
+    .js .hero-in, .js .rv, .js .rv-stagger > * { animation:none; transition:opacity .3s ease; transform:none; opacity:1; }
+    .hero-img { animation:none; transform:none; }
+    .fence::after, .fence-v::after { display:none; }
+    .marquee-track { animation:none; }
+    .tabpanel { animation:none; }
+    .btn, .chip { transition:none; }
   }
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"GIGANT Agro","url":"https://elektropastuh.satu.kz/","logo":"assets/img/logo-gigant.png","telephone":["+77054285707","+77757716024"],"address":{"@type":"PostalAddress","streetAddress":"микрорайон Атырау, 159/8, склад № 1","addressLocality":"Алматы","addressCountry":"KZ"},"openingHours":["Mo-Fr 10:00-18:00","Sa 10:00-16:00"]}
+{"@context":"https://schema.org","@type":"Organization","name":"GIGANT Agro","url":"https://farik9797.github.io/gigant-agro-site/","logo":"assets/img/logo-gigant.png","telephone":["+77054285707","+77757716024"],"address":{"@type":"PostalAddress","streetAddress":"микрорайон Атырау, 159/8, склад № 1","addressLocality":"Алматы","addressCountry":"KZ"},"openingHours":["Mo-Fr 10:00-18:00","Sa 10:00-16:00"]}
 </script>
 </head>
-<body class="pb-[72px] md:pb-0">
+<body class="pb-[calc(72px+env(safe-area-inset-bottom))] md:pb-0">
+<a href="#podbor" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:rounded-full focus:bg-pulse focus:text-ink focus:px-4 focus:py-2 focus:font-semibold">Перейти к подбору комплекта</a>
 
-<!-- ================= ШАПКА ================= -->
-<header id="header" class="sticky top-0 z-40 bg-white border-b border-line">
-  <!-- верхняя полоса: узнаваемость со старого сайта -->
-  <div id="topbar" class="hidden md:block bg-brand text-cream text-[14px]">
-    <div class="container-site h-9 flex items-center justify-between gap-6">
-      <div class="flex items-center gap-6">
-        <a href="tel:+77054285707" class="inline-flex items-center gap-1.5 hover:text-white"><i data-lucide="phone" class="w-4 h-4"></i>+7 (705) 428-57-07</a>
-        <a href="tel:+77757716024" class="inline-flex items-center gap-1.5 hover:text-white"><i data-lucide="phone" class="w-4 h-4"></i>+7 (775) 771-60-24</a>
-        <span class="inline-flex items-center gap-1.5 text-cream/80"><i data-lucide="clock" class="w-4 h-4"></i>Пн–Пт 10:00–18:00, Сб 10:00–16:00</span>
+<!-- ================= ПЛАВАЮЩАЯ НАВИГАЦИЯ ================= -->
+<div class="fixed top-3 md:top-5 inset-x-3 md:inset-x-6 z-nav">
+  <nav id="nav" class="mx-auto max-w-site rounded-full border border-white/50 bg-white/72 backdrop-blur-xl" aria-label="Основная навигация">
+    <div class="h-14 md:h-16 pl-3 pr-2 md:pl-4 md:pr-3 flex items-center gap-3">
+      <a href="#top" class="flex items-center gap-2.5 shrink-0" aria-label="GIGANT Agro — на главную">
+        <img src="assets/img/logo-gigant.png" alt="" width="40" height="40" class="w-10 h-10 rounded-full">
+        <span class="font-black text-[17px] leading-none tracking-[-0.02em]">GIGANT <span class="text-brand-dark">Agro</span></span>
+      </a>
+      <div class="hidden lg:flex items-center gap-0.5 ml-3 text-[15px] font-medium whitespace-nowrap">
+        <a href="#catalog" class="px-3 py-2 rounded-full hover:bg-ink/5">Каталог</a>
+        <a href="#podbor" class="px-3 py-2 rounded-full hover:bg-ink/5">Подбор</a>
+        <a href="#komplekty" class="px-3 py-2 rounded-full hover:bg-ink/5">Комплекты</a>
+        <a href="#kak-rabotaet" class="px-3 py-2 rounded-full hover:bg-ink/5">Как работает</a>
+        <a href="#dostavka" class="px-3 py-2 rounded-full hover:bg-ink/5">Доставка</a>
+        <a href="#faq" class="px-3 py-2 rounded-full hover:bg-ink/5">FAQ</a>
       </div>
-      <div class="flex items-center gap-6">
-        <span class="inline-flex items-center gap-1.5 text-cream/80"><i data-lucide="map-pin" class="w-4 h-4"></i>Алматы, мкр. Атырау, 159/8, склад № 1</span>
-        <a href="https://wa.me/77054285707?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9D%D1%83%D0%B6%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D0%BE%20%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BF%D0%B0%D1%81%D1%82%D1%83%D1%85%D1%83" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 font-medium hover:text-white"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-4 h-4">Написать в WhatsApp</a>
-      </div>
-    </div>
-  </div>
-  <!-- основная строка -->
-  <div id="mainbar" class="container-site flex items-center gap-3 md:gap-5">
-    <a href="#" class="flex items-center gap-3 shrink-0" aria-label="GIGANT Agro — на главную">
-      <img src="assets/img/logo-gigant.png" alt="GIGANT" width="44" height="44" class="w-11 h-11 rounded-md">
-      <span class="font-display font-bold text-[18px] leading-none tracking-[-0.02em]">GIGANT <span class="text-brand-dark">Agro</span></span>
-    </a>
-
-    <div class="relative hidden md:block">
-      <button id="catalogBtn" class="btn-secondary h-11 px-4" aria-expanded="false" aria-controls="megamenu"><i data-lucide="layout-grid" class="w-5 h-5"></i>Каталог<i data-lucide="chevron-down" class="w-4 h-4"></i></button>
-      <div id="megamenu" hidden class="absolute left-0 top-[calc(100%+10px)] w-[720px] card shadow-card p-3 grid grid-cols-2 gap-1 z-50">
-        <a href="#catalog" class="flex items-start gap-3 p-3 rounded-lg hover:bg-cream"><i data-lucide="zap" class="w-5 h-5 text-brand-dark mt-0.5"></i><span><span class="block font-semibold">Электропастухи</span><span class="block text-muted text-[14px]">GIGANT и Bekci, 6,9–25 Дж</span></span></a>
-        <a href="#komplekty" class="flex items-start gap-3 p-3 rounded-lg hover:bg-cream"><i data-lucide="package" class="w-5 h-5 text-brand-dark mt-0.5"></i><span><span class="block font-semibold">Готовые комплекты</span><span class="block text-muted text-[14px]">Овцы 1 га, КРС 5 га, лошади 6 га</span></span></a>
-        <a href="#catalog" class="flex items-start gap-3 p-3 rounded-lg hover:bg-cream"><i data-lucide="layers" class="w-5 h-5 text-brand-dark mt-0.5"></i><span><span class="block font-semibold">Сетки и шнуры</span><span class="block text-muted text-[14px]">Шнур 6 жил, проволока 1,6 мм</span></span></a>
-        <a href="#catalog" class="flex items-start gap-3 p-3 rounded-lg hover:bg-cream"><i data-lucide="milestone" class="w-5 h-5 text-brand-dark mt-0.5"></i><span><span class="block font-semibold">Изоляторы и колышки</span><span class="block text-muted text-[14px]">Для проволоки, шнура и ленты</span></span></a>
-        <a href="#catalog" class="flex items-start gap-3 p-3 rounded-lg hover:bg-cream"><i data-lucide="cable" class="w-5 h-5 text-brand-dark mt-0.5"></i><span><span class="block font-semibold">Кабели и аксессуары</span><span class="block text-muted text-[14px]">Подключение, заземление, ворота</span></span></a>
-        <a href="#avtonomno" class="flex items-start gap-3 p-3 rounded-lg hover:bg-cream"><i data-lucide="sun" class="w-5 h-5 text-brand-dark mt-0.5"></i><span><span class="block font-semibold">Солнечное питание</span><span class="block text-muted text-[14px]">Панели, MPPT-контроллеры, аккумуляторы</span></span></a>
-        <a href="#catalog" class="flex items-start gap-3 p-3 rounded-lg hover:bg-cream"><i data-lucide="scissors" class="w-5 h-5 text-brand-dark mt-0.5"></i><span><span class="block font-semibold">Стрижка овец</span><span class="block text-muted text-[14px]">Машинки и комплектующие</span></span></a>
-        <a href="#catalog" class="flex items-start gap-3 p-3 rounded-lg hover:bg-cream"><i data-lucide="flashlight" class="w-5 h-5 text-brand-dark mt-0.5"></i><span><span class="block font-semibold">Электропогоняла</span><span class="block text-muted text-[14px]">Для перемещения скота</span></span></a>
+      <div class="ml-auto flex items-center gap-1.5 md:gap-2">
+        <a href="tel:+77054285707" class="hidden 2xl:inline-flex items-center gap-2 px-3 py-2 rounded-full font-semibold text-[15px] whitespace-nowrap hover:bg-ink/5"><i data-lucide="phone" class="w-4 h-4" aria-hidden="true"></i>+7 (705) 428-57-07</a>
+        <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-full bg-brand-dark hover:bg-[#356A2D] transition-colors" aria-label="Написать в WhatsApp"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20"></a>
+        <a href="#podbor" class="btn-primary h-10 md:h-11 px-4 md:px-5 hidden md:inline-flex">Подобрать комплект</a>
+        <button id="burger" class="lg:hidden inline-flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-full hover:bg-ink/5" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu"><i data-lucide="menu" class="w-6 h-6" aria-hidden="true"></i></button>
       </div>
     </div>
-
-    <form class="hidden lg:flex flex-1 max-w-[420px]" role="search" onsubmit="return false">
-      <label class="relative w-full">
-        <span class="sr-only">Поиск по каталогу</span>
-        <i data-lucide="search" class="w-5 h-5 text-muted absolute left-3.5 top-1/2 -translate-y-1/2"></i>
-        <input type="search" class="input h-11 pl-11" placeholder="Например, шнур 6 жил">
-      </label>
-    </form>
-
-    <div class="ml-auto flex items-center gap-2 md:gap-3">
-      <a href="tel:+77054285707" class="hidden md:inline-flex btn-ghost h-11 px-3 font-medium"><i data-lucide="phone" class="w-5 h-5"></i><span class="hidden xl:inline">+7 (705) 428-57-07</span></a>
-      <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="hidden md:inline-flex btn-outline h-11 px-4 border-brand-dark/40 text-brand-dark hover:bg-cream" aria-label="Написать в WhatsApp"><img src="assets/icons/whatsapp-3E7A34.svg" alt="" class="w-5 h-5"><span>WhatsApp</span></a>
-      <a href="#podbor" class="btn-primary h-11 px-4 hidden md:inline-flex">Подобрать комплект</a>
-      <button class="md:hidden btn-ghost h-11 w-11 px-0" aria-label="Поиск"><i data-lucide="search" class="w-6 h-6"></i></button>
-      <button id="burger" class="md:hidden btn-ghost h-11 w-11 px-0" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu"><i data-lucide="menu" class="w-6 h-6"></i></button>
-    </div>
-  </div>
-
-  <!-- мобильное меню -->
-  <div id="mobileMenu" hidden class="md:hidden border-t border-line bg-white">
-    <nav class="container-site py-3 flex flex-col">
-      <a href="#catalog" class="py-3 font-semibold border-b border-line">Каталог</a>
-      <a href="#podbor" class="py-3 border-b border-line">Подбор комплекта</a>
-      <a href="#flagmany" class="py-3 border-b border-line">Электропастухи 15 и 25 Дж</a>
-      <a href="#komplekty" class="py-3 border-b border-line">Готовые комплекты</a>
-      <a href="#kak-rabotaet" class="py-3 border-b border-line">Как это работает</a>
-      <a href="#dostavka" class="py-3 border-b border-line">Доставка и оплата</a>
-      <a href="#faq" class="py-3 border-b border-line">Вопросы и ответы</a>
-      <div class="pt-4 pb-2 text-[14px] text-muted">Алматы, мкр. Атырау, 159/8, склад № 1 · Пн–Пт 10–18, Сб 10–16</div>
-      <a href="tel:+77054285707" class="py-2 font-medium">+7 (705) 428-57-07</a>
-      <a href="tel:+77757716024" class="py-2 font-medium">+7 (775) 771-60-24</a>
+  </nav>
+  <div id="mobileMenu" hidden class="lg:hidden mx-auto max-w-site mt-2 rounded-2xl border border-white/50 bg-white/95 backdrop-blur-xl p-2 z-menu">
+    <nav class="flex flex-col text-[16px] font-medium">
+      <a href="#catalog" class="px-4 py-3 rounded-xl hover:bg-ink/5">Каталог</a>
+      <a href="#podbor" class="px-4 py-3 rounded-xl hover:bg-ink/5">Подбор комплекта</a>
+      <a href="#flagmany" class="px-4 py-3 rounded-xl hover:bg-ink/5">Электропастухи 15 и 25&nbsp;Дж</a>
+      <a href="#komplekty" class="px-4 py-3 rounded-xl hover:bg-ink/5">Готовые комплекты</a>
+      <a href="#kak-rabotaet" class="px-4 py-3 rounded-xl hover:bg-ink/5">Как это работает</a>
+      <a href="#dostavka" class="px-4 py-3 rounded-xl hover:bg-ink/5">Доставка и оплата</a>
+      <a href="#faq" class="px-4 py-3 rounded-xl hover:bg-ink/5">Вопросы и ответы</a>
+      <div class="px-4 pt-3 pb-2 text-[14px] text-muted border-t border-line mt-1">Алматы, мкр. Атырау, 159/8, склад № 1 · Пн–Пт 10–18, Сб 10–16</div>
+      <a href="tel:+77054285707" class="px-4 py-2 font-semibold">+7 (705) 428-57-07</a>
+      <a href="tel:+77757716024" class="px-4 pb-3 font-semibold">+7 (775) 771-60-24</a>
     </nav>
   </div>
-</header>
+</div>
 
-<main>
-<!-- ================= 6.2 ГЛАВНЫЙ ЭКРАН ================= -->
-<section class="relative overflow-hidden">
-  <div class="container-site pt-10 pb-14 md:pt-16 md:pb-20 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-    <div class="lg:col-span-7 order-2 lg:order-1">
-      <p class="overline reveal d1">Электропастухи и электроизгороди · Алматы · доставка по Казахстану</p>
-      <h1 class="reveal d2 mt-4 text-[34px] leading-[38px] md:text-[46px] md:leading-[52px] lg:text-[52px] lg:leading-[58px] font-bold max-w-[16ch]">Электроизгородь, которая держит стадо</h1>
-      <p class="reveal d3 mt-5 lead text-[17px] md:text-[19px] md:leading-[30px]">Электропастухи GIGANT и Bekci от 6,9 до 25 Дж, готовые комплекты для овец, лошадей и КРС, питание от сети, аккумулятора или солнца. Подберём и поможем установить.</p>
-      <div class="reveal d4 mt-8 flex flex-col sm:flex-row gap-3">
-        <a href="#podbor" class="btn-primary btn-lg">Подобрать комплект<i data-lucide="arrow-right" class="w-5 h-5"></i></a>
-        <a href="#catalog" class="btn-outline btn-lg">Смотреть каталог</a>
+<main id="top">
+<!-- ================= HERO ================= -->
+<section class="relative min-h-[88svh] md:min-h-[92svh] flex items-end overflow-hidden bg-deep text-white">
+  <img src="assets/img/hero-cattle-1920.jpg" srcset="assets/img/hero-cattle.jpg 1280w, assets/img/hero-cattle-1920.jpg 1920w" sizes="100vw" alt="Стадо коров пасётся за линией электроизгороди на склоне" class="hero-img absolute inset-0 w-full h-full object-cover object-[60%_45%]" fetchpriority="high" width="1920" height="1440">
+  <div class="absolute inset-0 bg-gradient-to-t from-deep via-deep/45 to-deep/5" aria-hidden="true"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-deep/70 via-deep/20 to-transparent" aria-hidden="true"></div>
+
+  <div id="heroContent" class="relative container-site w-full pt-32 pb-12 md:pb-16 lg:pb-20 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
+    <div class="lg:col-span-8">
+      <a href="https://www.ozon.ru/product/elektropastuh-gigant-15-dzh-dlya-korov-ovets-loshadey-kabanov-1632680883/" target="_blank" rel="noopener" class="hero-in d1 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-md pl-2 pr-4 py-1.5 text-[14px] font-medium hover:bg-white/20 transition-colors">
+        <span class="inline-flex items-center gap-0.5 rounded-full bg-pulse text-ink px-2 py-1 text-[12px] font-extrabold tabular-nums"><i data-lucide="star" class="w-3 h-3 fill-current" aria-hidden="true"></i>4,8</span>
+        <span>82 отзыва на Ozon</span>
+      </a>
+      <h1 class="hero-in d2 mt-6 font-black tracking-[-0.03em] text-[clamp(2.6rem,6.2vw,5.5rem)] leading-[0.98] max-w-[13ch]">Электроизгородь, которая держит <span class="accent text-pulse font-bold tracking-normal">стадо</span></h1>
+      <p class="hero-in d3 mt-6 text-[17px] md:text-[19px] leading-[1.5] text-white/85 max-w-[52ch]">Электропастухи GIGANT и Bekci от 6,9 до 25&nbsp;Дж, готовые комплекты для овец, лошадей и КРС, питание от сети, аккумулятора или солнца. Подберём и поможем установить.</p>
+      <div class="hero-in d4 mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="#podbor" class="btn-primary btn-lg">Подобрать комплект<i data-lucide="arrow-right" class="w-5 h-5" aria-hidden="true"></i></a>
+        <a href="#catalog" class="btn-glass btn-lg">Смотреть каталог</a>
       </div>
-      <ul class="reveal d5 mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[14px] md:text-[15px] text-muted">
-        <li class="inline-flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark"></i>Склад в Алматы, отгрузка в день заказа</li>
-        <li class="inline-flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark"></i>Консультация по установке</li>
-        <li class="inline-flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark"></i>Гарантия до 2 лет</li>
-        <li class="inline-flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark"></i>Опт и розница</li>
+      <ul class="hero-in d5 mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[14px] md:text-[15px] text-white/80">
+        <li class="inline-flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pulse" aria-hidden="true"></i>Склад в Алматы, отгрузка в день заказа</li>
+        <li class="inline-flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pulse" aria-hidden="true"></i>Консультация по установке</li>
+        <li class="inline-flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pulse" aria-hidden="true"></i>Гарантия до 2 лет</li>
+        <li class="inline-flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pulse" aria-hidden="true"></i>Опт и розница</li>
       </ul>
-      <!-- линия ограждения -->
-      <div class="fence relative mt-10 mr-6" aria-hidden="true"><span class="post" style="left:0"></span><span class="post" style="left:33%"></span><span class="post" style="left:66%"></span><span class="post" style="right:0"></span></div>
     </div>
-
-    <div class="lg:col-span-5 order-1 lg:order-2 reveal d3">
-      <div class="relative">
-        <div class="card overflow-hidden shadow-card">
-          <div class="relative bg-white aspect-[4/3] md:aspect-square">
-            <img src="assets/img/product-gigant15.jpg" alt="Электропастух GIGANT 15 Дж с адаптером, пультом и клеммами" class="absolute inset-0 w-full h-full object-contain p-4" fetchpriority="high" width="800" height="800">
-            <span class="sign absolute left-4 top-4"><i data-lucide="zap" class="w-3.5 h-3.5"></i>Осторожно, электроизгородь</span>
-          </div>
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 p-3 border-t border-line bg-bg">
-            <span class="spec justify-center py-2.5"><span class="text-brand-dark">15</span>&nbsp;Дж</span>
-            <span class="spec justify-center py-2.5"><span class="text-brand-dark">12 000</span>&nbsp;В</span>
-            <span class="spec justify-center py-2.5">220 В / 12 В</span>
-            <span class="spec justify-center py-2.5">Пульт ДУ</span>
-          </div>
-        </div>
-        <img src="assets/img/hero-cattle.jpg" alt="" class="hidden lg:block absolute -z-10 -right-6 -top-6 w-full h-full object-cover rounded-2xl" width="1280" height="960">
-      </div>
-      <p class="mt-3 text-[13px] text-muted lg:hidden">GIGANT 15 Дж — флагман собственной марки</p>
-    </div>
+    <!-- техпаспорт флагмана -->
+    <a href="#flagmany" class="hero-in d5 hidden lg:flex lg:col-span-4 justify-self-end w-full max-w-[380px] items-center gap-4 rounded-2xl border border-white/25 bg-white/10 backdrop-blur-xl p-3 pr-5 hover:bg-white/15 transition-colors">
+      <span class="w-20 h-20 rounded-xl bg-white overflow-hidden shrink-0"><img src="assets/img/product-gigant15.jpg" alt="" class="w-full h-full object-cover" width="800" height="533"></span>
+      <span class="flex-1">
+        <span class="block text-[12px] font-semibold text-white/70">Флагман собственной марки</span>
+        <span class="block font-extrabold text-[18px] leading-tight mt-0.5">GIGANT 15&nbsp;Дж</span>
+        <span class="mt-2 flex gap-4 text-white/90"><span class="spec">15<span class="text-[12px] font-semibold text-white/70">Дж</span></span><span class="spec">12&nbsp;000<span class="text-[12px] font-semibold text-white/70">В</span></span><span class="spec">220/12<span class="text-[12px] font-semibold text-white/70">В</span></span></span>
+      </span>
+      <i data-lucide="arrow-up-right" class="w-5 h-5 text-white/70" aria-hidden="true"></i>
+    </a>
   </div>
 </section>
 
-<!-- ================= 6.3 ПОДБОР ================= -->
-<section id="podbor" class="container-site scroll-mt-24">
-  <div class="rounded-2xl bg-cream border border-brand/30 p-6 md:p-10">
-    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-      <div>
-        <p class="overline">Подбор за минуту</p>
-        <h2 class="h2 mt-2">Подберите комплект под своё хозяйство</h2>
-        <p class="lead mt-2">Три вопроса — и мы покажем модель, комплект и ориентировочную цену.</p>
+<!-- ================= ЛОГОТИПНАЯ ЛЕНТА ================= -->
+<div class="bg-white border-b border-line relative">
+  <button id="marqueeToggle" class="absolute right-3 top-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center w-9 h-9 rounded-full border border-line bg-white text-muted hover:text-ink hover:border-ink" aria-label="Остановить бегущую строку" aria-pressed="false"><i data-lucide="pause" class="w-4 h-4" aria-hidden="true"></i></button>
+  <div class="marquee overflow-hidden py-5">
+    <div class="marquee-track gap-12 pr-12 text-[15px] font-semibold uppercase tracking-[0.06em] text-muted">
+      <span class="inline-flex items-center gap-12"><span class="text-ink">GIGANT</span><span>Bekci</span><span>Satu.kz</span><span>Ozon</span><span>Wildberries</span><span>Опт и розница</span><span>Склад в Алматы</span><span>Доставка по Казахстану и СНГ</span><span>Гарантия до 2 лет</span></span>
+      <span class="inline-flex items-center gap-12" aria-hidden="true"><span class="text-ink">GIGANT</span><span>Bekci</span><span>Satu.kz</span><span>Ozon</span><span>Wildberries</span><span>Опт и розница</span><span>Склад в Алматы</span><span>Доставка по Казахстану и СНГ</span><span>Гарантия до 2 лет</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ПОДБОР ================= -->
+<section id="podbor" class="container-site scroll-mt-28 pt-12 md:pt-16">
+  <div class="rv rounded-2xl bg-cream border border-brand/25 p-6 md:p-10 lg:p-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-end">
+      <div class="lg:col-span-8">
+        <h2 class="h2">Подберите комплект под своё хозяйство</h2>
+        <p class="lead mt-3">Три вопроса — и мы покажем модель, комплект и ориентировочную цену. Точный состав подтвердит менеджер.</p>
       </div>
-      <p class="text-[14px] text-muted md:text-right md:max-w-[28ch]">Не хотите заполнять — просто напишите в WhatsApp, что за животные и сколько гектаров.</p>
+      <p class="lg:col-span-4 text-[15px] text-muted lg:text-right">Не хотите заполнять — напишите в WhatsApp, что за животные и сколько гектаров.</p>
     </div>
 
-    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-      <div>
-        <p class="kicker-num">01 · Животные</p>
+    <div class="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      <fieldset>
+        <legend class="font-extrabold text-[15px] text-brand-dark">Животные</legend>
         <div id="pickAnimal" class="mt-3 flex flex-wrap gap-2" role="group" aria-label="Вид животных">
           <button class="chip" data-v="krs" aria-pressed="true">КРС</button>
           <button class="chip" data-v="horse" aria-pressed="false">Лошади</button>
@@ -227,531 +225,446 @@ tailwind.config = {
           <button class="chip" data-v="bird" aria-pressed="false">Птица</button>
           <button class="chip" data-v="wild" aria-pressed="false">От диких животных</button>
         </div>
-      </div>
-      <div>
-        <p class="kicker-num">02 · Площадь или периметр</p>
+      </fieldset>
+      <fieldset>
+        <legend class="font-extrabold text-[15px] text-brand-dark">Площадь или периметр</legend>
         <div class="mt-3 flex gap-2">
-          <label class="relative flex-1">
-            <span class="sr-only">Значение</span>
-            <input id="pickArea" type="number" min="0.1" step="0.1" value="5" class="input pr-4" inputmode="decimal">
-          </label>
-          <div id="pickUnit" class="inline-flex rounded-lg border border-line bg-white p-1" role="group" aria-label="Единицы">
-            <button class="h-10 px-3 rounded-md text-[15px] font-medium bg-ink text-white" data-v="ha" aria-pressed="true">га</button>
-            <button class="h-10 px-3 rounded-md text-[15px] font-medium" data-v="m" aria-pressed="false">м периметра</button>
+          <label class="relative flex-1"><span class="sr-only">Значение</span><input id="pickArea" type="number" min="0.1" step="0.1" value="5" class="input" inputmode="decimal"></label>
+          <div id="pickUnit" class="inline-flex rounded-xl border border-line bg-white p-1" role="group" aria-label="Единицы">
+            <button class="h-10 px-3 rounded-lg text-[15px] font-medium bg-ink text-white" data-v="ha" aria-pressed="true">га</button>
+            <button class="h-10 px-3 rounded-lg text-[15px] font-medium" data-v="m" aria-pressed="false">м периметра</button>
           </div>
         </div>
-        <p class="mt-2 text-[13px] text-muted">Не знаете периметр — укажите площадь, мы посчитаем.</p>
-      </div>
-      <div>
-        <p class="kicker-num">03 · Питание</p>
+        <p class="mt-2 text-[14px] text-muted">Не знаете периметр — укажите площадь, мы посчитаем.</p>
+      </fieldset>
+      <fieldset>
+        <legend class="font-extrabold text-[15px] text-brand-dark">Питание</legend>
         <div id="pickPower" class="mt-3 flex flex-wrap gap-2" role="group" aria-label="Источник питания">
-          <button class="chip" data-v="220" aria-pressed="true">220 В</button>
-          <button class="chip" data-v="12" aria-pressed="false">12 В аккумулятор</button>
+          <button class="chip" data-v="220" aria-pressed="true">220&nbsp;В</button>
+          <button class="chip" data-v="12" aria-pressed="false">12&nbsp;В аккумулятор</button>
           <button class="chip" data-v="sun" aria-pressed="false">Солнечная панель</button>
         </div>
-      </div>
+      </fieldset>
     </div>
 
-    <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-3">
-      <button id="pickGo" class="btn-primary btn-lg">Показать решение<i data-lucide="arrow-right" class="w-5 h-5"></i></button>
-      <span class="text-[14px] text-muted">Результат ориентировочный. Точный состав подтвердит менеджер.</span>
+    <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
+      <button id="pickGo" class="btn-primary btn-lg">Показать решение<i data-lucide="arrow-right" class="w-5 h-5" aria-hidden="true"></i></button>
     </div>
 
-    <div id="pickResult" hidden class="mt-6 card p-5 md:p-6 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-5 md:gap-8 items-center">
+    <div id="pickResult" hidden aria-live="polite" class="mt-6 card p-5 md:p-6 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-5 md:gap-8 items-center">
       <div>
-        <p class="overline">Рекомендуем</p>
+        <p class="text-[13px] font-semibold text-brand-dark">Рекомендуем</p>
         <p id="resModel" class="h3 mt-1"></p>
         <p id="resKit" class="mt-2 text-muted"></p>
         <p id="resPower" class="mt-1 text-muted"></p>
         <p id="resWhy" class="mt-3 text-[14px] text-muted"></p>
       </div>
       <div class="md:text-right">
-        <p id="resPrice" class="font-display font-bold text-[28px] leading-none"></p>
+        <p id="resPrice" class="font-black text-[28px] leading-none tabular-nums"></p>
         <div class="mt-4 flex flex-col sm:flex-row md:flex-col gap-2">
           <a href="#konsultaciya" class="btn-primary">Заказать</a>
-          <a id="resWa" href="#" target="_blank" rel="noopener" class="btn-secondary"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5">Обсудить в WhatsApp</a>
+          <a id="resWa" href="#" target="_blank" rel="noopener" class="btn-secondary"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Обсудить в WhatsApp</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= 6.4 КАТЕГОРИИ ================= -->
-<section id="catalog" class="section scroll-mt-20">
+<!-- ================= ФЛАГМАНЫ ================= -->
+<section id="flagmany" class="section scroll-mt-24">
   <div class="container-site">
-    <div class="flex items-end justify-between gap-4">
-      <div><p class="overline">Каталог</p><h2 class="h2 mt-2">Всё для электроизгороди в одном месте</h2></div>
-      <a href="#" class="hidden md:inline-flex items-center gap-1 font-medium text-brand-dark hover:underline">Все товары<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+    <div class="rv grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
+      <h2 class="h2 lg:col-span-7">Два прибора, которые закрывают <span class="accent text-brand-dark font-bold tracking-normal">любую задачу</span></h2>
+      <p class="lead lg:col-span-5">Оба работают от сети 220&nbsp;В и от аккумулятора 12&nbsp;В. Разница — в запасе мощности на длину линии, траву и характер животных.</p>
     </div>
-    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 md:auto-rows-[150px]">
-      <a href="#flagmany" class="card card-hover col-span-2 md:row-span-2 overflow-hidden group flex flex-col">
-        <div class="flex-1 min-h-[170px] overflow-hidden"><img src="assets/img/cow-tape.jpg" alt="Корова у ленты электроизгороди" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-start justify-between gap-3 shrink-0"><div><h3 class="h3">Электропастухи</h3><p class="text-muted text-[14px] mt-1">GIGANT и Bekci, 6,9 · 14,5 · 15 · 25 Дж</p></div><span class="text-[13px] text-muted whitespace-nowrap">4 модели</span></div>
+
+    <div class="rv-stagger mt-10 grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6">
+      <article class="card lift overflow-hidden flex flex-col">
+        <div class="bg-white aspect-[16/10] relative">
+          <img src="assets/img/product-gigant15.jpg" alt="Электропастух GIGANT 15&nbsp;Дж с адаптером, пультом и клеммами" class="absolute inset-0 w-full h-full object-contain p-6" loading="lazy" width="800" height="533">
+          <span class="absolute left-4 top-4 rounded-full bg-cream text-brand-dark text-[12px] font-bold px-2.5 py-1">Собственная марка</span>
+        </div>
+        <div class="p-6 md:p-7 flex flex-col flex-1 border-t border-line">
+          <div class="flex items-start justify-between gap-4">
+            <div><h3 class="font-black text-[26px] leading-none tracking-[-0.02em]">GIGANT 15&nbsp;Дж</h3><p class="text-muted text-[15px] mt-2">Стандартные хозяйства и средние периметры</p></div>
+            <p class="font-black text-[24px] leading-none tabular-nums whitespace-nowrap">105 000 ₸</p>
+          </div>
+          <dl class="mt-5 grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3 text-[15px]">
+            <div><dt class="text-[13px] text-muted">Импульс</dt><dd class="font-bold tabular-nums">15&nbsp;Дж</dd></div>
+            <div><dt class="text-[13px] text-muted">Напряжение</dt><dd class="font-bold tabular-nums">12&nbsp;000&nbsp;В</dd></div>
+            <div><dt class="text-[13px] text-muted">Питание</dt><dd class="font-bold">220&nbsp;В / 12&nbsp;В</dd></div>
+            <div><dt class="text-[13px] text-muted">Управление</dt><dd class="font-bold">Пульт ДУ</dd></div>
+            <div><dt class="text-[13px] text-muted">Для кого</dt><dd class="font-bold">КРС, овцы, козы</dd></div>
+            <div><dt class="text-[13px] text-muted">Гарантия</dt><dd class="font-bold">1 год</dd></div>
+          </dl>
+          <div class="mt-auto pt-6 flex flex-wrap gap-3">
+            <a href="#konsultaciya" class="btn-primary h-11 px-5">Заказать</a>
+            <a href="https://wa.me/77054285707?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20GIGANT%2015%20%D0%94%D0%B6" target="_blank" rel="noopener" class="btn-outline h-11 px-4"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5" width="20" height="20">WhatsApp</a>
+          </div>
+        </div>
+      </article>
+      <article class="card lift overflow-hidden flex flex-col">
+        <div class="bg-white aspect-[16/10] relative">
+          <img src="assets/img/product-bekci25.jpg" alt="Электропастух Bekci 25&nbsp;Дж" class="absolute inset-0 w-full h-full object-contain p-6" loading="lazy" width="800" height="1073">
+          <span class="absolute left-4 top-4 rounded-full bg-pulse text-ink text-[12px] font-bold px-2.5 py-1">Максимальная мощность</span>
+        </div>
+        <div class="p-6 md:p-7 flex flex-col flex-1 border-t border-line">
+          <div class="flex items-start justify-between gap-4">
+            <div><h3 class="font-black text-[26px] leading-none tracking-[-0.02em]">Bekci 25&nbsp;Дж</h3><p class="text-muted text-[15px] mt-2">Большие периметры, густая трава, крупные и дикие животные</p></div>
+            <p class="font-black text-[24px] leading-none tabular-nums whitespace-nowrap">145 000 ₸</p>
+          </div>
+          <dl class="mt-5 grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3 text-[15px]">
+            <div><dt class="text-[13px] text-muted">Импульс</dt><dd class="font-bold tabular-nums">25&nbsp;Дж</dd></div>
+            <div><dt class="text-[13px] text-muted">Производство</dt><dd class="font-bold">Турция</dd></div>
+            <div><dt class="text-[13px] text-muted">Питание</dt><dd class="font-bold">220&nbsp;В / 12&nbsp;В</dd></div>
+            <div><dt class="text-[13px] text-muted">Корпус</dt><dd class="font-bold">Переносной</dd></div>
+            <div><dt class="text-[13px] text-muted">Для кого</dt><dd class="font-bold">КРС, лошади, дикие</dd></div>
+            <div><dt class="text-[13px] text-muted">Гарантия</dt><dd class="font-bold">2 года</dd></div>
+          </dl>
+          <div class="mt-auto pt-6 flex flex-wrap gap-3">
+            <a href="#konsultaciya" class="btn-primary h-11 px-5">Заказать</a>
+            <a href="https://wa.me/77054285707?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20Bekci%2025%20%D0%94%D0%B6" target="_blank" rel="noopener" class="btn-outline h-11 px-4"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5" width="20" height="20">WhatsApp</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <p class="rv mt-6 flex flex-col md:flex-row md:items-center gap-3 md:gap-6 text-[15px] text-muted">
+      <span><strong class="text-ink">Какой выбрать?</strong> 15&nbsp;Дж — стандартные хозяйства и средние периметры. 25&nbsp;Дж — большие периметры, густая растительность, крупные и дикие животные.</span>
+      <a href="#catalog" class="link md:ml-auto whitespace-nowrap">Вся линейка: 6,9 · 14,5 · 15 · 25&nbsp;Дж<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+    </p>
+  </div>
+</section>
+
+<!-- ================= КАТАЛОГ ================= -->
+<section id="catalog" class="section pt-0 scroll-mt-24">
+  <div class="container-site">
+    <div class="rv flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+      <div><h2 class="h2">Всё для электроизгороди</h2><p class="lead mt-3">От прибора до последнего изолятора — со склада в Алматы.</p></div>
+      <a href="#" class="link whitespace-nowrap">Все товары<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+    </div>
+    <div class="rv-stagger mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 md:auto-rows-[150px]">
+      <a href="#flagmany" class="card lift col-span-2 md:row-span-2 overflow-hidden group flex flex-col">
+        <div class="flex-1 min-h-[170px] overflow-hidden"><img src="assets/img/cow-tape.jpg" alt="Корова у ленты электроизгороди" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="p-4 md:p-5 flex items-start justify-between gap-3 shrink-0"><div><h3 class="h3">Электропастухи</h3><p class="text-muted text-[14px] mt-1">GIGANT и Bekci, 6,9 · 14,5 · 15 · 25&nbsp;Дж</p></div><span class="text-[13px] text-muted whitespace-nowrap">4 модели</span></div>
       </a>
-      <a href="#catalog" class="card card-hover p-4 md:p-5 flex flex-col justify-between min-h-[140px]"><i data-lucide="layers" class="w-7 h-7 text-brand-dark"></i><div><h3 class="font-display font-semibold text-[17px] leading-tight">Сетки и шнуры</h3><p class="text-muted text-[13px] mt-1">Шнур 6 жил, проволока 1,6 мм</p></div></a>
-      <a href="#catalog" class="card card-hover p-4 md:p-5 flex flex-col justify-between min-h-[140px]"><i data-lucide="milestone" class="w-7 h-7 text-brand-dark"></i><div><h3 class="font-display font-semibold text-[17px] leading-tight">Изоляторы и колышки</h3><p class="text-muted text-[13px] mt-1">Под проволоку, шнур, ленту</p></div></a>
-      <a href="#catalog" class="card card-hover p-4 md:p-5 flex flex-col justify-between min-h-[140px]"><i data-lucide="cable" class="w-7 h-7 text-brand-dark"></i><div><h3 class="font-display font-semibold text-[17px] leading-tight">Кабели и аксессуары</h3><p class="text-muted text-[13px] mt-1">Подключение, заземление, ворота</p></div></a>
-      <a href="#avtonomno" class="card card-hover p-4 md:p-5 flex flex-col justify-between min-h-[140px]"><i data-lucide="sun" class="w-7 h-7 text-brand-dark"></i><div><h3 class="font-display font-semibold text-[17px] leading-tight">Солнечное питание</h3><p class="text-muted text-[13px] mt-1">Панели, контроллеры, АКБ</p></div></a>
-      <a href="#komplekty" class="card card-hover col-span-2 md:row-span-2 overflow-hidden group flex flex-col">
-        <div class="flex-1 min-h-[170px] overflow-hidden"><img src="assets/img/solar-netting.jpg" alt="Электропастух с солнечной панелью у сетки" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-start justify-between gap-3 shrink-0"><div><h3 class="h3">Готовые комплекты</h3><p class="text-muted text-[14px] mt-1">Овцы 1 га · КРС 5 га · Лошади 6 га · автономные</p></div><span class="text-[13px] text-muted whitespace-nowrap">от 125 000 ₸</span></div>
+      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between min-h-[140px]"><i data-lucide="layers" class="w-6 h-6 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Сетки и шнуры</h3><p class="text-muted text-[13px] mt-1">Шнур 6 жил, проволока 1,6&nbsp;мм</p></div></a>
+      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between min-h-[140px]"><i data-lucide="milestone" class="w-6 h-6 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Изоляторы и колышки</h3><p class="text-muted text-[13px] mt-1">Под проволоку, шнур, ленту</p></div></a>
+      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between min-h-[140px]"><i data-lucide="cable" class="w-6 h-6 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Кабели и аксессуары</h3><p class="text-muted text-[13px] mt-1">Подключение, заземление, ворота</p></div></a>
+      <a href="#avtonomno" class="card lift p-4 md:p-5 flex flex-col justify-between min-h-[140px]"><i data-lucide="sun" class="w-6 h-6 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Солнечное питание</h3><p class="text-muted text-[13px] mt-1">Панели, контроллеры, АКБ</p></div></a>
+      <a href="#komplekty" class="card lift col-span-2 md:row-span-2 overflow-hidden group flex flex-col">
+        <div class="flex-1 min-h-[170px] overflow-hidden"><img src="assets/img/solar-netting.jpg" alt="Электропастух с солнечной панелью у сетки" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="p-4 md:p-5 flex items-start justify-between gap-3 shrink-0"><div><h3 class="h3">Готовые комплекты</h3><p class="text-muted text-[14px] mt-1">Овцы 1&nbsp;га · КРС 5&nbsp;га · Лошади 6&nbsp;га · автономные</p></div><span class="text-[13px] text-muted whitespace-nowrap">от 125 000 ₸</span></div>
       </a>
-      <a href="#catalog" class="card card-hover p-4 md:p-5 flex flex-col justify-between min-h-[140px]"><i data-lucide="scissors" class="w-7 h-7 text-brand-dark"></i><div><h3 class="font-display font-semibold text-[17px] leading-tight">Стрижка овец</h3><p class="text-muted text-[13px] mt-1">Машинки и ножи</p></div></a>
-      <a href="#catalog" class="card card-hover p-4 md:p-5 flex flex-col justify-between min-h-[140px]"><i data-lucide="flashlight" class="w-7 h-7 text-brand-dark"></i><div><h3 class="font-display font-semibold text-[17px] leading-tight">Электропогоняла</h3><p class="text-muted text-[13px] mt-1">GIGANT, 44 500 ₸</p></div></a>
-      <a href="#podbor" class="col-span-2 rounded-xl bg-dark text-cream p-5 flex items-center justify-between gap-4 transition-colors hover:bg-[#1f3323] min-h-[140px] md:min-h-0">
-        <div><p class="font-display font-semibold text-[18px] leading-tight">Не знаете, что нужно?</p><p class="text-cream/70 text-[14px] mt-1">Три вопроса — покажем комплект и цену.</p></div>
+      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between min-h-[140px]"><i data-lucide="scissors" class="w-6 h-6 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Стрижка овец</h3><p class="text-muted text-[13px] mt-1">Машинки и ножи</p></div></a>
+      <a href="#catalog" class="card lift p-4 md:p-5 flex flex-col justify-between min-h-[140px]"><i data-lucide="flashlight" class="w-6 h-6 text-brand-dark" aria-hidden="true"></i><div><h3 class="font-extrabold text-[17px] leading-tight">Электропогоняла</h3><p class="text-muted text-[13px] mt-1">GIGANT, 44 500 ₸</p></div></a>
+      <a href="#podbor" class="col-span-2 rounded-2xl bg-deep text-cream p-5 flex items-center justify-between gap-4 transition-colors hover:bg-[#1f3323] min-h-[140px] md:min-h-0">
+        <div><p class="font-extrabold text-[18px] leading-tight">Не знаете, что нужно?</p><p class="text-cream/70 text-[14px] mt-1">Три вопроса — покажем комплект и цену.</p></div>
         <span class="btn-primary h-11 px-4 shrink-0">Подобрать</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ================= 6.5 ФЛАГМАНЫ ================= -->
-<section id="flagmany" class="section pt-0 scroll-mt-20">
+<!-- ================= ПО ВИДАМ ЖИВОТНЫХ ================= -->
+<section id="zhivotnye" class="section bg-white border-y border-line scroll-mt-24">
   <div class="container-site">
-    <p class="overline">Электропастухи</p>
-    <h2 class="h2 mt-2">Два прибора, которые закрывают любую задачу</h2>
-    <p class="lead mt-3">Оба работают от сети 220 В и от аккумулятора 12 В. Разница — в запасе мощности на длину линии, траву и характер животных.</p>
-
-    <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
-      <!-- GIGANT 15 -->
-      <article class="card card-hover overflow-hidden flex flex-col">
-        <div class="grid grid-cols-1 sm:grid-cols-[200px_1fr] md:grid-cols-[240px_1fr]">
-          <div class="bg-white aspect-[4/3] sm:aspect-auto sm:min-h-[240px] relative border-b sm:border-b-0 sm:border-r border-line">
-            <img src="assets/img/product-gigant15.jpg" alt="Электропастух GIGANT 15 Дж" class="absolute inset-0 w-full h-full object-contain p-3" loading="lazy" width="800" height="800">
-          </div>
-          <div class="p-5 md:p-6">
-            <div class="flex items-center gap-2"><span class="rounded-md bg-cream text-brand-dark text-[12px] font-semibold px-2 py-1">Собственная марка</span><span class="rounded-md bg-cream text-brand-dark text-[12px] font-semibold px-2 py-1">В наличии</span></div>
-            <h3 class="mt-3 font-display font-bold text-[24px] leading-tight">GIGANT 15 Дж</h3>
-            <p class="text-muted text-[14px] mt-1">Для стандартных хозяйств и средних периметров</p>
-            <dl class="mt-4 grid grid-cols-1 text-[14px]">
-              <div class="flex justify-between gap-4 border-b border-line py-1.5"><dt class="text-muted shrink-0">Импульс</dt><dd class="font-semibold text-right">15 Дж</dd></div>
-              <div class="flex justify-between gap-4 border-b border-line py-1.5"><dt class="text-muted shrink-0">Напряжение</dt><dd class="font-semibold text-right">12 000 В</dd></div>
-              <div class="flex justify-between gap-4 border-b border-line py-1.5"><dt class="text-muted shrink-0">Питание</dt><dd class="font-semibold text-right">220 В / 12 В</dd></div>
-              <div class="flex justify-between gap-4 border-b border-line py-1.5"><dt class="text-muted shrink-0">Управление</dt><dd class="font-semibold text-right">Пульт ДУ</dd></div>
-              <div class="flex justify-between gap-4 border-b border-line py-1.5"><dt class="text-muted shrink-0">Для кого</dt><dd class="font-semibold text-right">КРС, овцы, козы</dd></div>
-              <div class="flex justify-between gap-4 border-b border-line py-1.5"><dt class="text-muted shrink-0">Гарантия</dt><dd class="font-semibold text-right">1 год</dd></div>
-            </dl>
-          </div>
-        </div>
-        <div class="mt-auto p-5 md:p-6 pt-0 md:pt-0 flex flex-wrap items-center gap-3">
-          <p class="font-display font-bold text-[26px] leading-none mr-auto">105 000 ₸</p>
-          <a href="https://wa.me/77054285707?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20GIGANT%2015%20%D0%94%D0%B6" target="_blank" rel="noopener" class="btn-outline h-11 px-4"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5">WhatsApp</a>
-          <a href="#konsultaciya" class="btn-primary h-11 px-5">Заказать</a>
-        </div>
-      </article>
-      <!-- Bekci 25 -->
-      <article class="card card-hover overflow-hidden flex flex-col">
-        <div class="grid grid-cols-1 sm:grid-cols-[200px_1fr] md:grid-cols-[240px_1fr]">
-          <div class="bg-white aspect-[4/3] sm:aspect-auto sm:min-h-[240px] relative border-b sm:border-b-0 sm:border-r border-line">
-            <img src="assets/img/product-bekci25.jpg" alt="Электропастух Bekci 25 Дж" class="absolute inset-0 w-full h-full object-contain p-3" loading="lazy" width="800" height="800">
-          </div>
-          <div class="p-5 md:p-6">
-            <div class="flex items-center gap-2"><span class="rounded-md bg-pulse/30 text-ink text-[12px] font-semibold px-2 py-1">Максимальная мощность</span><span class="rounded-md bg-cream text-brand-dark text-[12px] font-semibold px-2 py-1">В наличии</span></div>
-            <h3 class="mt-3 font-display font-bold text-[24px] leading-tight">Bekci 25 Дж</h3>
-            <p class="text-muted text-[14px] mt-1">Большие периметры, густая трава, крупные и дикие животные</p>
-            <dl class="mt-4 grid grid-cols-1 text-[14px]">
-              <div class="flex justify-between gap-4 border-b border-line py-1.5"><dt class="text-muted shrink-0">Импульс</dt><dd class="font-semibold text-right">25 Дж</dd></div>
-              <div class="flex justify-between gap-4 border-b border-line py-1.5"><dt class="text-muted shrink-0">Производство</dt><dd class="font-semibold text-right">Турция</dd></div>
-              <div class="flex justify-between gap-4 border-b border-line py-1.5"><dt class="text-muted shrink-0">Питание</dt><dd class="font-semibold text-right">220 В / 12 В</dd></div>
-              <div class="flex justify-between gap-4 border-b border-line py-1.5"><dt class="text-muted shrink-0">Корпус</dt><dd class="font-semibold text-right">Переносной</dd></div>
-              <div class="flex justify-between gap-4 border-b border-line py-1.5"><dt class="text-muted shrink-0">Для кого</dt><dd class="font-semibold text-right">КРС, лошади, дикие</dd></div>
-              <div class="flex justify-between gap-4 border-b border-line py-1.5"><dt class="text-muted shrink-0">Гарантия</dt><dd class="font-semibold text-right">2 года</dd></div>
-            </dl>
-          </div>
-        </div>
-        <div class="mt-auto p-5 md:p-6 pt-0 md:pt-0 flex flex-wrap items-center gap-3">
-          <p class="font-display font-bold text-[26px] leading-none mr-auto">145 000 ₸</p>
-          <a href="https://wa.me/77054285707?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20Bekci%2025%20%D0%94%D0%B6" target="_blank" rel="noopener" class="btn-outline h-11 px-4"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5">WhatsApp</a>
-          <a href="#konsultaciya" class="btn-primary h-11 px-5">Заказать</a>
-        </div>
-      </article>
+    <div class="rv grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
+      <h2 class="h2 lg:col-span-6">Каждому стаду&nbsp;— своя изгородь</h2>
+      <p class="lead lg:col-span-6">Число линий, высота и тип проводника зависят от того, кого вы держите. Ниже — обычная практика; точную схему дадим при подборе.</p>
     </div>
-
-    <div class="mt-6 card p-5 md:p-6 flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
-      <div class="flex items-start gap-3"><i data-lucide="scale" class="w-6 h-6 text-brand-dark shrink-0 mt-0.5"></i><p class="text-[15px]"><strong>Какой выбрать?</strong> 15 Дж — стандартные хозяйства и средние периметры. 25 Дж — большие периметры, густая растительность, крупные и дикие животные. Не уверены — напишите нам площадь и вид животных.</p></div>
-      <a href="#" class="md:ml-auto inline-flex items-center gap-1 font-medium text-brand-dark whitespace-nowrap hover:underline">Вся линейка: 6,9 · 14,5 · 15 · 25 Дж<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 6.6 ПО ВИДАМ ЖИВОТНЫХ ================= -->
-<section id="zhivotnye" class="section bg-white border-y border-line scroll-mt-20">
-  <div class="container-site">
-    <p class="overline">Решения по видам животных</p>
-    <h2 class="h2 mt-2">Каждому стаду — своя изгородь</h2>
-    <p class="lead mt-3">Число линий, высота и тип проводника зависят от того, кого вы держите. Ниже — обычная практика; точную схему дадим при подборе.</p>
-
     <div class="mt-8 -mx-5 px-5 md:mx-0 md:px-0 overflow-x-auto">
       <div id="animalTabs" class="flex gap-2 min-w-max" role="tablist" aria-label="Вид животных">
-        <button class="tab-btn" role="tab" aria-selected="true" aria-controls="tab-krs" id="tabbtn-krs">КРС</button>
-        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-horse" id="tabbtn-horse">Лошади</button>
-        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-sheep" id="tabbtn-sheep">Овцы и козы</button>
-        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-pig" id="tabbtn-pig">Свиньи</button>
-        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-bird" id="tabbtn-bird">Птица</button>
-        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-wild" id="tabbtn-wild">Дикие животные</button>
+        <button class="chip h-10" role="tab" aria-selected="true" aria-controls="tab-krs" id="tabbtn-krs">КРС</button>
+        <button class="chip h-10" role="tab" aria-selected="false" aria-controls="tab-horse" id="tabbtn-horse">Лошади</button>
+        <button class="chip h-10" role="tab" aria-selected="false" aria-controls="tab-sheep" id="tabbtn-sheep">Овцы и козы</button>
+        <button class="chip h-10" role="tab" aria-selected="false" aria-controls="tab-pig" id="tabbtn-pig">Свиньи</button>
+        <button class="chip h-10" role="tab" aria-selected="false" aria-controls="tab-bird" id="tabbtn-bird">Птица</button>
+        <button class="chip h-10" role="tab" aria-selected="false" aria-controls="tab-wild" id="tabbtn-wild">Дикие животные</button>
       </div>
     </div>
-
     <div class="mt-6">
-      <!-- КРС -->
-      <div id="tab-krs" role="tabpanel" aria-labelledby="tabbtn-krs" class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-        <div class="lg:col-span-6 rounded-xl overflow-hidden aspect-[4/3]"><img src="assets/img/cattle-meadow.jpg" alt="Коровы на пастбище" class="w-full h-full object-cover" loading="lazy" width="900" height="600"></div>
+      <div id="tab-krs" role="tabpanel" aria-labelledby="tabbtn-krs" class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/cattle-meadow.jpg" alt="Коровы на пастбище" class="w-full h-full object-cover" loading="lazy" width="900" height="600"></div>
         <div class="lg:col-span-6">
           <h3 class="h3">Крупный рогатый скот</h3>
-          <p class="mt-2 text-muted">Спокойные и крупные животные: достаточно одной-двух линий на уровне груди. Главное — заметный проводник и стабильный импульс на длинном периметре.</p>
-          <dl class="mt-5 grid grid-cols-2 gap-3 text-[15px]">
-            <div class="card p-3"><dt class="text-muted text-[13px]">Линий</dt><dd class="font-semibold text-right">1–2</dd></div>
-            <div class="card p-3"><dt class="text-muted text-[13px]">Проводник</dt><dd class="font-semibold text-right">Проволока 1,6 мм или шнур 6 жил</dd></div>
-            <div class="card p-3"><dt class="text-muted text-[13px]">Прибор</dt><dd class="font-semibold text-right">GIGANT 15 · Bekci 25</dd></div>
-            <div class="card p-3"><dt class="text-muted text-[13px]">Готовый комплект</dt><dd class="font-semibold text-right">«Для КРС», 5 га</dd></div>
+          <p class="mt-3 text-muted">Спокойные и крупные животные: достаточно одной-двух линий на уровне груди. Главное — заметный проводник и стабильный импульс на длинном периметре.</p>
+          <dl class="mt-5 grid grid-cols-2 gap-x-6 gap-y-4 text-[15px]">
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Линий</dt><dd class="font-bold">1–2</dd></div>
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Проводник</dt><dd class="font-bold">Проволока 1,6&nbsp;мм или шнур 6 жил</dd></div>
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Прибор</dt><dd class="font-bold">GIGANT 15 · Bekci 25</dd></div>
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Готовый комплект</dt><dd class="font-bold">«Для КРС», 5&nbsp;га</dd></div>
           </dl>
-          <a href="#komplekty" class="mt-5 inline-flex items-center gap-1 font-medium text-brand-dark hover:underline">Комплект для КРС — 145 000 ₸<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          <a href="#komplekty" class="link mt-5">Комплект для КРС — 145 000 ₸<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
         </div>
       </div>
-      <!-- Лошади -->
-      <div id="tab-horse" role="tabpanel" aria-labelledby="tabbtn-horse" hidden class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-        <div class="lg:col-span-6 rounded-xl overflow-hidden aspect-[4/3]"><img src="assets/img/horses-steppe.jpg" alt="Лошади на пастбище в казахстанской степи" class="w-full h-full object-cover" loading="lazy" width="900" height="458"></div>
+      <div id="tab-horse" role="tabpanel" aria-labelledby="tabbtn-horse" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/horses-steppe.jpg" alt="Лошади на пастбище в казахстанской степи" class="w-full h-full object-cover" loading="lazy" width="900" height="458"></div>
         <div class="lg:col-span-6">
           <h3 class="h3">Лошади</h3>
-          <p class="mt-2 text-muted">Лошадь должна хорошо видеть границу: используют широкую ленту или яркий шнур в две-три линии. Прибор — с запасом на большой табунный периметр.</p>
-          <dl class="mt-5 grid grid-cols-2 gap-3 text-[15px]">
-            <div class="card p-3"><dt class="text-muted text-[13px]">Линий</dt><dd class="font-semibold text-right">2–3</dd></div>
-            <div class="card p-3"><dt class="text-muted text-[13px]">Проводник</dt><dd class="font-semibold text-right">Лента или шнур 6 жил</dd></div>
-            <div class="card p-3"><dt class="text-muted text-[13px]">Прибор</dt><dd class="font-semibold text-right">GIGANT 15 · Bekci 25</dd></div>
-            <div class="card p-3"><dt class="text-muted text-[13px]">Готовый комплект</dt><dd class="font-semibold text-right">«Для лошадей», 6 га</dd></div>
+          <p class="mt-3 text-muted">Лошадь должна хорошо видеть границу: используют широкую ленту или яркий шнур в две-три линии. Прибор — с запасом на большой табунный периметр.</p>
+          <dl class="mt-5 grid grid-cols-2 gap-x-6 gap-y-4 text-[15px]">
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Линий</dt><dd class="font-bold">2–3</dd></div>
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Проводник</dt><dd class="font-bold">Лента или шнур 6 жил</dd></div>
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Прибор</dt><dd class="font-bold">GIGANT 15 · Bekci 25</dd></div>
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Готовый комплект</dt><dd class="font-bold">«Для лошадей», 6&nbsp;га</dd></div>
           </dl>
-          <a href="#komplekty" class="mt-5 inline-flex items-center gap-1 font-medium text-brand-dark hover:underline">Комплект для лошадей — 125 000 ₸<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          <a href="#komplekty" class="link mt-5">Комплект для лошадей — 125 000 ₸<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
         </div>
       </div>
-      <!-- Овцы и козы -->
-      <div id="tab-sheep" role="tabpanel" aria-labelledby="tabbtn-sheep" hidden class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-        <div class="lg:col-span-6 rounded-xl overflow-hidden aspect-[4/3]"><img src="assets/img/sheep.jpg" alt="Овца на выпасе" class="w-full h-full object-cover" loading="lazy" width="900" height="631"></div>
+      <div id="tab-sheep" role="tabpanel" aria-labelledby="tabbtn-sheep" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/sheep.jpg" alt="Овца на выпасе" class="w-full h-full object-cover" loading="lazy" width="900" height="631"></div>
         <div class="lg:col-span-6">
           <h3 class="h3">Овцы и козы</h3>
-          <p class="mt-2 text-muted">Шерсть изолирует, а козы любят пролезать снизу, поэтому линий нужно больше и ниже к земле — либо готовая электросетка.</p>
-          <dl class="mt-5 grid grid-cols-2 gap-3 text-[15px]">
-            <div class="card p-3"><dt class="text-muted text-[13px]">Линий</dt><dd class="font-semibold text-right">4–5 или сетка</dd></div>
-            <div class="card p-3"><dt class="text-muted text-[13px]">Проводник</dt><dd class="font-semibold text-right">Сетка или шнур 6 жил</dd></div>
-            <div class="card p-3"><dt class="text-muted text-[13px]">Прибор</dt><dd class="font-semibold text-right">Bekci 14,5 · GIGANT 15</dd></div>
-            <div class="card p-3"><dt class="text-muted text-[13px]">Готовый комплект</dt><dd class="font-semibold text-right">«Для овец», 1 га</dd></div>
+          <p class="mt-3 text-muted">Шерсть изолирует, а козы любят пролезать снизу, поэтому линий нужно больше и ниже к земле — либо готовая электросетка.</p>
+          <dl class="mt-5 grid grid-cols-2 gap-x-6 gap-y-4 text-[15px]">
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Линий</dt><dd class="font-bold">4–5 или сетка</dd></div>
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Проводник</dt><dd class="font-bold">Сетка или шнур 6 жил</dd></div>
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Прибор</dt><dd class="font-bold">Bekci 14,5 · GIGANT 15</dd></div>
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Готовый комплект</dt><dd class="font-bold">«Для овец», 1&nbsp;га</dd></div>
           </dl>
-          <a href="#komplekty" class="mt-5 inline-flex items-center gap-1 font-medium text-brand-dark hover:underline">Комплект для овец — 125 000 ₸<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          <a href="#komplekty" class="link mt-5">Комплект для овец — 125 000 ₸<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
         </div>
       </div>
-      <!-- Свиньи -->
-      <div id="tab-pig" role="tabpanel" aria-labelledby="tabbtn-pig" hidden class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-        <div class="lg:col-span-6 rounded-xl overflow-hidden aspect-[4/3]"><img src="assets/img/fence-tape.jpg" alt="Линии электроизгороди на пастбище" class="w-full h-full object-cover" loading="lazy" width="900" height="296"></div>
+      <div id="tab-pig" role="tabpanel" aria-labelledby="tabbtn-pig" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/fence-tape.jpg" alt="Линии электроизгороди на пастбище" class="w-full h-full object-cover" loading="lazy" width="900" height="296"></div>
         <div class="lg:col-span-6">
           <h3 class="h3">Свиньи</h3>
-          <p class="mt-2 text-muted">Свиньи проверяют границу носом — линии ставят низко, у самой земли, и следят, чтобы трава не замыкала проводник.</p>
-          <dl class="mt-5 grid grid-cols-2 gap-3 text-[15px]">
-            <div class="card p-3"><dt class="text-muted text-[13px]">Линий</dt><dd class="font-semibold text-right">2–3, низко</dd></div>
-            <div class="card p-3"><dt class="text-muted text-[13px]">Проводник</dt><dd class="font-semibold text-right">Проволока или шнур</dd></div>
-            <div class="card p-3"><dt class="text-muted text-[13px]">Прибор</dt><dd class="font-semibold text-right">GIGANT 15</dd></div>
-            <div class="card p-3"><dt class="text-muted text-[13px]">Готовый комплект</dt><dd class="font-semibold text-right">Собираем под периметр</dd></div>
+          <p class="mt-3 text-muted">Свиньи проверяют границу носом — линии ставят низко, у самой земли, и следят, чтобы трава не замыкала проводник.</p>
+          <dl class="mt-5 grid grid-cols-2 gap-x-6 gap-y-4 text-[15px]">
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Линий</dt><dd class="font-bold">2–3, низко</dd></div>
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Проводник</dt><dd class="font-bold">Проволока или шнур</dd></div>
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Прибор</dt><dd class="font-bold">GIGANT 15</dd></div>
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Готовый комплект</dt><dd class="font-bold">Собираем под периметр</dd></div>
           </dl>
-          <a href="#podbor" class="mt-5 inline-flex items-center gap-1 font-medium text-brand-dark hover:underline">Подобрать комплект<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          <a href="#podbor" class="link mt-5">Подобрать комплект<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
         </div>
       </div>
-      <!-- Птица -->
-      <div id="tab-bird" role="tabpanel" aria-labelledby="tabbtn-bird" hidden class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-        <div class="lg:col-span-6 rounded-xl overflow-hidden aspect-[4/3]"><img src="assets/img/solar-netting.jpg" alt="Электросетка с генератором на солнечной панели" class="w-full h-full object-cover" loading="lazy" width="900" height="675"></div>
+      <div id="tab-bird" role="tabpanel" aria-labelledby="tabbtn-bird" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/solar-netting.jpg" alt="Электросетка с генератором на солнечной панели" class="w-full h-full object-cover" loading="lazy" width="900" height="675"></div>
         <div class="lg:col-span-6">
           <h3 class="h3">Птица</h3>
-          <p class="mt-2 text-muted">Для кур, гусей и индеек работает только электросетка: она держит птицу внутри и не пускает лис и собак снаружи.</p>
-          <dl class="mt-5 grid grid-cols-2 gap-3 text-[15px]">
-            <div class="card p-3"><dt class="text-muted text-[13px]">Линий</dt><dd class="font-semibold text-right">Сетка</dd></div>
-            <div class="card p-3"><dt class="text-muted text-[13px]">Проводник</dt><dd class="font-semibold text-right">Электросетка</dd></div>
-            <div class="card p-3"><dt class="text-muted text-[13px]">Прибор</dt><dd class="font-semibold text-right">Bekci 6.9 · GIGANT 15</dd></div>
-            <div class="card p-3"><dt class="text-muted text-[13px]">Готовый комплект</dt><dd class="font-semibold text-right">Собираем под периметр</dd></div>
+          <p class="mt-3 text-muted">Для кур, гусей и индеек работает только электросетка: она держит птицу внутри и не пускает лис и собак снаружи.</p>
+          <dl class="mt-5 grid grid-cols-2 gap-x-6 gap-y-4 text-[15px]">
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Линий</dt><dd class="font-bold">Сетка</dd></div>
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Проводник</dt><dd class="font-bold">Электросетка</dd></div>
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Прибор</dt><dd class="font-bold">Bekci 6.9 · GIGANT 15</dd></div>
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Готовый комплект</dt><dd class="font-bold">Собираем под периметр</dd></div>
           </dl>
-          <a href="#podbor" class="mt-5 inline-flex items-center gap-1 font-medium text-brand-dark hover:underline">Подобрать комплект<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          <a href="#podbor" class="link mt-5">Подобрать комплект<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
         </div>
       </div>
-      <!-- Дикие -->
-      <div id="tab-wild" role="tabpanel" aria-labelledby="tabbtn-wild" hidden class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-        <div class="lg:col-span-6 rounded-xl overflow-hidden aspect-[4/3]"><img src="assets/img/fence-berry.jpg" alt="Электроизгородь по периметру поля" class="w-full h-full object-cover" loading="lazy" width="900" height="512"></div>
+      <div id="tab-wild" role="tabpanel" aria-labelledby="tabbtn-wild" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/fence-berry.jpg" alt="Электроизгородь по периметру поля" class="w-full h-full object-cover" loading="lazy" width="900" height="512"></div>
         <div class="lg:col-span-6">
           <h3 class="h3">Защита от диких животных</h3>
-          <p class="mt-2 text-muted">Кабаны, волки и собаки идут снизу, лоси и косули — сверху. Нужны низкие линии, хорошее заземление и прибор с запасом мощности.</p>
-          <dl class="mt-5 grid grid-cols-2 gap-3 text-[15px]">
-            <div class="card p-3"><dt class="text-muted text-[13px]">Линий</dt><dd class="font-semibold text-right">3–4, от земли</dd></div>
-            <div class="card p-3"><dt class="text-muted text-[13px]">Проводник</dt><dd class="font-semibold text-right">Проволока 1,6 мм</dd></div>
-            <div class="card p-3"><dt class="text-muted text-[13px]">Прибор</dt><dd class="font-semibold text-right">Bekci 25</dd></div>
-            <div class="card p-3"><dt class="text-muted text-[13px]">Готовый комплект</dt><dd class="font-semibold text-right">Собираем под периметр</dd></div>
+          <p class="mt-3 text-muted">Кабаны, волки и собаки идут снизу, лоси и косули — сверху. Нужны низкие линии, хорошее заземление и прибор с запасом мощности.</p>
+          <dl class="mt-5 grid grid-cols-2 gap-x-6 gap-y-4 text-[15px]">
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Линий</dt><dd class="font-bold">3–4, от земли</dd></div>
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Проводник</dt><dd class="font-bold">Проволока 1,6&nbsp;мм</dd></div>
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Прибор</dt><dd class="font-bold">Bekci 25</dd></div>
+            <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Готовый комплект</dt><dd class="font-bold">Собираем под периметр</dd></div>
           </dl>
-          <a href="#podbor" class="mt-5 inline-flex items-center gap-1 font-medium text-brand-dark hover:underline">Подобрать комплект<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          <a href="#podbor" class="link mt-5">Подобрать комплект<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= 6.7 ГОТОВЫЕ КОМПЛЕКТЫ ================= -->
-<section id="komplekty" class="section scroll-mt-20">
+<!-- ================= ГОТОВЫЕ КОМПЛЕКТЫ ================= -->
+<section id="komplekty" class="section scroll-mt-24">
   <div class="container-site">
-    <div class="flex items-end justify-between gap-4">
-      <div><p class="overline">Готовые комплекты</p><h2 class="h2 mt-2">Распаковал и поставил</h2><p class="lead mt-3">Всё нужное в одной коробке. При покупке полного комплекта аккумулятор — в подарок.</p></div>
-      <a href="#" class="hidden md:inline-flex items-center gap-1 font-medium text-brand-dark hover:underline whitespace-nowrap">Все комплекты<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+    <div class="rv flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+      <div><h2 class="h2">Распаковал и поставил</h2><p class="lead mt-3">Всё нужное в одной коробке. При покупке полного комплекта аккумулятор — в подарок.</p></div>
+      <a href="#" class="link whitespace-nowrap">Все комплекты<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
     </div>
-    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5">
-      <!-- овцы -->
-      <article class="card card-hover overflow-hidden flex flex-col">
-        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/sheep.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="631"><span class="absolute left-3 top-3 rounded-md bg-pulse text-ink text-[12px] font-semibold px-2 py-1">Аккумулятор в подарок</span></div>
+    <div class="rv-stagger mt-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5">
+      <article class="card lift overflow-hidden flex flex-col">
+        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/sheep.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="631"><span class="absolute left-3 top-3 rounded-full bg-pulse text-ink text-[12px] font-bold px-2.5 py-1">Аккумулятор в подарок</span></div>
         <div class="p-5 flex flex-col flex-1">
-          <p class="text-[13px] text-muted">Овцы и козы · до 1 га</p>
-          <h3 class="font-display font-bold text-[20px] leading-tight mt-1">Комплект «Для овец»</h3>
+          <p class="text-[13px] text-muted">Овцы и козы · до 1&nbsp;га</p>
+          <h3 class="font-extrabold text-[20px] leading-tight mt-1">Комплект «Для овец»</h3>
           <ul class="mt-3 space-y-1.5 text-[14px] text-muted">
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1"></i>Генератор импульсов</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1"></i>Проводник, изоляторы</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1"></i>Ворота</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1"></i>Аккумулятор 12 В</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Генератор импульсов</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Проводник, изоляторы</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Ворота</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Аккумулятор 12&nbsp;В</li>
           </ul>
-          <div class="mt-auto pt-5 flex items-center justify-between gap-3">
-            <p class="font-display font-bold text-[22px] leading-none">125 000 ₸</p>
-            <a href="#konsultaciya" class="btn-primary h-10 px-4 text-[15px]">Заказать</a>
-          </div>
-          <a href="#" class="mt-3 text-[14px] font-medium text-brand-dark hover:underline">Состав комплекта</a>
+          <div class="mt-auto pt-5 flex items-center justify-between gap-3"><p class="font-black text-[22px] leading-none tabular-nums">125 000 ₸</p><a href="#konsultaciya" class="btn-primary h-10 px-4 text-[15px]">Заказать</a></div>
         </div>
       </article>
-      <!-- КРС -->
-      <article class="card card-hover overflow-hidden flex flex-col">
-        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/cattle-meadow.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="600"><span class="absolute left-3 top-3 rounded-md bg-pulse text-ink text-[12px] font-semibold px-2 py-1">Аккумулятор в подарок</span></div>
+      <article class="card lift overflow-hidden flex flex-col">
+        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/cattle-meadow.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="600"><span class="absolute left-3 top-3 rounded-full bg-pulse text-ink text-[12px] font-bold px-2.5 py-1">Аккумулятор в подарок</span></div>
         <div class="p-5 flex flex-col flex-1">
-          <p class="text-[13px] text-muted">КРС · до 5 га</p>
-          <h3 class="font-display font-bold text-[20px] leading-tight mt-1">Комплект «Для КРС»</h3>
+          <p class="text-[13px] text-muted">КРС · до 5&nbsp;га</p>
+          <h3 class="font-extrabold text-[20px] leading-tight mt-1">Комплект «Для КРС»</h3>
           <ul class="mt-3 space-y-1.5 text-[14px] text-muted">
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1"></i>Генератор импульсов</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1"></i>Аккумулятор 12 В, 7 Ач</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1"></i>Проводник 1000 м, изоляторы</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1"></i>Предупреждающие таблички</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Генератор импульсов</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Аккумулятор 12&nbsp;В, 7&nbsp;Ач</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Проводник 1000 м, изоляторы</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Предупреждающие таблички</li>
           </ul>
-          <div class="mt-auto pt-5 flex items-center justify-between gap-3">
-            <p class="font-display font-bold text-[22px] leading-none">145 000 ₸</p>
-            <a href="#konsultaciya" class="btn-primary h-10 px-4 text-[15px]">Заказать</a>
-          </div>
-          <a href="#" class="mt-3 text-[14px] font-medium text-brand-dark hover:underline">Состав комплекта</a>
+          <div class="mt-auto pt-5 flex items-center justify-between gap-3"><p class="font-black text-[22px] leading-none tabular-nums">145 000 ₸</p><a href="#konsultaciya" class="btn-primary h-10 px-4 text-[15px]">Заказать</a></div>
         </div>
       </article>
-      <!-- лошади -->
-      <article class="card card-hover overflow-hidden flex flex-col">
-        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/horses-steppe-2.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="675"><span class="absolute left-3 top-3 rounded-md bg-pulse text-ink text-[12px] font-semibold px-2 py-1">Аккумулятор в подарок</span></div>
+      <article class="card lift overflow-hidden flex flex-col">
+        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/horses-steppe-2.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="675"><span class="absolute left-3 top-3 rounded-full bg-pulse text-ink text-[12px] font-bold px-2.5 py-1">Аккумулятор в подарок</span></div>
         <div class="p-5 flex flex-col flex-1">
-          <p class="text-[13px] text-muted">Лошади · до 6 га</p>
-          <h3 class="font-display font-bold text-[20px] leading-tight mt-1">Комплект «Для лошадей»</h3>
+          <p class="text-[13px] text-muted">Лошади · до 6&nbsp;га</p>
+          <h3 class="font-extrabold text-[20px] leading-tight mt-1">Комплект «Для лошадей»</h3>
           <ul class="mt-3 space-y-1.5 text-[14px] text-muted">
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1"></i>Генератор импульсов</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1"></i>Проволока, шнур, верёвка</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1"></i>Ворота, изоляторы</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1"></i>Аккумулятор 12 В</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Генератор импульсов</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Проволока, шнур, верёвка</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Ворота, изоляторы</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Аккумулятор 12&nbsp;В</li>
           </ul>
-          <div class="mt-auto pt-5 flex items-center justify-between gap-3">
-            <p class="font-display font-bold text-[22px] leading-none">125 000 ₸</p>
-            <a href="#konsultaciya" class="btn-primary h-10 px-4 text-[15px]">Заказать</a>
-          </div>
-          <a href="#" class="mt-3 text-[14px] font-medium text-brand-dark hover:underline">Состав комплекта</a>
+          <div class="mt-auto pt-5 flex items-center justify-between gap-3"><p class="font-black text-[22px] leading-none tabular-nums">125 000 ₸</p><a href="#konsultaciya" class="btn-primary h-10 px-4 text-[15px]">Заказать</a></div>
         </div>
       </article>
-      <!-- автономный -->
-      <article class="card card-hover overflow-hidden flex flex-col">
-        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/solar-energizer.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="586"><span class="absolute left-3 top-3 rounded-md bg-dark text-cream text-[12px] font-semibold px-2 py-1">Без розетки</span></div>
+      <article class="card lift overflow-hidden flex flex-col">
+        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/solar-energizer.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="586"><span class="absolute left-3 top-3 rounded-full bg-deep text-cream text-[12px] font-bold px-2.5 py-1">Без розетки</span></div>
         <div class="p-5 flex flex-col flex-1">
           <p class="text-[13px] text-muted">Любые животные · дальние пастбища</p>
-          <h3 class="font-display font-bold text-[20px] leading-tight mt-1">Автономный комплект</h3>
+          <h3 class="font-extrabold text-[20px] leading-tight mt-1">Автономный комплект</h3>
           <ul class="mt-3 space-y-1.5 text-[14px] text-muted">
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1"></i>Электропастух 15 или 25 Дж</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1"></i>Солнечная панель</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1"></i>MPPT-контроллер</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1"></i>Аккумулятор 12 В</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Электропастух 15 или 25&nbsp;Дж</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Солнечная панель</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>MPPT-контроллер</li>
+            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Аккумулятор 12&nbsp;В</li>
           </ul>
-          <div class="mt-auto pt-5 flex items-center justify-between gap-3">
-            <p class="font-display font-bold text-[18px] leading-none">Цена по запросу</p>
-            <a href="#podbor" class="btn-secondary h-10 px-4 text-[15px]">Собрать</a>
-          </div>
-          <a href="#avtonomno" class="mt-3 text-[14px] font-medium text-brand-dark hover:underline">Как работает автономное питание</a>
+          <div class="mt-auto pt-5 flex items-center justify-between gap-3"><p class="font-extrabold text-[17px] leading-tight">Цена по запросу</p><a href="#podbor" class="btn-secondary h-10 px-4 text-[15px]" data-preset-power="sun">Собрать</a></div>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ================= 6.8 КАК РАБОТАЕТ ================= -->
-<section id="kak-rabotaet" class="section pt-0 scroll-mt-20">
-  <div class="container-site">
-    <div class="card p-6 md:p-10 lg:p-12">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        <div class="lg:col-span-4">
-          <p class="overline">Принцип</p>
-          <h2 class="h2 mt-2">Как это работает</h2>
-          <p class="lead mt-3">Электроизгородь — не стена, а граница, которую животное запоминает после первого касания.</p>
-          <a href="#" class="mt-5 btn-outline">Схемы подключения<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-        </div>
-        <div class="lg:col-span-8">
-          <div class="relative">
-          <div class="fence hidden lg:block absolute top-6 left-6 right-[calc(25%-36px)]" aria-hidden="true"></div>
-          <ol class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
-            <li class="relative">
-              <div class="w-12 h-12 rounded-full bg-cream border-2 border-brand flex items-center justify-center relative z-10"><i data-lucide="zap" class="w-5 h-5 text-brand-dark"></i></div>
-              <p class="mt-3 font-display font-semibold">Электропастух</p>
-              <p class="text-[14px] text-muted mt-1">Раз в секунду отправляет в линию короткий высоковольтный импульс.</p>
-            </li>
-            <li class="relative">
-              <div class="w-12 h-12 rounded-full bg-cream border-2 border-brand flex items-center justify-center relative z-10"><i data-lucide="cable" class="w-5 h-5 text-brand-dark"></i></div>
-              <p class="mt-3 font-display font-semibold">Линия на изоляторах</p>
-              <p class="text-[14px] text-muted mt-1">Проволока, шнур или сетка на столбиках. Изоляторы не дают импульсу уйти в столб.</p>
-            </li>
-            <li class="relative">
-              <div class="w-12 h-12 rounded-full bg-cream border-2 border-brand flex items-center justify-center relative z-10"><i data-lucide="activity" class="w-5 h-5 text-brand-dark"></i></div>
-              <p class="mt-3 font-display font-semibold">Касание</p>
-              <p class="text-[14px] text-muted mt-1">Животное касается линии и получает ощутимый, но безопасный удар.</p>
-            </li>
-            <li class="relative">
-              <div class="w-12 h-12 rounded-full bg-cream border-2 border-brand flex items-center justify-center relative z-10"><i data-lucide="arrow-down-to-line" class="w-5 h-5 text-brand-dark"></i></div>
-              <p class="mt-3 font-display font-semibold">Заземление</p>
-              <p class="text-[14px] text-muted mt-1">Импульс уходит в землю через штыри заземления. Без него изгородь не работает.</p>
-            </li>
-          </ol>
-          </div>
-          <ul class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 text-[15px]">
-            <li class="rounded-lg bg-bg border border-line p-4"><span class="font-display font-bold text-brand-dark text-[22px] leading-none">~1 с</span><p class="text-muted text-[14px] mt-1">между импульсами — животное успевает отойти</p></li>
-            <li class="rounded-lg bg-bg border border-line p-4"><span class="font-display font-bold text-brand-dark text-[22px] leading-none">1–2 дня</span><p class="text-muted text-[14px] mt-1">и стадо запоминает границу</p></li>
-            <li class="rounded-lg bg-bg border border-line p-4"><span class="font-display font-bold text-brand-dark text-[22px] leading-none">Безопасно</span><p class="text-muted text-[14px] mt-1">для людей и животных при правильном монтаже</p></li>
-          </ul>
-        </div>
+<!-- ================= КАК ЭТО РАБОТАЕТ ================= -->
+<section id="kak-rabotaet" class="section pt-0 scroll-mt-24">
+  <div class="container-site grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+    <div class="lg:col-span-5">
+      <div class="lg:sticky lg:top-28">
+        <h2 class="h2 rv">Как это работает</h2>
+        <p class="lead mt-3 rv">Электроизгородь — не стена, а граница, которую животное запоминает после первого касания. Импульс идёт по кругу: прибор, линия, животное, земля.</p>
+        <div class="rv mt-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/insulator.jpg" alt="Изолятор на столбе держит проволоку электроизгороди" class="w-full h-full object-cover" loading="lazy" width="900" height="900"></div>
+        <a href="#" class="rv btn-outline mt-6">Схемы подключения<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
       </div>
     </div>
+    <ol class="lg:col-span-7 relative rv-stagger">
+      <div class="fence-v hidden md:block" aria-hidden="true"></div>
+      <li class="relative md:pl-20 py-6 md:py-8 border-b border-line">
+        <span class="hidden md:flex absolute left-0 top-6 md:top-8 w-12 h-12 rounded-full bg-cream border-2 border-brand items-center justify-center font-black text-brand-dark tabular-nums">1</span>
+        <h3 class="h3">Электропастух даёт импульс</h3>
+        <p class="mt-2 text-muted max-w-[52ch]">Примерно раз в секунду прибор отправляет в линию короткий высоковольтный импульс. Питание — от сети, аккумулятора или солнечной панели.</p>
+      </li>
+      <li class="relative md:pl-20 py-6 md:py-8 border-b border-line">
+        <span class="hidden md:flex absolute left-0 top-6 md:top-8 w-12 h-12 rounded-full bg-cream border-2 border-brand items-center justify-center font-black text-brand-dark tabular-nums">2</span>
+        <h3 class="h3">Линия держит напряжение</h3>
+        <p class="mt-2 text-muted max-w-[52ch]">Проволока, шнур или сетка натянуты на столбиках через изоляторы. Изолятор не даёт импульсу уйти в столб — поэтому его нельзя экономить.</p>
+      </li>
+      <li class="relative md:pl-20 py-6 md:py-8 border-b border-line">
+        <span class="hidden md:flex absolute left-0 top-6 md:top-8 w-12 h-12 rounded-full bg-cream border-2 border-brand items-center justify-center font-black text-brand-dark tabular-nums">3</span>
+        <h3 class="h3">Животное касается и запоминает</h3>
+        <p class="mt-2 text-muted max-w-[52ch]">Удар ощутимый, но безопасный. Стадо запоминает границу за один-два дня и дальше обходит линию стороной.</p>
+      </li>
+      <li class="relative md:pl-20 py-6 md:py-8">
+        <span class="hidden md:flex absolute left-0 top-6 md:top-8 w-12 h-12 rounded-full bg-cream border-2 border-brand items-center justify-center font-black text-brand-dark tabular-nums">4</span>
+        <h3 class="h3">Заземление замыкает круг</h3>
+        <p class="mt-2 text-muted max-w-[52ch]">Импульс уходит в землю через штыри заземления. Без хорошего заземления изгородь не работает — это половина успеха установки.</p>
+      </li>
+    </ol>
   </div>
 </section>
 
-<!-- ================= 6.9 АВТОНОМНОЕ ПИТАНИЕ (тёмная секция) ================= -->
-<section id="avtonomno" class="bg-dark text-cream scroll-mt-20">
-  <div class="container-site section grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-    <div class="lg:col-span-6">
-      <p class="overline text-pulse">Автономное питание</p>
-      <h2 class="h2 mt-2">Работает там, где нет розетки</h2>
-      <p class="mt-3 text-cream/75 text-[17px] max-w-[56ch]">Дальнее пастбище, летняя стоянка, участок без сети — прибор питается от аккумулятора, а солнечная панель заряжает его днём. Возить аккумулятор на зарядку не нужно.</p>
-      <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div class="rounded-xl border border-cream/15 p-4"><i data-lucide="battery-charging" class="w-6 h-6 text-pulse"></i><p class="mt-3 font-display font-semibold">Аккумулятор 12 В</p><p class="text-cream/65 text-[14px] mt-1">Запас энергии на ночь и пасмурные дни.</p></div>
-        <div class="rounded-xl border border-cream/15 p-4"><i data-lucide="sun" class="w-6 h-6 text-pulse"></i><p class="mt-3 font-display font-semibold">Солнечная панель</p><p class="text-cream/65 text-[14px] mt-1">Восполняет заряд, пока прибор работает.</p></div>
-        <div class="rounded-xl border border-cream/15 p-4"><i data-lucide="gauge" class="w-6 h-6 text-pulse"></i><p class="mt-3 font-display font-semibold">MPPT-контроллер</p><p class="text-cream/65 text-[14px] mt-1">Бережёт аккумулятор от перезаряда и глубокого разряда.</p></div>
-      </div>
-      <div class="mt-8 flex flex-col sm:flex-row gap-3">
-        <a href="#podbor" class="btn-primary btn-lg" data-preset-power="sun">Собрать автономный комплект<i data-lucide="arrow-right" class="w-5 h-5"></i></a>
-        <a href="https://wa.me/77054285707?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D0%B0%D0%B2%D1%82%D0%BE%D0%BD%D0%BE%D0%BC%D0%BD%D1%8B%D0%B9%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%20%D1%81%20%D1%81%D0%BE%D0%BB%D0%BD%D0%B5%D1%87%D0%BD%D0%BE%D0%B9%20%D0%BF%D0%B0%D0%BD%D0%B5%D0%BB%D1%8C%D1%8E" target="_blank" rel="noopener" class="btn btn-lg border border-cream/30 text-cream hover:bg-cream/10"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5">Спросить в WhatsApp</a>
+<!-- ================= АВТОНОМНОЕ ПИТАНИЕ ================= -->
+<section id="avtonomno" class="relative bg-deep text-cream scroll-mt-24 overflow-hidden">
+  <div class="grid grid-cols-1 lg:grid-cols-2">
+    <div class="relative min-h-[320px] lg:min-h-0">
+      <img src="assets/img/solar-line.jpg" alt="Солнечная панель на линии электроизгороди" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="1100" height="736">
+      <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-deep/70 lg:from-transparent via-transparent lg:via-transparent lg:to-deep/80" aria-hidden="true"></div>
+    </div>
+    <div class="section px-5 md:px-12 lg:px-16 xl:px-24">
+      <h2 class="h2 rv">Работает там, где нет розетки</h2>
+      <p class="rv mt-4 text-cream/80 text-[17px] md:text-[18px] leading-[1.6] max-w-[52ch]">Дальнее пастбище, летняя стоянка, участок без сети — прибор питается от аккумулятора, а солнечная панель заряжает его днём. Возить аккумулятор на зарядку не нужно.</p>
+      <dl class="rv-stagger mt-8 divide-y divide-cream/15 border-y border-cream/15">
+        <div class="py-4 flex gap-4"><i data-lucide="battery-charging" class="w-6 h-6 text-pulse shrink-0 mt-0.5" aria-hidden="true"></i><div><dt class="font-extrabold">Аккумулятор 12&nbsp;В</dt><dd class="text-cream/70 text-[15px] mt-0.5">Запас энергии на ночь и пасмурные дни.</dd></div></div>
+        <div class="py-4 flex gap-4"><i data-lucide="sun" class="w-6 h-6 text-pulse shrink-0 mt-0.5" aria-hidden="true"></i><div><dt class="font-extrabold">Солнечная панель</dt><dd class="text-cream/70 text-[15px] mt-0.5">Восполняет заряд, пока прибор работает.</dd></div></div>
+        <div class="py-4 flex gap-4"><i data-lucide="gauge" class="w-6 h-6 text-pulse shrink-0 mt-0.5" aria-hidden="true"></i><div><dt class="font-extrabold">MPPT-контроллер</dt><dd class="text-cream/70 text-[15px] mt-0.5">Бережёт аккумулятор от перезаряда и глубокого разряда.</dd></div></div>
+      </dl>
+      <div class="rv mt-8 flex flex-col sm:flex-row gap-3">
+        <a href="#podbor" class="btn-primary btn-lg" data-preset-power="sun">Собрать автономный комплект<i data-lucide="arrow-right" class="w-5 h-5" aria-hidden="true"></i></a>
+        <a href="https://wa.me/77054285707?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D0%B0%D0%B2%D1%82%D0%BE%D0%BD%D0%BE%D0%BC%D0%BD%D1%8B%D0%B9%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%20%D1%81%20%D1%81%D0%BE%D0%BB%D0%BD%D0%B5%D1%87%D0%BD%D0%BE%D0%B9%20%D0%BF%D0%B0%D0%BD%D0%B5%D0%BB%D1%8C%D1%8E" target="_blank" rel="noopener" class="btn-glass btn-lg"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Спросить в WhatsApp</a>
       </div>
       <div class="fence on-dark relative mt-10 mr-6" aria-hidden="true"><span class="post" style="left:0"></span><span class="post" style="left:50%"></span><span class="post" style="right:0"></span></div>
     </div>
-    <div class="lg:col-span-6">
-      <div class="rounded-2xl overflow-hidden aspect-[4/3] border border-cream/10"><img src="assets/img/solar-line.jpg" alt="Солнечная панель на линии электроизгороди" class="w-full h-full object-cover" loading="lazy" width="1100" height="736"></div>
-    </div>
   </div>
 </section>
 
-<!-- ================= 6.10 ПОЧЕМУ GIGANT AGRO ================= -->
-<section id="pochemu" class="section scroll-mt-20">
-  <div class="container-site">
-    <p class="overline">Почему GIGANT Agro</p>
-    <h2 class="h2 mt-2">Не прибор, а рабочее решение</h2>
-    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-      <div class="card p-5 md:p-6"><i data-lucide="zap" class="w-7 h-7 text-brand-dark"></i><h3 class="h3 mt-4">Мощность до 25 Дж</h3><p class="text-muted mt-2 text-[15px]">Четыре модели от 6,9 до 25 Дж — под загон, ферму и большой периметр.</p></div>
-      <div class="card p-5 md:p-6"><i data-lucide="package" class="w-7 h-7 text-brand-dark"></i><h3 class="h3 mt-4">Готовые комплекты</h3><p class="text-muted mt-2 text-[15px]">Под вид животных и площадь: овцы 1 га, КРС 5 га, лошади 6 га. Аккумулятор в подарок.</p></div>
-      <div class="card p-5 md:p-6"><i data-lucide="sliders-horizontal" class="w-7 h-7 text-brand-dark"></i><h3 class="h3 mt-4">Подбор за минуту</h3><p class="text-muted mt-2 text-[15px]">Три вопроса на сайте или один разговор с менеджером — и вы знаете, что покупать.</p></div>
-      <div class="card p-5 md:p-6"><i data-lucide="warehouse" class="w-7 h-7 text-brand-dark"></i><h3 class="h3 mt-4">Склад в Алматы</h3><p class="text-muted mt-2 text-[15px]">Основной ассортимент в наличии, отгрузка в день заказа. Опт и розница.</p></div>
-      <div class="card p-5 md:p-6"><i data-lucide="wrench" class="w-7 h-7 text-brand-dark"></i><h3 class="h3 mt-4">Помощь с установкой</h3><p class="text-muted mt-2 text-[15px]">Схемы подключения, инструкции и консультация в WhatsApp на каждом этапе монтажа.</p></div>
-      <div class="card p-5 md:p-6"><i data-lucide="shield-check" class="w-7 h-7 text-brand-dark"></i><h3 class="h3 mt-4">Гарантия до 2 лет</h3><p class="text-muted mt-2 text-[15px]">GIGANT — 1 год, Bekci — 2 года. Возврат и обмен 14 дней по закону РК.</p></div>
+<!-- ================= ДОСТАВКА И ОПЛАТА ================= -->
+<section id="dostavka" class="section scroll-mt-24">
+  <div class="container-site grid grid-cols-1 lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-5 rv">
+      <h2 class="h2">Забрать в Алматы или получить в регионе</h2>
+      <p class="lead mt-3">Основной ассортимент в наличии — отгружаем в день заказа.</p>
+      <a href="#" class="link mt-5">Подробнее о доставке<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
     </div>
-  </div>
-</section>
-
-<!-- 6.11 Отзывы: блок не публикуется, пока нет реальных отзывов и фото установок (правило промта). Место для секции id="otzyvy". -->
-
-<!-- ================= 6.12 ДОСТАВКА И ОПЛАТА ================= -->
-<section id="dostavka" class="section pt-0 scroll-mt-20">
-  <div class="container-site">
-    <div class="flex items-end justify-between gap-4">
-      <div><p class="overline">Доставка и оплата</p><h2 class="h2 mt-2">Забрать в Алматы или получить в регионе</h2></div>
-      <a href="#" class="hidden md:inline-flex items-center gap-1 font-medium text-brand-dark hover:underline whitespace-nowrap">Подробнее о доставке<i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-    </div>
-    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-      <div class="card p-5"><i data-lucide="map-pin" class="w-6 h-6 text-brand-dark"></i><h3 class="font-display font-semibold text-[18px] mt-3">Самовывоз</h3><p class="text-muted text-[14px] mt-1">Алматы, мкр. Атырау, 159/8, склад № 1. Пн–Пт 10–18, Сб 10–16.</p></div>
-      <div class="card p-5"><i data-lucide="truck" class="w-6 h-6 text-brand-dark"></i><h3 class="font-display font-semibold text-[18px] mt-3">Доставка по Казахстану</h3><p class="text-muted text-[14px] mt-1">Транспортными компаниями во все регионы, а также в Россию и страны СНГ. Стоимость считаем индивидуально, отправка после оплаты.</p></div>
-      <div class="card p-5"><i data-lucide="credit-card" class="w-6 h-6 text-brand-dark"></i><h3 class="font-display font-semibold text-[18px] mt-3">Оплата</h3><p class="text-muted text-[14px] mt-1">Наличными на складе или безналичным переводом по реквизитам для ИП и юрлиц.</p></div>
-      <div class="card p-5"><i data-lucide="store" class="w-6 h-6 text-brand-dark"></i><h3 class="font-display font-semibold text-[18px] mt-3">На маркетплейсах</h3><p class="text-muted text-[14px] mt-1">Привычнее покупать там? Мы есть на площадках:</p>
+    <dl class="lg:col-span-7 rv-stagger grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2">
+      <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><i data-lucide="map-pin" class="w-5 h-5 text-brand-dark" aria-hidden="true"></i>Самовывоз</dt><dd class="text-muted text-[15px] mt-2">Алматы, мкр. Атырау, 159/8, склад № 1. Пн–Пт 10–18, Сб 10–16.</dd></div>
+      <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><i data-lucide="truck" class="w-5 h-5 text-brand-dark" aria-hidden="true"></i>Доставка по Казахстану и СНГ</dt><dd class="text-muted text-[15px] mt-2">Транспортными компаниями во все регионы, а также в Россию и страны СНГ. Стоимость считаем индивидуально, отправка после оплаты.</dd></div>
+      <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><i data-lucide="credit-card" class="w-5 h-5 text-brand-dark" aria-hidden="true"></i>Оплата</dt><dd class="text-muted text-[15px] mt-2">Наличными на складе или безналичным переводом по реквизитам для ИП и юрлиц.</dd></div>
+      <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><i data-lucide="store" class="w-5 h-5 text-brand-dark" aria-hidden="true"></i>На маркетплейсах</dt><dd class="text-muted text-[15px] mt-2">Привычнее покупать там? Мы есть на площадках:</dd>
         <div class="mt-3 flex flex-wrap gap-2">
-          <a href="https://elektropastuh.satu.kz/" target="_blank" rel="noopener" class="rounded-md border border-line px-2.5 py-1 text-[13px] font-semibold hover:border-ink">Satu.kz</a>
-          <a href="https://www.ozon.ru/product/elektropastuh-gigant-15-dzh-dlya-korov-ovets-loshadey-kabanov-1632680883/" target="_blank" rel="noopener" class="rounded-md border border-line px-2.5 py-1 text-[13px] font-semibold hover:border-ink">Ozon</a>
-          <a href="https://www.wildberries.ru/catalog/694923616/detail.aspx" target="_blank" rel="noopener" class="rounded-md border border-line px-2.5 py-1 text-[13px] font-semibold hover:border-ink">Wildberries</a>
+          <a href="https://elektropastuh.satu.kz/" target="_blank" rel="noopener" class="rounded-full border border-line px-3 py-1.5 text-[13px] font-bold hover:border-ink">Satu.kz</a>
+          <a href="https://www.ozon.ru/product/elektropastuh-gigant-15-dzh-dlya-korov-ovets-loshadey-kabanov-1632680883/" target="_blank" rel="noopener" class="rounded-full border border-line px-3 py-1.5 text-[13px] font-bold hover:border-ink">Ozon · 4,8</a>
+          <a href="https://www.wildberries.ru/catalog/694923616/detail.aspx" target="_blank" rel="noopener" class="rounded-full border border-line px-3 py-1.5 text-[13px] font-bold hover:border-ink">Wildberries</a>
         </div>
       </div>
-    </div>
+    </dl>
   </div>
 </section>
 
-<!-- ================= 6.13 FAQ ================= -->
-<section id="faq" class="section bg-white border-y border-line scroll-mt-20">
+<!-- ================= FAQ ================= -->
+<section id="faq" class="section bg-white border-y border-line scroll-mt-24">
   <div class="container-site grid grid-cols-1 lg:grid-cols-12 gap-8">
-    <div class="lg:col-span-4">
-      <p class="overline">Вопросы и ответы</p>
-      <h2 class="h2 mt-2">Что спрашивают перед покупкой</h2>
+    <div class="lg:col-span-5 rv">
+      <h2 class="h2">Что спрашивают перед покупкой</h2>
       <p class="lead mt-3">Не нашли свой вопрос — напишите в WhatsApp, отвечаем в рабочее время в течение часа.</p>
-      <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="mt-5 btn-secondary"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5">Задать вопрос</a>
+      <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="btn-secondary mt-5"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Задать вопрос</a>
     </div>
-    <div class="lg:col-span-8 divide-y divide-line border-y border-line">
-      <details open class="group py-1">
-        <summary class="flex items-center justify-between gap-4 py-4 font-display font-semibold text-[17px] md:text-[18px]">Какую мощность выбрать?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark"></i></summary>
-        <p class="pb-5 text-muted">Для небольших загонов и спокойных животных достаточно 6,9 Дж. Для стандартных хозяйств с КРС, лошадьми, овцами — 14,5–15 Дж. Для больших периметров, густой травы и защиты от диких животных — 25 Дж. Сомневаетесь — напишите нам площадь и вид животных.</p>
-      </details>
-      <details class="group py-1">
-        <summary class="flex items-center justify-between gap-4 py-4 font-display font-semibold text-[17px] md:text-[18px]">Как рассчитать периметр по площади?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark"></i></summary>
-        <p class="pb-5 text-muted">Периметр зависит от формы участка. Для квадратного участка 1 га это около 400 м, 5 га — около 900 м, 6 га — около 980 м. Умножьте периметр на число линий — получите длину проводника. Вытянутый участок потребует больше.</p>
-      </details>
-      <details class="group py-1">
-        <summary class="flex items-center justify-between gap-4 py-4 font-display font-semibold text-[17px] md:text-[18px]">Сколько линий нужно?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark"></i></summary>
-        <p class="pb-5 text-muted">Крупным спокойным животным обычно хватает одной-двух линий. Мелким и активным — овцам, козам, свиньям — нужно больше линий и ниже к земле, либо готовая электросетка. Точное число и высоты подскажем при подборе.</p>
-      </details>
-      <details class="group py-1">
-        <summary class="flex items-center justify-between gap-4 py-4 font-display font-semibold text-[17px] md:text-[18px]">Как сделать заземление?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark"></i></summary>
-        <p class="pb-5 text-muted">Заземление — половина успеха: без него импульс слабый. Металлические штыри вбивают во влажный грунт и соединяют с клеммой заземления прибора. В сухом или каменистом грунте штырей нужно больше. Схема есть в инструкции к каждому прибору.</p>
-      </details>
-      <details class="group py-1">
-        <summary class="flex items-center justify-between gap-4 py-4 font-display font-semibold text-[17px] md:text-[18px]">12 В, 220 В или солнечная панель?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark"></i></summary>
-        <p class="pb-5 text-muted">Есть розетка рядом — 220 В. Нет — аккумулятор 12 В. Пастбище далеко и надолго — аккумулятор плюс солнечная панель, чтобы не возить его на зарядку. Приборы 14,5–25 Дж работают от обоих источников.</p>
-      </details>
-      <details class="group py-1">
-        <summary class="flex items-center justify-between gap-4 py-4 font-display font-semibold text-[17px] md:text-[18px]">Сложно ли установить самому?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark"></i></summary>
-        <p class="pb-5 text-muted">Нет. Стандартный комплект ставится за несколько часов: столбики, изоляторы, проводник, заземление, прибор. Мы консультируем по телефону и в WhatsApp на каждом этапе.</p>
-      </details>
-      <details class="group py-1">
-        <summary class="flex items-center justify-between gap-4 py-4 font-display font-semibold text-[17px] md:text-[18px]">Какая гарантия и возврат?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark"></i></summary>
-        <p class="pb-5 text-muted">GIGANT 15 — 1 год, Bekci — 2 года. Возврат и обмен в течение 14 дней по закону РК «О защите прав потребителей» при наличии чека и товарного вида.</p>
-      </details>
-      <details class="group py-1">
-        <summary class="flex items-center justify-between gap-4 py-4 font-display font-semibold text-[17px] md:text-[18px]">Как и сколько идёт доставка?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark"></i></summary>
-        <p class="pb-5 text-muted">Самовывоз со склада в Алматы — в день заказа. По регионам Казахстана — транспортными компаниями после полной оплаты, стоимость и срок рассчитываем индивидуально. Отправляем также в Россию и страны СНГ.</p>
-      </details>
+    <div class="lg:col-span-7 rv divide-y divide-line border-y border-line">
+      <details open class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Какую мощность выбрать?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true"></i></summary><p class="pb-5 text-muted max-w-[70ch]">Для небольших загонов и спокойных животных достаточно 6,9&nbsp;Дж. Для стандартных хозяйств с КРС, лошадьми, овцами — 14,5–15&nbsp;Дж. Для больших периметров, густой травы и защиты от диких животных — 25&nbsp;Дж. Сомневаетесь — напишите нам площадь и вид животных.</p></details>
+      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Как рассчитать периметр по площади?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true"></i></summary><p class="pb-5 text-muted max-w-[70ch]">Периметр зависит от формы участка. Для квадратного участка 1&nbsp;га это около 400 м, 5&nbsp;га — около 900 м, 6&nbsp;га — около 980 м. Умножьте периметр на число линий — получите длину проводника. Вытянутый участок потребует больше.</p></details>
+      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Сколько линий нужно?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true"></i></summary><p class="pb-5 text-muted max-w-[70ch]">Крупным спокойным животным обычно хватает одной-двух линий. Мелким и активным — овцам, козам, свиньям — нужно больше линий и ниже к земле, либо готовая электросетка. Точное число и высоты подскажем при подборе.</p></details>
+      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Как сделать заземление?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true"></i></summary><p class="pb-5 text-muted max-w-[70ch]">Заземление — половина успеха: без него импульс слабый. Металлические штыри вбивают во влажный грунт и соединяют с клеммой заземления прибора. В сухом или каменистом грунте штырей нужно больше. Схема есть в инструкции к каждому прибору.</p></details>
+      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">12&nbsp;В, 220&nbsp;В или солнечная панель?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true"></i></summary><p class="pb-5 text-muted max-w-[70ch]">Есть розетка рядом — 220&nbsp;В. Нет — аккумулятор 12&nbsp;В. Пастбище далеко и надолго — аккумулятор плюс солнечная панель, чтобы не возить его на зарядку. Приборы 14,5–25&nbsp;Дж работают от обоих источников.</p></details>
+      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Сложно ли установить самому?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true"></i></summary><p class="pb-5 text-muted max-w-[70ch]">Нет. Стандартный комплект ставится за несколько часов: столбики, изоляторы, проводник, заземление, прибор. Мы консультируем по телефону и в WhatsApp на каждом этапе.</p></details>
+      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Какая гарантия и возврат?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true"></i></summary><p class="pb-5 text-muted max-w-[70ch]">GIGANT 15 — 1 год, Bekci — 2 года. Возврат и обмен в течение 14 дней по закону РК «О защите прав потребителей» при наличии чека и товарного вида.</p></details>
+      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Как и сколько идёт доставка?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true"></i></summary><p class="pb-5 text-muted max-w-[70ch]">Самовывоз со склада в Алматы — в день заказа. По регионам Казахстана — транспортными компаниями после полной оплаты, стоимость и срок рассчитываем индивидуально. Отправляем также в Россию и страны СНГ.</p></details>
     </div>
   </div>
 </section>
 
-<!-- ================= 6.14 КОНСУЛЬТАЦИЯ ================= -->
-<section id="konsultaciya" class="section scroll-mt-20">
-  <div class="container-site grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-    <div class="lg:col-span-5">
-      <p class="overline">Консультация</p>
-      <h2 class="h2 mt-2">Не уверены, что выбрать? Опишите хозяйство</h2>
-      <p class="lead mt-3">Подберём за один разговор: модель, число линий, проводник и питание. Перезвоним в рабочее время.</p>
-      <ul class="mt-6 space-y-2 text-[15px] text-muted">
-        <li class="flex gap-2"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0"></i>Без обязательств и предоплаты</li>
-        <li class="flex gap-2"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0"></i>Ответ в рабочее время в течение часа</li>
-        <li class="flex gap-2"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0"></i>Или сразу в WhatsApp: +7 (705) 428-57-07</li>
+<!-- ================= ФИНАЛЬНЫЙ CTA + ФОРМА ================= -->
+<section id="konsultaciya" class="relative bg-deep text-cream scroll-mt-24 overflow-hidden">
+  <img src="assets/img/steppe-horses-1920.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40" loading="lazy" width="1920" height="976" aria-hidden="true">
+  <div class="absolute inset-0 bg-gradient-to-b from-deep/70 via-deep/60 to-deep" aria-hidden="true"></div>
+  <div class="relative container-site section grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <div class="lg:col-span-5 rv">
+      <h2 class="h2">Опишите хозяйство&nbsp;— <span class="accent text-pulse font-bold tracking-normal">подберём</span> за один разговор</h2>
+      <p class="mt-4 text-cream/80 text-[17px] md:text-[18px] leading-[1.6] max-w-[48ch]">Модель, число линий, проводник и питание. Перезвоним в рабочее время: Пн–Пт 10–18, Сб 10–16.</p>
+      <ul class="mt-6 space-y-2 text-[15px] text-cream/85">
+        <li class="flex gap-2"><i data-lucide="check" class="w-5 h-5 text-pulse shrink-0" aria-hidden="true"></i>Без обязательств и предоплаты</li>
+        <li class="flex gap-2"><i data-lucide="check" class="w-5 h-5 text-pulse shrink-0" aria-hidden="true"></i>Ответ в рабочее время в течение часа</li>
+        <li class="flex gap-2"><i data-lucide="check" class="w-5 h-5 text-pulse shrink-0" aria-hidden="true"></i>Или сразу в WhatsApp: +7 (705) 428-57-07</li>
       </ul>
+      <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="btn-glass mt-6"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Написать в WhatsApp</a>
     </div>
-    <form id="leadForm" class="lg:col-span-7 card p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 gap-4" novalidate>
-      <label class="block"><span class="text-[14px] font-medium">Имя</span><input type="text" name="name" class="input mt-1.5" placeholder="Как к вам обращаться" required></label>
-      <label class="block"><span class="text-[14px] font-medium">Телефон</span><input type="tel" name="phone" class="input mt-1.5" placeholder="+7 (___) ___-__-__" required inputmode="tel"></label>
+    <form id="leadForm" class="lg:col-span-7 rv bg-white text-ink rounded-2xl p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 gap-4" novalidate>
+      <label class="block"><span class="text-[14px] font-semibold">Имя</span><input type="text" name="name" class="input mt-1.5" placeholder="Как к вам обращаться…" required autocomplete="name"></label>
+      <label class="block"><span class="text-[14px] font-semibold">Телефон</span><input type="tel" name="phone" class="input mt-1.5" placeholder="+7 (___) ___-__-__" required inputmode="tel" autocomplete="tel"></label>
       <div class="sm:col-span-2">
-        <span class="text-[14px] font-medium">Животные</span>
+        <span class="text-[14px] font-semibold">Животные</span>
         <div class="mt-1.5 flex flex-wrap gap-2" id="formAnimals">
           <button type="button" class="chip h-10" data-v="КРС" aria-pressed="false">КРС</button>
           <button type="button" class="chip h-10" data-v="Лошади" aria-pressed="false">Лошади</button>
@@ -761,36 +674,34 @@ tailwind.config = {
           <button type="button" class="chip h-10" data-v="Дикие" aria-pressed="false">От диких животных</button>
         </div>
       </div>
-      <label class="block"><span class="text-[14px] font-medium">Площадь, га</span><input type="number" name="area" class="input mt-1.5" placeholder="Например, 5" min="0" step="0.1" inputmode="decimal"></label>
-      <label class="block"><span class="text-[14px] font-medium">Питание</span>
-        <select name="power" class="input mt-1.5"><option>220 В</option><option>12 В аккумулятор</option><option>Солнечная панель</option><option>Не знаю</option></select>
-      </label>
+      <label class="block"><span class="text-[14px] font-semibold">Площадь, га</span><input type="number" name="area" class="input mt-1.5" placeholder="Например, 5…" min="0" step="0.1" inputmode="decimal" autocomplete="off"></label>
+      <label class="block"><span class="text-[14px] font-semibold">Питание</span><select name="power" class="input mt-1.5" autocomplete="off"><option>220&nbsp;В</option><option>12&nbsp;В аккумулятор</option><option>Солнечная панель</option><option>Не знаю</option></select></label>
       <label class="sm:col-span-2 flex items-start gap-3 text-[14px] text-muted"><input type="checkbox" name="consent" class="mt-1 w-4 h-4 accent-[#3E7A34]" required><span>Согласен на обработку персональных данных. <a href="#" class="underline hover:text-ink">Политика конфиденциальности</a></span></label>
       <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-3">
         <button type="submit" class="btn-primary btn-lg">Получить подбор</button>
-        <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-medium text-brand-dark hover:underline"><img src="assets/icons/whatsapp-3E7A34.svg" alt="" class="w-5 h-5">или напишите в WhatsApp</a>
+        <span class="text-[14px] text-muted">Перезвоним в рабочее время</span>
       </div>
-      <p id="formOk" hidden class="sm:col-span-2 rounded-lg bg-cream border border-brand/40 p-4 text-[15px]"><strong>Спасибо!</strong> Заявка принята. Перезвоним в рабочее время: Пн–Пт 10–18, Сб 10–16.</p>
+      <p id="formOk" hidden aria-live="polite" class="sm:col-span-2 rounded-xl bg-cream border border-brand/40 p-4 text-[15px]"><strong>Спасибо!</strong> Заявка принята. Перезвоним в рабочее время: Пн–Пт 10–18, Сб 10–16.</p>
     </form>
   </div>
 </section>
 </main>
 
-<!-- ================= 6.15 ПОДВАЛ ================= -->
-<footer class="bg-dark text-cream/80">
+<!-- ================= ПОДВАЛ ================= -->
+<footer class="bg-deep text-cream/80 border-t border-cream/10">
   <div class="container-site py-12 md:py-16 grid grid-cols-2 md:grid-cols-4 gap-8">
     <div class="col-span-2 md:col-span-1">
-      <a href="#" class="flex items-center gap-3"><img src="assets/img/logo-gigant.png" alt="GIGANT" width="44" height="44" class="w-11 h-11 rounded-md"><span class="font-display font-bold text-[18px] text-cream">GIGANT Agro</span></a>
+      <a href="#top" class="flex items-center gap-3"><img src="assets/img/logo-gigant.png" alt="" width="44" height="44" class="w-11 h-11 rounded-full"><span class="font-black text-[18px] text-cream">GIGANT Agro</span></a>
       <ul class="mt-5 space-y-2 text-[15px]">
         <li><a href="tel:+77054285707" class="hover:text-cream">+7 (705) 428-57-07</a></li>
         <li><a href="tel:+77757716024" class="hover:text-cream">+7 (775) 771-60-24</a></li>
-        <li><a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:text-cream"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-4 h-4 opacity-80">WhatsApp</a></li>
+        <li><a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:text-cream"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-4 h-4 opacity-80" width="16" height="16">WhatsApp</a></li>
         <li class="text-cream/60">Алматы, мкр. Атырау, 159/8, склад № 1</li>
         <li class="text-cream/60">Пн–Пт 10:00–18:00, Сб 10:00–16:00</li>
       </ul>
     </div>
     <div>
-      <p class="font-display font-semibold text-cream">Каталог</p>
+      <p class="font-extrabold text-cream">Каталог</p>
       <ul class="mt-4 space-y-2 text-[15px]">
         <li><a href="#flagmany" class="hover:text-cream">Электропастухи</a></li>
         <li><a href="#komplekty" class="hover:text-cream">Готовые комплекты</a></li>
@@ -802,7 +713,7 @@ tailwind.config = {
       </ul>
     </div>
     <div>
-      <p class="font-display font-semibold text-cream">Покупателям</p>
+      <p class="font-extrabold text-cream">Покупателям</p>
       <ul class="mt-4 space-y-2 text-[15px]">
         <li><a href="#podbor" class="hover:text-cream">Подбор комплекта</a></li>
         <li><a href="#" class="hover:text-cream">Как выбрать электропастух</a></li>
@@ -813,17 +724,17 @@ tailwind.config = {
       </ul>
     </div>
     <div>
-      <p class="font-display font-semibold text-cream">Компания</p>
+      <p class="font-extrabold text-cream">Компания</p>
       <ul class="mt-4 space-y-2 text-[15px]">
         <li><a href="#" class="hover:text-cream">О компании</a></li>
         <li><a href="#" class="hover:text-cream">Контакты</a></li>
         <li><a href="#" class="hover:text-cream">Оптовым покупателям</a></li>
       </ul>
-      <p class="mt-6 font-display font-semibold text-cream">Мы на площадках</p>
+      <p class="mt-6 font-extrabold text-cream">Мы на площадках</p>
       <div class="mt-3 flex flex-wrap gap-2">
-        <a href="https://elektropastuh.satu.kz/" target="_blank" rel="noopener" class="rounded-md border border-cream/20 px-2.5 py-1 text-[13px] font-semibold hover:border-cream/60">Satu.kz</a>
-        <a href="https://www.ozon.ru/product/elektropastuh-gigant-15-dzh-dlya-korov-ovets-loshadey-kabanov-1632680883/" target="_blank" rel="noopener" class="rounded-md border border-cream/20 px-2.5 py-1 text-[13px] font-semibold hover:border-cream/60">Ozon</a>
-        <a href="https://www.wildberries.ru/catalog/694923616/detail.aspx" target="_blank" rel="noopener" class="rounded-md border border-cream/20 px-2.5 py-1 text-[13px] font-semibold hover:border-cream/60">Wildberries</a>
+        <a href="https://elektropastuh.satu.kz/" target="_blank" rel="noopener" class="rounded-full border border-cream/20 px-3 py-1.5 text-[13px] font-bold hover:border-cream/60">Satu.kz</a>
+        <a href="https://www.ozon.ru/product/elektropastuh-gigant-15-dzh-dlya-korov-ovets-loshadey-kabanov-1632680883/" target="_blank" rel="noopener" class="rounded-full border border-cream/20 px-3 py-1.5 text-[13px] font-bold hover:border-cream/60">Ozon</a>
+        <a href="https://www.wildberries.ru/catalog/694923616/detail.aspx" target="_blank" rel="noopener" class="rounded-full border border-cream/20 px-3 py-1.5 text-[13px] font-bold hover:border-cream/60">Wildberries</a>
       </div>
     </div>
   </div>
@@ -833,45 +744,53 @@ tailwind.config = {
       <div class="md:ml-auto flex flex-wrap items-center gap-x-5 gap-y-1">
         <a href="#" class="hover:text-cream">Политика конфиденциальности</a>
         <span>Фото пастбищ — Wikimedia Commons, CC BY / CC BY-SA (временно)</span>
-        <span class="inline-flex rounded-md border border-cream/20 overflow-hidden"><span class="px-2 py-0.5 bg-cream/15 text-cream">RU</span><span class="px-2 py-0.5">KZ</span></span>
+        <span class="inline-flex rounded-full border border-cream/20 overflow-hidden"><span class="px-2.5 py-0.5 bg-cream/15 text-cream">RU</span><span class="px-2.5 py-0.5">KZ</span></span>
       </div>
     </div>
   </div>
 </footer>
 
 <!-- плавающий WhatsApp (desktop) -->
-<a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="hidden md:flex fixed right-6 bottom-6 z-40 w-14 h-14 rounded-full bg-brand-dark shadow-card items-center justify-center transition-transform hover:scale-105" aria-label="Написать в WhatsApp"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-7 h-7"></a>
+<a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="hidden md:flex fixed right-6 bottom-6 z-float w-14 h-14 rounded-full bg-brand-dark items-center justify-center transition-transform duration-200 ease-out hover:scale-105 active:scale-95" aria-label="Написать в WhatsApp"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-7 h-7" width="28" height="28"></a>
 
 <!-- липкая панель действий (mobile) -->
-<nav class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white border-t border-line shadow-sticky grid grid-cols-4" aria-label="Быстрые действия">
-  <a href="#catalog" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[12px] font-medium"><i data-lucide="layout-grid" class="w-6 h-6"></i>Каталог</a>
-  <a href="#podbor" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[12px] font-medium"><i data-lucide="sliders-horizontal" class="w-6 h-6"></i>Подбор</a>
-  <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[12px] font-medium text-brand-dark"><img src="assets/icons/whatsapp-3E7A34.svg" alt="" class="w-6 h-6">WhatsApp</a>
-  <a href="tel:+77054285707" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[12px] font-semibold bg-pulse"><i data-lucide="phone" class="w-6 h-6"></i>Позвонить</a>
+<nav class="md:hidden fixed bottom-0 inset-x-0 z-bar bg-white/95 backdrop-blur-xl border-t border-line grid grid-cols-4 pb-[env(safe-area-inset-bottom)]" aria-label="Быстрые действия">
+  <a href="#catalog" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[12px] font-medium"><i data-lucide="layout-grid" class="w-6 h-6" aria-hidden="true"></i>Каталог</a>
+  <a href="#podbor" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[12px] font-medium"><i data-lucide="sliders-horizontal" class="w-6 h-6" aria-hidden="true"></i>Подбор</a>
+  <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[12px] font-medium text-brand-dark"><img src="assets/icons/whatsapp-3E7A34.svg" alt="" class="w-6 h-6" width="24" height="24">WhatsApp</a>
+  <a href="tel:+77054285707" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[12px] font-semibold bg-pulse"><i data-lucide="phone" class="w-6 h-6" aria-hidden="true"></i>Позвонить</a>
 </nav>
 
 <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
 <script>
 (function(){
   lucide.createIcons();
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // --- шапка: сжатие при прокрутке
-  const header=document.getElementById('header');
-  const onScroll=()=>header.classList.toggle('header-shrink',window.scrollY>80);
+  // --- навигация: состояние при прокрутке + параллакс-гашение hero
+  const nav=document.getElementById('nav'), hero=document.getElementById('heroContent');
+  let ticking=false;
+  const onScroll=()=>{ if(ticking) return; ticking=true; requestAnimationFrame(()=>{
+    const y=window.scrollY; nav.classList.toggle('scrolled',y>24);
+    if(hero&&!reduce){ const p=Math.min(y/700,1); hero.style.transform='translateY('+(y*0.18)+'px)'; hero.style.opacity=String(1-p*0.9); }
+    ticking=false; }); };
   onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
 
-  // --- мегаменю
-  const catalogBtn=document.getElementById('catalogBtn'), mega=document.getElementById('megamenu');
-  if(catalogBtn){
-    catalogBtn.addEventListener('click',e=>{e.stopPropagation();const open=mega.hidden;mega.hidden=!open;catalogBtn.setAttribute('aria-expanded',String(open));});
-    document.addEventListener('click',e=>{if(!mega.hidden&&!mega.contains(e.target)){mega.hidden=true;catalogBtn.setAttribute('aria-expanded','false');}});
-    document.addEventListener('keydown',e=>{if(e.key==='Escape'){mega.hidden=true;catalogBtn.setAttribute('aria-expanded','false');}});
-  }
+  // --- бегущая строка: пауза
+  const mq=document.querySelector('.marquee'), mqBtn=document.getElementById('marqueeToggle');
+  mqBtn.addEventListener('click',()=>{const paused=mq.classList.toggle('paused'); mqBtn.setAttribute('aria-pressed',String(paused)); mqBtn.setAttribute('aria-label',paused?'Запустить бегущую строку':'Остановить бегущую строку'); mqBtn.innerHTML='<i data-lucide="'+(paused?'play':'pause')+'" class="w-4 h-4" aria-hidden="true"></i>'; lucide.createIcons();});
 
   // --- мобильное меню
   const burger=document.getElementById('burger'), mobileMenu=document.getElementById('mobileMenu');
   burger.addEventListener('click',()=>{const open=mobileMenu.hidden;mobileMenu.hidden=!open;burger.setAttribute('aria-expanded',String(open));});
   mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.hidden=true;burger.setAttribute('aria-expanded','false');}));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!mobileMenu.hidden){mobileMenu.hidden=true;burger.setAttribute('aria-expanded','false');}});
+
+  // --- scroll reveal (контент видим без JS; JS только добавляет вход)
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}}),{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.rv,.rv-stagger').forEach(el=>io.observe(el));
+  // страховка: всё, что не попало в наблюдатель за 2,5 с, показать
+  setTimeout(()=>document.querySelectorAll('.rv:not(.is-in),.rv-stagger:not(.is-in)').forEach(el=>{const r=el.getBoundingClientRect(); if(r.top<innerHeight) el.classList.add('is-in');}),2500);
 
   // --- группы чипов (одиночный выбор)
   function singleSelect(groupId,onChange){
@@ -888,28 +807,26 @@ tailwind.config = {
     unitGroup.querySelectorAll('button').forEach(x=>{x.setAttribute('aria-pressed','false');x.classList.remove('bg-ink','text-white');});
     b.setAttribute('aria-pressed','true'); b.classList.add('bg-ink','text-white'); pick.unit=b.dataset.v;
     document.getElementById('pickArea').value=pick.unit==='ha'?5:900;});
-
-  // --- предустановка питания «солнце» из тёмной секции
   document.querySelectorAll('[data-preset-power]').forEach(a=>a.addEventListener('click',()=>{
     const btn=document.querySelector('#pickPower button[data-v="'+a.dataset.presetPower+'"]'); btn&&btn.click();}));
 
-  // --- правила подбора (стартовые, из промта; подтвердить у заказчика)
+  // --- правила подбора (стартовые, подтвердить у заказчика)
   const ANIMAL={krs:'КРС',horse:'лошади',sheep:'овцы и козы',pig:'свиньи',bird:'птица',wild:'защита от диких животных'};
-  const POWER={'220':'220 В','12':'12 В аккумулятор','sun':'солнечная панель'};
+  const POWER={'220':'220 В','12':'12\u00a0В аккумулятор','sun':'солнечная панель'};
   function recommend(a,ha,power){
     let r;
-    if(a==='wild'||ha>6) r={model:'Bekci 25 Дж + комплектующие',price:'от 145 000 ₸',kit:'Прибор, проволока 1,6 мм, изоляторы и заземление под ваш периметр.',why:'Большой периметр или дикие животные — нужен запас мощности.'};
-    else if(a==='sheep'&&ha<=1) r={model:'Комплект «Для овец», 1 га',price:'125 000 ₸',kit:'Генератор, проводник, изоляторы, ворота, аккумулятор в подарок.',why:''};
-    else if(a==='krs'&&ha<=5) r={model:'Комплект «Для КРС», 5 га',price:'145 000 ₸',kit:'Генератор, аккумулятор 12 В 7 Ач, проводник 1000 м, изоляторы, предупреждающие таблички.',why:''};
-    else if(a==='horse'&&ha<=6) r={model:'Комплект «Для лошадей», 6 га',price:'125 000 ₸',kit:'Генератор, проволока, шнур, верёвка, ворота, изоляторы, аккумулятор в подарок.',why:''};
-    else if(a==='pig'||a==='bird') r={model:'GIGANT 15 Дж + сетка или шнур',price:'от 105 000 ₸',kit:'Прибор, электросетка или шнур 6 жил, изоляторы — количество посчитаем по периметру.',why:''};
-    else r={model:'GIGANT 15 Дж + комплектующие',price:'от 105 000 ₸',kit:'Прибор, проводник, изоляторы, заземление под ваш участок.',why:'Площадь больше стандартного комплекта — соберём под периметр.'};
-    r.power=power==='sun'?'Питание: аккумулятор 12 В + солнечная панель и MPPT-контроллер — мощность панели подберём.':power==='12'?'Питание: аккумулятор 12 В (в готовых комплектах уже есть).':'Питание: от сети 220 В, адаптер в комплекте.';
+    if(a==='wild'||ha>6) r={model:'Bekci 25\u00a0Дж + комплектующие',price:'от 145 000 ₸',kit:'Прибор, проволока 1,6\u00a0мм, изоляторы и заземление под ваш периметр.',why:'Большой периметр или дикие животные — нужен запас мощности.'};
+    else if(a==='sheep'&&ha<=1) r={model:'Комплект «Для овец», 1\u00a0га',price:'125 000 ₸',kit:'Генератор, проводник, изоляторы, ворота, аккумулятор в подарок.',why:''};
+    else if(a==='krs'&&ha<=5) r={model:'Комплект «Для КРС», 5\u00a0га',price:'145 000 ₸',kit:'Генератор, аккумулятор 12\u00a0В 7\u00a0Ач, проводник 1000 м, изоляторы, предупреждающие таблички.',why:''};
+    else if(a==='horse'&&ha<=6) r={model:'Комплект «Для лошадей», 6\u00a0га',price:'125 000 ₸',kit:'Генератор, проволока, шнур, верёвка, ворота, изоляторы, аккумулятор в подарок.',why:''};
+    else if(a==='pig'||a==='bird') r={model:'GIGANT 15\u00a0Дж + сетка или шнур',price:'от 105 000 ₸',kit:'Прибор, электросетка или шнур 6 жил, изоляторы — количество посчитаем по периметру.',why:''};
+    else r={model:'GIGANT 15\u00a0Дж + комплектующие',price:'от 105 000 ₸',kit:'Прибор, проводник, изоляторы, заземление под ваш участок.',why:'Площадь больше стандартного комплекта — соберём под периметр.'};
+    r.power=power==='sun'?'Питание: аккумулятор 12\u00a0В + солнечная панель и MPPT-контроллер — мощность панели подберём.':power==='12'?'Питание: аккумулятор 12\u00a0В (в готовых комплектах уже есть).':'Питание: от сети 220\u00a0В, адаптер в комплекте.';
     return r;
   }
   document.getElementById('pickGo').addEventListener('click',()=>{
     const val=parseFloat(document.getElementById('pickArea').value)||0;
-    const ha=pick.unit==='ha'?val:Math.pow(val/4,2)/10000; // периметр квадрата → площадь
+    const ha=pick.unit==='ha'?val:Math.pow(val/4,2)/10000;
     const r=recommend(pick.animal,ha,pick.power);
     document.getElementById('resModel').textContent=r.model;
     document.getElementById('resKit').textContent=r.kit;
@@ -919,14 +836,17 @@ tailwind.config = {
     const areaTxt=pick.unit==='ha'?val+' га':val+' м периметра';
     const msg='Здравствуйте! Хочу подобрать электропастух. Животные: '+ANIMAL[pick.animal]+', '+areaTxt+', питание: '+POWER[pick.power]+'. Сайт предложил: '+r.model+'.';
     document.getElementById('resWa').href='https://wa.me/77054285707?text='+encodeURIComponent(msg);
-    const res=document.getElementById('pickResult'); res.hidden=false; res.scrollIntoView({behavior:'smooth',block:'nearest'});
+    const res=document.getElementById('pickResult'); res.hidden=false; res.scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'});
   });
 
   // --- табы по животным
   const tabs=document.getElementById('animalTabs');
+  tabs.addEventListener('keydown',e=>{const list=[...tabs.querySelectorAll('[role="tab"]')]; const i=list.indexOf(document.activeElement); if(i<0) return;
+    if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault(); const j=(i+(e.key==='ArrowRight'?1:-1)+list.length)%list.length; list[j].focus(); list[j].click();}});
   tabs.addEventListener('click',e=>{const b=e.target.closest('[role="tab"]'); if(!b) return;
     tabs.querySelectorAll('[role="tab"]').forEach(t=>{t.setAttribute('aria-selected','false');document.getElementById(t.getAttribute('aria-controls')).hidden=true;});
-    b.setAttribute('aria-selected','true'); document.getElementById(b.getAttribute('aria-controls')).hidden=false;});
+    b.setAttribute('aria-selected','true'); const p=document.getElementById(b.getAttribute('aria-controls')); p.hidden=false;
+    p.classList.remove('tabpanel'); void p.offsetWidth; p.classList.add('tabpanel');});
 
   // --- чипы в форме (множественный выбор)
   document.getElementById('formAnimals').addEventListener('click',e=>{const b=e.target.closest('button[data-v]'); if(!b) return;
@@ -934,8 +854,7 @@ tailwind.config = {
 
   // --- форма: прототип, без отправки
   const form=document.getElementById('leadForm');
-  form.addEventListener('submit',e=>{e.preventDefault();
-    if(!form.checkValidity()){form.reportValidity();return;}
+  form.addEventListener('submit',e=>{e.preventDefault(); if(!form.checkValidity()){form.reportValidity();return;}
     document.getElementById('formOk').hidden=false; form.querySelector('button[type=submit]').disabled=true;});
 })();
 </script>
