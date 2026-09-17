@@ -1,0 +1,12 @@
+
+# secrets — never commit
+password.md
+
+# firecrawl local cache
+.firecrawl/
+
+# browser screenshots and playwright output
+.playwright-mcp/
+
+# macOS
+.DS_Store
