@@ -22,3 +22,4 @@
 Иконка WhatsApp: Simple Icons (CC0). UI-иконки: Lucide (ISC).
 | shearing.jpg | File:Schafschur Savognin.jpg | CC BY-SA 4.0 |
 | accessories.jpg | фрагмент фото GIGANT 15 с Satu (клеммы, кабель, пульт) | заказчик |
+| why-cow-fence.jpg | изображение от заказчика (прислано 17.09.2026) | заказчик |
