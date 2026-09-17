@@ -25,3 +25,4 @@
 | why-cow-fence.jpg | изображение от заказчика (прислано 17.09.2026) | заказчик |
 | kit-sheep-poultry.jpg, kit-sheep-poultry-full.jpg | изображение от заказчика «Готовые комплекты» (17.09.2026) | заказчик |
 | cat-insulators.jpg, cat-cables.jpg, cat-shearing.jpg, cat-nets.jpg | изображения от заказчика для плиток каталога (17.09.2026) | заказчик |
+| hero-gigant-1920.jpg, hero-gigant-1280.jpg | изображение от заказчика для hero (17.09.2026) | заказчик |
