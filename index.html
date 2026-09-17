@@ -23,7 +23,7 @@ tailwind.config = {
   theme: { extend: {
     colors: { bg:'#F4F6F1', ink:'#16191C', muted:'#4F5A52', brand:'#5A984B', 'brand-dark':'#3E7A34', deep:'#17261B', cream:'#F3F8D6', pulse:'#FFC400', line:'#D6DCD2', danger:'#C8372D' },
     fontFamily: { sans:['"Golos Text"','system-ui','sans-serif'], serif:['Vollkorn','Georgia','serif'] },
-    maxWidth: { site:'1240px' },
+    maxWidth: { site:'1400px' },
     transitionTimingFunction: { out:'cubic-bezier(0.22, 1, 0.36, 1)' },
     zIndex: { float:'30', nav:'40', menu:'45', bar:'40' }
   } }
@@ -42,7 +42,7 @@ tailwind.config = {
     fieldset { min-inline-size: 0; }
   }
   @layer components {
-    .container-site { @apply max-w-site mx-auto px-5 md:px-8; }
+    .container-site { @apply max-w-site mx-auto px-5; }
     .section { padding-block: clamp(4rem, 8vw, 7rem); }
     .h2 { @apply font-black tracking-[-0.03em] text-[clamp(2rem,3.6vw,3rem)] leading-[1.06]; }
     .h3 { @apply font-extrabold tracking-[-0.02em] text-[clamp(1.25rem,1.6vw,1.5rem)] leading-[1.15]; }
@@ -220,7 +220,7 @@ tailwind.config = {
         <div class="p-4 md:p-5 flex items-end justify-between gap-3"><div class="min-w-0 flex-1"><h3 class="font-extrabold text-[17px] leading-tight">Электропастухи</h3><p class="text-muted text-[14px] mt-1">GIGANT 15&nbsp;Дж и Bekci 25&nbsp;Дж</p></div><i data-lucide="arrow-right" class="w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i></div>
       </a>
       <a href="#komplekty" class="card lift overflow-hidden group flex flex-col">
-        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/solar-netting.jpg" alt="Электропастух с солнечной панелью и сеткой" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/kit-sheep-poultry.jpg" alt="Овцы, куры и утка за электросеткой из готового комплекта" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
         <div class="p-4 md:p-5 flex items-end justify-between gap-3"><div class="min-w-0 flex-1"><h3 class="font-extrabold text-[17px] leading-tight">Готовые комплекты</h3><p class="text-muted text-[14px] mt-1">Для овец, КРС и лошадей</p></div><i data-lucide="arrow-right" class="w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i></div>
       </a>
       <a href="#catalog" class="card lift overflow-hidden group flex flex-col">
@@ -396,7 +396,7 @@ tailwind.config = {
 <!-- ================= ПОЧЕМУ GIGANT AGRO ================= -->
 <section id="pochemu" class="bg-deep text-cream overflow-hidden scroll-mt-24">
   <div class="grid grid-cols-1 lg:grid-cols-12">
-    <div class="lg:col-span-7 section px-5 md:px-12 lg:pr-12 lg:pl-[max(2rem,calc((100vw-1240px)/2+2rem))]">
+    <div class="lg:col-span-7 section px-5 md:px-12 lg:pr-12 lg:pl-[max(1.25rem,calc((100vw-1400px)/2+1.25rem))]">
       <p class="rv flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.12em] text-cream/70"><span class="w-2 h-2 rounded-full bg-pulse" aria-hidden="true"></span>Почему GIGANT Agro</p>
       <h2 class="rv h2 mt-3 max-w-[18ch]">Рабочие решения, а&nbsp;не просто товары</h2>
       <ul class="rv-stagger mt-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-8">
