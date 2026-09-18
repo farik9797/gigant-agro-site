@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://farik9797.github.io/gigant-agro-site/sitemap.xml

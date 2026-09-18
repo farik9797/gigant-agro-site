@@ -1,0 +1,68 @@
+<main id="top">
+<nav aria-label="Хлебные крошки" class="container-site pt-28 md:pt-32">
+  <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-[14px] text-muted">
+    <li><a href="index.html" class="hover:text-ink">Главная</a></li><li aria-hidden="true">/</li><li aria-current="page" class="text-ink font-medium">Контакты</li>
+  </ol>
+</nav>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"index.html"},{"@type":"ListItem","position":2,"name":"Контакты"}]}</script>
+<header class="container-site pt-6 md:pt-8">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-10 items-end">
+    <div class="lg:col-span-7"><h1 class="h2">Контакты</h1><p class="lead mt-4">Склад и выдача заказов в Алматы. Звоните или пишите в WhatsApp — отвечаем в рабочее время в течение часа.</p></div>
+    
+  </div>
+</header>
+<section class="container-site mt-8 md:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+  <div class="lg:col-span-5 space-y-5">
+    <div class="card p-6">
+      <h2 class="h3">GIGANT Agro</h2>
+      <dl class="mt-4 space-y-4 text-[16px]">
+        <div><dt class="text-[13px] text-muted">Телефоны</dt>
+          <dd class="mt-1 flex flex-col gap-1"><a href="tel:+77054285707" class="font-bold hover:underline">+7 (705) 428-57-07</a><a href="tel:+77757716024" class="font-bold hover:underline">+7 (775) 771-60-24</a></dd></div>
+        <div><dt class="text-[13px] text-muted">WhatsApp</dt>
+          <dd class="mt-1"><a href="https://wa.me/77054285707?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21" target="_blank" rel="noopener" class="link">Написать в WhatsApp<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a></dd></div>
+        <div><dt class="text-[13px] text-muted">Адрес склада</dt>
+          <dd class="mt-1 font-bold">Алматы, мкр. Атырау, 159/8,<br>склад №&nbsp;1</dd></div>
+        <div><dt class="text-[13px] text-muted">Часы работы</dt>
+          <dd class="mt-1">Пн–Пт 10:00–18:00<br>Сб 10:00–16:00<br>Вс — выходной</dd></div>
+        <div><dt class="text-[13px] text-muted">E-mail</dt><dd class="mt-1 text-muted">[уточнить у заказчика]</dd></div>
+      </dl>
+    </div>
+    <div class="card p-6">
+      <p class="font-extrabold">Как добраться</p>
+      <p class="text-muted text-[15px] mt-2">Микрорайон Атырау, дом 159/8, склад №&nbsp;1. Перед выездом напишите в WhatsApp — подскажем ориентиры и проверим наличие.</p>
+      <div class="mt-4 rounded-xl bg-[#EEF1EA] border border-line h-[220px] flex flex-col items-center justify-center text-center gap-2 text-muted">
+        <i data-lucide="map-pin" class="w-8 h-8 text-brand-dark" aria-hidden="true"></i>
+        <p class="text-[15px] max-w-[30ch]">Здесь будет карта. Подключим после согласования точки на 2ГИС или Яндекс Картах.</p>
+      </div>
+    </div>
+  </div>
+  <div class="lg:col-span-7">
+    <form id="leadForm" class="card p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 gap-4" novalidate>
+      <h2 class="sm:col-span-2 h3">Оставить заявку</h2>
+      <p class="sm:col-span-2 text-muted text-[15px] -mt-2">Опишите хозяйство — подберём модель, число линий и питание. Перезвоним в рабочее время.</p>
+      <div><label for="fName" class="block text-[14px] font-semibold">Имя</label><input id="fName" type="text" name="name" class="input mt-1.5" placeholder="Как к вам обращаться…" required autocomplete="name" aria-describedby="nameErr"><p id="nameErr" class="mt-1.5 text-[14px] text-danger" hidden></p></div>
+      <div><label for="fPhone" class="block text-[14px] font-semibold">Телефон</label><input id="fPhone" type="tel" name="phone" class="input mt-1.5" placeholder="+7 (705) 000-00-00" required inputmode="tel" autocomplete="tel" aria-describedby="phoneErr"><p id="phoneErr" class="mt-1.5 text-[14px] text-danger" hidden></p></div>
+      <div class="sm:col-span-2">
+        <span id="formAnimalsLabel" class="text-[14px] font-semibold">Животные</span>
+        <input type="hidden" name="animals" id="formAnimalsValue" value="">
+        <div class="mt-1.5 flex flex-wrap gap-2" id="formAnimals" role="group" aria-labelledby="formAnimalsLabel">
+          <button type="button" class="chip h-10" data-v="КРС" aria-pressed="false">КРС</button>
+          <button type="button" class="chip h-10" data-v="Лошади" aria-pressed="false">Лошади</button>
+          <button type="button" class="chip h-10" data-v="Овцы и козы" aria-pressed="false">Овцы и козы</button>
+          <button type="button" class="chip h-10" data-v="Свиньи" aria-pressed="false">Свиньи</button>
+          <button type="button" class="chip h-10" data-v="Птица" aria-pressed="false">Птица</button>
+          <button type="button" class="chip h-10" data-v="Дикие" aria-pressed="false">От диких животных</button>
+        </div>
+      </div>
+      <div><label for="fArea" class="block text-[14px] font-semibold">Площадь, га</label><input id="fArea" type="number" name="area" class="input mt-1.5" placeholder="Например, 5…" min="0" step="0.1" inputmode="decimal" autocomplete="off"></div>
+      <div><label for="fPower" class="block text-[14px] font-semibold">Питание</label><select id="fPower" name="power" class="input mt-1.5" autocomplete="off"><option>220 В</option><option>12 В аккумулятор</option><option>Солнечная панель</option><option>Не знаю</option></select></div>
+      <div class="sm:col-span-2"><label class="flex items-start gap-3 text-[14px] text-muted cursor-pointer"><input type="checkbox" name="consent" class="mt-1 w-4 h-4 accent-[#3E7A34] shrink-0" required aria-describedby="consentErr"><span>Согласен на обработку персональных данных. <a href="policy.html" class="underline hover:text-ink">Политика конфиденциальности</a></span></label><p id="consentErr" class="mt-1.5 text-[14px] text-danger" hidden></p></div>
+      <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-3">
+        <button type="submit" class="btn-primary btn-lg">Отправить заявку</button>
+        <span class="text-[14px] text-muted">Перезвоним в рабочее время</span>
+      </div>
+      <p id="formOk" hidden aria-live="polite" tabindex="-1" class="sm:col-span-2 rounded-xl bg-cream border border-brand/40 p-4 text-[15px]"><strong>Спасибо!</strong> Заявка принята. Перезвоним в рабочее время: Пн–Пт 10–18, Сб 10–16.</p>
+    </form>
+  </div>
+</section>
+</main>

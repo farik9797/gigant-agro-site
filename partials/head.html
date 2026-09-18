@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#17261B">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESC}}">
+<meta property="og:title" content="{{OGTITLE}}">
+<meta property="og:description" content="{{DESC}}">
+<meta property="og:image" content="{{OGIMAGE}}">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/img/favicon-64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://cdn.tailwindcss.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;800;900&family=Vollkorn:ital,wght@1,700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.replace('no-js','js')</script>
+<noscript><style>#preloader{display:none!important}</style></noscript>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { bg:'#F4F6F1', ink:'#16191C', muted:'#4F5A52', brand:'#5A984B', 'brand-dark':'#3E7A34', deep:'#17261B', cream:'#F3F8D6', pulse:'#FFC400', line:'#D6DCD2', danger:'#C8372D' },
+    fontFamily: { sans:['"Golos Text"','system-ui','sans-serif'], serif:['Vollkorn','Georgia','serif'] },
+    maxWidth: { site:'1400px' },
+    transitionTimingFunction: { out:'cubic-bezier(0.22, 1, 0.36, 1)' },
+    zIndex: { float:'30', nav:'40', menu:'45', bar:'40', preloader:'100' }
+  } }
+}
+</script>
+<style type="text/tailwindcss">
+  @layer base {
+    html { scroll-behavior: smooth; color-scheme: light; -webkit-tap-highlight-color: transparent; }
+    a, button, [role="tab"] { touch-action: manipulation; }
+    body { @apply font-sans text-ink bg-bg antialiased text-[16px] leading-[26px] md:text-[17px] md:leading-[27px]; }
+    h1,h2,h3 { text-wrap: balance; }
+    p { text-wrap: pretty; }
+    ::selection { background:#FFC400; color:#16191C; }
+    :focus-visible { outline: 3px solid #FFC400; outline-offset: 3px; border-radius: 8px; }
+    [hidden] { display: none !important; }
+    fieldset { min-inline-size: 0; }
+  }
+  @layer components {
+    .container-site { @apply max-w-site mx-auto px-5; }
+    .section { padding-block: clamp(4rem, 8vw, 7rem); }
+    .h2 { @apply font-black tracking-[-0.03em] text-[clamp(2rem,3.6vw,3rem)] leading-[1.06]; }
+    .h3 { @apply font-extrabold tracking-[-0.02em] text-[clamp(1.25rem,1.6vw,1.5rem)] leading-[1.15]; }
+    .lead { @apply text-muted text-[17px] md:text-[18px] leading-[1.55] max-w-[60ch]; }
+    .accent { @apply font-serif italic font-bold; }
+    .btn { @apply inline-flex items-center justify-center gap-2 h-12 px-6 rounded-full font-semibold text-[16px] cursor-pointer select-none whitespace-nowrap transition-[transform,background-color,border-color,color] duration-200 ease-out active:scale-[0.97]; }
+    .btn-lg { @apply h-14 px-8 text-[17px]; }
+    .btn-primary { @apply btn bg-pulse text-ink hover:bg-[#FFCF33]; }
+    .btn-secondary { @apply btn bg-brand-dark text-white hover:bg-[#356A2D]; }
+    .btn-outline { @apply btn bg-white border border-line text-ink hover:border-ink; }
+    .btn-glass { @apply btn border border-white/40 text-white bg-white/10 backdrop-blur-md hover:bg-white/20; }
+    .chip { @apply inline-flex items-center gap-2 h-11 px-3 md:px-4 rounded-full border border-line bg-white text-[15px] font-medium cursor-pointer transition-[background-color,border-color,color,transform] duration-200 ease-out hover:border-ink active:scale-[0.97]; }
+    .chip[aria-pressed="true"], .chip[aria-selected="true"] { @apply bg-ink text-white border-ink; }
+    .card { @apply bg-white rounded-2xl border border-line; }
+    .lift { @apply transition-[transform,border-color] duration-300 ease-out hover:-translate-y-0.5 hover:border-ink/50; }
+    .input { @apply w-full h-12 rounded-xl border border-line bg-white px-4 text-[16px] text-ink placeholder:text-muted focus:border-ink focus:outline-none; }
+    .spec { @apply inline-flex items-baseline gap-1 font-extrabold text-[15px] leading-none tracking-[-0.01em] tabular-nums whitespace-nowrap; }
+    .link { @apply inline-flex items-center gap-1.5 font-semibold text-brand-dark hover:underline underline-offset-4; }
+  }
+  /* ---------- preloader ---------- */
+  #preloader { position:fixed; inset:0; z-index:100; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.75rem; background:#17261B; transition:opacity .5s ease, visibility .5s ease; }
+  #preloader.is-hidden { opacity:0; visibility:hidden; }
+  #preloader img { width:72px; height:72px; }
+  .pre-fence { position:relative; width:min(260px,60vw); height:2px; background:rgba(243,248,214,.2); overflow:visible; }
+  .pre-fence .post { position:absolute; top:-8px; width:3px; height:18px; border-radius:2px; background:#F3F8D6; opacity:.45; }
+  .pre-fence::after { content:""; position:absolute; top:-2px; left:-70px; width:70px; height:6px; border-radius:3px; background:#FFC400; box-shadow:0 0 16px rgba(255,196,0,.9); animation:pre-run 1.4s linear infinite; }
+  @keyframes pre-run { from { left:-70px; } to { left:100%; } }
+  html.loading { overflow:hidden; }
+  html.loading .hero-in { animation-play-state:paused; }
+
+  /* ---------- hero load choreography ---------- */
+  .js .hero-in { opacity:0; transform:translateY(22px); animation:hero-rise .9s cubic-bezier(.22,1,.36,1) forwards; }
+  .js .hero-in.d1{animation-delay:.10s} .js .hero-in.d2{animation-delay:.22s} .js .hero-in.d3{animation-delay:.36s} .js .hero-in.d4{animation-delay:.50s} .js .hero-in.d5{animation-delay:.66s}
+  @keyframes hero-rise { to { opacity:1; transform:none; } }
+  .hero-img { animation:hero-zoom 8s cubic-bezier(.22,1,.36,1) forwards; transform:scale(1.06); }
+  @keyframes hero-zoom { to { transform:scale(1); } }
+  /* ---------- scroll reveal (visible by default; JS opts in) ---------- */
+  .js .rv { opacity:0; transform:translateY(24px); transition:opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1); }
+  .js .rv.is-in { opacity:1; transform:none; }
+  .js .rv-stagger > * { opacity:0; transform:translateY(18px); transition:opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
+  .js .rv-stagger.is-in > * { opacity:1; transform:none; }
+  .js .rv-stagger.is-in > *:nth-child(2){transition-delay:.06s} .js .rv-stagger.is-in > *:nth-child(3){transition-delay:.12s} .js .rv-stagger.is-in > *:nth-child(4){transition-delay:.18s} .js .rv-stagger.is-in > *:nth-child(5){transition-delay:.24s} .js .rv-stagger.is-in > *:nth-child(6){transition-delay:.30s} .js .rv-stagger.is-in > *:nth-child(7){transition-delay:.36s} .js .rv-stagger.is-in > *:nth-child(8){transition-delay:.42s} .js .rv-stagger.is-in > *:nth-child(9){transition-delay:.48s}
+  /* ---------- fence line with running pulse ---------- */
+  .fence { position:relative; height:2px; background:rgba(22,25,28,.14); }
+  .fence::after { content:""; position:absolute; top:-2px; left:-72px; width:72px; height:6px; border-radius:3px; background:#FFC400; box-shadow:0 0 14px rgba(255,196,0,.85); animation:pulse-run 3.2s linear infinite; }
+  .fence .post { position:absolute; top:-9px; width:4px; height:20px; border-radius:2px; background:#5A984B; }
+  .fence.on-dark { background:rgba(243,248,214,.22); } .fence.on-dark .post { background:#F3F8D6; }
+  @keyframes pulse-run { from { left:-72px; } to { left:100%; } }
+  .fence-v { position:absolute; left:23px; top:24px; bottom:24px; width:2px; background:rgba(22,25,28,.14); overflow:hidden; }
+  .fence-v::after { content:""; position:absolute; left:-2px; top:-72px; width:6px; height:72px; border-radius:3px; background:#FFC400; box-shadow:0 0 14px rgba(255,196,0,.85); animation:pulse-down 3.6s linear infinite; }
+  @keyframes pulse-down { from { top:-72px; } to { top:100%; } }
+  /* ---------- подбор: панель результата на мобильном ---------- */
+  @media (max-width: 767px) { #pickResult:not(.has-result) { display:none; } }
+
+  /* ---------- каталог: слайдер на мобильном ---------- */
+  @media (max-width: 767px) {
+    .m-slider { display:flex; gap:.75rem; overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x mandatory; scroll-padding-left:1.25rem; margin-inline:-1.25rem; padding-inline:1.25rem; padding-bottom:.25rem; scrollbar-width:none; -ms-overflow-style:none; }
+    .m-slider::-webkit-scrollbar { display:none; }
+    .m-slider > * { flex:0 0 78%; max-width:320px; scroll-snap-align:start; }
+  }
+  #catProgress, #kitProgress { transition:transform .15s linear, width .2s ease; will-change:transform; }
+
+  /* ---------- marquee ---------- */
+  .marquee { mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+  .marquee-track { display:flex; width:max-content; animation:marquee 34s linear infinite; }
+  .marquee:hover .marquee-track, .marquee.paused .marquee-track { animation-play-state:paused; }
+  @keyframes marquee { to { transform:translateX(-50%); } }
+  /* ---------- nav ---------- */
+  /* шапка: тёмное стекло над фото → белая при прокрутке */
+  #nav { background:rgba(23,38,27,.46); border-color:rgba(243,248,214,.22); color:#F3F8D6; transition:background-color .3s ease, box-shadow .3s ease, border-color .3s ease, color .3s ease; }
+  #nav .nav-accent { color:#FFC400; transition:color .3s ease; }
+  #nav .nav-link:hover { background-color:rgba(243,248,214,.14); }
+  .page-inner #nav { background:rgba(255,255,255,.94); border-color:rgba(22,25,28,.08); color:#16191C; box-shadow:0 8px 24px -16px rgba(22,25,28,.35); }
+  .page-inner #nav .nav-accent { color:#3E7A34; }
+  .page-inner #nav .nav-link:hover { background-color:rgba(22,25,28,.06); }
+  #nav.scrolled { background:rgba(255,255,255,.94); border-color:rgba(22,25,28,.08); color:#16191C; box-shadow:0 8px 24px -16px rgba(22,25,28,.35); }
+  #nav.scrolled .nav-accent { color:#3E7A34; }
+  #nav.scrolled .nav-link:hover { background-color:rgba(22,25,28,.06); }
+  /* ---------- accordion ---------- */
+  details > summary { list-style:none; cursor:pointer; } details > summary::-webkit-details-marker { display:none; }
+  details[open] .faq-icon { transform:rotate(45deg); } .faq-icon { transition:transform .2s ease-out; }
+  /* ---------- tab panel crossfade ---------- */
+  .tabpanel { animation:tab-in .35s cubic-bezier(.22,1,.36,1); }
+  @keyframes tab-in { from { opacity:0; transform:translateY(6px); } }
+  @media (hover:none) { .lift:hover { transform:none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .js .hero-in, .js .rv, .js .rv-stagger > * { animation:none; transition:opacity .3s ease; transform:none; opacity:1; }
+    .hero-img { animation:none; transform:none; }
+    .fence::after, .fence-v::after { display:none; }
+    .pre-fence::after { animation:none; left:0; width:100%; box-shadow:none; }
+    .marquee-track { animation:none; }
+    .tabpanel { animation:none; }
+    .btn, .chip { transition:none; }
+  }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"GIGANT Agro","url":"https://farik9797.github.io/gigant-agro-site/","logo":"assets/img/logo-gigant.png","telephone":["+77054285707","+77757716024"],"address":{"@type":"PostalAddress","streetAddress":"микрорайон Атырау, 159/8, склад №&nbsp;1","addressLocality":"Алматы","addressCountry":"KZ"},"openingHours":["Mo-Fr 10:00-18:00","Sa 10:00-16:00"]}
+</script>
+</head>
