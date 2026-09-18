@@ -26,3 +26,7 @@
 | kit-sheep-poultry.jpg, kit-sheep-poultry-full.jpg | изображение от заказчика «Готовые комплекты» (17.09.2026) | заказчик |
 | cat-insulators.jpg, cat-cables.jpg, cat-shearing.jpg, cat-nets.jpg | изображения от заказчика для плиток каталога (17.09.2026) | заказчик |
 | hero-gigant-1920.jpg, hero-gigant-1280.jpg | изображение от заказчика для hero (17.09.2026) | заказчик |
+| animal-sheep.jpg | кадр из изображения заказчика «Готовые комплекты» | заказчик |
+| animal-poultry.jpg | File:Schar Deutscher Legegänse beim Grasen.jpg | CC0 |
+| animal-pigs.jpg | File:SugarMtnFarmPigsInPasture.jpg | CC BY-SA 4.0 |
+| animal-boar.jpg | File:Wild boar Paliseul Ardennes.jpg | CC BY-SA 4.0 |
