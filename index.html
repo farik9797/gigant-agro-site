@@ -95,6 +95,14 @@ tailwind.config = {
   .fence-v { position:absolute; left:23px; top:24px; bottom:24px; width:2px; background:rgba(22,25,28,.14); overflow:hidden; }
   .fence-v::after { content:""; position:absolute; left:-2px; top:-72px; width:6px; height:72px; border-radius:3px; background:#FFC400; box-shadow:0 0 14px rgba(255,196,0,.85); animation:pulse-down 3.6s linear infinite; }
   @keyframes pulse-down { from { top:-72px; } to { top:100%; } }
+  /* ---------- каталог: слайдер на мобильном ---------- */
+  @media (max-width: 767px) {
+    .cat-scroll { display:flex; gap:.75rem; overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x mandatory; scroll-padding-left:1.25rem; margin-inline:-1.25rem; padding-inline:1.25rem; padding-bottom:.25rem; scrollbar-width:none; -ms-overflow-style:none; }
+    .cat-scroll::-webkit-scrollbar { display:none; }
+    .cat-scroll > * { flex:0 0 78%; max-width:320px; scroll-snap-align:start; }
+  }
+  #catProgress { transition:transform .15s linear, width .2s ease; will-change:transform; }
+
   /* ---------- marquee ---------- */
   .marquee { mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
   .marquee-track { display:flex; width:max-content; animation:marquee 34s linear infinite; }
@@ -254,7 +262,7 @@ tailwind.config = {
       </div>
       <a href="#catalog" class="link whitespace-nowrap">Весь каталог<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
     </div>
-    <div class="rv-stagger mt-8 grid grid-cols-1 md:grid-cols-4 gap-3 md:gap-4">
+    <div id="catScroll" class="cat-scroll rv-stagger mt-8 md:grid md:grid-cols-4 md:gap-4" role="group" aria-label="Категории каталога, прокрутка по горизонтали">
       <a href="#flagmany" class="card lift overflow-hidden group flex flex-col">
         <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/product-gigant15.jpg" alt="Электропастух GIGANT 15 Дж" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
         <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h3 class="font-extrabold text-[17px] leading-tight">Электропастухи</h3><p class="text-muted text-[14px] mt-1">GIGANT 15&nbsp;Дж и Bekci 25&nbsp;Дж</p></div><i data-lucide="arrow-right" class="w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i></div>
@@ -289,6 +297,9 @@ tailwind.config = {
         <div class="relative"><p class="font-extrabold text-[20px] leading-tight">Не знаете, что выбрать?</p><p class="text-cream/75 text-[14px] mt-2 max-w-[24ch]">Поможем подобрать комплект под ваших животных, площадь и условия.</p></div>
         <span class="relative btn-primary h-11 px-4 self-start text-[15px]">Получить консультацию</span>
       </a>
+    </div>
+    <div class="md:hidden mt-4 h-1 rounded-full bg-line overflow-hidden" aria-hidden="true">
+      <div id="catProgress" class="h-full rounded-full bg-brand-dark" style="width:30%"></div>
     </div>
   </div>
 </section>
@@ -868,6 +879,18 @@ tailwind.config = {
     if(hero&&!reduce){ const p=Math.min(y/700,1); hero.style.transform='translateY('+(y*0.18)+'px)'; hero.style.opacity=String(1-p*0.9); }
     ticking=false; }); };
   onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+  // --- каталог-слайдер: индикатор прокрутки
+  var cs=document.getElementById('catScroll'), pg=document.getElementById('catProgress');
+  if(cs&&pg){
+    var upd=function(){
+      if(cs.scrollWidth<=cs.clientWidth+1){ pg.style.width='100%'; pg.style.transform='none'; return; }
+      var ratio=cs.clientWidth/cs.scrollWidth;
+      pg.style.width=(ratio*100)+'%';
+      pg.style.transform='translateX('+((cs.scrollLeft/cs.scrollWidth)/ratio*100)+'%)';
+    };
+    upd(); cs.addEventListener('scroll',upd,{passive:true}); window.addEventListener('resize',upd);
+  }
 
   // --- бегущая строка: пауза
   const mq=document.querySelector('.marquee'), mqBtn=document.getElementById('marqueeToggle');
