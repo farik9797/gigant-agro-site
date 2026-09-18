@@ -55,7 +55,7 @@ tailwind.config = {
     .btn-secondary { @apply btn bg-brand-dark text-white hover:bg-[#356A2D]; }
     .btn-outline { @apply btn bg-white border border-line text-ink hover:border-ink; }
     .btn-glass { @apply btn border border-white/40 text-white bg-white/10 backdrop-blur-md hover:bg-white/20; }
-    .chip { @apply inline-flex items-center gap-2 h-11 px-4 rounded-full border border-line bg-white text-[15px] font-medium cursor-pointer transition-[background-color,border-color,color,transform] duration-200 ease-out hover:border-ink active:scale-[0.97]; }
+    .chip { @apply inline-flex items-center gap-2 h-11 px-3 md:px-4 rounded-full border border-line bg-white text-[15px] font-medium cursor-pointer transition-[background-color,border-color,color,transform] duration-200 ease-out hover:border-ink active:scale-[0.97]; }
     .chip[aria-pressed="true"], .chip[aria-selected="true"] { @apply bg-ink text-white border-ink; }
     .card { @apply bg-white rounded-2xl border border-line; }
     .lift { @apply transition-[transform,border-color] duration-300 ease-out hover:-translate-y-0.5 hover:border-ink/50; }
@@ -95,13 +95,16 @@ tailwind.config = {
   .fence-v { position:absolute; left:23px; top:24px; bottom:24px; width:2px; background:rgba(22,25,28,.14); overflow:hidden; }
   .fence-v::after { content:""; position:absolute; left:-2px; top:-72px; width:6px; height:72px; border-radius:3px; background:#FFC400; box-shadow:0 0 14px rgba(255,196,0,.85); animation:pulse-down 3.6s linear infinite; }
   @keyframes pulse-down { from { top:-72px; } to { top:100%; } }
+  /* ---------- подбор: панель результата на мобильном ---------- */
+  @media (max-width: 767px) { #pickResult:not(.has-result) { display:none; } }
+
   /* ---------- каталог: слайдер на мобильном ---------- */
   @media (max-width: 767px) {
-    .cat-scroll { display:flex; gap:.75rem; overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x mandatory; scroll-padding-left:1.25rem; margin-inline:-1.25rem; padding-inline:1.25rem; padding-bottom:.25rem; scrollbar-width:none; -ms-overflow-style:none; }
-    .cat-scroll::-webkit-scrollbar { display:none; }
-    .cat-scroll > * { flex:0 0 78%; max-width:320px; scroll-snap-align:start; }
+    .m-slider { display:flex; gap:.75rem; overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x mandatory; scroll-padding-left:1.25rem; margin-inline:-1.25rem; padding-inline:1.25rem; padding-bottom:.25rem; scrollbar-width:none; -ms-overflow-style:none; }
+    .m-slider::-webkit-scrollbar { display:none; }
+    .m-slider > * { flex:0 0 78%; max-width:320px; scroll-snap-align:start; }
   }
-  #catProgress { transition:transform .15s linear, width .2s ease; will-change:transform; }
+  #catProgress, #kitProgress { transition:transform .15s linear, width .2s ease; will-change:transform; }
 
   /* ---------- marquee ---------- */
   .marquee { mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
@@ -243,7 +246,7 @@ tailwind.config = {
 
 <!-- ================= ЛОГОТИПНАЯ ЛЕНТА ================= -->
 <div class="bg-white border-b border-line relative">
-  <button id="marqueeToggle" class="absolute right-3 top-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center w-11 h-11 md:w-9 md:h-9 rounded-full border border-line bg-white text-muted hover:text-ink hover:border-ink" aria-label="Остановить бегущую строку" aria-pressed="false"><i data-lucide="pause" class="w-4 h-4" aria-hidden="true"></i></button>
+  <button id="marqueeToggle" class="sr-only focus:not-sr-only focus:absolute focus:right-3 focus:top-1/2 focus:-translate-y-1/2 focus:z-10 focus:inline-flex focus:items-center focus:justify-center focus:w-11 focus:h-11 focus:rounded-full focus:border focus:border-ink focus:bg-white focus:text-ink" aria-label="Остановить бегущую строку" aria-pressed="false"><i data-lucide="pause" class="w-4 h-4" aria-hidden="true"></i></button>
   <div class="marquee overflow-hidden py-5">
     <div class="marquee-track gap-12 pr-12 text-[15px] font-semibold uppercase tracking-[0.06em] text-muted">
       <span class="inline-flex items-center gap-12"><span class="text-ink">GIGANT</span><span>Bekci</span><span>Satu.kz</span><span>Ozon</span><span>Wildberries</span><span>Опт и розница</span><span>Склад в Алматы</span><span>Доставка по Казахстану и СНГ</span><span>Гарантия до 2 лет</span></span>
@@ -262,7 +265,7 @@ tailwind.config = {
       </div>
       <a href="#catalog" class="link whitespace-nowrap">Весь каталог<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
     </div>
-    <div id="catScroll" class="cat-scroll rv-stagger mt-8 md:grid md:grid-cols-4 md:gap-4" role="group" aria-label="Категории каталога, прокрутка по горизонтали">
+    <div id="catScroll" class="m-slider rv-stagger mt-8 md:grid md:grid-cols-4 md:gap-4" role="group" aria-label="Категории каталога, прокрутка по горизонтали">
       <a href="#flagmany" class="card lift overflow-hidden group flex flex-col">
         <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/product-gigant15.jpg" alt="Электропастух GIGANT 15 Дж" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
         <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h3 class="font-extrabold text-[17px] leading-tight">Электропастухи</h3><p class="text-muted text-[14px] mt-1">GIGANT 15&nbsp;Дж и Bekci 25&nbsp;Дж</p></div><i data-lucide="arrow-right" class="w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i></div>
@@ -306,7 +309,7 @@ tailwind.config = {
 
 <!-- ================= ПОДБОР ================= -->
 <section id="podbor" class="container-site scroll-mt-28 pt-12 md:pt-16">
-  <div class="rv rounded-2xl bg-cream border border-brand/25 p-6 md:p-10 lg:p-12">
+  <div class="rv rounded-2xl bg-cream border border-brand/25 p-5 md:p-10 lg:p-12">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-end">
       <div class="lg:col-span-8">
         <h2 class="h2">Подберите комплект под своё хозяйство</h2>
@@ -315,10 +318,10 @@ tailwind.config = {
       <p class="lg:col-span-4 text-[15px] text-muted lg:text-right">Не хотите заполнять — <a href="https://wa.me/77054285707?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D0%BE%D0%BC%D0%BE%D0%B3%D0%B8%D1%82%D0%B5%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BF%D0%B0%D1%81%D1%82%D1%83%D1%85" target="_blank" rel="noopener" class="link">напишите в WhatsApp</a>, что за животные и сколько гектаров.</p>
     </div>
 
-    <div class="mt-8 md:mt-10 card p-5 md:p-7 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0">
+    <div class="mt-7 md:mt-10 md:bg-white md:rounded-2xl md:border md:border-line md:p-7 grid grid-cols-1 lg:grid-cols-12 gap-7 md:gap-8 lg:gap-0">
       <div class="lg:col-span-7 lg:pr-10">
         <fieldset class="pb-6">
-          <legend class="flex items-center gap-3 font-extrabold text-[17px]"><span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-cream text-brand-dark text-[14px] font-black tabular-nums" aria-hidden="true">1</span>Кого держите</legend>
+          <legend class="flex items-center gap-3 font-extrabold text-[17px]"><span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white md:bg-cream border border-line md:border-0 text-brand-dark text-[14px] font-black tabular-nums" aria-hidden="true">1</span>Кого держите</legend>
           <div id="pickAnimal" class="mt-4 flex flex-wrap gap-2" role="group" aria-label="Вид животных">
             <button class="chip" data-v="krs" aria-pressed="true">КРС</button>
             <button class="chip" data-v="horse" aria-pressed="false">Лошади</button>
@@ -329,7 +332,7 @@ tailwind.config = {
           </div>
         </fieldset>
         <fieldset class="py-6">
-          <legend class="flex items-center gap-3 font-extrabold text-[17px]"><span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-cream text-brand-dark text-[14px] font-black tabular-nums" aria-hidden="true">2</span>Сколько земли</legend>
+          <legend class="flex items-center gap-3 font-extrabold text-[17px]"><span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white md:bg-cream border border-line md:border-0 text-brand-dark text-[14px] font-black tabular-nums" aria-hidden="true">2</span>Сколько земли</legend>
           <div class="mt-4 flex flex-col sm:flex-row sm:items-center gap-3">
             <label class="relative w-full sm:w-36"><span class="sr-only">Площадь или периметр</span><input id="pickArea" type="number" min="0.1" step="0.1" value="5" class="input" inputmode="decimal" aria-describedby="pickAreaHint" autocomplete="off"></label>
             <div id="pickUnit" class="grid grid-cols-2 w-full sm:inline-flex sm:w-auto self-start rounded-xl border border-line bg-white p-1" role="group" aria-label="Единицы">
@@ -340,7 +343,7 @@ tailwind.config = {
           <p id="pickAreaHint" class="mt-3 text-[14px] text-muted">Не знаете периметр — укажите площадь, мы посчитаем.</p>
         </fieldset>
         <fieldset class="pt-6">
-          <legend class="flex items-center gap-3 font-extrabold text-[17px]"><span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-cream text-brand-dark text-[14px] font-black tabular-nums" aria-hidden="true">3</span>Откуда питание</legend>
+          <legend class="flex items-center gap-3 font-extrabold text-[17px]"><span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white md:bg-cream border border-line md:border-0 text-brand-dark text-[14px] font-black tabular-nums" aria-hidden="true">3</span>Откуда питание</legend>
           <div id="pickPower" class="mt-4 flex flex-wrap gap-2" role="group" aria-label="Источник питания">
             <button class="chip" data-v="220" aria-pressed="true">Розетка 220&nbsp;В</button>
             <button class="chip" data-v="12" aria-pressed="false">Аккумулятор 12&nbsp;В</button>
@@ -354,8 +357,8 @@ tailwind.config = {
           <button id="pickGo" class="btn-primary btn-lg w-full">Показать решение<i data-lucide="arrow-right" class="w-5 h-5" aria-hidden="true"></i></button>
           <p class="mt-3 text-[14px] text-muted">Результат ориентировочный, точный состав подтвердит менеджер.</p>
         </div>
-        <div id="pickResult" aria-live="polite" tabindex="-1" class="flex-1 rounded-2xl bg-cream border border-brand/30 p-5 md:p-6 outline-none">
-          <div id="resEmpty" class="h-full min-h-[200px] flex flex-col items-center justify-center text-center gap-3 text-muted">
+        <div id="pickResult" aria-live="polite" tabindex="-1" class="flex-1 rounded-2xl bg-white border border-line md:bg-cream md:border-brand/30 p-5 md:p-6 outline-none">
+          <div id="resEmpty" class="h-full min-h-[200px] hidden md:flex flex-col items-center justify-center text-center gap-3 text-muted">
             <i data-lucide="sliders-horizontal" class="w-8 h-8 text-brand-dark" aria-hidden="true"></i>
             <p class="text-[15px] max-w-[26ch]">Выберите животных, площадь и питание — здесь появится модель, комплект и цена.</p>
           </div>
@@ -581,7 +584,7 @@ tailwind.config = {
       <div><h2 class="h2">Распаковал и поставил</h2><p class="lead mt-3">Всё нужное в одной коробке. При покупке полного комплекта аккумулятор — в подарок.</p></div>
       <a href="#komplekty" class="link whitespace-nowrap">Все комплекты<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
     </div>
-    <div class="rv-stagger mt-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5">
+    <div id="kitScroll" class="m-slider rv-stagger mt-10 md:grid md:grid-cols-2 xl:grid-cols-4 md:gap-5" role="group" aria-label="Готовые комплекты, прокрутка по горизонтали">
       <article class="card lift overflow-hidden flex flex-col">
         <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/sheep.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="631"><span class="absolute left-3 top-3 rounded-full bg-pulse text-ink text-[13px] font-bold px-2.5 py-1">Аккумулятор в подарок</span></div>
         <div class="p-5 flex flex-col flex-1">
@@ -638,6 +641,9 @@ tailwind.config = {
           <div class="mt-auto pt-5 flex items-center justify-between gap-3"><p class="font-extrabold text-[17px] leading-tight">Цена по запросу</p><a href="#podbor" class="btn-secondary h-10 px-4 text-[15px]" data-preset-power="sun">Собрать</a></div>
         </div>
       </article>
+    </div>
+    <div class="md:hidden mt-4 h-1 rounded-full bg-line overflow-hidden" aria-hidden="true">
+      <div id="kitProgress" class="h-full rounded-full bg-brand-dark" style="width:30%"></div>
     </div>
   </div>
 </section>
@@ -880,9 +886,10 @@ tailwind.config = {
     ticking=false; }); };
   onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
 
-  // --- каталог-слайдер: индикатор прокрутки
-  var cs=document.getElementById('catScroll'), pg=document.getElementById('catProgress');
-  if(cs&&pg){
+  // --- слайдеры на мобильном: индикатор прокрутки
+  [['catScroll','catProgress'],['kitScroll','kitProgress']].forEach(function(pair){
+    var cs=document.getElementById(pair[0]), pg=document.getElementById(pair[1]);
+    if(!cs||!pg) return;
     var upd=function(){
       if(cs.scrollWidth<=cs.clientWidth+1){ pg.style.width='100%'; pg.style.transform='none'; return; }
       var ratio=cs.clientWidth/cs.scrollWidth;
@@ -890,7 +897,7 @@ tailwind.config = {
       pg.style.transform='translateX('+((cs.scrollLeft/cs.scrollWidth)/ratio*100)+'%)';
     };
     upd(); cs.addEventListener('scroll',upd,{passive:true}); window.addEventListener('resize',upd);
-  }
+  });
 
   // --- бегущая строка: пауза
   const mq=document.querySelector('.marquee'), mqBtn=document.getElementById('marqueeToggle');
@@ -954,7 +961,7 @@ tailwind.config = {
     const areaTxt=pick.unit==='ha'?val+' га':val+' м периметра';
     const msg='Здравствуйте! Хочу подобрать электропастух. Животные: '+ANIMAL[pick.animal]+', '+areaTxt+', питание: '+POWER[pick.power]+'. Сайт предложил: '+r.model+'.';
     document.getElementById('resWa').href='https://wa.me/77054285707?text='+encodeURIComponent(msg);
-    const res=document.getElementById('pickResult'); document.getElementById('resEmpty').hidden=true; document.getElementById('resBody').hidden=false;
+    const res=document.getElementById('pickResult'); res.classList.add('has-result'); document.getElementById('resEmpty').hidden=true; document.getElementById('resBody').hidden=false;
     if(window.innerWidth<1024) res.scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'}); res.focus({preventScroll:true});
   });
 
