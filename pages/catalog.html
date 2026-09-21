@@ -1,6 +1,6 @@
 <main id="top">
 <nav aria-label="Хлебные крошки" class="container-site pt-28 md:pt-32">
-  <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-[14px] text-muted">
+  <ol class="no-scrollbar flex items-center gap-x-2 gap-y-1 text-[14px] text-muted whitespace-nowrap overflow-x-auto -mx-5 px-5 sm:mx-0 sm:px-0 sm:flex-wrap sm:whitespace-normal sm:overflow-visible">
     <li><a href="index.html" class="hover:text-ink">Главная</a></li><li aria-hidden="true">/</li><li aria-current="page" class="text-ink font-medium">Каталог</li>
   </ol>
 </nav>
@@ -13,37 +13,69 @@
 </header>
 <section class="container-site mt-10 md:mt-12">
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-      <a href="catalog-elektropastuhi.html" class="card lift overflow-hidden group flex flex-col">
-        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/product-gigant15.jpg" alt="Электропастух GIGANT 15 Дж" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">Электропастухи</h2><p class="text-muted text-[14px] mt-1">GIGANT 15&nbsp;Дж и Bekci от 6,9 до 25&nbsp;Дж</p></div><span class="text-[13px] text-muted whitespace-nowrap">4 модели</span></div>
+      <a href="catalog-elektropastuhi.html" class="card lift overflow-hidden group flex flex-row sm:flex-col">
+        <div class="w-[112px] shrink-0 sm:w-auto aspect-square sm:aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/product-gigant15.jpg" alt="Электропастух GIGANT 15 Дж" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="min-w-0 flex-1 p-3.5 sm:p-4 md:p-5 flex items-center justify-between gap-2 sm:gap-3">
+          <div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">Электропастухи</h2><p class="text-muted text-[14px] leading-snug mt-1">GIGANT 15&nbsp;Дж и Bekci от 6,9 до 25&nbsp;Дж</p><p class="sm:hidden mt-1.5 text-[13px] font-bold text-brand-dark">4 модели</p></div>
+          <span class="hidden sm:block text-[13px] text-muted whitespace-nowrap">4 модели</span>
+          <i data-lucide="chevron-right" class="sm:hidden w-5 h-5 text-muted shrink-0" aria-hidden="true"></i>
+        </div>
       </a>
-      <a href="catalog-komplekty.html" class="card lift overflow-hidden group flex flex-col">
-        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/kit-sheep-poultry.jpg" alt="Готовый комплект для овец с электросеткой" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">Готовые комплекты</h2><p class="text-muted text-[14px] mt-1">Для овец, КРС и лошадей, аккумулятор в подарок</p></div><span class="text-[13px] text-muted whitespace-nowrap">от 125 000 ₸</span></div>
+      <a href="catalog-komplekty.html" class="card lift overflow-hidden group flex flex-row sm:flex-col">
+        <div class="w-[112px] shrink-0 sm:w-auto aspect-square sm:aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/kit-sheep-poultry.jpg" alt="Готовый комплект для овец с электросеткой" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="min-w-0 flex-1 p-3.5 sm:p-4 md:p-5 flex items-center justify-between gap-2 sm:gap-3">
+          <div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">Готовые комплекты</h2><p class="text-muted text-[14px] leading-snug mt-1">Для овец, КРС и лошадей, аккумулятор в подарок</p><p class="sm:hidden mt-1.5 text-[13px] font-bold text-brand-dark">от 125 000 ₸</p></div>
+          <span class="hidden sm:block text-[13px] text-muted whitespace-nowrap">от 125 000 ₸</span>
+          <i data-lucide="chevron-right" class="sm:hidden w-5 h-5 text-muted shrink-0" aria-hidden="true"></i>
+        </div>
       </a>
-      <a href="catalog-setki.html" class="card lift overflow-hidden group flex flex-col">
-        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/cat-nets.jpg" alt="Рулоны электросетки" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">Сетки и шнуры</h2><p class="text-muted text-[14px] mt-1">Шнур 6 жил, проволока 1,6 мм, электросетки</p></div><span class="text-[13px] text-muted whitespace-nowrap">от 21 900 ₸</span></div>
+      <a href="catalog-setki.html" class="card lift overflow-hidden group flex flex-row sm:flex-col">
+        <div class="w-[112px] shrink-0 sm:w-auto aspect-square sm:aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/cat-nets.jpg" alt="Рулоны электросетки" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="min-w-0 flex-1 p-3.5 sm:p-4 md:p-5 flex items-center justify-between gap-2 sm:gap-3">
+          <div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">Сетки и шнуры</h2><p class="text-muted text-[14px] leading-snug mt-1">Шнур 6 жил, проволока 1,6 мм, электросетки</p><p class="sm:hidden mt-1.5 text-[13px] font-bold text-brand-dark">от 21 900 ₸</p></div>
+          <span class="hidden sm:block text-[13px] text-muted whitespace-nowrap">от 21 900 ₸</span>
+          <i data-lucide="chevron-right" class="sm:hidden w-5 h-5 text-muted shrink-0" aria-hidden="true"></i>
+        </div>
       </a>
-      <a href="catalog-izolyatory.html" class="card lift overflow-hidden group flex flex-col">
-        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/cat-insulators.jpg" alt="Изолятор на столбе" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">Изоляторы и колышки</h2><p class="text-muted text-[14px] mt-1">Под проволоку, шнур и ленту</p></div><span class="text-[13px] text-muted whitespace-nowrap">цена по запросу</span></div>
+      <a href="catalog-izolyatory.html" class="card lift overflow-hidden group flex flex-row sm:flex-col">
+        <div class="w-[112px] shrink-0 sm:w-auto aspect-square sm:aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/cat-insulators.jpg" alt="Изолятор на столбе" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="min-w-0 flex-1 p-3.5 sm:p-4 md:p-5 flex items-center justify-between gap-2 sm:gap-3">
+          <div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">Изоляторы и колышки</h2><p class="text-muted text-[14px] leading-snug mt-1">Под проволоку, шнур и ленту</p><p class="sm:hidden mt-1.5 text-[13px] font-bold text-brand-dark">цена по запросу</p></div>
+          <span class="hidden sm:block text-[13px] text-muted whitespace-nowrap">цена по запросу</span>
+          <i data-lucide="chevron-right" class="sm:hidden w-5 h-5 text-muted shrink-0" aria-hidden="true"></i>
+        </div>
       </a>
-      <a href="catalog-kabeli.html" class="card lift overflow-hidden group flex flex-col">
-        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/cat-cables.jpg" alt="Кабели подключения с клеммами" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">Кабели и аксессуары</h2><p class="text-muted text-[14px] mt-1">Подключение, клеммы, заземление, ворота</p></div><span class="text-[13px] text-muted whitespace-nowrap">цена по запросу</span></div>
+      <a href="catalog-kabeli.html" class="card lift overflow-hidden group flex flex-row sm:flex-col">
+        <div class="w-[112px] shrink-0 sm:w-auto aspect-square sm:aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/cat-cables.jpg" alt="Кабели подключения с клеммами" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="min-w-0 flex-1 p-3.5 sm:p-4 md:p-5 flex items-center justify-between gap-2 sm:gap-3">
+          <div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">Кабели и аксессуары</h2><p class="text-muted text-[14px] leading-snug mt-1">Подключение, клеммы, заземление, ворота</p><p class="sm:hidden mt-1.5 text-[13px] font-bold text-brand-dark">цена по запросу</p></div>
+          <span class="hidden sm:block text-[13px] text-muted whitespace-nowrap">цена по запросу</span>
+          <i data-lucide="chevron-right" class="sm:hidden w-5 h-5 text-muted shrink-0" aria-hidden="true"></i>
+        </div>
       </a>
-      <a href="catalog-solnce.html" class="card lift overflow-hidden group flex flex-col">
-        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/solar-line.jpg" alt="Солнечная панель на линии электроизгороди" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">Солнечные системы</h2><p class="text-muted text-[14px] mt-1">Панели, MPPT-контроллеры, аккумуляторы</p></div><span class="text-[13px] text-muted whitespace-nowrap">цена по запросу</span></div>
+      <a href="catalog-solnce.html" class="card lift overflow-hidden group flex flex-row sm:flex-col">
+        <div class="w-[112px] shrink-0 sm:w-auto aspect-square sm:aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/solar-line.jpg" alt="Солнечная панель на линии электроизгороди" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="min-w-0 flex-1 p-3.5 sm:p-4 md:p-5 flex items-center justify-between gap-2 sm:gap-3">
+          <div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">Солнечные системы</h2><p class="text-muted text-[14px] leading-snug mt-1">Панели, MPPT-контроллеры, аккумуляторы</p><p class="sm:hidden mt-1.5 text-[13px] font-bold text-brand-dark">цена по запросу</p></div>
+          <span class="hidden sm:block text-[13px] text-muted whitespace-nowrap">цена по запросу</span>
+          <i data-lucide="chevron-right" class="sm:hidden w-5 h-5 text-muted shrink-0" aria-hidden="true"></i>
+        </div>
       </a>
-      <a href="catalog-strizhka.html" class="card lift overflow-hidden group flex flex-col">
-        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/cat-shearing.jpg" alt="Машинка для стрижки овец" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">Стрижка овец</h2><p class="text-muted text-[14px] mt-1">Машинки, ножи и запчасти</p></div><span class="text-[13px] text-muted whitespace-nowrap">цена по запросу</span></div>
+      <a href="catalog-strizhka.html" class="card lift overflow-hidden group flex flex-row sm:flex-col">
+        <div class="w-[112px] shrink-0 sm:w-auto aspect-square sm:aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/cat-shearing.jpg" alt="Машинка для стрижки овец" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="min-w-0 flex-1 p-3.5 sm:p-4 md:p-5 flex items-center justify-between gap-2 sm:gap-3">
+          <div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">Стрижка овец</h2><p class="text-muted text-[14px] leading-snug mt-1">Машинки, ножи и запчасти</p><p class="sm:hidden mt-1.5 text-[13px] font-bold text-brand-dark">цена по запросу</p></div>
+          <span class="hidden sm:block text-[13px] text-muted whitespace-nowrap">цена по запросу</span>
+          <i data-lucide="chevron-right" class="sm:hidden w-5 h-5 text-muted shrink-0" aria-hidden="true"></i>
+        </div>
       </a>
-      <a href="catalog-pogonyala.html" class="card lift overflow-hidden group flex flex-col">
-        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/product-gigant15.jpg" alt="Электропогоняло GIGANT" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">Электропогонялa</h2><p class="text-muted text-[14px] mt-1">Для перемещения скота</p></div><span class="text-[13px] text-muted whitespace-nowrap">44 500 ₸</span></div>
+      <a href="catalog-pogonyala.html" class="card lift overflow-hidden group flex flex-row sm:flex-col">
+        <div class="w-[112px] shrink-0 sm:w-auto aspect-square sm:aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/product-gigant15.jpg" alt="Электропогоняло GIGANT" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="min-w-0 flex-1 p-3.5 sm:p-4 md:p-5 flex items-center justify-between gap-2 sm:gap-3">
+          <div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">Электропогонялa</h2><p class="text-muted text-[14px] leading-snug mt-1">Для перемещения скота</p><p class="sm:hidden mt-1.5 text-[13px] font-bold text-brand-dark">44 500 ₸</p></div>
+          <span class="hidden sm:block text-[13px] text-muted whitespace-nowrap">44 500 ₸</span>
+          <i data-lucide="chevron-right" class="sm:hidden w-5 h-5 text-muted shrink-0" aria-hidden="true"></i>
+        </div>
       </a>
   </div>
 </section>

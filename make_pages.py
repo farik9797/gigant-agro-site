@@ -23,7 +23,7 @@ def crumbs(items):
         ld.append('{"@type":"ListItem","position":%d,"name":"%s"%s}'%(i,t.replace('&nbsp;',' '),
                   ',"item":"%s"'%h if h else ''))
     return f'''<nav aria-label="Хлебные крошки" class="container-site pt-28 md:pt-32">
-  <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-[14px] text-muted">
+  <ol class="no-scrollbar flex items-center gap-x-2 gap-y-1 text-[14px] text-muted whitespace-nowrap overflow-x-auto -mx-5 px-5 sm:mx-0 sm:px-0 sm:flex-wrap sm:whitespace-normal sm:overflow-visible">
     {'<li aria-hidden="true">/</li>'.join(li)}
   </ol>
 </nav>
@@ -61,7 +61,7 @@ def product_card(img, alt, name, sub, price, specs, href=None, badge=None, badge
     spec_html=''.join(f'<div class="border-t border-line pt-2"><dt class="text-[12px] text-muted">{k}</dt><dd class="font-bold text-[14px]">{v}</dd></div>' for k,v in specs)
     title=f'<a href="{href}" class="hover:underline underline-offset-4">{name}</a>' if href else name
     return f'''<article class="card lift overflow-hidden flex flex-col">
-  <div class="relative bg-white aspect-[4/3] border-b border-line">
+  <div class="relative bg-white aspect-[16/10] sm:aspect-[4/3] border-b border-line">
     <img src="{img}" alt="{alt}" class="absolute inset-0 w-full h-full object-contain p-4" loading="lazy" width="800" height="600">
     {f'<span class="absolute left-3 top-3 rounded-full {badge_style} text-[13px] font-bold px-2.5 py-1">{badge}</span>' if badge else ''}
   </div>
@@ -73,8 +73,8 @@ def product_card(img, alt, name, sub, price, specs, href=None, badge=None, badge
     <p class="text-muted text-[14px] mt-2">{sub}</p>
     <dl class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2">{spec_html}</dl>
     <div class="mt-auto pt-5 flex flex-wrap gap-2">
-      <a href="{order(name)}" class="btn-primary h-10 px-4 text-[15px]">Заказать</a>
-      <a href="{wa('Здравствуйте! Интересует '+name.replace('&nbsp;',' '))}" target="_blank" rel="noopener" class="btn-outline h-10 px-3 text-[15px]"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5" width="20" height="20">WhatsApp</a>
+      <a href="{order(name)}" class="btn-primary h-11 sm:h-10 px-4 text-[15px] flex-1 sm:flex-none">Заказать</a>
+      <a href="{wa('Здравствуйте! Интересует '+name.replace('&nbsp;',' '))}" target="_blank" rel="noopener" class="btn-outline h-11 sm:h-10 px-3.5 sm:px-3 text-[15px] shrink-0"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5" width="20" height="20">WhatsApp</a>
     </div>
   </div>
 </article>'''
@@ -133,15 +133,19 @@ def kit_card(k):
     <ul class="mt-3 space-y-1.5 text-[14px] text-muted">{li}</ul>
     <div class="mt-auto pt-5 flex items-center justify-between gap-3">
       <p class="font-black text-[20px] leading-none tabular-nums">{k['price']}</p>
-      <a href="{order(k['name'])}" class="btn-primary h-10 px-4 text-[15px]">Заказать</a>
+      <a href="{order(k['name'])}" class="btn-primary h-11 sm:h-10 px-5 sm:px-4 text-[15px]">Заказать</a>
     </div>
   </div>
 </article>'''
 
 # ---------- каталог (все категории) ----------
-tiles=''.join(f'''      <a href="{href}" class="card lift overflow-hidden group flex flex-col">
-        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="{img}" alt="{alt}" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">{name}</h2><p class="text-muted text-[14px] mt-1">{sub}</p></div><span class="text-[13px] text-muted whitespace-nowrap">{meta}</span></div>
+tiles=''.join(f'''      <a href="{href}" class="card lift overflow-hidden group flex flex-row sm:flex-col">
+        <div class="w-[112px] shrink-0 sm:w-auto aspect-square sm:aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="{img}" alt="{alt}" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
+        <div class="min-w-0 flex-1 p-3.5 sm:p-4 md:p-5 flex items-center justify-between gap-2 sm:gap-3">
+          <div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">{name}</h2><p class="text-muted text-[14px] leading-snug mt-1">{sub}</p><p class="sm:hidden mt-1.5 text-[13px] font-bold text-brand-dark">{meta}</p></div>
+          <span class="hidden sm:block text-[13px] text-muted whitespace-nowrap">{meta}</span>
+          <i data-lucide="chevron-right" class="sm:hidden w-5 h-5 text-muted shrink-0" aria-hidden="true"></i>
+        </div>
       </a>
 ''' for href,name,sub,img,alt,meta in CATS)
 
@@ -164,7 +168,7 @@ w('catalog-elektropastuhi.html', f'''
 {crumbs([('Главная','index.html'),('Каталог','catalog.html'),('Электропастухи',None)])}
 {page_head('Электропастухи', 'Четыре модели от 6,9 до 25&nbsp;Дж. Мощность выбирают по длине линии, густоте травы и виду животных: чем длиннее периметр и плотнее растительность, тем больше джоулей нужно.')}
 <section class="container-site mt-8 md:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
-  <div class="lg:col-span-3">
+  <div class="order-last lg:order-none lg:col-span-3">
     <div class="lg:sticky lg:top-28 card p-5">
       <p class="font-extrabold text-[17px]">Подобрать по задаче</p>
       <ul class="mt-4 space-y-2.5 text-[15px]">
@@ -324,8 +328,9 @@ w('product-gigant-15.html', f'''
 
 <section class="container-site mt-12 md:mt-16">
   <h2 class="h2">Похожие приборы</h2>
-  <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+  <div id="relScroll" class="m-slider mt-6 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5" role="group" aria-label="Похожие приборы, прокрутка по горизонтали">
 {''.join(product_card(p['img'],p['alt'],p['name'],p['sub'],p['price'],p['specs'],p.get('href'),p.get('badge'),p.get('badge_style','bg-cream text-brand-dark')) for p in PRIBORY[1:])}  </div>
+  <div class="md:hidden mt-4 h-1 rounded-full bg-line overflow-hidden" aria-hidden="true"><div id="relProgress" class="h-full rounded-full bg-brand-dark" style="width:34%"></div></div>
 </section>
 {cta_band('Подобрать комплект с этим прибором','Скажите вид животных и площадь — посчитаем проводник, изоляторы и заземление под ваш периметр.')}
 </main>''')
@@ -421,6 +426,7 @@ ANIMAL_TABLE=[('КРС','1–2','Проволока 1,6 мм или шнур 6 �
  ('Свиньи','2–3, низко','Проволока или шнур','GIGANT 15','Под периметр'),
  ('Птица','Сетка','Электросетка','Bekci 6,9 · GIGANT 15','Под периметр'),
  ('Дикие животные','3–4, от земли','Проволока 1,6 мм','Bekci 25','Под периметр')]
+animal_cards=''.join(f'''<div class="card p-4"><h3 class="font-extrabold text-[17px]">{a}</h3><dl class="mt-3 grid grid-cols-[auto,1fr] gap-x-4 gap-y-1.5 text-[15px]"><dt class="text-muted">Линий</dt><dd class="font-semibold tabular-nums">{l}</dd><dt class="text-muted">Проводник</dt><dd class="font-semibold">{c}</dd><dt class="text-muted">Прибор</dt><dd class="font-semibold">{d}</dd><dt class="text-muted">Комплект</dt><dd class="font-semibold">{k}</dd></dl></div>''' for a,l,c,d,k in ANIMAL_TABLE)
 rows=''.join(f'<tr class="border-b border-line"><th scope="row" class="text-left font-bold py-3 pr-4">{a}</th><td class="py-3 pr-4 tabular-nums">{l}</td><td class="py-3 pr-4">{c}</td><td class="py-3 pr-4">{d}</td><td class="py-3">{k}</td></tr>' for a,l,c,d,k in ANIMAL_TABLE)
 
 w('kak-vybrat.html', f'''
@@ -458,7 +464,8 @@ w('kak-vybrat.html', f'''
       <p class="mt-4"><a href="catalog-solnce.html" class="link">Солнечные системы<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a></p>
     </article>
     <article id="table" class="scroll-mt-28"><h2 class="h3">Таблица по животным</h2>
-      <div class="mt-4 overflow-x-auto"><table class="w-full min-w-[640px] text-[15px]">
+      <div class="mt-4 space-y-3 md:hidden">{animal_cards}</div>
+      <div class="mt-4 overflow-x-auto hidden md:block"><table class="w-full min-w-[640px] text-[15px]">
         <thead><tr class="border-b-2 border-ink"><th scope="col" class="text-left font-extrabold py-3 pr-4">Животные</th><th scope="col" class="text-left font-extrabold py-3 pr-4">Линий</th><th scope="col" class="text-left font-extrabold py-3 pr-4">Проводник</th><th scope="col" class="text-left font-extrabold py-3 pr-4">Прибор</th><th scope="col" class="text-left font-extrabold py-3">Комплект</th></tr></thead>
         <tbody>{rows}</tbody>
       </table></div>
@@ -653,7 +660,7 @@ w('kontakty.html', f'''
 <main id="top">
 {crumbs([('Главная','index.html'),('Контакты',None)])}
 {page_head('Контакты', 'Склад и выдача заказов в Алматы. Звоните или пишите в WhatsApp — отвечаем в рабочее время в течение часа.')}
-<section class="container-site mt-8 md:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+<section class="container-site mt-8 md:mt-10 pb-14 md:pb-24 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
   <div class="lg:col-span-5 space-y-5">
     <div class="card p-6">
       <h2 class="h3">GIGANT Agro</h2>
@@ -776,7 +783,7 @@ w('policy.html', f'''
 <main id="top">
 {crumbs([('Главная','index.html'),('Политика конфиденциальности',None)])}
 {page_head('Политика конфиденциальности', 'Как GIGANT Agro обрабатывает персональные данные, которые вы оставляете через формы на сайте.')}
-<section class="container-site mt-8 md:mt-10">
+<section class="container-site mt-8 md:mt-10 pb-14 md:pb-24">
   {prose('''<p><strong>Какие данные мы собираем.</strong> Имя и номер телефона, которые вы указываете в форме заявки, а также сведения о хозяйстве: вид животных, площадь и предпочтительный источник питания. Эти данные нужны, чтобы подобрать комплект и связаться с вами.</p>
 <p class="mt-4"><strong>Зачем.</strong> Для ответа на заявку, подбора оборудования, оформления заказа и доставки. Мы не используем ваши данные для рассылок без отдельного согласия.</p>
 <p class="mt-4"><strong>Кому передаём.</strong> Транспортной компании — данные, необходимые для доставки. В остальных случаях мы не передаём данные третьим лицам, кроме случаев, предусмотренных законодательством Республики Казахстан.</p>
