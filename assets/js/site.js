@@ -27,7 +27,7 @@
   })();
 
   // --- слайдеры на мобильном: индикатор прокрутки
-  [['catScroll','catProgress'],['kitScroll','kitProgress'],['relScroll','relProgress']].forEach(function(pair){
+  [['catScroll','catProgress'],['kitScroll','kitProgress'],['relScroll','relProgress'],['flagScroll','flagProgress']].forEach(function(pair){
     var cs=document.getElementById(pair[0]), pg=document.getElementById(pair[1]);
     if(!cs||!pg) return;
     var upd=function(){
