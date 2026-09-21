@@ -37,7 +37,14 @@ def page_head(h1, lead, aside=''):
   </div>
 </header>'''
 
-def cta_band(title='Не уверены, что выбрать?', text='Опишите хозяйство — подберём модель, число линий и питание за один разговор.'):
+def cta_band(title='Не уверены, что выбрать?', text='Опишите хозяйство — подберём модель, число линий и питание за один разговор.', ask=None):
+    """ask — текст сообщения в WhatsApp. Если задан, главная кнопка ведёт в WhatsApp, вторая — звонок."""
+    if ask:
+        buttons=f'''<a href="{wa(ask)}" target="_blank" rel="noopener" class="btn-primary btn-lg"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5" width="20" height="20">Написать в WhatsApp</a>
+      <a href="tel:+77054285707" class="btn-glass btn-lg"><i data-lucide="phone" class="w-5 h-5" aria-hidden="true"></i>+7 (705) 428-57-07</a>'''
+    else:
+        buttons=f'''<a href="podbor.html" class="btn-primary btn-lg">Подобрать комплект<i data-lucide="arrow-right" class="w-5 h-5" aria-hidden="true"></i></a>
+      <a href="{wa('Здравствуйте! Нужна консультация по электропастуху.')}" target="_blank" rel="noopener" class="btn-glass btn-lg"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">WhatsApp</a>'''
     return f'''<section class="bg-deep text-cream mt-16 md:mt-24">
   <div class="container-site py-12 md:py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
     <div class="lg:col-span-7">
@@ -45,16 +52,15 @@ def cta_band(title='Не уверены, что выбрать?', text='Опиш
       <p class="mt-4 text-cream/80 text-[17px] leading-[1.6] max-w-[52ch]">{text}</p>
     </div>
     <div class="lg:col-span-5 flex flex-col sm:flex-row lg:justify-end gap-3">
-      <a href="podbor.html" class="btn-primary btn-lg">Подобрать комплект<i data-lucide="arrow-right" class="w-5 h-5" aria-hidden="true"></i></a>
-      <a href="{wa('Здравствуйте! Нужна консультация по электропастуху.')}" target="_blank" rel="noopener" class="btn-glass btn-lg"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">WhatsApp</a>
+      {buttons}
     </div>
   </div>
 </section>'''
 
 def helper_card():
-    return f'''<article class="rounded-2xl bg-deep text-cream p-5 flex flex-col justify-between gap-4 min-h-[220px]">
-  <div><p class="font-extrabold text-[18px] leading-tight">Не нашли нужное?</p><p class="text-cream/75 text-[14px] mt-2">Напишите, что за животные и сколько гектаров — подберём комплект и посчитаем количество.</p></div>
-  <a href="{wa('Здравствуйте! Помогите подобрать комплектующие.')}" target="_blank" rel="noopener" class="btn-primary h-11 px-4 self-start text-[15px]"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5" width="20" height="20">Спросить в WhatsApp</a>
+    return f'''<article class="col-span-full rounded-2xl bg-deep text-cream p-5 md:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-8">
+  <div><p class="font-extrabold text-[18px] leading-tight">Не нашли нужное?</p><p class="text-cream/75 text-[14px] md:text-[15px] mt-2 max-w-[60ch]">Напишите, что за животные и сколько гектаров — подберём комплект и посчитаем количество.</p></div>
+  <a href="{wa('Здравствуйте! Помогите подобрать комплектующие.')}" target="_blank" rel="noopener" class="btn-primary h-11 px-4 self-start sm:self-auto shrink-0 text-[15px]"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5" width="20" height="20">Спросить в WhatsApp</a>
 </article>'''
 
 def product_card(img, alt, name, sub, price, specs, href=None, badge=None, badge_style='bg-cream text-brand-dark'):
@@ -144,9 +150,9 @@ def kit_card(k):
 tiles=''.join(f'''      <a href="{href}" class="card lift overflow-hidden group flex flex-row sm:flex-col">
         <div class="w-[112px] shrink-0 sm:w-auto aspect-square sm:aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="{img}" alt="{alt}" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
         <div class="min-w-0 flex-1 p-3.5 sm:p-4 md:p-5 flex items-center justify-between gap-2 sm:gap-3">
-          <div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">{name}</h2><p class="text-muted text-[14px] leading-snug mt-1">{sub}</p><p class="sm:hidden mt-1.5 text-[13px] font-bold text-brand-dark">{meta}</p></div>
-          <span class="hidden sm:block text-[13px] text-muted whitespace-nowrap">{meta}</span>
+          <div class="min-w-0 flex-1"><h2 class="font-extrabold text-[17px] leading-tight">{name}</h2><p class="text-muted text-[14px] leading-snug mt-1">{sub}</p><p class="mt-1.5 sm:mt-2 text-[13px] font-bold text-brand-dark">{meta}</p></div>
           <i data-lucide="chevron-right" class="sm:hidden w-5 h-5 text-muted shrink-0" aria-hidden="true"></i>
+          <i data-lucide="arrow-right" class="hidden sm:block w-4 h-4 text-muted shrink-0 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true"></i>
         </div>
       </a>
 ''' for href,name,sub,img,alt,meta in CATS)
@@ -412,7 +418,7 @@ w('podbor.html', f'''
     <div class="card p-5"><p class="font-extrabold">Запас мощности</p><p class="text-muted text-[15px] mt-2">Густая трава и длинная линия съедают импульс. Поэтому для больших периметров и защиты от диких животных берут 25&nbsp;Дж, а не 15.</p></div>
   </div>
 </section>
-{cta_band('Хотите обсудить голосом?','Позвоните или напишите в WhatsApp: уточним вид животных, форму участка и подберём комплект без формы.')}
+{cta_band('Хотите обсудить голосом?','Позвоните или напишите в WhatsApp: уточним вид животных, форму участка и подберём комплект без формы.', ask='Здравствуйте! Хочу подобрать электропастух, удобнее обсудить голосом.')}
 </main>''')
 
 # ---------- как выбрать (гид) ----------
@@ -515,7 +521,7 @@ w('instrukcii.html', f'''
     <div class="card p-5"><p class="font-extrabold">Дешёвые изоляторы</p><p class="text-muted text-[15px] mt-2">Треснувший изолятор уводит ток в столб. Замена стоит копейки, поиск неисправности — полдня.</p></div>
   </div>
 </section>
-{cta_band('Не получается запустить линию?','Опишите, что происходит: не бьёт совсем, бьёт слабо или только на части периметра. Подскажем, что проверить.')}
+{cta_band('Не получается запустить линию?','Опишите, что происходит: не бьёт совсем, бьёт слабо или только на части периметра. Подскажем, что проверить.', ask='Здравствуйте! Не получается запустить электроизгородь, нужна помощь.')}
 </main>''')
 
 # ---------- доставка и оплата ----------
@@ -559,7 +565,7 @@ w('dostavka.html', f'''
     </ol>
   </div>
 </section>
-{cta_band('Посчитать доставку','Напишите город и что заказываете — узнаем стоимость у транспортной компании и вернёмся с цифрой.')}
+{cta_band('Посчитать доставку','Напишите город и что заказываете — узнаем стоимость у транспортной компании и вернёмся с цифрой.', ask='Здравствуйте! Посчитайте, пожалуйста, доставку. Город: ')}
 </main>''')
 
 # ---------- гарантия и возврат ----------
@@ -601,7 +607,7 @@ w('garantiya.html', f'''
     </div>
   </div>
 </section>
-{cta_band('Прибор не бьёт?','Перед возвратом проверим вместе заземление, изоляторы и траву на линии. Чаще всего проблема решается за один разговор.')}
+{cta_band('Прибор не бьёт?','Перед возвратом проверим вместе заземление, изоляторы и траву на линии. Чаще всего проблема решается за один разговор.', ask='Здравствуйте! Прибор не бьёт или бьёт слабо, помогите разобраться.')}
 </main>''')
 
 # ---------- о компании ----------
@@ -647,7 +653,7 @@ w('o-kompanii.html', f'''
     </div>
   </div>
 </section>
-{cta_band('Оптовым покупателям','Работаем с хозяйствами и перепродажей. Напишите объём и позиции — пришлём условия.')}
+{cta_band('Оптовым покупателям','Работаем с хозяйствами и перепродажей. Напишите объём и позиции — пришлём условия.', ask='Здравствуйте! Интересуют оптовые условия.')}
 </main>''')
 
 # ---------- контакты ----------
