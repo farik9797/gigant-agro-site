@@ -133,6 +133,11 @@ PAGES = [
   'assets/img/hero-gigant-1920.jpg'),
 ]
 
+# карточки товаров остальных категорий: список пишет make_pages.py
+_gen = os.path.join(ROOT, 'pages', '_generated.json')
+if os.path.exists(_gen):
+    PAGES += [tuple(x) for x in json.load(open(_gen, encoding='utf-8'))]
+
 BASE = 'https://farik9797.github.io/gigant-agro-site/'
 MANIFEST = json.load(open(os.path.join(ROOT, 'assets/img/opt/manifest.json'))) if os.path.exists(os.path.join(ROOT, 'assets/img/opt/manifest.json')) else {}
 HERO_IMAGES = {'hero-gigant-1920.jpg', 'steppe-horses-1920.jpg', 'why-cow-fence.jpg', 'solar-line.jpg'}
@@ -190,7 +195,7 @@ def responsive_images(html):
 def mark_current(html, slug):
     """aria-current для текущего пункта в шапке, мобильном меню и нижней панели."""
     exact = slug + '.html'
-    section = 'catalog.html' if slug.startswith(('catalog-', 'product-', 'kit-')) else None
+    section = 'catalog.html' if slug.startswith(('catalog-', 'product-', 'kit-', 'item-')) else None
     def rep(m):
         href = m.group(1)
         if href == exact: return m.group(0).replace('<a ', '<a aria-current="page" ', 1)

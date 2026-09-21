@@ -419,6 +419,270 @@
    }
   ]
  },
+ "item-pogonyalo-1.jpg": {
+  "width": 900,
+  "height": 1200,
+  "variants": [
+   {
+    "w": 480,
+    "h": 640,
+    "file": "assets/img/opt/item-pogonyalo-1-480.webp",
+    "kb": 10
+   },
+   {
+    "w": 640,
+    "h": 853,
+    "file": "assets/img/opt/item-pogonyalo-1-640.webp",
+    "kb": 13
+   },
+   {
+    "w": 800,
+    "h": 1067,
+    "file": "assets/img/opt/item-pogonyalo-1-800.webp",
+    "kb": 18
+   }
+  ]
+ },
+ "item-pogonyalo-2.jpg": {
+  "width": 900,
+  "height": 1200,
+  "variants": [
+   {
+    "w": 480,
+    "h": 640,
+    "file": "assets/img/opt/item-pogonyalo-2-480.webp",
+    "kb": 3
+   },
+   {
+    "w": 640,
+    "h": 853,
+    "file": "assets/img/opt/item-pogonyalo-2-640.webp",
+    "kb": 5
+   },
+   {
+    "w": 800,
+    "h": 1067,
+    "file": "assets/img/opt/item-pogonyalo-2-800.webp",
+    "kb": 7
+   }
+  ]
+ },
+ "item-pogonyalo-3.jpg": {
+  "width": 900,
+  "height": 1200,
+  "variants": [
+   {
+    "w": 480,
+    "h": 640,
+    "file": "assets/img/opt/item-pogonyalo-3-480.webp",
+    "kb": 6
+   },
+   {
+    "w": 640,
+    "h": 853,
+    "file": "assets/img/opt/item-pogonyalo-3-640.webp",
+    "kb": 9
+   },
+   {
+    "w": 800,
+    "h": 1067,
+    "file": "assets/img/opt/item-pogonyalo-3-800.webp",
+    "kb": 12
+   }
+  ]
+ },
+ "item-pogonyalo-4.jpg": {
+  "width": 960,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 640,
+    "file": "assets/img/opt/item-pogonyalo-4-480.webp",
+    "kb": 34
+   },
+   {
+    "w": 640,
+    "h": 853,
+    "file": "assets/img/opt/item-pogonyalo-4-640.webp",
+    "kb": 49
+   },
+   {
+    "w": 800,
+    "h": 1067,
+    "file": "assets/img/opt/item-pogonyalo-4-800.webp",
+    "kb": 66
+   },
+   {
+    "w": 960,
+    "h": 1280,
+    "file": "assets/img/opt/item-pogonyalo-4-960.webp",
+    "kb": 86
+   }
+  ]
+ },
+ "item-provoloka-1.jpg": {
+  "width": 1280,
+  "height": 853,
+  "variants": [
+   {
+    "w": 480,
+    "h": 320,
+    "file": "assets/img/opt/item-provoloka-1-480.webp",
+    "kb": 10
+   },
+   {
+    "w": 640,
+    "h": 426,
+    "file": "assets/img/opt/item-provoloka-1-640.webp",
+    "kb": 15
+   },
+   {
+    "w": 800,
+    "h": 533,
+    "file": "assets/img/opt/item-provoloka-1-800.webp",
+    "kb": 20
+   },
+   {
+    "w": 1200,
+    "h": 800,
+    "file": "assets/img/opt/item-provoloka-1-1200.webp",
+    "kb": 35
+   }
+  ]
+ },
+ "item-provoloka-2.jpg": {
+  "width": 853,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 720,
+    "file": "assets/img/opt/item-provoloka-2-480.webp",
+    "kb": 23
+   },
+   {
+    "w": 640,
+    "h": 960,
+    "file": "assets/img/opt/item-provoloka-2-640.webp",
+    "kb": 34
+   },
+   {
+    "w": 800,
+    "h": 1200,
+    "file": "assets/img/opt/item-provoloka-2-800.webp",
+    "kb": 47
+   }
+  ]
+ },
+ "item-provoloka-3.jpg": {
+  "width": 960,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 640,
+    "file": "assets/img/opt/item-provoloka-3-480.webp",
+    "kb": 48
+   },
+   {
+    "w": 640,
+    "h": 853,
+    "file": "assets/img/opt/item-provoloka-3-640.webp",
+    "kb": 76
+   },
+   {
+    "w": 800,
+    "h": 1067,
+    "file": "assets/img/opt/item-provoloka-3-800.webp",
+    "kb": 105
+   },
+   {
+    "w": 960,
+    "h": 1280,
+    "file": "assets/img/opt/item-provoloka-3-960.webp",
+    "kb": 135
+   }
+  ]
+ },
+ "item-shnur-1.jpg": {
+  "width": 853,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 720,
+    "file": "assets/img/opt/item-shnur-1-480.webp",
+    "kb": 32
+   },
+   {
+    "w": 640,
+    "h": 960,
+    "file": "assets/img/opt/item-shnur-1-640.webp",
+    "kb": 51
+   },
+   {
+    "w": 800,
+    "h": 1200,
+    "file": "assets/img/opt/item-shnur-1-800.webp",
+    "kb": 72
+   }
+  ]
+ },
+ "item-shnur-2.jpg": {
+  "width": 853,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 720,
+    "file": "assets/img/opt/item-shnur-2-480.webp",
+    "kb": 35
+   },
+   {
+    "w": 640,
+    "h": 960,
+    "file": "assets/img/opt/item-shnur-2-640.webp",
+    "kb": 55
+   },
+   {
+    "w": 800,
+    "h": 1200,
+    "file": "assets/img/opt/item-shnur-2-800.webp",
+    "kb": 75
+   }
+  ]
+ },
+ "item-shnur-3.jpg": {
+  "width": 1280,
+  "height": 853,
+  "variants": [
+   {
+    "w": 480,
+    "h": 320,
+    "file": "assets/img/opt/item-shnur-3-480.webp",
+    "kb": 15
+   },
+   {
+    "w": 640,
+    "h": 426,
+    "file": "assets/img/opt/item-shnur-3-640.webp",
+    "kb": 24
+   },
+   {
+    "w": 800,
+    "h": 533,
+    "file": "assets/img/opt/item-shnur-3-800.webp",
+    "kb": 35
+   },
+   {
+    "w": 1200,
+    "h": 800,
+    "file": "assets/img/opt/item-shnur-3-1200.webp",
+    "kb": 68
+   }
+  ]
+ },
  "kit-generator-4j.jpg": {
   "width": 960,
   "height": 1280,

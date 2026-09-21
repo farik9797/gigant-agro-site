@@ -63,14 +63,16 @@ def helper_card():
   <a href="{wa('Здравствуйте! Помогите подобрать комплектующие.')}" target="_blank" rel="noopener" class="btn-primary h-11 px-4 self-start sm:self-auto shrink-0 text-[15px]"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5" width="20" height="20">Спросить в WhatsApp</a>
 </article>'''
 
-def product_card(img, alt, name, sub, price, specs, href=None, badge=None, badge_style='bg-cream text-brand-dark'):
+NOPHOTO='<div class="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-[#EEF1EA] text-muted text-center px-6"><i data-lucide="camera" class="w-8 h-8 text-brand-dark/70" aria-hidden="true"></i><p class="text-[14px] leading-snug">Фото пришлём в WhatsApp</p></div>'
+
+def product_card(img, alt, name, sub, price, specs, href=None, badge=None, badge_style='bg-cream text-brand-dark', nophoto=False):
     specs=[(k,'уточняйте' if k=='Наличие' and '[уточнить' in v else v) for k,v in specs]
     specs=[(k,v) for k,v in specs if '[уточнить' not in v]   # пометки для заказчика на сайт не выводим
     spec_html=''.join(f'<div class="border-t border-line pt-2"><dt class="text-[12px] text-muted">{k}</dt><dd class="font-bold text-[14px]">{v}</dd></div>' for k,v in specs)
     title=f'<a href="{href}" class="hover:underline underline-offset-4">{name}</a>' if href else name
     return f'''<article class="card lift overflow-hidden flex flex-col">
   <div class="relative bg-white aspect-[16/10] sm:aspect-[4/3] border-b border-line">
-    <img src="{img}" alt="{alt}" class="absolute inset-0 w-full h-full object-contain p-4" loading="lazy" width="800" height="600">
+    {NOPHOTO if nophoto else f'<img src="{img}" alt="{alt}" class="absolute inset-0 w-full h-full object-contain p-4" loading="lazy" width="800" height="600">'}
     {f'<span class="absolute left-3 top-3 rounded-full {badge_style} text-[13px] font-bold px-2.5 py-1">{badge}</span>' if badge else ''}
   </div>
   <div class="p-5 flex flex-col flex-1">
@@ -100,7 +102,7 @@ CATS=[
  ('catalog-kabeli.html','Кабели и аксессуары','Подключение, клеммы, заземление, ворота','assets/img/cat-cables.jpg','Кабели подключения с клеммами','цена по запросу'),
  ('catalog-solnce.html','Солнечные системы','Панели, MPPT-контроллеры, аккумуляторы','assets/img/solar-line.jpg','Солнечная панель на линии электроизгороди','цена по запросу'),
  ('catalog-strizhka.html','Стрижка овец','Машинки, ножи и запчасти','assets/img/cat-shearing.jpg','Машинка для стрижки овец','цена по запросу'),
- ('catalog-pogonyala.html','Электропогонялa','Для перемещения скота','assets/img/product-gigant15.jpg','Электропогоняло GIGANT','44 500 ₸'),
+ ('catalog-pogonyala.html','Электропогонялa','Для перемещения скота','assets/img/item-pogonyalo-1.jpg','Электропогоняло GIGANT','44 500 ₸'),
 ]
 
 # Приборы. Характеристики Bekci — с заводского шильдика (фото на витрине заказчика): напряжение, вес, габариты, питание.
@@ -304,44 +306,114 @@ w('catalog-komplekty.html', f'''
 </main>''')
 
 # ---------- остальные категории (общий шаблон) ----------
+# Товары остальных категорий. Цифры — только с витрины заказчика на Satu и его инфографики; где данных нет, карточка без таблицы:
+# назначение, «Как выбрать», «Что сообщить менеджеру», запрос цены. Поля с '[уточнить]' на сайт не выводятся.
 SIMPLE={
  'catalog-setki.html':('Сетки и шнуры','Проводник — то, что животное видит и чувствует. Для КРС и лошадей берут проволоку или шнур, для овец, коз и птицы — готовую электросетку.',
-   [dict(img='assets/img/cat-nets.jpg',alt='Рулоны электросетки',name='Шнур многожильный, 6 жил',sub='Универсальный проводник для КРС, лошадей и овец',price='21 900 ₸',
-         specs=[('Жил','6'),('Длина бухты','[уточнить]'),('Цвет','[уточнить]'),('Скидка','до 10 %')]),
-    dict(img='assets/img/fence-tape.jpg',alt='Линии электроизгороди',name='Проволока оцинкованная 1,6 мм',sub='Бухта 1000 м, для длинных периметров и защиты от диких животных',price='22 000 ₸',
-         specs=[('Диаметр','1,6 мм'),('Длина бухты','1000 м'),('Покрытие','Оцинковка'),('Скидка','до 10 %')]),
-    dict(img='assets/img/cat-nets.jpg',alt='Электросетка в рулоне',name='Электросетка',sub='Для овец, коз и птицы: держит внутри и не пускает хищников снаружи',price='цена по запросу',
-         specs=[('Высота','[уточнить]'),('Длина','[уточнить]'),('Цвет','[уточнить]'),('Наличие','[уточнить]')])]),
+   [dict(slug='item-shnur-6-zhil',img='assets/img/item-shnur-1.jpg',alt='Шнур многожильный GIGANT, бело-красный, в бухте',name='Шнур многожильный, 6 жил',sub='Универсальный проводник для КРС, лошадей и овец',price='21 900 ₸',price_num='21900',stock_ok=True,
+         specs=[('Жил','6'),('Диаметр','2,5 мм'),('Сопротивление','0,65 Ом/м'),('На разрыв','70 кг')],
+         lead='Заметный бело-красный шнур: три стальные оцинкованные жилы проводят импульс, три нити ПВХ держат нагрузку. Легче проволоки, не ломается на перегибах, хорошо виден животным.',
+         facts=[('6','жил'),('2,5','мм'),('0,65','Ом/м')],
+         shots=[('assets/img/item-shnur-1.jpg','Шнур многожильный GIGANT, бело-красный, в бухте'),('assets/img/item-shnur-2.jpg','Бухта шнура GIGANT, вид сбоку'),('assets/img/item-shnur-3.jpg','Шнуры, верёвки и ленты для электроизгороди разных цветов')],
+         table=[('Жил','6: три стальные оцинкованные и три нити ПВХ'),('Диаметр','2,5 мм'),('Электрическое сопротивление','0,65 Ом/м'),('Прочность на разрыв','70 кг'),('Стойкость к ультрафиолету','Есть'),('Цвет','Бело-красный'),('Производство','Германия')],
+         tips=['Шнур берут там, где важна заметность: для лошадей, молодняка и новых загонов.','Длину считаем так: периметр умножить на число линий. Для КРС обычно одна-две линии, для овец четыре-пять.','На длинных периметрах сопротивление важнее цвета: чем оно ниже, тем дальше доходит импульс.'],
+         ask=['Вид животных и число линий','Периметр или площадь участка','Какие столбы: дерево, металл или стеклоарматура'],
+         opt='17 500 ₸ за штуку при заказе от 6 штук',ld='Шнур многожильный для электроизгороди: 6 жил, диаметр 2,5 мм, сопротивление 0,65 Ом/м, прочность на разрыв 70 кг.'),
+    dict(slug='item-provoloka-1-6',img='assets/img/item-provoloka-1.jpg',alt='Бухта оцинкованной проволоки 1,6 мм',name='Проволока оцинкованная 1,6 мм',sub='Бухта 1000 м, для длинных периметров и защиты от диких животных',price='22 000 ₸',price_num='22000',stock_ok=True,
+         specs=[('Диаметр','1,6 мм'),('Длина бухты','1000 м'),('Покрытие','Оцинковка'),('Хватает на','6 га в одну линию')],
+         lead='Токонесущая линия для длинных периметров. Термически обработана: не ломается на изгиб и послушно ложится на изоляторы. Низкое сопротивление, не ржавеет, серебристый блеск заметен животным.',
+         facts=[('1,6','мм'),('1000','м в бухте'),('6','га в одну линию')],
+         shots=[('assets/img/item-provoloka-1.jpg','Бухта оцинкованной проволоки 1,6 мм'),('assets/img/item-provoloka-2.jpg','Бухта проволоки 1,6 мм, вид сбоку'),('assets/img/item-provoloka-3.jpg','Оцинкованная проволока крупным планом')],
+         table=[('Диаметр','1,6 мм'),('Длина бухты','1000 м'),('Покрытие','Оцинковка, не ржавеет'),('Обработка','Термически обработанная'),('Цвет','Серебристый'),('Площадь ограждения','До 6 га в одну линию')],
+         tips=['Проволока дешевле шнура на метр и лучше проводит ток, поэтому её берут на длинные периметры и для защиты от диких животных.','Она хуже заметна, чем шнур или лента. Для лошадей и новых загонов верхнюю линию часто делают из шнура.','Длину считаем так: периметр умножить на число линий.'],
+         ask=['Вид животных и число линий','Периметр или площадь участка','Нужны ли изоляторы и натяжители'],
+         opt='18 500 ₸ за штуку при заказе от 10 штук',ld='Проволока оцинкованная 1,6 мм для электроизгороди, бухта 1000 м, термически обработанная.'),
+    dict(slug='item-elektrosetka',img='assets/img/cat-nets.jpg',alt='Электросетка в рулоне',name='Электросетка',sub='Для овец, коз и птицы: держит внутри и не пускает хищников снаружи',price='цена по запросу',
+         specs=[('Для овец','50 м × 90 см'),('Длина','[уточнить]'),('Цвет','[уточнить]'),('Наличие','[уточнить]')],
+         lead='Готовая изгородь в рулоне: сетка со встроенными стойками ставится за час и так же быстро переносится. Держит овец, коз и птицу внутри и не пускает лис и собак снаружи.',
+         table=[('Сетка для овец','50 м × 90 см')],
+         tips=['Высота: для овец и коз хватает 90 см, для птицы берут сетку выше и с более мелкой ячейкой.','Секции соединяются между собой, длину считаем по периметру загона.','Нижние нити касаются травы и забирают часть импульса, поэтому сетке нужен прибор с запасом мощности.'],
+         ask=['Кого держите: овцы, козы или птица','Периметр загона','Какой прибор уже есть'])]),
  'catalog-izolyatory.html':('Изоляторы и колышки','Изолятор не даёт импульсу уйти в столб. Это самая дешёвая часть изгороди и первая причина, по которой линия перестаёт бить.',
-   [dict(img='assets/img/cat-insulators.jpg',alt='Изолятор на деревянном столбе',name='Изоляторы',sub='Под проволоку, шнур и ленту, для дерева и металла',price='цена по запросу',
-         specs=[('Тип','Кольцевые, угловые'),('Крепление','Шуруп, гвоздь'),('Материал','Полимер'),('Наличие','[уточнить]')]),
-    dict(img='assets/img/cat-nets.jpg',alt='Колышки и стойки',name='Колышки и стойки',sub='Переносная изгородь и деление пастбища на загоны',price='цена по запросу',
-         specs=[('Высота','[уточнить]'),('Материал','[уточнить]'),('Ушек под линии','[уточнить]'),('Наличие','[уточнить]')])]),
+   [dict(slug='item-izolyatory',img='assets/img/cat-insulators.jpg',alt='Изолятор на деревянном столбе',name='Изоляторы',sub='Под проволоку, шнур и ленту, для дерева и металла',price='цена по запросу',
+         specs=[('Тип','С саморезом, зажимные'),('Под столб','Дерево, стеклоарматура'),('В комплектах','по 100 шт'),('Наличие','[уточнить]')],
+         lead='Изолятор держит проводник на столбе и не даёт импульсу уйти в землю. Треснувший или дешёвый изолятор — самая частая причина, по которой линия бьёт слабо.',
+         table=[('С саморезом','Вкручиваются в деревянные столбы'),('Зажимные','Надеваются на стеклоарматуру'),('В готовых комплектах','100 шт')],
+         tips=['Сначала смотрим на столб: в дерево идут изоляторы с саморезом, на стеклоарматуру и пруток — зажимные.','Потом на проводник: кольцевые под проволоку и шнур, широкие под ленту.','На углах и у ворот натяжение выше, туда ставят усиленные угловые изоляторы.','Количество считаем просто: по одному на каждую линию на каждом столбе.'],
+         ask=['Какие столбы и сколько их','Проводник: проволока, шнур или лента','Сколько линий']),
+    dict(slug='item-kolyshki',nophoto=True,img='assets/img/cat-nets.jpg',alt='Колышки и стойки',name='Колышки и стойки',sub='Переносная изгородь и деление пастбища на загоны',price='цена по запросу',
+         specs=[('Высота','[уточнить]'),('Материал','[уточнить]'),('Ушек под линии','[уточнить]'),('Наличие','[уточнить]')],
+         lead='Лёгкие стойки для временной изгороди. Вдавливаются в землю ногой и переносятся за минуты: удобно делить пастбище на загоны и переводить стадо по мере стравливания травы.',
+         table=[],
+         tips=['Высоту стойки подбирают под животное: верхняя линия должна быть на уровне груди.','Ушки на стойке задают высоту линий, под овец и коз их нужно больше, чем под КРС.','На углах и в начале линии лучше ставить жёсткий столб: лёгкая стойка натяжение не держит.'],
+         ask=['Вид животных','Длина линии, которую нужно переносить','Сколько линий планируете'])]),
  'catalog-kabeli.html':('Кабели и аксессуары','Всё, что соединяет прибор, линию и землю: кабель высокого напряжения, клеммы, штыри заземления и ворота для прохода техники.',
-   [dict(img='assets/img/cat-cables.jpg',alt='Кабели подключения с клеммами',name='Кабель подключения и клеммы',sub='Соединение прибора с линией и заземлением',price='цена по запросу',
-         specs=[('Сечение','[уточнить]'),('Длина','[уточнить]'),('Клеммы','В комплекте'),('Наличие','[уточнить]')]),
-    dict(img='assets/img/cat-cables.jpg',alt='Ворота для электроизгороди',name='Ворота и ручки',sub='Проход для людей и техники без разбора линии',price='цена по запросу',
-         specs=[('Тип','Пружинные'),('Длина','[уточнить]'),('Изоляция','Есть'),('Наличие','[уточнить]')]),
-    dict(img='assets/img/insulator.jpg',alt='Штыри заземления',name='Заземление',sub='Штыри и провод. Без хорошего заземления изгородь не работает',price='цена по запросу',
-         specs=[('Штырей','[уточнить]'),('Длина штыря','[уточнить]'),('Материал','Оцинковка'),('Наличие','[уточнить]')])]),
+   [dict(slug='item-kabel-klemmy',img='assets/img/cat-cables.jpg',alt='Кабели подключения с клеммами',name='Кабель подключения и клеммы',sub='Соединение прибора с линией и заземлением',price='цена по запросу',
+         specs=[('Сечение','[уточнить]'),('Длина','[уточнить]'),('Клеммы','В комплекте'),('Наличие','[уточнить]')],
+         lead='Кабель соединяет прибор с линией и с заземлением. Нужен именно высоковольтный: обычный бытовой провод импульс пробивает, и ток уходит в землю раньше изгороди.',
+         table=[('В готовых комплектах','Кабель подключения с зажимами, 1 шт')],
+         tips=['Длину берём с запасом: от прибора до линии и отдельно от прибора до штырей заземления.','Если кабель идёт под воротами или под землёй, его укладывают в трубку.','Зажимы с хорошим контактом важнее, чем кажется: окисленная клемма съедает заметную часть импульса.'],
+         ask=['Расстояние от прибора до линии','Расстояние до места заземления','Есть ли подземные переходы']),
+    dict(slug='item-vorota',nophoto=True,img='assets/img/cat-cables.jpg',alt='Ворота для электроизгороди',name='Ворота и ручки',sub='Проход для людей и техники без разбора линии',price='цена по запросу',
+         specs=[('Тип','Пружинные'),('Длина','[уточнить]'),('Ручка','С изолятором'),('Наличие','[уточнить]')],
+         lead='Пружинные ворота открывают проход для людей и техники, не разбирая линию. Пружина растягивается на ширину проезда, за ручку с изолятором можно браться без удара.',
+         table=[('Тип','Пружинные, с ручкой-изолятором'),('В готовых комплектах','1–2 шт')],
+         tips=['Ворот нужно столько, сколько проходов: для людей, для техники, для перегона стада.','Ширину проезда измеряем заранее, под технику берём с запасом.','На каждую линию в проёме нужна своя пружина с ручкой.'],
+         ask=['Сколько проходов и какой ширины','Сколько линий в изгороди']),
+    dict(slug='item-zazemlenie',nophoto=True,img='assets/img/insulator.jpg',alt='Штыри заземления',name='Заземление',sub='Штыри и провод. Без хорошего заземления изгородь не работает',price='цена по запросу',
+         specs=[('Штырей','[уточнить]'),('Длина штыря','[уточнить]'),('Материал','Оцинковка'),('Наличие','[уточнить]')],
+         lead='Импульс возвращается в прибор через землю. Если заземление слабое, животное почти ничего не чувствует, даже когда прибор исправен. Это самая частая причина жалоб «изгородь не бьёт».',
+         table=[],
+         tips=['Штыри вбивают во влажный грунт. В сухом или каменистом грунте их нужно больше.','Чем мощнее прибор, тем больше штырей: для 15–25 Дж одного штыря мало.','Штыри ставят на расстоянии друг от друга и соединяют одним проводом с клеммой заземления прибора.'],
+         ask=['Модель прибора','Какой грунт на участке: влажный, сухой, каменистый'])]),
  'catalog-solnce.html':('Солнечные системы','Комплект для пастбища без розетки: панель заряжает аккумулятор днём, контроллер бережёт его от перезаряда и глубокого разряда.',
-   [dict(img='assets/img/solar-line.jpg',alt='Солнечная панель на линии электроизгороди',name='Солнечная панель',sub='Подбирается под мощность прибора и число солнечных часов',price='цена по запросу',
-         specs=[('Мощность','[уточнить]'),('Напряжение','12 В'),('Крепление','На столб'),('Наличие','[уточнить]')]),
-    dict(img='assets/img/solar-energizer.jpg',alt='MPPT-контроллер',name='MPPT-контроллер',sub='Бережёт аккумулятор от перезаряда и глубокого разряда',price='цена по запросу',
-         specs=[('Тип','MPPT'),('Напряжение','12 В'),('Ток','[уточнить]'),('Наличие','[уточнить]')]),
-    dict(img='assets/img/solar-netting.jpg',alt='Аккумулятор 12 В',name='Аккумулятор 12 В',sub='Запас энергии на ночь и пасмурные дни',price='цена по запросу',
-         specs=[('Ёмкость','7 Ач и выше'),('Напряжение','12 В'),('Тип','Свинцово-кислотный'),('Наличие','[уточнить]')])]),
+   [dict(slug='item-solnechnaya-panel',img='assets/img/solar-line.jpg',alt='Солнечная панель на линии электроизгороди',name='Солнечная панель',sub='Подбирается под мощность прибора и число солнечных часов',price='цена по запросу',
+         specs=[('Мощность','[уточнить]'),('Система','12 В'),('Крепление','На столб'),('Наличие','[уточнить]')],
+         lead='Панель заряжает аккумулятор днём, а прибор работает от него круглосуточно. Решение для дальних пастбищ и летних стоянок, куда не дотянуть сеть.',
+         table=[('Система','12 В, вместе с аккумулятором и контроллером')],
+         tips=['Мощность панели подбираем под прибор: чем больше джоулей, тем больше он потребляет.','Запас нужен на пасмурные дни, поэтому панель считаем вместе с ёмкостью аккумулятора.','Панель ставят на столб, направляют на юг и следят, чтобы её не затеняли деревья и трава.'],
+         ask=['Модель прибора','Регион и сезон использования','Есть ли уже аккумулятор']),
+    dict(slug='item-mppt-kontroller',nophoto=True,img='assets/img/solar-energizer.jpg',alt='MPPT-контроллер',name='MPPT-контроллер',sub='Бережёт аккумулятор от перезаряда и глубокого разряда',price='цена по запросу',
+         specs=[('Тип','MPPT'),('Система','12 В'),('Ток','[уточнить]'),('Наличие','[уточнить]')],
+         lead='Контроллер стоит между панелью и аккумулятором. Не даёт перезарядить батарею в солнечный день и отключает нагрузку до глубокого разряда, от которого аккумулятор быстро умирает.',
+         table=[('Тип','MPPT'),('Система','12 В')],
+         tips=['Контроллер подбирают по току панели, с запасом.','MPPT снимает с панели больше энергии, чем простой ШИМ-контроллер, особенно в пасмурную погоду и на холоде.'],
+         ask=['Мощность панели','Ёмкость аккумулятора']),
+    dict(slug='item-akkumulyator-12v',nophoto=True,img='assets/img/solar-netting.jpg',alt='Аккумулятор 12 В',name='Аккумулятор 12 В',sub='Запас энергии на ночь и пасмурные дни',price='цена по запросу',
+         specs=[('Ёмкость','7 Ач'),('Напряжение','12 В'),('Тип','AGM VRLA'),('Наличие','[уточнить]')],
+         lead='Аккумулятор питает прибор там, где нет розетки, и держит изгородь ночью и в пасмурные дни. Такой же идёт в наших готовых комплектах.',
+         table=[('Модель','Security Force SF 1207'),('Напряжение','12 В'),('Ёмкость','7 Ач'),('Тип','AGM VRLA, необслуживаемый')],
+         tips=['Чем мощнее прибор, тем быстрее он разряжает батарею. Для 15–25 Дж и работы без панели берут ёмкость больше.','С солнечной панелью хватает меньшей ёмкости: батарея подзаряжается каждый день.','Глубокий разряд сокращает срок службы, поэтому с панелью ставят контроллер.'],
+         ask=['Модель прибора','Будет ли солнечная панель','Как часто можете подзаряжать'])]),
  'catalog-strizhka.html':('Оборудование для стрижки овец','Машинки и расходники для сезона стрижки. Ножи затупляются быстро, поэтому запасной комплект берут сразу.',
-   [dict(img='assets/img/cat-shearing.jpg',alt='Машинка для стрижки овец',name='Машинка для стрижки овец',sub='Сетевая, для отары среднего размера',price='цена по запросу',
-         specs=[('Питание','220 В'),('Мощность','[уточнить]'),('Ножи','В комплекте'),('Наличие','[уточнить]')]),
-    dict(img='assets/img/cat-shearing.jpg',alt='Ножи для машинки',name='Ножи и запчасти',sub='Верхний и нижний нож, гребёнки, расходники',price='цена по запросу',
-         specs=[('Совместимость','[уточнить]'),('Материал','Сталь'),('В упаковке','[уточнить]'),('Наличие','[уточнить]')])]),
+   [dict(slug='item-mashinka-strizhka',img='assets/img/cat-shearing.jpg',alt='Машинка для стрижки овец',name='Машинка для стрижки овец',sub='Сетевая, для отары среднего размера',price='цена по запросу',
+         specs=[('Питание','220 В'),('Мощность','[уточнить]'),('Ножи','В комплекте'),('Наличие','[уточнить]')],
+         lead='Сетевая машинка для сезонной стрижки овец. Работает от 220 В, ножи идут в комплекте.',
+         table=[('Питание','Сеть 220 В'),('Ножи','В комплекте')],
+         tips=['Запасной комплект ножей берут сразу: на грязной шерсти они тупятся быстро.','Ножи и гребёнку смазывают во время работы, иначе машинка греется и рвёт шерсть.'],
+         ask=['Размер отары','Нужны ли запасные ножи']),
+    dict(slug='item-nozhi',img='assets/img/cat-shearing.jpg',alt='Ножи для машинки',name='Ножи и запчасти',sub='Верхний и нижний нож, гребёнки, расходники',price='цена по запросу',
+         specs=[('Совместимость','[уточнить]'),('Материал','Сталь'),('В упаковке','[уточнить]'),('Наличие','[уточнить]')],
+         lead='Верхние и нижние ножи, гребёнки и расходники для машинок. Подберём под вашу модель.',
+         table=[],
+         tips=['Ножи подбирают под модель машинки: посадка у разных производителей отличается.','Затупившиеся ножи можно заточить, но запасной комплект на сезон всё равно нужен.'],
+         ask=['Марка и модель машинки','Фото старого ножа, если модель неизвестна'])]),
  'catalog-pogonyala.html':('Электропогонялa','Прибор для управления движением животных при перегоне, погрузке и ветеринарных обработках.',
-   [dict(img='assets/img/product-gigant15.jpg',alt='Электропогоняло GIGANT',name='Электропогоняло GIGANT',sub='Для КРС, свиней и мелкого рогатого скота',price='44 500 ₸',
-         specs=[('Питание','Аккумуляторное'),('Длина','[уточнить]'),('Для кого','КРС, свиньи, МРС'),('Наличие','В наличии')])]),
+   [dict(slug='item-elektropogonyalo',img='assets/img/item-pogonyalo-1.jpg',alt='Электропогоняло GIGANT: рукоятка и контакты',name='Электропогоняло GIGANT',sub='Для КРС, свиней и мелкого рогатого скота',price='44 500 ₸',price_num='44500',stock_ok=True,brand='GIGANT',
+         specs=[('Длина хлыста','120 см'),('Аккумулятор','Li-ion'),('Зарядка','От сети'),('Наличие','В наличии')],
+         lead='Аккумуляторное электропогоняло для перегона, погрузки и ветеринарных обработок. Хлыст 120 см держит безопасную дистанцию, импульс направляет животное и не причиняет вреда.',
+         facts=[('120','см, хлыст'),('Li-ion','аккумулятор'),('220 В','зарядка')],
+         shots=[('assets/img/item-pogonyalo-1.jpg','Электропогоняло GIGANT: рукоятка и контакты'),('assets/img/item-pogonyalo-2.jpg','Электропогоняло GIGANT целиком, хлыст 120 см'),('assets/img/item-pogonyalo-3.jpg','Рукоятка электропогоняла и вилка с контактами'),('assets/img/item-pogonyalo-4.jpg','Электропогоняло для скота GIGANT, длина электрохлыста 120 см')],
+         table=[('Длина электрохлыста','120 см'),('Питание','Встроенный литий-ионный аккумулятор'),('Зарядка','От сети 220 В'),('Корпус','Защищён от пыли, влаги и ударов'),('Для кого','КРС, свиньи, мелкий рогатый скот'),('Производитель','GIGANT, Казахстан')],
+         tips=['Погоняло нужно при перегоне, погрузке в транспорт, взвешивании и ветеринарных обработках.','Касаются крупных мышц задней части, коротко. По голове и вымени не работают.','После смены аккумулятор ставят на зарядку, чтобы он не уходил в глубокий разряд.'],
+         ask=['Вид животных','Сколько приборов нужно'],
+         ld='Электропогоняло аккумуляторное GIGANT для КРС, свиней и мелкого рогатого скота, длина хлыста 120 см.')]),
 }
+ITEM_CAT={i['slug']:(fname,title) for fname,(title,lead,items) in SIMPLE.items() for i in items}
 for fname,(title,lead,items) in SIMPLE.items():
-    cards=''.join(product_card(i['img'],i['alt'],i['name'],i['sub'],i['price'],i['specs']) for i in items)
+    for i in items: i['href']=i['slug']+'.html'
+for fname,(title,lead,items) in SIMPLE.items():
+    cards=''.join(product_card(i['img'],i['alt'],i['name'],i['sub'],i['price'],i['specs'],i['href'],nophoto=i.get('nophoto',False)) for i in items)
     w(fname, f'''
 <main id="top">
 {crumbs([('Главная','index.html'),('Каталог','catalog.html'),(title,None)])}
@@ -360,16 +432,16 @@ def card_of(p):
     return product_card(p['img'],p['alt'],p['name'],p['sub'],p['price'],p['specs'],p.get('href'),p.get('badge'),p.get('badge_style','bg-cream text-brand-dark'))
 
 def product_page(d, kind='pribor'):
-    # kind: 'pribor' — электропастух, 'kit' — готовый комплект
+    # kind: 'pribor' — электропастух, 'kit' — готовый комплект, 'item' — товар остальных категорий
     import json
-    kit=kind=='kit'
+    kit=kind=='kit'; item=kind=='item'
     base='https://farik9797.github.io/gigant-agro-site/'
-    full=d['short'] if kit else 'Электропастух '+d['short']
+    full=d['short'] if kit else d['name'].replace('&nbsp;',' ') if item else 'Электропастух '+d['short']
     shots=d.get('shots') or [(d['img'],d['alt'])]+d.get('gallery',[])
     ld=''
     if d.get('ld'):
-        ld='<script type="application/ld+json">'+json.dumps({"@context":"https://schema.org","@type":"Product","name":full,"brand":{"@type":"Brand","name":d['brand']},
-            "category":"Готовые комплекты электроизгороди" if kit else "Электропастухи","image":base+shots[0][0],"description":d['ld'],
+        ld='<script type="application/ld+json">'+json.dumps({"@context":"https://schema.org","@type":"Product","name":full,"brand":{"@type":"Brand","name":d.get('brand','GIGANT Agro')},
+            "category":"Готовые комплекты электроизгороди" if kit else ITEM_CAT[d['slug']][1] if item else "Электропастухи","image":base+shots[0][0],"description":d['ld'],
             "offers":{"@type":"Offer","price":d['price_num'],"priceCurrency":"KZT","availability":"https://schema.org/InStock",
                       "url":base+d['slug']+'.html',"seller":{"@type":"Organization","name":"GIGANT Agro"}}},ensure_ascii=False)+'</script>'
     badge_text=d.get('badge') or ('Аккумулятор в подарок' if kit and d.get('price_num') else '')
@@ -382,15 +454,23 @@ def product_page(d, kind='pribor'):
             for i,(src,alt) in enumerate(shots))+'</div>'
     dd_cls='font-bold text-right whitespace-nowrap shrink-0' if kit else 'font-bold text-right'   # количество в составе не переносим
     spec_rows=''.join(f'<div class="flex justify-between gap-6 border-b border-line py-3"><dt class="text-muted">{k}</dt><dd class="{dd_cls}">{v}</dd></div>' for k,v in d['table'])
-    if d['kit'] and isinstance(d['kit'][0],tuple):
-        side='<dl class="mt-4 text-[15px]">'+''.join(f'<div class="border-b border-line py-2.5"><dt class="text-[13px] text-muted">{k}</dt><dd class="font-bold mt-0.5">{v}</dd></div>' for k,v in d['kit'])+'</dl>'
+    side_src=d.get('ask') if item else d['kit']
+    if side_src and isinstance(side_src[0],tuple):
+        side='<dl class="mt-4 text-[15px]">'+''.join(f'<div class="border-b border-line py-2.5"><dt class="text-[13px] text-muted">{k}</dt><dd class="font-bold mt-0.5">{v}</dd></div>' for k,v in side_src)+'</dl>'
     else:
-        side='<ul class="mt-4 space-y-2 text-[15px]">'+''.join(f'<li class="flex gap-2.5"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>{x}</li>' for x in d['kit'])+'</ul>'
-    facts=''.join(f'<div class="card p-3 text-center"><p class="font-black text-[20px] tabular-nums">{a}</p><p class="text-[12px] text-muted mt-0.5">{b}</p></div>' for a,b in d['facts'])
+        side='<ul class="mt-4 space-y-2 text-[15px]">'+''.join(f'<li class="flex gap-2.5"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>{x}</li>' for x in side_src)+'</ul>'
+    facts_src=d.get('facts') or []
+    facts=''.join(f'<div class="card p-3 text-center"><p class="font-black text-[20px] tabular-nums">{a}</p><p class="text-[12px] text-muted mt-0.5">{b}</p></div>' for a,b in facts_src)
     opt=f'<p class="mt-3 text-[15px] text-muted"><strong class="text-ink">Оптом:</strong> {d["opt"]}.</p>' if d.get('opt') else ''
     has_price=bool(d.get('price_num'))
+    in_stock=d.get('stock_ok', not item)   # у товаров без данных о наличии честно пишем «уточняйте»
+    stock_html=(f'<span class="inline-flex items-center gap-1.5 rounded-full bg-cream text-brand-dark text-[14px] font-bold px-3 py-1.5"><i data-lucide="check" class="w-4 h-4" aria-hidden="true"></i>{d.get("stock","В наличии")}</span>'
+                if in_stock else '<span class="inline-flex items-center rounded-full bg-white border border-line text-muted text-[14px] font-semibold px-3 py-1.5">Наличие уточняйте</span>')
+    table_html=f'<h2 class="h3">{{TT}}</h2>\n    <dl class="mt-4 text-[15px]">{spec_rows}</dl>' if d['table'] else ''
+    tips=d.get('tips') or []
+    tips_html=(f'<h2 class="h3{" mt-10" if d["table"] else ""}">Как выбрать</h2>\n    <ul class="mt-4 space-y-3 text-[16px] leading-[1.6] max-w-[62ch]">'+''.join(f'<li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0 mt-0.5" aria-hidden="true"></i><span>{t}</span></li>' for t in tips)+'</ul>') if tips else ''
     price_html=f'<p class="font-black text-[32px] leading-none tabular-nums">{d["price"]}</p>' if has_price else f'<p class="font-black text-[24px] leading-none">{d["price"]}</p>'
-    wa_text='Здравствуйте! Интересует '+(full[0].lower()+full[1:] if kit else 'электропастух '+d['short'])+(' за '+d['price']+'.' if has_price else '. Подскажите цену.')
+    wa_text='Здравствуйте! Интересует '+(full[0].lower()+full[1:] if (kit or item) else 'электропастух '+d['short'])+(' за '+d['price']+'.' if has_price else '. Подскажите цену.')
     if kit:
         parent=('Готовые комплекты','catalog-komplekty.html'); h1=d['h1']
         table_title,side_title='Состав комплекта', d.get('side_title','Генератор и шнур' if has_price else 'Как это работает')
@@ -406,6 +486,26 @@ def product_page(d, kind='pribor'):
     </div>'''
         others=[k for k in KITS if k['slug']!=d['slug']]; rel_title='Другие комплекты'; rel=''.join(kit_card(k) for k in others)
         band=cta_band('Нужен комплект под другой периметр?','Скажите вид животных и площадь — посчитаем шнур, изоляторы и ворота под ваш участок.')
+    elif item:
+        cat_file,cat_title=ITEM_CAT[d['slug']]
+        parent=(cat_title,cat_file); h1=d.get('h1',d['name'])
+        table_title,side_title='Характеристики','Что сообщить менеджеру'
+        warranty='Возврат и обмен 14 дней по закону РК'
+        side_card='''<div class="card p-5 mt-6">
+      <p class="font-extrabold">Посчитаем количество</p>
+      <p class="text-muted text-[15px] mt-2">Назовите животных и периметр: посчитаем, сколько чего нужно, и назовём цену с доставкой.</p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        <a href="podbor.html" class="chip h-10">Подбор за минуту</a>
+        <a href="catalog-komplekty.html" class="chip h-10">Готовые комплекты</a>
+        <a href="kak-vybrat.html" class="chip h-10">Как выбрать</a>
+      </div>
+    </div>'''
+        same=[i for i in SIMPLE[cat_file][2] if i['slug']!=d['slug']]
+        if same:
+            rel_title='Ещё в категории'; rel=''.join(product_card(i['img'],i['alt'],i['name'],i['sub'],i['price'],i['specs'],i['href'],nophoto=i.get('nophoto',False)) for i in same)
+        else:
+            rel_title='Электропастухи'; rel=''.join(card_of(p) for p in PRIBORY[:3])
+        band=cta_band('Нужна цена или количество?','Напишите, что за животные и какой периметр — посчитаем и ответим в рабочее время.', ask='Здравствуйте! Интересует: '+full+'. Подскажите цену и наличие.')
     else:
         parent=('Электропастухи','catalog-elektropastuhi.html'); h1='Электропастух '+d['name']
         table_title,side_title='Характеристики','Комплектация'
@@ -422,6 +522,8 @@ def product_page(d, kind='pribor'):
     </div>'''
         others=[p for p in PRIBORY if p['slug']!=d['slug']]; rel_title='Похожие приборы'; rel=''.join(card_of(p) for p in others)
         band=cta_band('Подобрать комплект с этим прибором','Скажите вид животных и площадь — посчитаем проводник, изоляторы и заземление под ваш периметр.')
+    table_html=table_html.replace('{TT}',table_title)
+    if item and not has_price: d=dict(d,cta='Запросить цену')
     w(d['slug']+'.html', f'''
 <main id="top">
 {crumbs([('Главная','index.html'),('Каталог','catalog.html'),parent,(d['name'],None)])}
@@ -430,7 +532,7 @@ def product_page(d, kind='pribor'):
   <div class="lg:col-span-7" data-gallery>
     <div class="card overflow-hidden">
       <div class="relative bg-white aspect-[4/3]">
-        <img data-gallery-main src="{shots[0][0]}" alt="{shots[0][1]}" class="absolute inset-0 w-full h-full object-contain p-4 md:p-6" fetchpriority="high" width="800" height="600">
+        {NOPHOTO if d.get('nophoto') else f'<img data-gallery-main src="{shots[0][0]}" alt="{shots[0][1]}" class="absolute inset-0 w-full h-full object-contain p-4 md:p-6" fetchpriority="high" width="800" height="600">'}
         {badge}
       </div>
     </div>
@@ -441,10 +543,10 @@ def product_page(d, kind='pribor'):
     <p class="lead mt-3">{d['lead']}</p>
     <div class="mt-6 flex flex-wrap items-center gap-3">
       {price_html}
-      <span class="inline-flex items-center gap-1.5 rounded-full bg-cream text-brand-dark text-[14px] font-bold px-3 py-1.5"><i data-lucide="check" class="w-4 h-4" aria-hidden="true"></i>{d.get('stock','В наличии')}</span>
+      {stock_html}
     </div>
     {opt}
-    <div class="mt-6 grid grid-cols-3 gap-3">{facts}</div>
+    {f'<div class="mt-6 grid grid-cols-3 gap-3">{facts}</div>' if facts else ''}
     <div class="mt-6 flex flex-col sm:flex-row sm:flex-wrap gap-3">
       <a href="{order(full)}" class="btn-primary btn-lg">{d.get('cta','Заказать')}</a>
       <a href="{wa(wa_text)}" target="_blank" rel="noopener" class="btn-secondary btn-lg"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Спросить в WhatsApp</a>
@@ -459,8 +561,8 @@ def product_page(d, kind='pribor'):
 
 <section class="container-site mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
   <div class="lg:col-span-7">
-    <h2 class="h3">{table_title}</h2>
-    <dl class="mt-4 text-[15px]">{spec_rows}</dl>
+    {table_html}
+    {tips_html}
   </div>
   <div class="lg:col-span-5">
     <h2 class="h3">{side_title}</h2>
@@ -480,6 +582,8 @@ def product_page(d, kind='pribor'):
 
 for d in PRIBORY: product_page(d)
 for d in KITS: product_page(d, kind='kit')
+for _f,(_t,_l,_items) in SIMPLE.items():
+    for d in _items: product_page(d, kind='item')
 
 # ---------- подбор комплекта (страница-конфигуратор) ----------
 w('podbor.html', f'''
@@ -952,3 +1056,14 @@ w('404.html', f'''
   </div>
 </section>
 </main>''')
+
+
+# ---------- манифест сгенерированных карточек товаров для build.py ----------
+import json as _json
+_gen=[]
+for _f,(_t,_l,_items) in SIMPLE.items():
+    for i in _items:
+        nm=i['name'].replace('&nbsp;',' ')
+        title=f"{nm} — {i['price']}, Алматы" if i.get('price_num') else f"{nm} — купить в Алматы, GIGANT Agro"
+        _gen.append([i['slug'], i['slug']+'.html', title, i['lead'][:200].rsplit(' ',1)[0].rstrip(',.:;—')+'. Склад в Алматы, доставка по Казахстану.', (i.get('shots') or [(i['img'],'')])[0][0]])
+open(os.path.join(ROOT,'pages','_generated.json'),'w',encoding='utf-8').write(_json.dumps(_gen,ensure_ascii=False,indent=1))
