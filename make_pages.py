@@ -355,7 +355,7 @@ w('podbor.html', f'''
             <button class="chip" data-v="wild" aria-pressed="false">Дикие животные</button>
           </div>
         </fieldset>
-        <fieldset class="py-6">
+        <fieldset class="mt-2 pb-6">
           <legend class="flex items-center gap-3 font-extrabold text-[17px]"><span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white md:bg-cream border border-line md:border-0 text-brand-dark text-[14px] font-black tabular-nums" aria-hidden="true">2</span>Сколько земли</legend>
           <div class="mt-4 flex flex-col sm:flex-row sm:items-center gap-3">
             <label class="relative w-full sm:w-36"><span class="sr-only">Площадь или периметр</span><input id="pickArea" type="number" min="0.1" step="0.1" value="5" class="input" inputmode="decimal" aria-describedby="pickAreaHint" autocomplete="off"></label>
@@ -366,7 +366,7 @@ w('podbor.html', f'''
           </div>
           <p id="pickAreaHint" class="mt-3 text-[14px] text-muted">Не знаете периметр — укажите площадь, мы посчитаем.</p>
         </fieldset>
-        <fieldset class="pt-6">
+        <fieldset class="mt-2">
           <legend class="flex items-center gap-3 font-extrabold text-[17px]"><span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white md:bg-cream border border-line md:border-0 text-brand-dark text-[14px] font-black tabular-nums" aria-hidden="true">3</span>Откуда питание</legend>
           <div id="pickPower" class="mt-4 flex flex-wrap gap-2" role="group" aria-label="Источник питания">
             <button class="chip" data-v="220" aria-pressed="true">Розетка 220&nbsp;В</button>
@@ -406,7 +406,7 @@ w('podbor.html', f'''
 
 <section class="container-site mt-12 md:mt-16">
   <h2 class="h2">Как мы считаем</h2>
-  <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
+  <div class="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-5">
     <div class="card p-5"><p class="font-extrabold">Периметр из площади</p><p class="text-muted text-[15px] mt-2">Для участка, близкого к квадрату: 1 га — около 400 м, 5 га — около 900 м, 6 га — около 980 м. Вытянутый участок при той же площади даёт больший периметр.</p></div>
     <div class="card p-5"><p class="font-extrabold">Длина проводника</p><p class="text-muted text-[15px] mt-2">Периметр умножаем на число линий. Крупным спокойным животным хватает одной-двух, овцам и козам нужно четыре-пять или готовая сетка.</p></div>
     <div class="card p-5"><p class="font-extrabold">Запас мощности</p><p class="text-muted text-[15px] mt-2">Густая трава и длинная линия съедают импульс. Поэтому для больших периметров и защиты от диких животных берут 25&nbsp;Дж, а не 15.</p></div>
@@ -494,9 +494,9 @@ w('instrukcii.html', f'''
 {page_head('Инструкции и схемы подключения', 'Порядок установки электроизгороди от разметки до проверки напряжения. К каждому прибору идёт своя инструкция, здесь — общая последовательность.')}
 <section class="container-site mt-8 md:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
   <div class="lg:col-span-5">
-    <div class="lg:sticky lg:top-28">
+    <div class="md:grid md:grid-cols-2 md:gap-5 md:items-center lg:block lg:sticky lg:top-28">
       <div class="rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/insulator.jpg" alt="Изолятор на столбе держит проволоку электроизгороди" class="w-full h-full object-cover" loading="lazy" width="900" height="900"></div>
-      <div class="card p-5 mt-5">
+      <div class="card p-5 mt-5 md:mt-0 lg:mt-5">
         <p class="font-extrabold">Нужна инструкция к прибору?</p>
         <p class="text-muted text-[15px] mt-2">Напишите модель прибора — пришлём инструкцию и схему подключения в WhatsApp.</p>
         <a href="{wa('Здравствуйте! Нужна инструкция по подключению электропастуха.')}" target="_blank" rel="noopener" class="btn-secondary w-full mt-4"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Спросить в WhatsApp</a>
