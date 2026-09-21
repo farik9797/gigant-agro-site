@@ -461,6 +461,126 @@
    }
   ]
  },
+ "product-bekci145-back.jpg": {
+  "width": 1014,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 606,
+    "file": "assets/img/opt/product-bekci145-back-480.webp",
+    "kb": 18
+   },
+   {
+    "w": 640,
+    "h": 808,
+    "file": "assets/img/opt/product-bekci145-back-640.webp",
+    "kb": 31
+   },
+   {
+    "w": 800,
+    "h": 1010,
+    "file": "assets/img/opt/product-bekci145-back-800.webp",
+    "kb": 47
+   },
+   {
+    "w": 1014,
+    "h": 1280,
+    "file": "assets/img/opt/product-bekci145-back-1014.webp",
+    "kb": 77
+   }
+  ]
+ },
+ "product-bekci145.jpg": {
+  "width": 1034,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 594,
+    "file": "assets/img/opt/product-bekci145-480.webp",
+    "kb": 25
+   },
+   {
+    "w": 640,
+    "h": 792,
+    "file": "assets/img/opt/product-bekci145-640.webp",
+    "kb": 38
+   },
+   {
+    "w": 800,
+    "h": 990,
+    "file": "assets/img/opt/product-bekci145-800.webp",
+    "kb": 54
+   },
+   {
+    "w": 1034,
+    "h": 1280,
+    "file": "assets/img/opt/product-bekci145-1034.webp",
+    "kb": 86
+   }
+  ]
+ },
+ "product-bekci25-back.jpg": {
+  "width": 1054,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 583,
+    "file": "assets/img/opt/product-bekci25-back-480.webp",
+    "kb": 14
+   },
+   {
+    "w": 640,
+    "h": 777,
+    "file": "assets/img/opt/product-bekci25-back-640.webp",
+    "kb": 22
+   },
+   {
+    "w": 800,
+    "h": 972,
+    "file": "assets/img/opt/product-bekci25-back-800.webp",
+    "kb": 32
+   },
+   {
+    "w": 1054,
+    "h": 1280,
+    "file": "assets/img/opt/product-bekci25-back-1054.webp",
+    "kb": 54
+   }
+  ]
+ },
+ "product-bekci25-box.jpg": {
+  "width": 1002,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 613,
+    "file": "assets/img/opt/product-bekci25-box-480.webp",
+    "kb": 32
+   },
+   {
+    "w": 640,
+    "h": 818,
+    "file": "assets/img/opt/product-bekci25-box-640.webp",
+    "kb": 51
+   },
+   {
+    "w": 800,
+    "h": 1022,
+    "file": "assets/img/opt/product-bekci25-box-800.webp",
+    "kb": 75
+   },
+   {
+    "w": 1002,
+    "h": 1280,
+    "file": "assets/img/opt/product-bekci25-box-1002.webp",
+    "kb": 123
+   }
+  ]
+ },
  "product-bekci25.jpg": {
   "width": 800,
   "height": 1073,
@@ -482,6 +602,66 @@
     "h": 1073,
     "file": "assets/img/opt/product-bekci25-800.webp",
     "kb": 54
+   }
+  ]
+ },
+ "product-bekci69-kit.jpg": {
+  "width": 1024,
+  "height": 768,
+  "variants": [
+   {
+    "w": 480,
+    "h": 360,
+    "file": "assets/img/opt/product-bekci69-kit-480.webp",
+    "kb": 11
+   },
+   {
+    "w": 640,
+    "h": 480,
+    "file": "assets/img/opt/product-bekci69-kit-640.webp",
+    "kb": 17
+   },
+   {
+    "w": 800,
+    "h": 600,
+    "file": "assets/img/opt/product-bekci69-kit-800.webp",
+    "kb": 23
+   },
+   {
+    "w": 1024,
+    "h": 768,
+    "file": "assets/img/opt/product-bekci69-kit-1024.webp",
+    "kb": 33
+   }
+  ]
+ },
+ "product-bekci69.jpg": {
+  "width": 1022,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 601,
+    "file": "assets/img/opt/product-bekci69-480.webp",
+    "kb": 20
+   },
+   {
+    "w": 640,
+    "h": 802,
+    "file": "assets/img/opt/product-bekci69-640.webp",
+    "kb": 29
+   },
+   {
+    "w": 800,
+    "h": 1002,
+    "file": "assets/img/opt/product-bekci69-800.webp",
+    "kb": 40
+   },
+   {
+    "w": 1022,
+    "h": 1280,
+    "file": "assets/img/opt/product-bekci69-1022.webp",
+    "kb": 60
    }
   ]
  },

@@ -26,6 +26,17 @@
     sync();
   })();
 
+  // --- карточка товара: миниатюры переключают главное фото
+  document.querySelectorAll('[data-gallery]').forEach(function(g){
+    var main=g.querySelector('[data-gallery-main]'), thumbs=[].slice.call(g.querySelectorAll('[data-gallery-thumb]'));
+    if(!main) return;
+    thumbs.forEach(function(b){ b.addEventListener('click',function(){
+      var im=b.querySelector('img'); if(im.srcset) main.srcset=im.srcset; main.src=im.currentSrc||im.src;
+      main.alt=(b.getAttribute('aria-label')||'').replace(/^Фото \d+: /,'');
+      thumbs.forEach(function(x){ x.setAttribute('aria-pressed', x===b?'true':'false'); });
+    }); });
+  });
+
   // --- слайдеры на мобильном: индикатор прокрутки
   [['catScroll','catProgress'],['kitScroll','kitProgress'],['relScroll','relProgress'],['flagScroll','flagProgress']].forEach(function(pair){
     var cs=document.getElementById(pair[0]), pg=document.getElementById(pair[1]);

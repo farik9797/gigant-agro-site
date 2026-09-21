@@ -103,21 +103,64 @@ CATS=[
  ('catalog-pogonyala.html','Электропогонялa','Для перемещения скота','assets/img/product-gigant15.jpg','Электропогоняло GIGANT','44 500 ₸'),
 ]
 
+# Приборы. Характеристики Bekci — с заводского шильдика (фото на витрине заказчика): напряжение, вес, габариты, питание.
+# «Макс. длина» с шильдика (150/300/400 км) не публикуем: это расчётная цифра без нагрузки; показываем рабочую длину по паспорту.
+WARRANTY_SHORT={'GIGANT':'1 год','Bekci':'2 года'}
 PRIBORY=[
- dict(img='assets/img/product-gigant15.jpg',alt='Электропастух GIGANT 15 Дж с адаптером, пультом и клеммами',
-      name='GIGANT 15&nbsp;Дж',sub='Стандартные хозяйства и средние периметры',price='105 000 ₸',
+ dict(slug='product-gigant-15',brand='GIGANT',short='GIGANT 15 Дж',
+      img='assets/img/product-gigant15.jpg',alt='Электропастух GIGANT 15 Дж с адаптером, пультом и клеммами',
+      name='GIGANT 15&nbsp;Дж',sub='Стандартные хозяйства и средние периметры',price='105 000 ₸',price_num='105000',
       href='product-gigant-15.html',badge='Собственная марка',
-      specs=[('Импульс','15 Дж'),('Напряжение','12 000 В'),('Питание','220 В / 12 В'),('Гарантия','1 год')]),
- dict(img='assets/img/product-bekci25.jpg',alt='Электропастух Bekci 25 Дж',
-      name='Bekci 25&nbsp;Дж',sub='Большие периметры, густая трава, крупные и дикие животные',price='145 000 ₸',
-      badge='Максимальная мощность',badge_style='bg-pulse text-ink',
-      specs=[('Импульс','25 Дж'),('Производство','Турция'),('Питание','220 В / 12 В'),('Гарантия','2 года')]),
- dict(img='assets/img/product-bekci25.jpg',alt='Электропастух Bekci 14.5 Дж',
-      name='Bekci 14,5&nbsp;Дж',sub='Хозяйства среднего размера, КРС и овцы',price='105 000 ₸',
-      specs=[('Импульс','14,5 Дж'),('Производство','Турция'),('Питание','220 В / 12 В'),('Гарантия','2 года')]),
- dict(img='assets/img/product-bekci25.jpg',alt='Электропастух Bekci 6.9 Дж',
-      name='Bekci 6,9&nbsp;Дж',sub='Небольшие загоны и спокойные животные',price='69 000 ₸',
-      specs=[('Импульс','6,9 Дж'),('Производство','Турция'),('Питание','[уточнить]'),('Гарантия','2 года')]),
+      specs=[('Импульс','15 Дж'),('Напряжение','12 000 В'),('Питание','220 В / 12 В'),('Гарантия','1 год')],
+      lead='Флагман собственной марки. Держит стандартное хозяйство с КРС, овцами и козами, работает от сети и от аккумулятора, управляется пультом.',
+      facts=[('15','Дж'),('12 000','В'),('220/12','В, питание')],
+      gallery=[],
+      table=[('Импульс, Дж','15'),('Максимальное напряжение','12 000 В'),('Питание','Сеть 220 В или аккумулятор 12 В'),
+             ('Управление','Пульт дистанционного управления'),('Габариты','250 × 200 × 50 мм'),('Вес','5 кг'),
+             ('Для кого','КРС, овцы, козы'),('Производство','Россия'),('Гарантия','1 год')],
+      kit=['Электропастух','Адаптер питания 220 В','Кабель с клеммами для аккумулятора','Пульт дистанционного управления','Предупреждающие таблички','Инструкция по эксплуатации'],
+      ld='Генератор импульсов для электроизгороди: 15 Дж, 12 000 В, питание 220 В и 12 В, пульт ДУ, гарантия 1 год.'),
+ dict(slug='product-bekci-25',brand='Bekci',short='Bekci 25 Дж',
+      img='assets/img/product-bekci25.jpg',alt='Электропастух Bekci 25 Дж',
+      name='Bekci 25&nbsp;Дж',sub='Большие периметры, густая трава, крупные и дикие животные',price='145 000 ₸',price_num='145000',
+      href='product-bekci-25.html',badge='Максимальная мощность',badge_style='bg-pulse text-ink',
+      specs=[('Импульс','25 Дж'),('Напряжение','25 000 В'),('Питание','220 В / 12 В'),('Гарантия','2 года')],
+      lead='Самый мощный прибор в линейке. Для больших периметров, густой травы под линией и защиты от диких животных: кабанов, волков, медведей.',
+      facts=[('25','Дж'),('25 000','В'),('220/12','В, питание')],
+      gallery=[('assets/img/product-bekci25-box.jpg','Электропастух Bekci 25 Дж в коробке с кабелями'),('assets/img/product-bekci25-back.jpg','Шильдик Bekci 25 Дж с характеристиками на задней стенке')],
+      table=[('Импульс, Дж','25'),('Выходное напряжение','25 000 В'),('Питание','Аккумулятор 12 В или сеть 220 В через адаптер'),
+             ('Рабочая длина линии по паспорту','8 000 м'),('Корпус','Переносной, с ручкой'),('Габариты','260 × 230 × 90 мм'),('Вес','2,05 кг'),
+             ('Для кого','КРС, лошади, защита от диких животных'),('Сертификаты','CE, EAC, ISO 9001:2015'),('Производство','Турция, ÇKR Tarım'),('Гарантия','2 года')],
+      kit=['Электропастух','Адаптер питания 220 В → 12 В','Кабель с зажимами для аккумулятора 12 В'],
+      ld='Генератор импульсов для электроизгороди: 25 Дж, 25 000 В, питание 12 В и 220 В, гарантия 2 года.'),
+ dict(slug='product-bekci-14-5',brand='Bekci',short='Bekci 14,5 Дж',
+      img='assets/img/product-bekci145.jpg',alt='Электропастух Bekci 14,5 Дж, бордовый корпус',
+      name='Bekci 14,5&nbsp;Дж',sub='Хозяйства среднего размера, КРС и овцы',price='105 000 ₸',price_num='105000',
+      href='product-bekci-14-5.html',
+      specs=[('Импульс','14,5 Дж'),('Напряжение','20 000 В'),('Питание','220 В / 12 В'),('Гарантия','2 года')],
+      lead='Прибор для хозяйств среднего размера: КРС, козы, овцы. Запаса мощности хватает и на защиту участка от кабанов и других диких животных.',
+      facts=[('14,5','Дж'),('20 000','В'),('220/12','В, питание')],
+      gallery=[('assets/img/product-bekci145-back.jpg','Шильдик Bekci 14,5 Дж с характеристиками на задней стенке')],
+      table=[('Импульс, Дж','14,5'),('Выходное напряжение','20 000 В'),('Питание','Аккумулятор 12 В или сеть 220 В через адаптер'),
+             ('Рабочая длина линии по паспорту','6 000 м'),('Корпус','Переносной, с ручкой'),('Габариты','260 × 230 × 90 мм'),('Вес','2,3 кг'),
+             ('Для кого','КРС, козы, овцы, защита от диких животных'),('Сертификаты','CE, EAC, ISO 9001:2015'),('Производство','Турция, ÇKR Tarım'),('Гарантия','2 года')],
+      kit=['Электропастух','Адаптер питания 220 В → 12 В','Кабель с зажимами для аккумулятора 12 В'],
+      opt='94 000 ₸ за штуку при заказе от 3 штук',
+      ld='Генератор импульсов для электроизгороди: 14,5 Дж, 20 000 В, питание 12 В и 220 В, гарантия 2 года.'),
+ dict(slug='product-bekci-6-9',brand='Bekci',short='Bekci 6,9 Дж',
+      img='assets/img/product-bekci69.jpg',alt='Электропастух Bekci 6,9 Дж, жёлтый корпус',
+      name='Bekci 6,9&nbsp;Дж',sub='Небольшие загоны и спокойные животные',price='69 000 ₸',price_num='69000',
+      href='product-bekci-6-9.html',
+      specs=[('Импульс','6,9 Дж'),('Напряжение','9 200 В'),('Питание','220 В / 12 В'),('Гарантия','2 года')],
+      lead='Младшая модель для небольших загонов и спокойных животных: лошадей, коров, овец и домашней птицы. Лёгкий переносной корпус, работает от сети и от аккумулятора.',
+      facts=[('6,9','Дж'),('9 200','В'),('220/12','В, питание')],
+      gallery=[('assets/img/product-bekci69-kit.jpg','Электропастух Bekci 6,9 Дж с адаптером питания и кабелем с зажимами')],
+      table=[('Импульс, Дж','6,9'),('Выходное напряжение','9 200 В'),('Питание','Аккумулятор 12 В или сеть 220 В через адаптер'),
+             ('Рабочая длина линии по паспорту','3 000 м'),('Корпус','Переносной, с ручкой'),('Габариты','260 × 230 × 90 мм'),('Вес','2,05 кг'),
+             ('Для кого','Лошади, коровы, овцы, домашняя птица'),('Сертификаты','CE, EAC, ISO 9001:2015'),('Производство','Турция, ÇKR Tarım'),('Гарантия','2 года')],
+      kit=['Электропастух','Адаптер питания 220 В → 12 В','Кабель с зажимами для аккумулятора 12 В'],
+      opt='55 000 ₸ за штуку при заказе от 5 штук',
+      ld='Генератор импульсов для электроизгороди: 6,9 Дж, 9 200 В, питание 12 В и 220 В, гарантия 2 года.'),
 ]
 
 KITS=[
@@ -260,45 +303,60 @@ for fname,(title,lead,items) in SIMPLE.items():
 {cta_band()}
 </main>''')
 
-# ---------- карточка товара ----------
-SPEC_TABLE=[('Импульс, Дж','15'),('Максимальное напряжение','12 000 В'),('Питание','Сеть 220 В или аккумулятор 12 В'),
- ('Управление','Пульт дистанционного управления'),
- ('Габариты','250 × 200 × 50 мм'),('Вес','5 кг'),('Для кого','КРС, овцы, козы'),
- ('Производство','Россия'),('Гарантия','1 год')]
-spec_rows=''.join(f'<div class="flex justify-between gap-6 border-b border-line py-3"><dt class="text-muted">{k}</dt><dd class="font-bold text-right">{v}</dd></div>' for k,v in SPEC_TABLE)
+# ---------- карточка товара (общий шаблон для всех приборов) ----------
+def card_of(p):
+    return product_card(p['img'],p['alt'],p['name'],p['sub'],p['price'],p['specs'],p.get('href'),p.get('badge'),p.get('badge_style','bg-cream text-brand-dark'))
 
-w('product-gigant-15.html', f'''
+def product_page(d):
+    import json
+    base='https://farik9797.github.io/gigant-agro-site/'
+    full='Электропастух '+d['short']
+    ld=json.dumps({"@context":"https://schema.org","@type":"Product","name":full,"brand":{"@type":"Brand","name":d['brand']},
+        "category":"Электропастухи","image":base+d['img'],"description":d['ld'],
+        "offers":{"@type":"Offer","price":d['price_num'],"priceCurrency":"KZT","availability":"https://schema.org/InStock",
+                  "url":base+d['slug']+'.html',"seller":{"@type":"Organization","name":"GIGANT Agro"}}},ensure_ascii=False)
+    badge=f'<span class="absolute left-4 top-4 rounded-full {d.get("badge_style","bg-cream text-brand-dark")} text-[13px] font-bold px-2.5 py-1">{d["badge"]}</span>' if d.get('badge') else ''
+    shots=[(d['img'],d['alt'])]+d['gallery']
+    thumbs=''
+    if len(shots)>1:
+        thumbs='<div class="mt-3 flex gap-2.5" role="group" aria-label="Фотографии товара">'+''.join(
+            f'<button type="button" data-gallery-thumb aria-pressed="{"true" if i==0 else "false"}" aria-label="Фото {i+1}: {alt}" class="gallery-thumb w-[76px] h-[76px] sm:w-[88px] sm:h-[88px] rounded-xl border border-line bg-white overflow-hidden shrink-0"><img src="{src}" alt="" data-sizes="96px" class="w-full h-full object-contain p-1.5" width="200" height="200"></button>'
+            for i,(src,alt) in enumerate(shots))+'</div>'
+    spec_rows=''.join(f'<div class="flex justify-between gap-6 border-b border-line py-3"><dt class="text-muted">{k}</dt><dd class="font-bold text-right">{v}</dd></div>' for k,v in d['table'])
+    kit=''.join(f'<li class="flex gap-2.5"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>{x}</li>' for x in d['kit'])
+    facts=''.join(f'<div class="card p-3 text-center"><p class="font-black text-[20px] tabular-nums">{a}</p><p class="text-[12px] text-muted mt-0.5">{b}</p></div>' for a,b in d['facts'])
+    opt=f'<p class="mt-3 text-[15px] text-muted"><strong class="text-ink">Оптом:</strong> {d["opt"]}.</p>' if d.get('opt') else ''
+    others=[p for p in PRIBORY if p['slug']!=d['slug']]
+    w(d['slug']+'.html', f'''
 <main id="top">
-{crumbs([('Главная','index.html'),('Каталог','catalog.html'),('Электропастухи','catalog-elektropastuhi.html'),('GIGANT 15&nbsp;Дж',None)])}
-<script type="application/ld+json">{{"@context":"https://schema.org","@type":"Product","name":"Электропастух GIGANT 15 Дж","brand":{{"@type":"Brand","name":"GIGANT"}},"category":"Электропастухи","image":"https://farik9797.github.io/gigant-agro-site/assets/img/product-gigant15.jpg","description":"Генератор импульсов для электроизгороди: 15 Дж, 12 000 В, питание 220 В и 12 В, пульт ДУ, гарантия 1 год.","offers":{{"@type":"Offer","price":"105000","priceCurrency":"KZT","availability":"https://schema.org/InStock","url":"https://farik9797.github.io/gigant-agro-site/product-gigant-15.html","seller":{{"@type":"Organization","name":"GIGANT Agro"}}}}}}</script>
+{crumbs([('Главная','index.html'),('Каталог','catalog.html'),('Электропастухи','catalog-elektropastuhi.html'),(d['name'],None)])}
+<script type="application/ld+json">{ld}</script>
 <section class="container-site mt-6 md:mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-  <div class="lg:col-span-7">
+  <div class="lg:col-span-7" data-gallery>
     <div class="card overflow-hidden">
       <div class="relative bg-white aspect-[4/3]">
-        <img src="assets/img/product-gigant15.jpg" alt="Электропастух GIGANT 15 Дж с адаптером, пультом и клеммами" class="absolute inset-0 w-full h-full object-contain p-6" fetchpriority="high" width="800" height="600">
-        <span class="absolute left-4 top-4 rounded-full bg-cream text-brand-dark text-[13px] font-bold px-2.5 py-1">Собственная марка</span>
+        <img data-gallery-main src="{d['img']}" alt="{d['alt']}" class="absolute inset-0 w-full h-full object-contain p-6" fetchpriority="high" width="800" height="600">
+        {badge}
       </div>
     </div>
+    {thumbs}
   </div>
   <div class="lg:col-span-5">
-    <h1 class="font-black text-[clamp(1.8rem,3vw,2.4rem)] leading-[1.05] tracking-[-0.02em]">Электропастух GIGANT 15&nbsp;Дж</h1>
-    <p class="lead mt-3">Флагман собственной марки. Держит стандартное хозяйство с КРС, овцами и козами, работает от сети и от аккумулятора, управляется пультом.</p>
+    <h1 class="font-black text-[clamp(1.8rem,3vw,2.4rem)] leading-[1.05] tracking-[-0.02em]">Электропастух {d['name']}</h1>
+    <p class="lead mt-3">{d['lead']}</p>
     <div class="mt-6 flex flex-wrap items-center gap-3">
-      <p class="font-black text-[32px] leading-none tabular-nums">105 000 ₸</p>
+      <p class="font-black text-[32px] leading-none tabular-nums">{d['price']}</p>
       <span class="inline-flex items-center gap-1.5 rounded-full bg-cream text-brand-dark text-[14px] font-bold px-3 py-1.5"><i data-lucide="check" class="w-4 h-4" aria-hidden="true"></i>В наличии</span>
     </div>
-    <div class="mt-6 grid grid-cols-3 gap-3">
-      <div class="card p-3 text-center"><p class="font-black text-[20px] tabular-nums">15</p><p class="text-[12px] text-muted mt-0.5">Дж</p></div>
-      <div class="card p-3 text-center"><p class="font-black text-[20px] tabular-nums">12 000</p><p class="text-[12px] text-muted mt-0.5">В</p></div>
-      <div class="card p-3 text-center"><p class="font-black text-[20px]">220/12</p><p class="text-[12px] text-muted mt-0.5">В, питание</p></div>
-    </div>
+    {opt}
+    <div class="mt-6 grid grid-cols-3 gap-3">{facts}</div>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <a href="{order('Электропастух GIGANT 15 Дж')}" class="btn-primary btn-lg">Заказать</a>
-      <a href="{wa('Здравствуйте! Интересует электропастух GIGANT 15 Дж за 105 000 ₸.')}" target="_blank" rel="noopener" class="btn-secondary btn-lg"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Спросить в WhatsApp</a>
+      <a href="{order(full)}" class="btn-primary btn-lg">Заказать</a>
+      <a href="{wa('Здравствуйте! Интересует электропастух '+d['short']+' за '+d['price']+'.')}" target="_blank" rel="noopener" class="btn-secondary btn-lg"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Спросить в WhatsApp</a>
     </div>
     <ul class="mt-6 space-y-2 text-[15px] text-muted">
       <li class="flex gap-2.5"><i data-lucide="truck" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Самовывоз в Алматы в день заказа, доставка по Казахстану и СНГ</li>
-      <li class="flex gap-2.5"><i data-lucide="shield-check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Гарантия 1 год, возврат 14 дней по закону РК</li>
+      <li class="flex gap-2.5"><i data-lucide="shield-check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Гарантия {WARRANTY_SHORT[d['brand']]}, возврат 14 дней по закону РК</li>
       <li class="flex gap-2.5"><i data-lucide="wrench" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Поможем с монтажом и заземлением по телефону и в WhatsApp</li>
     </ul>
   </div>
@@ -311,14 +369,7 @@ w('product-gigant-15.html', f'''
   </div>
   <div class="lg:col-span-5">
     <h2 class="h3">Комплектация</h2>
-    <ul class="mt-4 space-y-2 text-[15px]">
-      <li class="flex gap-2.5"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Электропастух</li>
-      <li class="flex gap-2.5"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Адаптер питания 220 В</li>
-      <li class="flex gap-2.5"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Кабель с клеммами для аккумулятора</li>
-      <li class="flex gap-2.5"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Пульт дистанционного управления</li>
-      <li class="flex gap-2.5"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Предупреждающие таблички</li>
-      <li class="flex gap-2.5"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Инструкция по эксплуатации</li>
-    </ul>
+    <ul class="mt-4 space-y-2 text-[15px]">{kit}</ul>
     <div class="card p-5 mt-6">
       <p class="font-extrabold">Что докупить</p>
       <p class="text-muted text-[15px] mt-2">Прибор — это только источник импульса. К нему нужен проводник, изоляторы и заземление.</p>
@@ -335,11 +386,13 @@ w('product-gigant-15.html', f'''
 <section class="container-site mt-12 md:mt-16">
   <h2 class="h2">Похожие приборы</h2>
   <div id="relScroll" class="m-slider mt-6 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5" role="group" aria-label="Похожие приборы, прокрутка по горизонтали">
-{''.join(product_card(p['img'],p['alt'],p['name'],p['sub'],p['price'],p['specs'],p.get('href'),p.get('badge'),p.get('badge_style','bg-cream text-brand-dark')) for p in PRIBORY[1:])}  </div>
+{''.join(card_of(p) for p in others)}  </div>
   <div class="md:hidden mt-4 h-1 rounded-full bg-line overflow-hidden" aria-hidden="true"><div id="relProgress" class="h-full rounded-full bg-brand-dark" style="width:34%"></div></div>
 </section>
 {cta_band('Подобрать комплект с этим прибором','Скажите вид животных и площадь — посчитаем проводник, изоляторы и заземление под ваш периметр.')}
 </main>''')
+
+for d in PRIBORY: product_page(d)
 
 # ---------- подбор комплекта (страница-конфигуратор) ----------
 w('podbor.html', f'''

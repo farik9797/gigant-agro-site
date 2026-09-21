@@ -59,6 +59,18 @@ PAGES = [
   'Электропастух GIGANT 15 Дж — 105 000 ₸, Алматы',
   'Электропастух GIGANT 15 Дж: импульс 15 Дж, напряжение 12 000 В, питание 220 В и 12 В, пульт ДУ, гарантия 1 год. Доставка по Казахстану.',
   'assets/img/product-gigant15.jpg'),
+ ('product-bekci-25',      'product-bekci-25.html',
+  'Электропастух Bekci 25 Дж — 145 000 ₸, Алматы',
+  'Электропастух Bekci 25 Дж: импульс 25 Дж, напряжение 25 000 В, питание 12 В и 220 В, гарантия 2 года. Для больших периметров и защиты от диких животных.',
+  'assets/img/product-bekci25.jpg'),
+ ('product-bekci-14-5',    'product-bekci-14-5.html',
+  'Электропастух Bekci 14,5 Дж — 105 000 ₸, Алматы',
+  'Электропастух Bekci 14,5 Дж: импульс 14,5 Дж, напряжение 20 000 В, питание 12 В и 220 В, гарантия 2 года. Для КРС, коз и овец.',
+  'assets/img/product-bekci145.jpg'),
+ ('product-bekci-6-9',     'product-bekci-6-9.html',
+  'Электропастух Bekci 6,9 Дж — 69 000 ₸, Алматы',
+  'Электропастух Bekci 6,9 Дж: импульс 6,9 Дж, напряжение 9 200 В, питание 12 В и 220 В, гарантия 2 года. Для небольших загонов, лошадей, овец и птицы.',
+  'assets/img/product-bekci69.jpg'),
  ('podbor',                'podbor.html',
   'Подбор комплекта электроизгороди за минуту — GIGANT Agro',
   'Ответьте на три вопроса: животные, площадь и питание. Покажем модель электропастуха, состав комплекта и ориентировочную цену.',
@@ -146,9 +158,11 @@ def responsive_images(html):
         hero = name in HERO_IMAGES and 'absolute inset-0' in tag   # тот же файл в карточке — обычные sizes
         v = info['variants']
         default = next((x for x in v if x['w'] >= (1440 if hero else 800)), v[-1])
-        tag = re.sub(r'\s(?:srcset|sizes|width|height)="[^"]*"', '', tag)
+        custom = re.search(r'\sdata-sizes="([^"]*)"', tag)   # миниатюры: свой sizes, иначе браузер тянет крупный вариант
+        tag = re.sub(r'\s(?:srcset|sizes|data-sizes|width|height)="[^"]*"', '', tag)
         srcset = ', '.join(f"{x['file']} {x['w']}w" for x in v)
         sizes = '100vw' if hero else '(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw'
+        if custom: sizes = custom.group(1)
         resp = f' srcset="{srcset}" sizes="{sizes}"' if len(v) > 1 else ''   # один размер (логотип) — без srcset
         tag = tag.replace(f'src="assets/img/{name}"',
               f'src="{default["file"]}"{resp} width="{info["width"]}" height="{info["height"]}"')
