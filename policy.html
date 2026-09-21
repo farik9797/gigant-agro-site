@@ -8,144 +8,25 @@
 <meta name="description" content="Как GIGANT Agro обрабатывает и защищает персональные данные, оставленные через формы на сайте.">
 <meta property="og:title" content="Политика конфиденциальности — GIGANT Agro">
 <meta property="og:description" content="Как GIGANT Agro обрабатывает и защищает персональные данные, оставленные через формы на сайте.">
-<meta property="og:image" content="assets/img/hero-gigant-1920.jpg">
+<meta property="og:image" content="https://farik9797.github.io/gigant-agro-site/assets/img/hero-gigant-1920.jpg">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://farik9797.github.io/gigant-agro-site/policy.html">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="GIGANT Agro">
+<link rel="canonical" href="https://farik9797.github.io/gigant-agro-site/policy.html">
 <link rel="icon" type="image/png" href="assets/img/favicon-64.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="preconnect" href="https://cdn.tailwindcss.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;800;900&family=Vollkorn:ital,wght@1,700&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.replace('no-js','js')</script>
 <noscript><style>#preloader{display:none!important}</style></noscript>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: { extend: {
-    colors: { bg:'#F4F6F1', ink:'#16191C', muted:'#4F5A52', brand:'#5A984B', 'brand-dark':'#3E7A34', deep:'#17261B', cream:'#F3F8D6', pulse:'#FFC400', line:'#D6DCD2', danger:'#C8372D' },
-    fontFamily: { sans:['"Golos Text"','system-ui','sans-serif'], serif:['Vollkorn','Georgia','serif'] },
-    maxWidth: { site:'1400px' },
-    transitionTimingFunction: { out:'cubic-bezier(0.22, 1, 0.36, 1)' },
-    zIndex: { float:'30', nav:'40', menu:'45', bar:'40', preloader:'100' }
-  } }
-}
-</script>
-<style type="text/tailwindcss">
-  @layer base {
-    html { scroll-behavior: smooth; color-scheme: light; -webkit-tap-highlight-color: transparent; }
-    a, button, [role="tab"] { touch-action: manipulation; }
-    body { @apply font-sans text-ink bg-bg antialiased text-[16px] leading-[26px] md:text-[17px] md:leading-[27px]; }
-    h1,h2,h3 { text-wrap: balance; }
-    p { text-wrap: pretty; }
-    ::selection { background:#FFC400; color:#16191C; }
-    :focus-visible { outline: 3px solid #FFC400; outline-offset: 3px; border-radius: 8px; }
-    [hidden] { display: none !important; }
-    fieldset { min-inline-size: 0; }
-  }
-  @layer components {
-    .container-site { @apply max-w-site mx-auto px-5; }
-    .section { padding-block: clamp(4rem, 8vw, 7rem); }
-    .h2 { @apply font-black tracking-[-0.03em] text-[clamp(2rem,3.6vw,3rem)] leading-[1.06]; }
-    .h3 { @apply font-extrabold tracking-[-0.02em] text-[clamp(1.25rem,1.6vw,1.5rem)] leading-[1.15]; }
-    .lead { @apply text-muted text-[17px] md:text-[18px] leading-[1.55] max-w-[60ch]; }
-    .accent { @apply font-serif italic font-bold; }
-    .btn { @apply inline-flex items-center justify-center gap-2 h-12 px-6 rounded-full font-semibold text-[16px] cursor-pointer select-none whitespace-nowrap transition-[transform,background-color,border-color,color] duration-200 ease-out active:scale-[0.97]; }
-    .btn-lg { @apply h-14 px-8 text-[17px]; }
-    .btn-primary { @apply btn bg-pulse text-ink hover:bg-[#FFCF33]; }
-    .btn-secondary { @apply btn bg-brand-dark text-white hover:bg-[#356A2D]; }
-    .btn-outline { @apply btn bg-white border border-line text-ink hover:border-ink; }
-    .btn-glass { @apply btn border border-white/40 text-white bg-white/10 backdrop-blur-md hover:bg-white/20; }
-    .chip { @apply inline-flex items-center gap-2 h-11 px-3 md:px-4 rounded-full border border-line bg-white text-[15px] font-medium cursor-pointer transition-[background-color,border-color,color,transform] duration-200 ease-out hover:border-ink active:scale-[0.97]; }
-    .chip[aria-pressed="true"], .chip[aria-selected="true"] { @apply bg-ink text-white border-ink; }
-    .card { @apply bg-white rounded-2xl border border-line; }
-    .lift { @apply transition-[transform,border-color] duration-300 ease-out hover:-translate-y-0.5 hover:border-ink/50; }
-    .input { @apply w-full h-12 rounded-xl border border-line bg-white px-4 text-[16px] text-ink placeholder:text-muted focus:border-ink focus:outline-none; }
-    .spec { @apply inline-flex items-baseline gap-1 font-extrabold text-[15px] leading-none tracking-[-0.01em] tabular-nums whitespace-nowrap; }
-    .link { @apply inline-flex items-center gap-1.5 font-semibold text-brand-dark hover:underline underline-offset-4; }
-  }
-  /* ---------- preloader ---------- */
-  #preloader { position:fixed; inset:0; z-index:100; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.75rem; background:#17261B; transition:opacity .5s ease, visibility .5s ease; }
-  #preloader.is-hidden { opacity:0; visibility:hidden; }
-  #preloader img { width:72px; height:72px; }
-  .pre-fence { position:relative; width:min(260px,60vw); height:2px; background:rgba(243,248,214,.2); overflow:visible; }
-  .pre-fence .post { position:absolute; top:-8px; width:3px; height:18px; border-radius:2px; background:#F3F8D6; opacity:.45; }
-  .pre-fence::after { content:""; position:absolute; top:-2px; left:-70px; width:70px; height:6px; border-radius:3px; background:#FFC400; box-shadow:0 0 16px rgba(255,196,0,.9); animation:pre-run 1.4s linear infinite; }
-  @keyframes pre-run { from { left:-70px; } to { left:100%; } }
-  html.loading { overflow:hidden; }
-  html.loading .hero-in { animation-play-state:paused; }
-
-  /* ---------- hero load choreography ---------- */
-  .js .hero-in { opacity:0; transform:translateY(22px); animation:hero-rise .9s cubic-bezier(.22,1,.36,1) forwards; }
-  .js .hero-in.d1{animation-delay:.10s} .js .hero-in.d2{animation-delay:.22s} .js .hero-in.d3{animation-delay:.36s} .js .hero-in.d4{animation-delay:.50s} .js .hero-in.d5{animation-delay:.66s}
-  @keyframes hero-rise { to { opacity:1; transform:none; } }
-  .hero-img { animation:hero-zoom 8s cubic-bezier(.22,1,.36,1) forwards; transform:scale(1.06); }
-  @keyframes hero-zoom { to { transform:scale(1); } }
-  /* ---------- scroll reveal (visible by default; JS opts in) ---------- */
-  .js .rv { opacity:0; transform:translateY(24px); transition:opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1); }
-  .js .rv.is-in { opacity:1; transform:none; }
-  .js .rv-stagger > * { opacity:0; transform:translateY(18px); transition:opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
-  .js .rv-stagger.is-in > * { opacity:1; transform:none; }
-  .js .rv-stagger.is-in > *:nth-child(2){transition-delay:.06s} .js .rv-stagger.is-in > *:nth-child(3){transition-delay:.12s} .js .rv-stagger.is-in > *:nth-child(4){transition-delay:.18s} .js .rv-stagger.is-in > *:nth-child(5){transition-delay:.24s} .js .rv-stagger.is-in > *:nth-child(6){transition-delay:.30s} .js .rv-stagger.is-in > *:nth-child(7){transition-delay:.36s} .js .rv-stagger.is-in > *:nth-child(8){transition-delay:.42s} .js .rv-stagger.is-in > *:nth-child(9){transition-delay:.48s}
-  /* ---------- fence line with running pulse ---------- */
-  .fence { position:relative; height:2px; background:rgba(22,25,28,.14); }
-  .fence::after { content:""; position:absolute; top:-2px; left:-72px; width:72px; height:6px; border-radius:3px; background:#FFC400; box-shadow:0 0 14px rgba(255,196,0,.85); animation:pulse-run 3.2s linear infinite; }
-  .fence .post { position:absolute; top:-9px; width:4px; height:20px; border-radius:2px; background:#5A984B; }
-  .fence.on-dark { background:rgba(243,248,214,.22); } .fence.on-dark .post { background:#F3F8D6; }
-  @keyframes pulse-run { from { left:-72px; } to { left:100%; } }
-  .fence-v { position:absolute; left:23px; top:24px; bottom:24px; width:2px; background:rgba(22,25,28,.14); overflow:hidden; }
-  .fence-v::after { content:""; position:absolute; left:-2px; top:-72px; width:6px; height:72px; border-radius:3px; background:#FFC400; box-shadow:0 0 14px rgba(255,196,0,.85); animation:pulse-down 3.6s linear infinite; }
-  @keyframes pulse-down { from { top:-72px; } to { top:100%; } }
-  /* ---------- подбор: панель результата на мобильном ---------- */
-  @media (max-width: 767px) { #pickResult:not(.has-result) { display:none; } }
-
-  /* ---------- каталог: слайдер на мобильном ---------- */
-  @media (max-width: 767px) {
-    .m-slider { display:flex; gap:.75rem; overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x mandatory; scroll-padding-left:1.25rem; margin-inline:-1.25rem; padding-inline:1.25rem; padding-bottom:.25rem; scrollbar-width:none; -ms-overflow-style:none; }
-    .m-slider::-webkit-scrollbar { display:none; }
-    .m-slider > * { flex:0 0 78%; max-width:320px; scroll-snap-align:start; }
-  }
-  #catProgress, #kitProgress { transition:transform .15s linear, width .2s ease; will-change:transform; }
-
-  /* ---------- marquee ---------- */
-  .marquee { mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
-  .marquee-track { display:flex; width:max-content; animation:marquee 34s linear infinite; }
-  .marquee:hover .marquee-track, .marquee.paused .marquee-track { animation-play-state:paused; }
-  @keyframes marquee { to { transform:translateX(-50%); } }
-  /* ---------- nav ---------- */
-  /* шапка: тёмное стекло над фото → белая при прокрутке */
-  #nav { background:rgba(23,38,27,.46); border-color:rgba(243,248,214,.22); color:#F3F8D6; transition:background-color .3s ease, box-shadow .3s ease, border-color .3s ease, color .3s ease; }
-  #nav .nav-accent { color:#FFC400; transition:color .3s ease; }
-  #nav .nav-link:hover { background-color:rgba(243,248,214,.14); }
-  .page-inner #nav { background:rgba(255,255,255,.94); border-color:rgba(22,25,28,.08); color:#16191C; box-shadow:0 8px 24px -16px rgba(22,25,28,.35); }
-  .page-inner #nav .nav-accent { color:#3E7A34; }
-  .page-inner #nav .nav-link:hover { background-color:rgba(22,25,28,.06); }
-  #nav.scrolled { background:rgba(255,255,255,.94); border-color:rgba(22,25,28,.08); color:#16191C; box-shadow:0 8px 24px -16px rgba(22,25,28,.35); }
-  #nav.scrolled .nav-accent { color:#3E7A34; }
-  #nav.scrolled .nav-link:hover { background-color:rgba(22,25,28,.06); }
-  /* ---------- accordion ---------- */
-  details > summary { list-style:none; cursor:pointer; } details > summary::-webkit-details-marker { display:none; }
-  details[open] .faq-icon { transform:rotate(45deg); } .faq-icon { transition:transform .2s ease-out; }
-  /* ---------- tab panel crossfade ---------- */
-  .tabpanel { animation:tab-in .35s cubic-bezier(.22,1,.36,1); }
-  @keyframes tab-in { from { opacity:0; transform:translateY(6px); } }
-  @media (hover:none) { .lift:hover { transform:none; } }
-  @media (prefers-reduced-motion: reduce) {
-    .js .hero-in, .js .rv, .js .rv-stagger > * { animation:none; transition:opacity .3s ease; transform:none; opacity:1; }
-    .hero-img { animation:none; transform:none; }
-    .fence::after, .fence-v::after { display:none; }
-    .pre-fence::after { animation:none; left:0; width:100%; box-shadow:none; }
-    .marquee-track { animation:none; }
-    .tabpanel { animation:none; }
-    .btn, .chip { transition:none; }
-  }
-</style>
+<link rel="preload" href="assets/fonts/golos-text-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/golos-text-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css?v=ad68a3e7">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"GIGANT Agro","url":"https://farik9797.github.io/gigant-agro-site/","logo":"assets/img/logo-gigant.png","telephone":["+77054285707","+77757716024"],"address":{"@type":"PostalAddress","streetAddress":"микрорайон Атырау, 159/8, склад №&nbsp;1","addressLocality":"Алматы","addressCountry":"KZ"},"openingHours":["Mo-Fr 10:00-18:00","Sa 10:00-16:00"]}
+{"@context":"https://schema.org","@type":"Organization","name":"GIGANT Agro","url":"https://farik9797.github.io/gigant-agro-site/","logo":"https://farik9797.github.io/gigant-agro-site/assets/img/logo-gigant.png","telephone":["+77054285707","+77757716024"],"address":{"@type":"PostalAddress","streetAddress":"микрорайон Атырау, 159/8, склад № 1","addressLocality":"Алматы","addressCountry":"KZ"},"openingHours":["Mo-Fr 10:00-18:00","Sa 10:00-16:00"]}
 </script>
 </head>
 <body class="page-inner pb-[calc(72px+env(safe-area-inset-bottom))] md:pb-0">
 <div id="preloader" role="status" aria-label="Загрузка сайта">
-  <img src="assets/img/logo-gigant.png" alt="" width="72" height="72" class="w-18 h-18 rounded-full">
+  <img decoding="async" src="assets/img/opt/logo-gigant-160.webp" width="160" height="160" alt="" class="w-18 h-18 rounded-full">
   <span class="pre-fence" aria-hidden="true"><span class="post" style="left:0"></span><span class="post" style="left:50%"></span><span class="post" style="right:0"></span></span>
 </div>
 <script>
@@ -159,21 +40,27 @@ tailwind.config = {
     p.classList.add('is-hidden');
     setTimeout(function(){ if(p.parentNode) p.parentNode.removeChild(p); }, 600);
   }
-  function ready(){ setTimeout(hide, Math.max(0, 600-(Date.now()-t0))); }
-  if(document.readyState==='complete') ready();
-  else window.addEventListener('load', ready);
-  setTimeout(hide, 4000);
+  function ready(){ setTimeout(hide, Math.max(0, 500-(Date.now()-t0))); }
+  /* стили уже применены (CSS блокирующий), ждём только разбор страницы и первый кадр героя */
+  function dom(){
+    var img=document.querySelector('main img');
+    if(img && img.loading!=='lazy' && !img.complete){ img.addEventListener('load', ready); img.addEventListener('error', ready); }
+    else ready();
+  }
+  if(document.readyState!=='loading') dom();
+  else document.addEventListener('DOMContentLoaded', dom);
+  setTimeout(hide, 2500);
 })();
 </script>
 
-<a href="index.html#podbor" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:rounded-full focus:bg-pulse focus:text-ink focus:px-4 focus:py-2 focus:font-semibold">Перейти к подбору комплекта</a>
+<a href="#top" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:rounded-full focus:bg-pulse focus:text-ink focus:px-4 focus:py-2 focus:font-semibold">Перейти к содержимому</a>
 
 <!-- ================= ПЛАВАЮЩАЯ НАВИГАЦИЯ ================= -->
 <div class="fixed top-3 md:top-5 inset-x-3 md:inset-x-6 z-nav">
   <nav id="nav" class="mx-auto max-w-site rounded-full border border-white/50 bg-white/72 backdrop-blur-xl" aria-label="Основная навигация">
     <div class="h-14 md:h-16 pl-3 pr-2 md:pl-4 md:pr-3 flex items-center gap-3">
       <a href="index.html#top" class="flex items-center gap-2.5 shrink-0" aria-label="GIGANT Agro — на главную">
-        <img src="assets/img/logo-gigant.png" alt="" width="40" height="40" class="w-10 h-10 rounded-full">
+        <img decoding="async" src="assets/img/opt/logo-gigant-160.webp" width="160" height="160" alt="" class="w-10 h-10 rounded-full">
         <span class="font-black text-[17px] leading-none tracking-[-0.02em]">GIGANT <span class="nav-accent">Agro</span></span>
       </a>
       <div class="hidden xl:flex items-center gap-0.5 ml-3 text-[15px] font-medium whitespace-nowrap">
@@ -185,10 +72,10 @@ tailwind.config = {
         <a href="faq.html" class="nav-link px-3 py-2 rounded-full">FAQ</a>
       </div>
       <div class="ml-auto flex items-center gap-1.5 md:gap-2">
-        <a href="tel:+77054285707" class="nav-link hidden 2xl:inline-flex items-center gap-2 px-3 py-2 rounded-full font-semibold text-[15px] whitespace-nowrap"><i data-lucide="phone" class="w-4 h-4" aria-hidden="true"></i>+7 (705) 428-57-07</a>
+        <a href="tel:+77054285707" class="nav-link hidden 2xl:inline-flex items-center gap-2 px-3 py-2 rounded-full font-semibold text-[15px] whitespace-nowrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>+7 (705) 428-57-07</a>
         <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-brand-dark hover:bg-[#356A2D] transition-colors" aria-label="Написать в WhatsApp"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20"></a>
         <a href="index.html#podbor" class="btn-primary h-10 md:h-11 px-4 md:px-5 hidden md:inline-flex">Подобрать комплект</a>
-        <button id="burger" class="nav-link xl:hidden inline-flex items-center justify-center w-11 h-11 rounded-full" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu"><i data-lucide="menu" class="w-6 h-6" aria-hidden="true"></i></button>
+        <button id="burger" class="nav-link xl:hidden inline-flex items-center justify-center w-11 h-11 rounded-full" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-6 h-6" aria-hidden="true" focusable="false"><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /></svg></button>
       </div>
     </div>
   </nav>
@@ -241,7 +128,7 @@ tailwind.config = {
 <footer class="bg-deep text-cream/80 border-t border-cream/10">
   <div class="container-site py-12 md:py-16 grid grid-cols-2 md:grid-cols-4 gap-8">
     <div class="col-span-2 md:col-span-1">
-      <a href="index.html#top" class="flex items-center gap-3"><img src="assets/img/logo-gigant.png" alt="" width="44" height="44" class="w-11 h-11 rounded-full"><span class="font-black text-[18px] text-cream">GIGANT Agro</span></a>
+      <a href="index.html#top" class="flex items-center gap-3"><img decoding="async" src="assets/img/opt/logo-gigant-160.webp" width="160" height="160" alt="" class="w-11 h-11 rounded-full"><span class="font-black text-[18px] text-cream">GIGANT Agro</span></a>
       <ul class="mt-4 text-[15px]">
         <li><a href="tel:+77054285707" class="block py-1.5 hover:text-cream">+7 (705) 428-57-07</a></li>
         <li><a href="tel:+77757716024" class="block py-1.5 hover:text-cream">+7 (775) 771-60-24</a></li>
@@ -292,7 +179,7 @@ tailwind.config = {
     <div class="container-site py-5 flex flex-col md:flex-row md:items-center gap-3 text-[13px] text-cream/65">
       <p>© 2026 GIGANT Agro. Торговая компания, Алматы.</p>
       <div class="md:ml-auto flex flex-wrap items-center gap-x-5 gap-y-1">
-        <a href="policy.html" class="block py-1.5 hover:text-cream" title="Страница в разработке">Политика конфиденциальности</a>
+        <a aria-current="page" href="policy.html" class="block py-1.5 hover:text-cream" title="Страница в разработке">Политика конфиденциальности</a>
         <!-- Фото пастбищ: Wikimedia Commons, CC BY / CC BY-SA — временные, список в assets/img/CREDITS.md; заменить на собственную съёмку до запуска -->
       </div>
     </div>
@@ -304,139 +191,12 @@ tailwind.config = {
 
 <!-- липкая панель действий (mobile) -->
 <nav class="md:hidden fixed bottom-0 inset-x-0 z-bar bg-white/95 backdrop-blur-xl border-t border-line grid grid-cols-4 pb-[env(safe-area-inset-bottom)]" aria-label="Быстрые действия">
-  <a href="index.html#catalog" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[13px] font-medium"><i data-lucide="layout-grid" class="w-6 h-6" aria-hidden="true"></i>Каталог</a>
-  <a href="index.html#podbor" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[13px] font-medium"><i data-lucide="sliders-horizontal" class="w-6 h-6" aria-hidden="true"></i>Подбор</a>
+  <a href="catalog.html" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[13px] font-medium"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-6 h-6" aria-hidden="true" focusable="false"><rect width="7" height="7" x="3" y="3" rx="1" /><rect width="7" height="7" x="14" y="3" rx="1" /><rect width="7" height="7" x="14" y="14" rx="1" /><rect width="7" height="7" x="3" y="14" rx="1" /></svg>Каталог</a>
+  <a href="podbor.html" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[13px] font-medium"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-6 h-6" aria-hidden="true" focusable="false"><line x1="21" x2="14" y1="4" y2="4" /><line x1="10" x2="3" y1="4" y2="4" /><line x1="21" x2="12" y1="12" y2="12" /><line x1="8" x2="3" y1="12" y2="12" /><line x1="21" x2="16" y1="20" y2="20" /><line x1="12" x2="3" y1="20" y2="20" /><line x1="14" x2="14" y1="2" y2="6" /><line x1="8" x2="8" y1="10" y2="14" /><line x1="16" x2="16" y1="18" y2="22" /></svg>Подбор</a>
   <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[13px] font-medium text-brand-dark"><img src="assets/icons/whatsapp-3E7A34.svg" alt="" class="w-6 h-6" width="24" height="24">WhatsApp</a>
-  <a href="tel:+77054285707" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[13px] font-semibold bg-pulse"><i data-lucide="phone" class="w-6 h-6" aria-hidden="true"></i>Позвонить</a>
+  <a href="tel:+77054285707" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[13px] font-semibold bg-pulse"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-6 h-6" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>Позвонить</a>
 </nav>
 
-<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
-<script>
-(function(){
-  lucide.createIcons();
-  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // --- навигация: состояние при прокрутке + параллакс-гашение hero
-  const nav=document.getElementById('nav'), hero=document.getElementById('heroContent');
-  let ticking=false;
-  const onScroll=()=>{ if(ticking) return; ticking=true; requestAnimationFrame(()=>{
-    const y=window.scrollY; nav.classList.toggle('scrolled',y>24);
-    if(hero&&!reduce){ const p=Math.min(y/700,1); hero.style.transform='translateY('+(y*0.18)+'px)'; hero.style.opacity=String(1-p*0.9); }
-    ticking=false; }); };
-  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
-
-  // --- слайдеры на мобильном: индикатор прокрутки
-  [['catScroll','catProgress'],['kitScroll','kitProgress']].forEach(function(pair){
-    var cs=document.getElementById(pair[0]), pg=document.getElementById(pair[1]);
-    if(!cs||!pg) return;
-    var upd=function(){
-      if(cs.scrollWidth<=cs.clientWidth+1){ pg.style.width='100%'; pg.style.transform='none'; return; }
-      var ratio=cs.clientWidth/cs.scrollWidth;
-      pg.style.width=(ratio*100)+'%';
-      pg.style.transform='translateX('+((cs.scrollLeft/cs.scrollWidth)/ratio*100)+'%)';
-    };
-    upd(); cs.addEventListener('scroll',upd,{passive:true}); window.addEventListener('resize',upd);
-  });
-
-  // --- бегущая строка: пауза
-  const mq=document.querySelector('.marquee'), mqBtn=document.getElementById('marqueeToggle');
-  if(mq&&mqBtn) mqBtn.addEventListener('click',()=>{const paused=mq.classList.toggle('paused'); mqBtn.setAttribute('aria-pressed',String(paused)); mqBtn.setAttribute('aria-label',paused?'Запустить бегущую строку':'Остановить бегущую строку'); mqBtn.innerHTML='<i data-lucide="'+(paused?'play':'pause')+'" class="w-4 h-4" aria-hidden="true"></i>'; lucide.createIcons();});
-
-  // --- мобильное меню
-  const burger=document.getElementById('burger'), mobileMenu=document.getElementById('mobileMenu');
-  if(burger&&mobileMenu){
-  const setMenu=open=>{mobileMenu.hidden=!open;burger.setAttribute('aria-expanded',String(open)); if(open){mobileMenu.querySelector('a').focus();} else {burger.focus();}};
-  burger.addEventListener('click',()=>setMenu(mobileMenu.hidden));
-  mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.hidden=true;burger.setAttribute('aria-expanded','false');}));
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!mobileMenu.hidden) setMenu(false);});
-  document.addEventListener('click',e=>{if(!mobileMenu.hidden&&!mobileMenu.contains(e.target)&&!burger.contains(e.target)){mobileMenu.hidden=true;burger.setAttribute('aria-expanded','false');}});
-  }
-
-  // --- scroll reveal (контент видим без JS; JS только добавляет вход)
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}}),{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
-  document.querySelectorAll('.rv,.rv-stagger').forEach(el=>io.observe(el));
-  // страховка: всё, что не попало в наблюдатель за 2,5 с, показать
-  setTimeout(()=>document.querySelectorAll('.rv:not(.is-in),.rv-stagger:not(.is-in)').forEach(el=>{const r=el.getBoundingClientRect(); if(r.top<innerHeight) el.classList.add('is-in');}),2500);
-
-  // --- группы чипов (одиночный выбор)
-  function singleSelect(groupId,onChange){
-    const g=document.getElementById(groupId); if(!g) return;
-    g.addEventListener('click',e=>{const b=e.target.closest('button[data-v]'); if(!b) return;
-      g.querySelectorAll('button[data-v]').forEach(x=>x.setAttribute('aria-pressed','false'));
-      b.setAttribute('aria-pressed','true'); onChange&&onChange(b.dataset.v);});
-  }
-  const pick={animal:'krs',unit:'ha',power:'220'};
-  singleSelect('pickAnimal',v=>pick.animal=v);
-  singleSelect('pickPower',v=>pick.power=v);
-  const unitGroup=document.getElementById('pickUnit');
-  if(unitGroup) unitGroup.addEventListener('click',e=>{const b=e.target.closest('button[data-v]'); if(!b) return;
-    unitGroup.querySelectorAll('button').forEach(x=>{x.setAttribute('aria-pressed','false');x.classList.remove('bg-ink','text-white');});
-    b.setAttribute('aria-pressed','true'); b.classList.add('bg-ink','text-white'); pick.unit=b.dataset.v;
-    document.getElementById('pickArea').value=pick.unit==='ha'?5:900;});
-  document.querySelectorAll('[data-preset-power]').forEach(a=>a.addEventListener('click',()=>{
-    const btn=document.querySelector('#pickPower button[data-v="'+a.dataset.presetPower+'"]'); btn&&btn.click();}));
-
-  // --- правила подбора (стартовые, подтвердить у заказчика)
-  const ANIMAL={krs:'КРС',horse:'лошади',sheep:'овцы и козы',pig:'свиньи',bird:'птица',wild:'защита от диких животных'};
-  const POWER={'220':'220 В','12':'12\u00a0В аккумулятор','sun':'солнечная панель'};
-  function recommend(a,ha,power){
-    let r;
-    if(a==='wild'||ha>6) r={model:'Bekci 25\u00a0Дж + комплектующие',price:'от 145 000 ₸',kit:'Прибор, проволока 1,6\u00a0мм, изоляторы и заземление под ваш периметр.',why:'Большой периметр или дикие животные — нужен запас мощности.'};
-    else if(a==='sheep'&&ha<=1) r={model:'Комплект «Для овец», 1\u00a0га',price:'125 000 ₸',kit:'Генератор, проводник, изоляторы, ворота, аккумулятор в подарок.',why:''};
-    else if(a==='krs'&&ha<=5) r={model:'Комплект «Для КРС», 5\u00a0га',price:'145 000 ₸',kit:'Генератор, аккумулятор 12\u00a0В 7\u00a0Ач, проводник 1000 м, изоляторы, предупреждающие таблички.',why:''};
-    else if(a==='horse'&&ha<=6) r={model:'Комплект «Для лошадей», 6\u00a0га',price:'125 000 ₸',kit:'Генератор, проволока, шнур, верёвка, ворота, изоляторы, аккумулятор в подарок.',why:''};
-    else if(a==='pig'||a==='bird') r={model:'GIGANT 15\u00a0Дж + сетка или шнур',price:'от 105 000 ₸',kit:'Прибор, электросетка или шнур 6 жил, изоляторы — количество посчитаем по периметру.',why:''};
-    else r={model:'GIGANT 15\u00a0Дж + комплектующие',price:'от 105 000 ₸',kit:'Прибор, проводник, изоляторы, заземление под ваш участок.',why:'Площадь больше стандартного комплекта — соберём под периметр.'};
-    r.power=power==='sun'?'Питание: аккумулятор 12\u00a0В + солнечная панель и MPPT-контроллер — мощность панели подберём.':power==='12'?'Питание: аккумулятор 12\u00a0В (в готовых комплектах уже есть).':'Питание: от сети 220\u00a0В, адаптер в комплекте.';
-    return r;
-  }
-  const pickGo=document.getElementById('pickGo');
-  if(pickGo) pickGo.addEventListener('click',()=>{
-    const val=parseFloat(document.getElementById('pickArea').value)||0;
-    const ha=pick.unit==='ha'?val:Math.pow(val/4,2)/10000;
-    const r=recommend(pick.animal,ha,pick.power);
-    document.getElementById('resModel').textContent=r.model;
-    document.getElementById('resKit').textContent=r.kit;
-    document.getElementById('resPower').textContent=r.power;
-    document.getElementById('resWhy').textContent=r.why;
-    document.getElementById('resPrice').textContent=r.price;
-    const areaTxt=pick.unit==='ha'?val+' га':val+' м периметра';
-    const msg='Здравствуйте! Хочу подобрать электропастух. Животные: '+ANIMAL[pick.animal]+', '+areaTxt+', питание: '+POWER[pick.power]+'. Сайт предложил: '+r.model+'.';
-    document.getElementById('resWa').href='https://wa.me/77054285707?text='+encodeURIComponent(msg);
-    const res=document.getElementById('pickResult'); res.classList.add('has-result'); document.getElementById('resEmpty').hidden=true; document.getElementById('resBody').hidden=false;
-    if(window.innerWidth<1024) res.scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'}); res.focus({preventScroll:true});
-  });
-
-  // --- табы по животным
-  const tabs=document.getElementById('animalTabs');
-  if(tabs) tabs.addEventListener('keydown',e=>{const list=[...tabs.querySelectorAll('[role="tab"]')]; const i=list.indexOf(document.activeElement); if(i<0) return;
-    if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault(); const j=(i+(e.key==='ArrowRight'?1:-1)+list.length)%list.length; list[j].focus(); list[j].click();}});
-  if(tabs) tabs.addEventListener('click',e=>{const b=e.target.closest('[role="tab"]'); if(!b) return;
-    tabs.querySelectorAll('[role="tab"]').forEach(t=>{t.setAttribute('aria-selected','false');t.setAttribute('tabindex','-1');document.getElementById(t.getAttribute('aria-controls')).hidden=true;});
-    b.setAttribute('aria-selected','true'); b.setAttribute('tabindex','0'); const p=document.getElementById(b.getAttribute('aria-controls')); p.hidden=false;
-    p.classList.remove('tabpanel'); void p.offsetWidth; p.classList.add('tabpanel');});
-
-  // --- чипы в форме (множественный выбор) → скрытое поле
-  const fa=document.getElementById('formAnimals'), faVal=document.getElementById('formAnimalsValue');
-  if(fa&&faVal) fa.addEventListener('click',e=>{const b=e.target.closest('button[data-v]'); if(!b) return;
-    b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');
-    faVal.value=[...fa.querySelectorAll('[aria-pressed="true"]')].map(x=>x.dataset.v).join(', ');});
-
-  // --- форма: инлайн-ошибки, состояние отправки (прототип, без бэкенда)
-  const form=document.getElementById('leadForm'), formOk=document.getElementById('formOk');
-  if(form&&formOk){
-  const setErr=(el,id,msg)=>{const err=document.getElementById(id); if(msg){el.setAttribute('aria-invalid','true'); err.textContent=msg; err.hidden=false;} else {el.removeAttribute('aria-invalid'); err.hidden=true;}};
-  const validate=()=>{const f=form.elements; const digits=f.phone.value.replace(/\D/g,''); let first=null;
-    [[f.name,'nameErr',f.name.value.trim()?'':'Укажите имя — так мы будем к вам обращаться.'],
-     [f.phone,'phoneErr',digits.length>=10?'':'Введите номер телефона, например +7 705 000-00-00.'],
-     [f.consent,'consentErr',f.consent.checked?'':'Нужно согласие на обработку данных.']
-    ].forEach(([el,id,msg])=>{setErr(el,id,msg); if(msg&&!first) first=el;}); return first;};
-  ['name','phone','consent'].forEach(n=>form.elements[n].addEventListener('input',()=>{if(form.elements[n].getAttribute('aria-invalid')) validate();}));
-  form.addEventListener('submit',e=>{e.preventDefault(); const first=validate(); if(first){first.focus(); return;}
-    const btn=form.querySelector('button[type=submit]'); btn.disabled=true; btn.textContent='Отправляем…';
-    setTimeout(()=>{formOk.hidden=false; btn.textContent='Заявка отправлена'; formOk.focus({preventScroll:true});},700);});
-  }
-})();
-</script>
+<script src="assets/js/site.js?v=38bc390a" defer></script>
 </body>
 </html>

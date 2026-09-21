@@ -1,0 +1,680 @@
+{
+ "animal-boar.jpg": {
+  "width": 900,
+  "height": 675,
+  "variants": [
+   {
+    "w": 480,
+    "h": 360,
+    "file": "assets/img/opt/animal-boar-480.webp",
+    "kb": 61
+   },
+   {
+    "w": 640,
+    "h": 480,
+    "file": "assets/img/opt/animal-boar-640.webp",
+    "kb": 112
+   },
+   {
+    "w": 800,
+    "h": 600,
+    "file": "assets/img/opt/animal-boar-800.webp",
+    "kb": 172
+   }
+  ]
+ },
+ "animal-pigs.jpg": {
+  "width": 900,
+  "height": 599,
+  "variants": [
+   {
+    "w": 480,
+    "h": 319,
+    "file": "assets/img/opt/animal-pigs-480.webp",
+    "kb": 47
+   },
+   {
+    "w": 640,
+    "h": 426,
+    "file": "assets/img/opt/animal-pigs-640.webp",
+    "kb": 84
+   },
+   {
+    "w": 800,
+    "h": 532,
+    "file": "assets/img/opt/animal-pigs-800.webp",
+    "kb": 124
+   }
+  ]
+ },
+ "animal-poultry.jpg": {
+  "width": 900,
+  "height": 599,
+  "variants": [
+   {
+    "w": 480,
+    "h": 319,
+    "file": "assets/img/opt/animal-poultry-480.webp",
+    "kb": 38
+   },
+   {
+    "w": 640,
+    "h": 426,
+    "file": "assets/img/opt/animal-poultry-640.webp",
+    "kb": 71
+   },
+   {
+    "w": 800,
+    "h": 532,
+    "file": "assets/img/opt/animal-poultry-800.webp",
+    "kb": 114
+   }
+  ]
+ },
+ "animal-sheep.jpg": {
+  "width": 720,
+  "height": 540,
+  "variants": [
+   {
+    "w": 480,
+    "h": 360,
+    "file": "assets/img/opt/animal-sheep-480.webp",
+    "kb": 22
+   },
+   {
+    "w": 640,
+    "h": 480,
+    "file": "assets/img/opt/animal-sheep-640.webp",
+    "kb": 32
+   }
+  ]
+ },
+ "cat-cables.jpg": {
+  "width": 1200,
+  "height": 792,
+  "variants": [
+   {
+    "w": 480,
+    "h": 317,
+    "file": "assets/img/opt/cat-cables-480.webp",
+    "kb": 16
+   },
+   {
+    "w": 640,
+    "h": 422,
+    "file": "assets/img/opt/cat-cables-640.webp",
+    "kb": 24
+   },
+   {
+    "w": 800,
+    "h": 528,
+    "file": "assets/img/opt/cat-cables-800.webp",
+    "kb": 32
+   },
+   {
+    "w": 1200,
+    "h": 792,
+    "file": "assets/img/opt/cat-cables-1200.webp",
+    "kb": 56
+   }
+  ]
+ },
+ "cat-insulators.jpg": {
+  "width": 1200,
+  "height": 797,
+  "variants": [
+   {
+    "w": 480,
+    "h": 319,
+    "file": "assets/img/opt/cat-insulators-480.webp",
+    "kb": 13
+   },
+   {
+    "w": 640,
+    "h": 425,
+    "file": "assets/img/opt/cat-insulators-640.webp",
+    "kb": 19
+   },
+   {
+    "w": 800,
+    "h": 531,
+    "file": "assets/img/opt/cat-insulators-800.webp",
+    "kb": 25
+   },
+   {
+    "w": 1200,
+    "h": 797,
+    "file": "assets/img/opt/cat-insulators-1200.webp",
+    "kb": 46
+   }
+  ]
+ },
+ "cat-nets.jpg": {
+  "width": 1200,
+  "height": 797,
+  "variants": [
+   {
+    "w": 480,
+    "h": 319,
+    "file": "assets/img/opt/cat-nets-480.webp",
+    "kb": 27
+   },
+   {
+    "w": 640,
+    "h": 425,
+    "file": "assets/img/opt/cat-nets-640.webp",
+    "kb": 43
+   },
+   {
+    "w": 800,
+    "h": 531,
+    "file": "assets/img/opt/cat-nets-800.webp",
+    "kb": 62
+   },
+   {
+    "w": 1200,
+    "h": 797,
+    "file": "assets/img/opt/cat-nets-1200.webp",
+    "kb": 119
+   }
+  ]
+ },
+ "cat-shearing.jpg": {
+  "width": 1200,
+  "height": 789,
+  "variants": [
+   {
+    "w": 480,
+    "h": 316,
+    "file": "assets/img/opt/cat-shearing-480.webp",
+    "kb": 10
+   },
+   {
+    "w": 640,
+    "h": 421,
+    "file": "assets/img/opt/cat-shearing-640.webp",
+    "kb": 15
+   },
+   {
+    "w": 800,
+    "h": 526,
+    "file": "assets/img/opt/cat-shearing-800.webp",
+    "kb": 21
+   },
+   {
+    "w": 1200,
+    "h": 789,
+    "file": "assets/img/opt/cat-shearing-1200.webp",
+    "kb": 41
+   }
+  ]
+ },
+ "cattle-meadow.jpg": {
+  "width": 900,
+  "height": 599,
+  "variants": [
+   {
+    "w": 480,
+    "h": 319,
+    "file": "assets/img/opt/cattle-meadow-480.webp",
+    "kb": 44
+   },
+   {
+    "w": 640,
+    "h": 426,
+    "file": "assets/img/opt/cattle-meadow-640.webp",
+    "kb": 83
+   },
+   {
+    "w": 800,
+    "h": 532,
+    "file": "assets/img/opt/cattle-meadow-800.webp",
+    "kb": 133
+   }
+  ]
+ },
+ "cow-tape.jpg": {
+  "width": 900,
+  "height": 675,
+  "variants": [
+   {
+    "w": 480,
+    "h": 360,
+    "file": "assets/img/opt/cow-tape-480.webp",
+    "kb": 36
+   },
+   {
+    "w": 640,
+    "h": 480,
+    "file": "assets/img/opt/cow-tape-640.webp",
+    "kb": 56
+   },
+   {
+    "w": 800,
+    "h": 600,
+    "file": "assets/img/opt/cow-tape-800.webp",
+    "kb": 76
+   }
+  ]
+ },
+ "fence-tape.jpg": {
+  "width": 900,
+  "height": 296,
+  "variants": [
+   {
+    "w": 480,
+    "h": 158,
+    "file": "assets/img/opt/fence-tape-480.webp",
+    "kb": 21
+   },
+   {
+    "w": 640,
+    "h": 210,
+    "file": "assets/img/opt/fence-tape-640.webp",
+    "kb": 41
+   },
+   {
+    "w": 800,
+    "h": 263,
+    "file": "assets/img/opt/fence-tape-800.webp",
+    "kb": 68
+   }
+  ]
+ },
+ "hero-gigant-1280.jpg": {
+  "width": 1280,
+  "height": 570,
+  "variants": [
+   {
+    "w": 480,
+    "h": 214,
+    "file": "assets/img/opt/hero-gigant-1280-480.webp",
+    "kb": 14
+   },
+   {
+    "w": 640,
+    "h": 285,
+    "file": "assets/img/opt/hero-gigant-1280-640.webp",
+    "kb": 20
+   },
+   {
+    "w": 800,
+    "h": 356,
+    "file": "assets/img/opt/hero-gigant-1280-800.webp",
+    "kb": 26
+   },
+   {
+    "w": 1200,
+    "h": 534,
+    "file": "assets/img/opt/hero-gigant-1280-1200.webp",
+    "kb": 42
+   }
+  ]
+ },
+ "hero-gigant-1920.jpg": {
+  "width": 3088,
+  "height": 1376,
+  "variants": [
+   {
+    "w": 480,
+    "h": 214,
+    "file": "assets/img/opt/hero-gigant-1920-480.webp",
+    "kb": 12
+   },
+   {
+    "w": 640,
+    "h": 285,
+    "file": "assets/img/opt/hero-gigant-1920-640.webp",
+    "kb": 18
+   },
+   {
+    "w": 960,
+    "h": 428,
+    "file": "assets/img/opt/hero-gigant-1920-960.webp",
+    "kb": 29
+   },
+   {
+    "w": 1440,
+    "h": 642,
+    "file": "assets/img/opt/hero-gigant-1920-1440.webp",
+    "kb": 48
+   },
+   {
+    "w": 1920,
+    "h": 856,
+    "file": "assets/img/opt/hero-gigant-1920-1920.webp",
+    "kb": 67
+   }
+  ]
+ },
+ "horses-steppe-2.jpg": {
+  "width": 900,
+  "height": 675,
+  "variants": [
+   {
+    "w": 480,
+    "h": 360,
+    "file": "assets/img/opt/horses-steppe-2-480.webp",
+    "kb": 17
+   },
+   {
+    "w": 640,
+    "h": 480,
+    "file": "assets/img/opt/horses-steppe-2-640.webp",
+    "kb": 29
+   },
+   {
+    "w": 800,
+    "h": 600,
+    "file": "assets/img/opt/horses-steppe-2-800.webp",
+    "kb": 43
+   }
+  ]
+ },
+ "horses-steppe.jpg": {
+  "width": 900,
+  "height": 457,
+  "variants": [
+   {
+    "w": 480,
+    "h": 244,
+    "file": "assets/img/opt/horses-steppe-480.webp",
+    "kb": 23
+   },
+   {
+    "w": 640,
+    "h": 325,
+    "file": "assets/img/opt/horses-steppe-640.webp",
+    "kb": 45
+   },
+   {
+    "w": 800,
+    "h": 406,
+    "file": "assets/img/opt/horses-steppe-800.webp",
+    "kb": 73
+   }
+  ]
+ },
+ "insulator.jpg": {
+  "width": 900,
+  "height": 900,
+  "variants": [
+   {
+    "w": 480,
+    "h": 480,
+    "file": "assets/img/opt/insulator-480.webp",
+    "kb": 7
+   },
+   {
+    "w": 640,
+    "h": 640,
+    "file": "assets/img/opt/insulator-640.webp",
+    "kb": 11
+   },
+   {
+    "w": 800,
+    "h": 800,
+    "file": "assets/img/opt/insulator-800.webp",
+    "kb": 16
+   }
+  ]
+ },
+ "kit-sheep-poultry.jpg": {
+  "width": 1200,
+  "height": 896,
+  "variants": [
+   {
+    "w": 480,
+    "h": 358,
+    "file": "assets/img/opt/kit-sheep-poultry-480.webp",
+    "kb": 33
+   },
+   {
+    "w": 640,
+    "h": 478,
+    "file": "assets/img/opt/kit-sheep-poultry-640.webp",
+    "kb": 52
+   },
+   {
+    "w": 800,
+    "h": 597,
+    "file": "assets/img/opt/kit-sheep-poultry-800.webp",
+    "kb": 75
+   },
+   {
+    "w": 1200,
+    "h": 896,
+    "file": "assets/img/opt/kit-sheep-poultry-1200.webp",
+    "kb": 147
+   }
+  ]
+ },
+ "logo-gigant.png": {
+  "width": 160,
+  "height": 160,
+  "variants": [
+   {
+    "w": 160,
+    "h": 160,
+    "file": "assets/img/opt/logo-gigant-160.webp",
+    "kb": 2
+   }
+  ]
+ },
+ "product-bekci25.jpg": {
+  "width": 800,
+  "height": 1073,
+  "variants": [
+   {
+    "w": 480,
+    "h": 644,
+    "file": "assets/img/opt/product-bekci25-480.webp",
+    "kb": 30
+   },
+   {
+    "w": 640,
+    "h": 858,
+    "file": "assets/img/opt/product-bekci25-640.webp",
+    "kb": 42
+   },
+   {
+    "w": 800,
+    "h": 1073,
+    "file": "assets/img/opt/product-bekci25-800.webp",
+    "kb": 54
+   }
+  ]
+ },
+ "product-gigant15.jpg": {
+  "width": 800,
+  "height": 533,
+  "variants": [
+   {
+    "w": 480,
+    "h": 320,
+    "file": "assets/img/opt/product-gigant15-480.webp",
+    "kb": 10
+   },
+   {
+    "w": 640,
+    "h": 426,
+    "file": "assets/img/opt/product-gigant15-640.webp",
+    "kb": 15
+   },
+   {
+    "w": 800,
+    "h": 533,
+    "file": "assets/img/opt/product-gigant15-800.webp",
+    "kb": 22
+   }
+  ]
+ },
+ "sheep.jpg": {
+  "width": 900,
+  "height": 631,
+  "variants": [
+   {
+    "w": 480,
+    "h": 337,
+    "file": "assets/img/opt/sheep-480.webp",
+    "kb": 65
+   },
+   {
+    "w": 640,
+    "h": 449,
+    "file": "assets/img/opt/sheep-640.webp",
+    "kb": 117
+   },
+   {
+    "w": 800,
+    "h": 561,
+    "file": "assets/img/opt/sheep-800.webp",
+    "kb": 181
+   }
+  ]
+ },
+ "solar-energizer.jpg": {
+  "width": 900,
+  "height": 585,
+  "variants": [
+   {
+    "w": 480,
+    "h": 312,
+    "file": "assets/img/opt/solar-energizer-480.webp",
+    "kb": 37
+   },
+   {
+    "w": 640,
+    "h": 416,
+    "file": "assets/img/opt/solar-energizer-640.webp",
+    "kb": 68
+   },
+   {
+    "w": 800,
+    "h": 520,
+    "file": "assets/img/opt/solar-energizer-800.webp",
+    "kb": 106
+   }
+  ]
+ },
+ "solar-line.jpg": {
+  "width": 1100,
+  "height": 736,
+  "variants": [
+   {
+    "w": 480,
+    "h": 321,
+    "file": "assets/img/opt/solar-line-480.webp",
+    "kb": 46
+   },
+   {
+    "w": 640,
+    "h": 428,
+    "file": "assets/img/opt/solar-line-640.webp",
+    "kb": 81
+   },
+   {
+    "w": 960,
+    "h": 642,
+    "file": "assets/img/opt/solar-line-960.webp",
+    "kb": 165
+   }
+  ]
+ },
+ "solar-netting.jpg": {
+  "width": 900,
+  "height": 675,
+  "variants": [
+   {
+    "w": 480,
+    "h": 360,
+    "file": "assets/img/opt/solar-netting-480.webp",
+    "kb": 55
+   },
+   {
+    "w": 640,
+    "h": 480,
+    "file": "assets/img/opt/solar-netting-640.webp",
+    "kb": 92
+   },
+   {
+    "w": 800,
+    "h": 600,
+    "file": "assets/img/opt/solar-netting-800.webp",
+    "kb": 132
+   }
+  ]
+ },
+ "steppe-horses-1920.jpg": {
+  "width": 1920,
+  "height": 976,
+  "variants": [
+   {
+    "w": 480,
+    "h": 244,
+    "file": "assets/img/opt/steppe-horses-1920-480.webp",
+    "kb": 18
+   },
+   {
+    "w": 640,
+    "h": 325,
+    "file": "assets/img/opt/steppe-horses-1920-640.webp",
+    "kb": 36
+   },
+   {
+    "w": 960,
+    "h": 488,
+    "file": "assets/img/opt/steppe-horses-1920-960.webp",
+    "kb": 89
+   },
+   {
+    "w": 1440,
+    "h": 732,
+    "file": "assets/img/opt/steppe-horses-1920-1440.webp",
+    "kb": 221
+   },
+   {
+    "w": 1920,
+    "h": 976,
+    "file": "assets/img/opt/steppe-horses-1920-1920.webp",
+    "kb": 414
+   }
+  ]
+ },
+ "why-cow-fence.jpg": {
+  "width": 1920,
+  "height": 1115,
+  "variants": [
+   {
+    "w": 480,
+    "h": 279,
+    "file": "assets/img/opt/why-cow-fence-480.webp",
+    "kb": 20
+   },
+   {
+    "w": 640,
+    "h": 372,
+    "file": "assets/img/opt/why-cow-fence-640.webp",
+    "kb": 33
+   },
+   {
+    "w": 960,
+    "h": 558,
+    "file": "assets/img/opt/why-cow-fence-960.webp",
+    "kb": 64
+   },
+   {
+    "w": 1440,
+    "h": 836,
+    "file": "assets/img/opt/why-cow-fence-1440.webp",
+    "kb": 126
+   },
+   {
+    "w": 1920,
+    "h": 1115,
+    "file": "assets/img/opt/why-cow-fence-1920.webp",
+    "kb": 200
+   }
+  ]
+ }
+}

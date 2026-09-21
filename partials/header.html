@@ -14,10 +14,16 @@
     p.classList.add('is-hidden');
     setTimeout(function(){ if(p.parentNode) p.parentNode.removeChild(p); }, 600);
   }
-  function ready(){ setTimeout(hide, Math.max(0, 600-(Date.now()-t0))); }
-  if(document.readyState==='complete') ready();
-  else window.addEventListener('load', ready);
-  setTimeout(hide, 4000);
+  function ready(){ setTimeout(hide, Math.max(0, 500-(Date.now()-t0))); }
+  /* стили уже применены (CSS блокирующий), ждём только разбор страницы и первый кадр героя */
+  function dom(){
+    var img=document.querySelector('main img');
+    if(img && img.loading!=='lazy' && !img.complete){ img.addEventListener('load', ready); img.addEventListener('error', ready); }
+    else ready();
+  }
+  if(document.readyState!=='loading') dom();
+  else document.addEventListener('DOMContentLoaded', dom);
+  setTimeout(hide, 2500);
 })();
 </script>
 

@@ -1,0 +1,25 @@
+{
+  "name": "gigant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farik9797/gigant-agro-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/farik9797/gigant-agro-site/issues"
+  },
+  "homepage": "https://github.com/farik9797/gigant-agro-site#readme",
+  "devDependencies": {
+    "lucide-static": "^0.469.0",
+    "tailwindcss": "^3.4.17"
+  }
+}

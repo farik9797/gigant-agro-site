@@ -40,6 +40,7 @@
     <form id="leadForm" class="card p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 gap-4" novalidate>
       <h2 class="sm:col-span-2 h3">Оставить заявку</h2>
       <p class="sm:col-span-2 text-muted text-[15px] -mt-2">Опишите хозяйство — подберём модель, число линий и питание. Перезвоним в рабочее время.</p>
+      <div id="formTovar" hidden class="sm:col-span-2 flex items-center justify-between gap-3 rounded-xl bg-cream border border-brand/30 px-4 py-3 text-[15px]"><span>Товар: <strong data-tovar-name></strong></span><button type="button" id="formTovarClear" class="text-[14px] font-semibold text-brand-dark hover:underline">Убрать</button><input type="hidden" name="tovar" id="formTovarValue" value=""></div>
       <div><label for="fName" class="block text-[14px] font-semibold">Имя</label><input id="fName" type="text" name="name" class="input mt-1.5" placeholder="Как к вам обращаться…" required autocomplete="name" aria-describedby="nameErr"><p id="nameErr" class="mt-1.5 text-[14px] text-danger" hidden></p></div>
       <div><label for="fPhone" class="block text-[14px] font-semibold">Телефон</label><input id="fPhone" type="tel" name="phone" class="input mt-1.5" placeholder="+7 (705) 000-00-00" required inputmode="tel" autocomplete="tel" aria-describedby="phoneErr"><p id="phoneErr" class="mt-1.5 text-[14px] text-danger" hidden></p></div>
       <div class="sm:col-span-2">
@@ -58,10 +59,10 @@
       <div><label for="fPower" class="block text-[14px] font-semibold">Питание</label><select id="fPower" name="power" class="input mt-1.5" autocomplete="off"><option>220 В</option><option>12 В аккумулятор</option><option>Солнечная панель</option><option>Не знаю</option></select></div>
       <div class="sm:col-span-2"><label class="flex items-start gap-3 text-[14px] text-muted cursor-pointer"><input type="checkbox" name="consent" class="mt-1 w-4 h-4 accent-[#3E7A34] shrink-0" required aria-describedby="consentErr"><span>Согласен на обработку персональных данных. <a href="policy.html" class="underline hover:text-ink">Политика конфиденциальности</a></span></label><p id="consentErr" class="mt-1.5 text-[14px] text-danger" hidden></p></div>
       <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-3">
-        <button type="submit" class="btn-primary btn-lg">Отправить заявку</button>
-        <span class="text-[14px] text-muted">Перезвоним в рабочее время</span>
+        <button type="submit" class="btn-primary btn-lg"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5" width="20" height="20">Отправить в WhatsApp</button>
+        <span class="text-[14px] text-muted">Заявка придёт менеджеру в WhatsApp, ответим в рабочее время</span>
       </div>
-      <p id="formOk" hidden aria-live="polite" tabindex="-1" class="sm:col-span-2 rounded-xl bg-cream border border-brand/40 p-4 text-[15px]"><strong>Спасибо!</strong> Заявка принята. Перезвоним в рабочее время: Пн–Пт 10–18, Сб 10–16.</p>
+      <p id="formOk" hidden aria-live="polite" tabindex="-1" class="sm:col-span-2 rounded-xl bg-cream border border-brand/40 p-4 text-[15px]"><strong>Открываем WhatsApp.</strong> Сообщение с вашими данными уже набрано — нажмите «Отправить». Если WhatsApp не открылся, позвоните: <a href="tel:+77054285707" class="font-semibold underline">+7 (705) 428-57-07</a>.</p>
     </form>
   </div>
 </section>

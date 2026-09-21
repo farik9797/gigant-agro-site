@@ -39,7 +39,7 @@
 
 <!-- ================= ЛОГОТИПНАЯ ЛЕНТА ================= -->
 <div class="bg-white border-b border-line relative">
-  <button id="marqueeToggle" class="sr-only focus:not-sr-only focus:absolute focus:right-3 focus:top-1/2 focus:-translate-y-1/2 focus:z-10 focus:inline-flex focus:items-center focus:justify-center focus:w-11 focus:h-11 focus:rounded-full focus:border focus:border-ink focus:bg-white focus:text-ink" aria-label="Остановить бегущую строку" aria-pressed="false"><i data-lucide="pause" class="w-4 h-4" aria-hidden="true"></i></button>
+  <button id="marqueeToggle" class="sr-only focus:not-sr-only focus:absolute focus:right-3 focus:top-1/2 focus:-translate-y-1/2 focus:z-10 focus:inline-flex focus:items-center focus:justify-center focus:w-11 focus:h-11 focus:rounded-full focus:border focus:border-ink focus:bg-white focus:text-ink" aria-label="Остановить бегущую строку" aria-pressed="false"><span data-ico="pause"><i data-lucide="pause" class="w-4 h-4" aria-hidden="true"></i></span><span data-ico="play" hidden><i data-lucide="play" class="w-4 h-4" aria-hidden="true"></i></span></button>
   <div class="marquee overflow-hidden py-5">
     <div class="marquee-track gap-12 pr-12 text-[15px] font-semibold uppercase tracking-[0.06em] text-muted">
       <span class="inline-flex items-center gap-12"><span class="text-ink">GIGANT</span><span>Bekci</span><span>Satu.kz</span><span>Ozon</span><span>Wildberries</span><span>Опт и розница</span><span>Склад в Алматы</span><span>Доставка по Казахстану и СНГ</span><span>Гарантия до 2 лет</span></span>
@@ -165,7 +165,7 @@
             <p id="resPower" class="mt-1 text-muted"></p>
             <p id="resWhy" class="mt-2 text-[14px] text-muted"></p>
             <div class="mt-5 flex flex-col gap-2">
-              <a href="#konsultaciya" class="btn-primary">Заказать</a>
+              <a id="resOrder" href="#konsultaciya" class="btn-primary">Заказать</a>
               <a id="resWa" href="#" target="_blank" rel="noopener" class="btn-secondary"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Обсудить в WhatsApp</a>
             </div>
           </div>
@@ -205,7 +205,7 @@
             <div><dt class="text-[13px] text-muted">Гарантия</dt><dd class="font-bold">1 год</dd></div>
           </dl>
           <div class="mt-auto pt-6 flex flex-wrap gap-3">
-            <a href="#konsultaciya" class="btn-primary h-11 px-5">Заказать</a>
+            <a href="#konsultaciya" data-tovar="GIGANT 15 Дж" class="btn-primary h-11 px-5">Заказать</a>
             <a href="https://wa.me/77054285707?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20GIGANT%2015%20%D0%94%D0%B6" target="_blank" rel="noopener" class="btn-outline h-11 px-4"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5" width="20" height="20">WhatsApp</a>
           </div>
         </div>
@@ -230,7 +230,7 @@
             <div><dt class="text-[13px] text-muted">Гарантия</dt><dd class="font-bold">2 года</dd></div>
           </dl>
           <div class="mt-auto pt-6 flex flex-wrap gap-3">
-            <a href="#konsultaciya" class="btn-primary h-11 px-5">Заказать</a>
+            <a href="#konsultaciya" data-tovar="Bekci 25 Дж" class="btn-primary h-11 px-5">Заказать</a>
             <a href="https://wa.me/77054285707?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20Bekci%2025%20%D0%94%D0%B6" target="_blank" rel="noopener" class="btn-outline h-11 px-4"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5" width="20" height="20">WhatsApp</a>
           </div>
         </div>
@@ -250,13 +250,13 @@
     <div class="lg:col-span-7 section px-5 md:px-12 lg:pr-12 lg:pl-[max(1.25rem,calc((100vw-1400px)/2+1.25rem))]">
       <p class="rv flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.12em] text-cream/70"><span class="w-2 h-2 rounded-full bg-pulse" aria-hidden="true"></span>Почему GIGANT Agro</p>
       <h2 class="rv h2 mt-3 max-w-[18ch]">Рабочие решения, а&nbsp;не просто товары</h2>
-      <ul class="rv-stagger mt-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-8">
-        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="zap" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Мощность 15 и 25&nbsp;Дж</p><p class="text-cream/70 text-[14px] mt-1">Держат любое стадо и большие периметры</p></div></li>
-        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="package" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Готовые комплекты</p><p class="text-cream/70 text-[14px] mt-1">Под вид животных и площадь</p></div></li>
-        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="sliders-horizontal" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Профессиональный подбор</p><p class="text-cream/70 text-[14px] mt-1">За минуту на сайте и консультация специалиста</p></div></li>
-        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="sun" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Автономность</p><p class="text-cream/70 text-[14px] mt-1">Солнечная панель + АКБ, работает без розетки</p></div></li>
-        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="layers" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Широкий ассортимент</p><p class="text-cream/70 text-[14px] mt-1">Комплектующих и расходников со склада в Алматы</p></div></li>
-        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="shield-check" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Гарантия и сервис</p><p class="text-cream/70 text-[14px] mt-1">Доставка по Казахстану и в РФ</p></div></li>
+      <ul class="rv-stagger mt-10 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8 max-w-[760px]">
+        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="zap" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Мощность 15 и 25&nbsp;Дж</p><p class="text-cream/75 text-[15px] leading-snug mt-1">Держат любое стадо и большие периметры</p></div></li>
+        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="package" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Готовые комплекты</p><p class="text-cream/75 text-[15px] leading-snug mt-1">Под вид животных и площадь</p></div></li>
+        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="sliders-horizontal" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Профессиональный подбор</p><p class="text-cream/75 text-[15px] leading-snug mt-1">За минуту на сайте и консультация специалиста</p></div></li>
+        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="sun" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Автономность</p><p class="text-cream/75 text-[15px] leading-snug mt-1">Солнечная панель + АКБ, работает без розетки</p></div></li>
+        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="layers" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Широкий ассортимент</p><p class="text-cream/75 text-[15px] leading-snug mt-1">Комплектующих и расходников со склада в Алматы</p></div></li>
+        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="shield-check" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Гарантия и сервис</p><p class="text-cream/75 text-[15px] leading-snug mt-1">Доставка по Казахстану и в РФ</p></div></li>
       </ul>
     </div>
     <div class="lg:col-span-5 relative min-h-[300px] lg:min-h-0">
@@ -391,7 +391,7 @@
             <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Ворота</li>
             <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Аккумулятор 12&nbsp;В</li>
           </ul>
-          <div class="mt-auto pt-5 flex items-center justify-between gap-3"><p class="font-black text-[22px] leading-none tabular-nums">125 000 ₸</p><a href="#konsultaciya" class="btn-primary h-10 px-4 text-[15px]">Заказать</a></div>
+          <div class="mt-auto pt-5 flex items-center justify-between gap-3"><p class="font-black text-[22px] leading-none tabular-nums">125 000 ₸</p><a href="#konsultaciya" data-tovar="Комплект «Для овец»" class="btn-primary h-10 px-4 text-[15px]">Заказать</a></div>
         </div>
       </article>
       <article class="card lift overflow-hidden flex flex-col">
@@ -405,7 +405,7 @@
             <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Проводник 1000 м, изоляторы</li>
             <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Предупреждающие таблички</li>
           </ul>
-          <div class="mt-auto pt-5 flex items-center justify-between gap-3"><p class="font-black text-[22px] leading-none tabular-nums">145 000 ₸</p><a href="#konsultaciya" class="btn-primary h-10 px-4 text-[15px]">Заказать</a></div>
+          <div class="mt-auto pt-5 flex items-center justify-between gap-3"><p class="font-black text-[22px] leading-none tabular-nums">145 000 ₸</p><a href="#konsultaciya" data-tovar="Комплект «Для КРС»" class="btn-primary h-10 px-4 text-[15px]">Заказать</a></div>
         </div>
       </article>
       <article class="card lift overflow-hidden flex flex-col">
@@ -419,7 +419,7 @@
             <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Ворота, изоляторы</li>
             <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Аккумулятор 12&nbsp;В</li>
           </ul>
-          <div class="mt-auto pt-5 flex items-center justify-between gap-3"><p class="font-black text-[22px] leading-none tabular-nums">125 000 ₸</p><a href="#konsultaciya" class="btn-primary h-10 px-4 text-[15px]">Заказать</a></div>
+          <div class="mt-auto pt-5 flex items-center justify-between gap-3"><p class="font-black text-[22px] leading-none tabular-nums">125 000 ₸</p><a href="#konsultaciya" data-tovar="Комплект «Для лошадей»" class="btn-primary h-10 px-4 text-[15px]">Заказать</a></div>
         </div>
       </article>
       <article class="card lift overflow-hidden flex flex-col">
@@ -566,6 +566,7 @@
       <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="btn-glass mt-6"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Написать в WhatsApp</a>
     </div>
     <form id="leadForm" class="lg:col-span-7 rv bg-white text-ink rounded-2xl p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 gap-4" novalidate>
+      <div id="formTovar" hidden class="sm:col-span-2 flex items-center justify-between gap-3 rounded-xl bg-cream border border-brand/30 px-4 py-3 text-[15px]"><span>Товар: <strong data-tovar-name></strong></span><button type="button" id="formTovarClear" class="text-[14px] font-semibold text-brand-dark hover:underline">Убрать</button><input type="hidden" name="tovar" id="formTovarValue" value=""></div>
       <div><label for="fName" class="block text-[14px] font-semibold">Имя</label><input id="fName" type="text" name="name" class="input mt-1.5" placeholder="Как к вам обращаться…" required autocomplete="name" aria-describedby="nameErr"><p id="nameErr" class="mt-1.5 text-[14px] text-danger" hidden></p></div>
       <div><label for="fPhone" class="block text-[14px] font-semibold">Телефон</label><input id="fPhone" type="tel" name="phone" class="input mt-1.5" placeholder="+7 (705) 000-00-00" required inputmode="tel" autocomplete="tel" aria-describedby="phoneErr"><p id="phoneErr" class="mt-1.5 text-[14px] text-danger" hidden></p></div>
       <div class="sm:col-span-2">
@@ -584,10 +585,10 @@
       <div><label for="fPower" class="block text-[14px] font-semibold">Питание</label><select id="fPower" name="power" class="input mt-1.5" autocomplete="off"><option>220&nbsp;В</option><option>12&nbsp;В аккумулятор</option><option>Солнечная панель</option><option>Не знаю</option></select></div>
       <div class="sm:col-span-2"><label class="flex items-start gap-3 text-[14px] text-muted cursor-pointer"><input type="checkbox" name="consent" class="mt-1 w-4 h-4 accent-[#3E7A34] shrink-0" required aria-describedby="consentErr"><span>Согласен на обработку персональных данных. <a href="policy.html" class="underline hover:text-ink">Политика конфиденциальности</a></span></label><p id="consentErr" class="mt-1.5 text-[14px] text-danger" hidden></p></div>
       <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-3">
-        <button type="submit" class="btn-primary btn-lg">Получить подбор</button>
-        <span class="text-[14px] text-muted">Перезвоним в рабочее время</span>
+        <button type="submit" class="btn-primary btn-lg"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5" width="20" height="20">Отправить в WhatsApp</button>
+        <span class="text-[14px] text-muted">Заявка придёт менеджеру в WhatsApp, ответим в рабочее время</span>
       </div>
-      <p id="formOk" hidden aria-live="polite" tabindex="-1" class="sm:col-span-2 rounded-xl bg-cream border border-brand/40 p-4 text-[15px]"><strong>Спасибо!</strong> Заявка принята. Перезвоним в рабочее время: Пн–Пт 10–18, Сб 10–16.</p>
+      <p id="formOk" hidden aria-live="polite" tabindex="-1" class="sm:col-span-2 rounded-xl bg-cream border border-brand/40 p-4 text-[15px]"><strong>Открываем WhatsApp.</strong> Сообщение с вашими данными уже набрано — нажмите «Отправить». Если WhatsApp не открылся, позвоните: <a href="tel:+77054285707" class="font-semibold underline">+7 (705) 428-57-07</a>.</p>
     </form>
   </div>
 </section>

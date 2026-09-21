@@ -8,144 +8,26 @@
 <meta name="description" content="Электропастухи GIGANT и Bekci от 6,9 до 25&nbsp;Дж, готовые комплекты для овец, лошадей и КРС. Склад в Алматы, доставка по Казахстану, подбор за минуту.">
 <meta property="og:title" content="Электроизгородь, которая держит стадо — GIGANT Agro">
 <meta property="og:description" content="Электропастухи GIGANT и Bekci от 6,9 до 25&nbsp;Дж, готовые комплекты для овец, лошадей и КРС. Склад в Алматы, доставка по Казахстану, подбор за минуту.">
-<meta property="og:image" content="assets/img/hero-gigant-1920.jpg">
+<meta property="og:image" content="https://farik9797.github.io/gigant-agro-site/assets/img/hero-gigant-1920.jpg">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://farik9797.github.io/gigant-agro-site/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="GIGANT Agro">
+<link rel="canonical" href="https://farik9797.github.io/gigant-agro-site/">
 <link rel="icon" type="image/png" href="assets/img/favicon-64.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="preconnect" href="https://cdn.tailwindcss.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;800;900&family=Vollkorn:ital,wght@1,700&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.replace('no-js','js')</script>
 <noscript><style>#preloader{display:none!important}</style></noscript>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: { extend: {
-    colors: { bg:'#F4F6F1', ink:'#16191C', muted:'#4F5A52', brand:'#5A984B', 'brand-dark':'#3E7A34', deep:'#17261B', cream:'#F3F8D6', pulse:'#FFC400', line:'#D6DCD2', danger:'#C8372D' },
-    fontFamily: { sans:['"Golos Text"','system-ui','sans-serif'], serif:['Vollkorn','Georgia','serif'] },
-    maxWidth: { site:'1400px' },
-    transitionTimingFunction: { out:'cubic-bezier(0.22, 1, 0.36, 1)' },
-    zIndex: { float:'30', nav:'40', menu:'45', bar:'40', preloader:'100' }
-  } }
-}
-</script>
-<style type="text/tailwindcss">
-  @layer base {
-    html { scroll-behavior: smooth; color-scheme: light; -webkit-tap-highlight-color: transparent; }
-    a, button, [role="tab"] { touch-action: manipulation; }
-    body { @apply font-sans text-ink bg-bg antialiased text-[16px] leading-[26px] md:text-[17px] md:leading-[27px]; }
-    h1,h2,h3 { text-wrap: balance; }
-    p { text-wrap: pretty; }
-    ::selection { background:#FFC400; color:#16191C; }
-    :focus-visible { outline: 3px solid #FFC400; outline-offset: 3px; border-radius: 8px; }
-    [hidden] { display: none !important; }
-    fieldset { min-inline-size: 0; }
-  }
-  @layer components {
-    .container-site { @apply max-w-site mx-auto px-5; }
-    .section { padding-block: clamp(4rem, 8vw, 7rem); }
-    .h2 { @apply font-black tracking-[-0.03em] text-[clamp(2rem,3.6vw,3rem)] leading-[1.06]; }
-    .h3 { @apply font-extrabold tracking-[-0.02em] text-[clamp(1.25rem,1.6vw,1.5rem)] leading-[1.15]; }
-    .lead { @apply text-muted text-[17px] md:text-[18px] leading-[1.55] max-w-[60ch]; }
-    .accent { @apply font-serif italic font-bold; }
-    .btn { @apply inline-flex items-center justify-center gap-2 h-12 px-6 rounded-full font-semibold text-[16px] cursor-pointer select-none whitespace-nowrap transition-[transform,background-color,border-color,color] duration-200 ease-out active:scale-[0.97]; }
-    .btn-lg { @apply h-14 px-8 text-[17px]; }
-    .btn-primary { @apply btn bg-pulse text-ink hover:bg-[#FFCF33]; }
-    .btn-secondary { @apply btn bg-brand-dark text-white hover:bg-[#356A2D]; }
-    .btn-outline { @apply btn bg-white border border-line text-ink hover:border-ink; }
-    .btn-glass { @apply btn border border-white/40 text-white bg-white/10 backdrop-blur-md hover:bg-white/20; }
-    .chip { @apply inline-flex items-center gap-2 h-11 px-3 md:px-4 rounded-full border border-line bg-white text-[15px] font-medium cursor-pointer transition-[background-color,border-color,color,transform] duration-200 ease-out hover:border-ink active:scale-[0.97]; }
-    .chip[aria-pressed="true"], .chip[aria-selected="true"] { @apply bg-ink text-white border-ink; }
-    .card { @apply bg-white rounded-2xl border border-line; }
-    .lift { @apply transition-[transform,border-color] duration-300 ease-out hover:-translate-y-0.5 hover:border-ink/50; }
-    .input { @apply w-full h-12 rounded-xl border border-line bg-white px-4 text-[16px] text-ink placeholder:text-muted focus:border-ink focus:outline-none; }
-    .spec { @apply inline-flex items-baseline gap-1 font-extrabold text-[15px] leading-none tracking-[-0.01em] tabular-nums whitespace-nowrap; }
-    .link { @apply inline-flex items-center gap-1.5 font-semibold text-brand-dark hover:underline underline-offset-4; }
-  }
-  /* ---------- preloader ---------- */
-  #preloader { position:fixed; inset:0; z-index:100; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.75rem; background:#17261B; transition:opacity .5s ease, visibility .5s ease; }
-  #preloader.is-hidden { opacity:0; visibility:hidden; }
-  #preloader img { width:72px; height:72px; }
-  .pre-fence { position:relative; width:min(260px,60vw); height:2px; background:rgba(243,248,214,.2); overflow:visible; }
-  .pre-fence .post { position:absolute; top:-8px; width:3px; height:18px; border-radius:2px; background:#F3F8D6; opacity:.45; }
-  .pre-fence::after { content:""; position:absolute; top:-2px; left:-70px; width:70px; height:6px; border-radius:3px; background:#FFC400; box-shadow:0 0 16px rgba(255,196,0,.9); animation:pre-run 1.4s linear infinite; }
-  @keyframes pre-run { from { left:-70px; } to { left:100%; } }
-  html.loading { overflow:hidden; }
-  html.loading .hero-in { animation-play-state:paused; }
-
-  /* ---------- hero load choreography ---------- */
-  .js .hero-in { opacity:0; transform:translateY(22px); animation:hero-rise .9s cubic-bezier(.22,1,.36,1) forwards; }
-  .js .hero-in.d1{animation-delay:.10s} .js .hero-in.d2{animation-delay:.22s} .js .hero-in.d3{animation-delay:.36s} .js .hero-in.d4{animation-delay:.50s} .js .hero-in.d5{animation-delay:.66s}
-  @keyframes hero-rise { to { opacity:1; transform:none; } }
-  .hero-img { animation:hero-zoom 8s cubic-bezier(.22,1,.36,1) forwards; transform:scale(1.06); }
-  @keyframes hero-zoom { to { transform:scale(1); } }
-  /* ---------- scroll reveal (visible by default; JS opts in) ---------- */
-  .js .rv { opacity:0; transform:translateY(24px); transition:opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1); }
-  .js .rv.is-in { opacity:1; transform:none; }
-  .js .rv-stagger > * { opacity:0; transform:translateY(18px); transition:opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
-  .js .rv-stagger.is-in > * { opacity:1; transform:none; }
-  .js .rv-stagger.is-in > *:nth-child(2){transition-delay:.06s} .js .rv-stagger.is-in > *:nth-child(3){transition-delay:.12s} .js .rv-stagger.is-in > *:nth-child(4){transition-delay:.18s} .js .rv-stagger.is-in > *:nth-child(5){transition-delay:.24s} .js .rv-stagger.is-in > *:nth-child(6){transition-delay:.30s} .js .rv-stagger.is-in > *:nth-child(7){transition-delay:.36s} .js .rv-stagger.is-in > *:nth-child(8){transition-delay:.42s} .js .rv-stagger.is-in > *:nth-child(9){transition-delay:.48s}
-  /* ---------- fence line with running pulse ---------- */
-  .fence { position:relative; height:2px; background:rgba(22,25,28,.14); }
-  .fence::after { content:""; position:absolute; top:-2px; left:-72px; width:72px; height:6px; border-radius:3px; background:#FFC400; box-shadow:0 0 14px rgba(255,196,0,.85); animation:pulse-run 3.2s linear infinite; }
-  .fence .post { position:absolute; top:-9px; width:4px; height:20px; border-radius:2px; background:#5A984B; }
-  .fence.on-dark { background:rgba(243,248,214,.22); } .fence.on-dark .post { background:#F3F8D6; }
-  @keyframes pulse-run { from { left:-72px; } to { left:100%; } }
-  .fence-v { position:absolute; left:23px; top:24px; bottom:24px; width:2px; background:rgba(22,25,28,.14); overflow:hidden; }
-  .fence-v::after { content:""; position:absolute; left:-2px; top:-72px; width:6px; height:72px; border-radius:3px; background:#FFC400; box-shadow:0 0 14px rgba(255,196,0,.85); animation:pulse-down 3.6s linear infinite; }
-  @keyframes pulse-down { from { top:-72px; } to { top:100%; } }
-  /* ---------- подбор: панель результата на мобильном ---------- */
-  @media (max-width: 767px) { #pickResult:not(.has-result) { display:none; } }
-
-  /* ---------- каталог: слайдер на мобильном ---------- */
-  @media (max-width: 767px) {
-    .m-slider { display:flex; gap:.75rem; overflow-x:auto; overscroll-behavior-x:contain; scroll-snap-type:x mandatory; scroll-padding-left:1.25rem; margin-inline:-1.25rem; padding-inline:1.25rem; padding-bottom:.25rem; scrollbar-width:none; -ms-overflow-style:none; }
-    .m-slider::-webkit-scrollbar { display:none; }
-    .m-slider > * { flex:0 0 78%; max-width:320px; scroll-snap-align:start; }
-  }
-  #catProgress, #kitProgress { transition:transform .15s linear, width .2s ease; will-change:transform; }
-
-  /* ---------- marquee ---------- */
-  .marquee { mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
-  .marquee-track { display:flex; width:max-content; animation:marquee 34s linear infinite; }
-  .marquee:hover .marquee-track, .marquee.paused .marquee-track { animation-play-state:paused; }
-  @keyframes marquee { to { transform:translateX(-50%); } }
-  /* ---------- nav ---------- */
-  /* шапка: тёмное стекло над фото → белая при прокрутке */
-  #nav { background:rgba(23,38,27,.46); border-color:rgba(243,248,214,.22); color:#F3F8D6; transition:background-color .3s ease, box-shadow .3s ease, border-color .3s ease, color .3s ease; }
-  #nav .nav-accent { color:#FFC400; transition:color .3s ease; }
-  #nav .nav-link:hover { background-color:rgba(243,248,214,.14); }
-  .page-inner #nav { background:rgba(255,255,255,.94); border-color:rgba(22,25,28,.08); color:#16191C; box-shadow:0 8px 24px -16px rgba(22,25,28,.35); }
-  .page-inner #nav .nav-accent { color:#3E7A34; }
-  .page-inner #nav .nav-link:hover { background-color:rgba(22,25,28,.06); }
-  #nav.scrolled { background:rgba(255,255,255,.94); border-color:rgba(22,25,28,.08); color:#16191C; box-shadow:0 8px 24px -16px rgba(22,25,28,.35); }
-  #nav.scrolled .nav-accent { color:#3E7A34; }
-  #nav.scrolled .nav-link:hover { background-color:rgba(22,25,28,.06); }
-  /* ---------- accordion ---------- */
-  details > summary { list-style:none; cursor:pointer; } details > summary::-webkit-details-marker { display:none; }
-  details[open] .faq-icon { transform:rotate(45deg); } .faq-icon { transition:transform .2s ease-out; }
-  /* ---------- tab panel crossfade ---------- */
-  .tabpanel { animation:tab-in .35s cubic-bezier(.22,1,.36,1); }
-  @keyframes tab-in { from { opacity:0; transform:translateY(6px); } }
-  @media (hover:none) { .lift:hover { transform:none; } }
-  @media (prefers-reduced-motion: reduce) {
-    .js .hero-in, .js .rv, .js .rv-stagger > * { animation:none; transition:opacity .3s ease; transform:none; opacity:1; }
-    .hero-img { animation:none; transform:none; }
-    .fence::after, .fence-v::after { display:none; }
-    .pre-fence::after { animation:none; left:0; width:100%; box-shadow:none; }
-    .marquee-track { animation:none; }
-    .tabpanel { animation:none; }
-    .btn, .chip { transition:none; }
-  }
-</style>
+<link rel="preload" href="assets/fonts/golos-text-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/golos-text-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" imagesrcset="assets/img/opt/hero-gigant-1920-480.webp 480w, assets/img/opt/hero-gigant-1920-640.webp 640w, assets/img/opt/hero-gigant-1920-960.webp 960w, assets/img/opt/hero-gigant-1920-1440.webp 1440w, assets/img/opt/hero-gigant-1920-1920.webp 1920w" imagesizes="100vw" fetchpriority="high">
+<link rel="stylesheet" href="assets/css/site.css?v=ad68a3e7">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"GIGANT Agro","url":"https://farik9797.github.io/gigant-agro-site/","logo":"assets/img/logo-gigant.png","telephone":["+77054285707","+77757716024"],"address":{"@type":"PostalAddress","streetAddress":"микрорайон Атырау, 159/8, склад №&nbsp;1","addressLocality":"Алматы","addressCountry":"KZ"},"openingHours":["Mo-Fr 10:00-18:00","Sa 10:00-16:00"]}
+{"@context":"https://schema.org","@type":"Organization","name":"GIGANT Agro","url":"https://farik9797.github.io/gigant-agro-site/","logo":"https://farik9797.github.io/gigant-agro-site/assets/img/logo-gigant.png","telephone":["+77054285707","+77757716024"],"address":{"@type":"PostalAddress","streetAddress":"микрорайон Атырау, 159/8, склад № 1","addressLocality":"Алматы","addressCountry":"KZ"},"openingHours":["Mo-Fr 10:00-18:00","Sa 10:00-16:00"]}
 </script>
 </head>
 <body class="pb-[calc(72px+env(safe-area-inset-bottom))] md:pb-0">
 <div id="preloader" role="status" aria-label="Загрузка сайта">
-  <img src="assets/img/logo-gigant.png" alt="" width="72" height="72" class="w-18 h-18 rounded-full">
+  <img decoding="async" src="assets/img/opt/logo-gigant-160.webp" width="160" height="160" alt="" class="w-18 h-18 rounded-full">
   <span class="pre-fence" aria-hidden="true"><span class="post" style="left:0"></span><span class="post" style="left:50%"></span><span class="post" style="right:0"></span></span>
 </div>
 <script>
@@ -159,10 +41,16 @@ tailwind.config = {
     p.classList.add('is-hidden');
     setTimeout(function(){ if(p.parentNode) p.parentNode.removeChild(p); }, 600);
   }
-  function ready(){ setTimeout(hide, Math.max(0, 600-(Date.now()-t0))); }
-  if(document.readyState==='complete') ready();
-  else window.addEventListener('load', ready);
-  setTimeout(hide, 4000);
+  function ready(){ setTimeout(hide, Math.max(0, 500-(Date.now()-t0))); }
+  /* стили уже применены (CSS блокирующий), ждём только разбор страницы и первый кадр героя */
+  function dom(){
+    var img=document.querySelector('main img');
+    if(img && img.loading!=='lazy' && !img.complete){ img.addEventListener('load', ready); img.addEventListener('error', ready); }
+    else ready();
+  }
+  if(document.readyState!=='loading') dom();
+  else document.addEventListener('DOMContentLoaded', dom);
+  setTimeout(hide, 2500);
 })();
 </script>
 
@@ -173,7 +61,7 @@ tailwind.config = {
   <nav id="nav" class="mx-auto max-w-site rounded-full border border-white/50 bg-white/72 backdrop-blur-xl" aria-label="Основная навигация">
     <div class="h-14 md:h-16 pl-3 pr-2 md:pl-4 md:pr-3 flex items-center gap-3">
       <a href="#top" class="flex items-center gap-2.5 shrink-0" aria-label="GIGANT Agro — на главную">
-        <img src="assets/img/logo-gigant.png" alt="" width="40" height="40" class="w-10 h-10 rounded-full">
+        <img decoding="async" src="assets/img/opt/logo-gigant-160.webp" width="160" height="160" alt="" class="w-10 h-10 rounded-full">
         <span class="font-black text-[17px] leading-none tracking-[-0.02em]">GIGANT <span class="nav-accent">Agro</span></span>
       </a>
       <div class="hidden xl:flex items-center gap-0.5 ml-3 text-[15px] font-medium whitespace-nowrap">
@@ -185,10 +73,10 @@ tailwind.config = {
         <a href="faq.html" class="nav-link px-3 py-2 rounded-full">FAQ</a>
       </div>
       <div class="ml-auto flex items-center gap-1.5 md:gap-2">
-        <a href="tel:+77054285707" class="nav-link hidden 2xl:inline-flex items-center gap-2 px-3 py-2 rounded-full font-semibold text-[15px] whitespace-nowrap"><i data-lucide="phone" class="w-4 h-4" aria-hidden="true"></i>+7 (705) 428-57-07</a>
+        <a href="tel:+77054285707" class="nav-link hidden 2xl:inline-flex items-center gap-2 px-3 py-2 rounded-full font-semibold text-[15px] whitespace-nowrap"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>+7 (705) 428-57-07</a>
         <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-11 h-11 rounded-full bg-brand-dark hover:bg-[#356A2D] transition-colors" aria-label="Написать в WhatsApp"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20"></a>
         <a href="#podbor" class="btn-primary h-10 md:h-11 px-4 md:px-5 hidden md:inline-flex">Подобрать комплект</a>
-        <button id="burger" class="nav-link xl:hidden inline-flex items-center justify-center w-11 h-11 rounded-full" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu"><i data-lucide="menu" class="w-6 h-6" aria-hidden="true"></i></button>
+        <button id="burger" class="nav-link xl:hidden inline-flex items-center justify-center w-11 h-11 rounded-full" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-6 h-6" aria-hidden="true" focusable="false"><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /></svg></button>
       </div>
     </div>
   </nav>
@@ -211,45 +99,45 @@ tailwind.config = {
 <main id="top">
 <!-- ================= HERO ================= -->
 <section class="relative min-h-[88svh] md:min-h-[92svh] flex items-end overflow-hidden bg-deep text-white">
-  <img src="assets/img/hero-gigant-1920.jpg" srcset="assets/img/hero-gigant-1280.jpg 1280w, assets/img/hero-gigant-1920.jpg 1920w" sizes="100vw" alt="Электропастух GIGANT с солнечной панелью на столбе, за изгородью пасётся стадо коров" class="hero-img absolute inset-0 w-full h-full object-cover object-[38%_55%] lg:object-[72%_50%]" fetchpriority="high" width="3088" height="1376">
+  <img src="assets/img/opt/hero-gigant-1920-1440.webp" srcset="assets/img/opt/hero-gigant-1920-480.webp 480w, assets/img/opt/hero-gigant-1920-640.webp 640w, assets/img/opt/hero-gigant-1920-960.webp 960w, assets/img/opt/hero-gigant-1920-1440.webp 1440w, assets/img/opt/hero-gigant-1920-1920.webp 1920w" sizes="100vw" width="3088" height="1376" alt="Электропастух GIGANT с солнечной панелью на столбе, за изгородью пасётся стадо коров" class="hero-img absolute inset-0 w-full h-full object-cover object-[38%_55%] lg:object-[72%_50%]" fetchpriority="high">
   <div class="absolute inset-0 bg-gradient-to-t from-deep via-deep/45 to-deep/5" aria-hidden="true"></div>
   <div class="absolute inset-0 bg-gradient-to-r from-deep/70 via-deep/20 to-transparent" aria-hidden="true"></div>
 
   <div id="heroContent" class="relative container-site w-full pt-32 pb-12 md:pb-16 lg:pb-20 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
     <div class="lg:col-span-8">
       <a href="https://www.ozon.ru/product/elektropastuh-gigant-15-dzh-dlya-korov-ovets-loshadey-kabanov-1632680883/" target="_blank" rel="noopener" class="hero-in d1 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-md pl-2 pr-4 py-1.5 text-[14px] font-medium hover:bg-white/20 transition-colors">
-        <span class="inline-flex items-center gap-0.5 rounded-full bg-pulse text-ink px-2 py-1 text-[13px] font-extrabold tabular-nums"><i data-lucide="star" class="w-3 h-3 fill-current" aria-hidden="true"></i>4,8</span>
+        <span class="inline-flex items-center gap-0.5 rounded-full bg-pulse text-ink px-2 py-1 text-[13px] font-extrabold tabular-nums"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-3 h-3 fill-current" aria-hidden="true" focusable="false"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>4,8</span>
         <span>82 отзыва на Ozon</span>
       </a>
       <h1 class="hero-in d2 mt-6 font-black tracking-[-0.03em] text-[clamp(2.4rem,6.2vw,5.5rem)] leading-[0.98] max-w-[13ch]">Электроизгородь, которая держит <span class="accent text-pulse font-bold tracking-normal">стадо</span></h1>
       <p class="hero-in d3 mt-6 text-[17px] md:text-[19px] leading-[1.5] text-white/85 max-w-[52ch]">Электропастухи GIGANT и Bekci от 6,9 до 25&nbsp;Дж, готовые комплекты для овец, лошадей и КРС, питание от сети, аккумулятора или солнца. Подберём и поможем установить.</p>
       <div class="hero-in d4 mt-8 flex flex-col sm:flex-row gap-3">
-        <a href="#podbor" class="btn-primary btn-lg">Подобрать комплект<i data-lucide="arrow-right" class="w-5 h-5" aria-hidden="true"></i></a>
+        <a href="#podbor" class="btn-primary btn-lg">Подобрать комплект<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
         <a href="#catalog" class="btn-glass btn-lg">Смотреть каталог</a>
       </div>
       <ul class="hero-in d5 mt-8 flex flex-wrap gap-x-6 gap-y-2 max-w-[650px] text-[14px] md:text-[15px] text-white/80">
-        <li class="inline-flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pulse" aria-hidden="true"></i>Склад в Алматы, отгрузка в день заказа</li>
-        <li class="inline-flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pulse" aria-hidden="true"></i>Консультация по установке</li>
-        <li class="inline-flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pulse" aria-hidden="true"></i>Гарантия до 2 лет</li>
-        <li class="inline-flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pulse" aria-hidden="true"></i>Опт и розница</li>
+        <li class="inline-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-pulse" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Склад в Алматы, отгрузка в день заказа</li>
+        <li class="inline-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-pulse" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Консультация по установке</li>
+        <li class="inline-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-pulse" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Гарантия до 2 лет</li>
+        <li class="inline-flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-pulse" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Опт и розница</li>
       </ul>
     </div>
     <!-- техпаспорт флагмана -->
     <a href="#flagmany" class="hero-in d5 hidden lg:flex lg:col-span-4 justify-self-end w-full max-w-[380px] items-center gap-4 rounded-2xl border border-white/25 bg-white/10 backdrop-blur-xl p-3 pr-5 hover:bg-white/15 transition-colors">
-      <span class="w-20 h-20 rounded-xl bg-white overflow-hidden shrink-0"><img src="assets/img/product-gigant15.jpg" alt="" class="w-full h-full object-cover" width="800" height="533"></span>
+      <span class="w-20 h-20 rounded-xl bg-white overflow-hidden shrink-0"><img decoding="async" src="assets/img/opt/product-gigant15-800.webp" srcset="assets/img/opt/product-gigant15-480.webp 480w, assets/img/opt/product-gigant15-640.webp 640w, assets/img/opt/product-gigant15-800.webp 800w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="800" height="533" alt="" class="w-full h-full object-cover"></span>
       <span class="flex-1">
         <span class="block text-[13px] font-semibold text-white/85">Флагман собственной марки</span>
         <span class="block font-extrabold text-[18px] leading-tight mt-0.5">GIGANT 15&nbsp;Дж</span>
         <span class="mt-2 flex gap-4 text-white/90"><span class="spec">15<span class="text-[13px] font-semibold text-white/85">Дж</span></span><span class="spec">12&nbsp;000<span class="text-[13px] font-semibold text-white/85">В</span></span><span class="spec">220/12<span class="text-[13px] font-semibold text-white/85">В</span></span></span>
       </span>
-      <i data-lucide="arrow-up-right" class="w-5 h-5 text-white/70" aria-hidden="true"></i>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 text-white/70" aria-hidden="true" focusable="false"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>
     </a>
   </div>
 </section>
 
 <!-- ================= ЛОГОТИПНАЯ ЛЕНТА ================= -->
 <div class="bg-white border-b border-line relative">
-  <button id="marqueeToggle" class="sr-only focus:not-sr-only focus:absolute focus:right-3 focus:top-1/2 focus:-translate-y-1/2 focus:z-10 focus:inline-flex focus:items-center focus:justify-center focus:w-11 focus:h-11 focus:rounded-full focus:border focus:border-ink focus:bg-white focus:text-ink" aria-label="Остановить бегущую строку" aria-pressed="false"><i data-lucide="pause" class="w-4 h-4" aria-hidden="true"></i></button>
+  <button id="marqueeToggle" class="sr-only focus:not-sr-only focus:absolute focus:right-3 focus:top-1/2 focus:-translate-y-1/2 focus:z-10 focus:inline-flex focus:items-center focus:justify-center focus:w-11 focus:h-11 focus:rounded-full focus:border focus:border-ink focus:bg-white focus:text-ink" aria-label="Остановить бегущую строку" aria-pressed="false"><span data-ico="pause"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4" aria-hidden="true" focusable="false"><rect x="14" y="4" width="4" height="16" rx="1" /><rect x="6" y="4" width="4" height="16" rx="1" /></svg></span><span data-ico="play" hidden><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4" aria-hidden="true" focusable="false"><polygon points="6 3 20 12 6 21 6 3" /></svg></span></button>
   <div class="marquee overflow-hidden py-5">
     <div class="marquee-track gap-12 pr-12 text-[15px] font-semibold uppercase tracking-[0.06em] text-muted">
       <span class="inline-flex items-center gap-12"><span class="text-ink">GIGANT</span><span>Bekci</span><span>Satu.kz</span><span>Ozon</span><span>Wildberries</span><span>Опт и розница</span><span>Склад в Алматы</span><span>Доставка по Казахстану и СНГ</span><span>Гарантия до 2 лет</span></span>
@@ -266,39 +154,39 @@ tailwind.config = {
         <p class="flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.12em] text-muted"><span class="w-2 h-2 rounded-full bg-pulse" aria-hidden="true"></span>Каталог</p>
         <h2 class="h2 mt-3">Популярные категории</h2>
       </div>
-      <a href="#catalog" class="link whitespace-nowrap">Весь каталог<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+      <a href="#catalog" class="link whitespace-nowrap">Весь каталог<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
     </div>
     <div id="catScroll" class="m-slider rv-stagger mt-8 md:grid md:grid-cols-4 md:gap-4" role="group" aria-label="Категории каталога, прокрутка по горизонтали">
       <a href="#flagmany" class="card lift overflow-hidden group flex flex-col">
-        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/product-gigant15.jpg" alt="Электропастух GIGANT 15 Дж" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h3 class="font-extrabold text-[17px] leading-tight">Электропастухи</h3><p class="text-muted text-[14px] mt-1">GIGANT 15&nbsp;Дж и Bekci 25&nbsp;Дж</p></div><i data-lucide="arrow-right" class="w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i></div>
+        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img decoding="async" src="assets/img/opt/product-gigant15-800.webp" srcset="assets/img/opt/product-gigant15-480.webp 480w, assets/img/opt/product-gigant15-640.webp 640w, assets/img/opt/product-gigant15-800.webp 800w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="800" height="533" alt="Электропастух GIGANT 15 Дж" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy"></div>
+        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h3 class="font-extrabold text-[17px] leading-tight">Электропастухи</h3><p class="text-muted text-[14px] mt-1">GIGANT 15&nbsp;Дж и Bekci 25&nbsp;Дж</p></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></div>
       </a>
       <a href="#komplekty" class="card lift overflow-hidden group flex flex-col">
-        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/kit-sheep-poultry.jpg" alt="Готовый комплект для овец: электросетка, электропастух SP-G6, аккумулятор, колья и провода" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h3 class="font-extrabold text-[17px] leading-tight">Готовые комплекты</h3><p class="text-muted text-[14px] mt-1">Для овец, КРС и лошадей</p></div><i data-lucide="arrow-right" class="w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i></div>
+        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img decoding="async" src="assets/img/opt/kit-sheep-poultry-800.webp" srcset="assets/img/opt/kit-sheep-poultry-480.webp 480w, assets/img/opt/kit-sheep-poultry-640.webp 640w, assets/img/opt/kit-sheep-poultry-800.webp 800w, assets/img/opt/kit-sheep-poultry-1200.webp 1200w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="1200" height="896" alt="Готовый комплект для овец: электросетка, электропастух SP-G6, аккумулятор, колья и провода" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy"></div>
+        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h3 class="font-extrabold text-[17px] leading-tight">Готовые комплекты</h3><p class="text-muted text-[14px] mt-1">Для овец, КРС и лошадей</p></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></div>
       </a>
       <a href="#catalog" class="card lift overflow-hidden group flex flex-col">
-        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/cat-nets.jpg" alt="Рулоны электросетки белого, чёрного и оранжевого цвета" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h3 class="font-extrabold text-[17px] leading-tight">Сетки и шнуры</h3><p class="text-muted text-[14px] mt-1">Для электроизгородей</p></div><i data-lucide="arrow-right" class="w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i></div>
+        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img decoding="async" src="assets/img/opt/cat-nets-800.webp" srcset="assets/img/opt/cat-nets-480.webp 480w, assets/img/opt/cat-nets-640.webp 640w, assets/img/opt/cat-nets-800.webp 800w, assets/img/opt/cat-nets-1200.webp 1200w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="1200" height="797" alt="Рулоны электросетки белого, чёрного и оранжевого цвета" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy"></div>
+        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h3 class="font-extrabold text-[17px] leading-tight">Сетки и шнуры</h3><p class="text-muted text-[14px] mt-1">Для электроизгородей</p></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></div>
       </a>
       <a href="#catalog" class="card lift overflow-hidden group flex flex-col">
-        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/cat-insulators.jpg" alt="Кольцевой изолятор на деревянном столбе с натянутой проволокой" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h3 class="font-extrabold text-[17px] leading-tight">Изоляторы и колышки</h3><p class="text-muted text-[14px] mt-1">Надёжное крепление</p></div><i data-lucide="arrow-right" class="w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i></div>
+        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img decoding="async" src="assets/img/opt/cat-insulators-800.webp" srcset="assets/img/opt/cat-insulators-480.webp 480w, assets/img/opt/cat-insulators-640.webp 640w, assets/img/opt/cat-insulators-800.webp 800w, assets/img/opt/cat-insulators-1200.webp 1200w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="1200" height="797" alt="Кольцевой изолятор на деревянном столбе с натянутой проволокой" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy"></div>
+        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h3 class="font-extrabold text-[17px] leading-tight">Изоляторы и колышки</h3><p class="text-muted text-[14px] mt-1">Надёжное крепление</p></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></div>
       </a>
       <a href="#catalog" class="card lift overflow-hidden group flex flex-col">
-        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/cat-cables.jpg" alt="Кабели подключения с клеммами и зажимами для аккумулятора" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h3 class="font-extrabold text-[17px] leading-tight">Кабели и аксессуары</h3><p class="text-muted text-[14px] mt-1">Для подключения и заземления</p></div><i data-lucide="arrow-right" class="w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i></div>
+        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img decoding="async" src="assets/img/opt/cat-cables-800.webp" srcset="assets/img/opt/cat-cables-480.webp 480w, assets/img/opt/cat-cables-640.webp 640w, assets/img/opt/cat-cables-800.webp 800w, assets/img/opt/cat-cables-1200.webp 1200w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="1200" height="792" alt="Кабели подключения с клеммами и зажимами для аккумулятора" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy"></div>
+        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h3 class="font-extrabold text-[17px] leading-tight">Кабели и аксессуары</h3><p class="text-muted text-[14px] mt-1">Для подключения и заземления</p></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></div>
       </a>
       <a href="#avtonomno" class="card lift overflow-hidden group flex flex-col">
-        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/solar-line.jpg" alt="Солнечная панель на линии электроизгороди" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h3 class="font-extrabold text-[17px] leading-tight">Солнечные системы</h3><p class="text-muted text-[14px] mt-1">Панели, контроллеры, АКБ</p></div><i data-lucide="arrow-right" class="w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i></div>
+        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img decoding="async" src="assets/img/opt/solar-line-960.webp" srcset="assets/img/opt/solar-line-480.webp 480w, assets/img/opt/solar-line-640.webp 640w, assets/img/opt/solar-line-960.webp 960w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="1100" height="736" alt="Солнечная панель на линии электроизгороди" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy"></div>
+        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h3 class="font-extrabold text-[17px] leading-tight">Солнечные системы</h3><p class="text-muted text-[14px] mt-1">Панели, контроллеры, АКБ</p></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></div>
       </a>
       <a href="#catalog" class="card lift overflow-hidden group flex flex-col">
-        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img src="assets/img/cat-shearing.jpg" alt="Электрическая машинка для стрижки овец с кабелем" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy" width="900" height="675"></div>
-        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h3 class="font-extrabold text-[17px] leading-tight">Стрижка овец</h3><p class="text-muted text-[14px] mt-1">Оборудование и запчасти</p></div><i data-lucide="arrow-right" class="w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true"></i></div>
+        <div class="aspect-[4/3] bg-[#EEF1EA] overflow-hidden"><img decoding="async" src="assets/img/opt/cat-shearing-800.webp" srcset="assets/img/opt/cat-shearing-480.webp 480w, assets/img/opt/cat-shearing-640.webp 640w, assets/img/opt/cat-shearing-800.webp 800w, assets/img/opt/cat-shearing-1200.webp 1200w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="1200" height="789" alt="Электрическая машинка для стрижки овец с кабелем" class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" loading="lazy"></div>
+        <div class="p-4 md:p-5 flex items-center justify-between gap-3"><div class="min-w-0 flex-1"><h3 class="font-extrabold text-[17px] leading-tight">Стрижка овец</h3><p class="text-muted text-[14px] mt-1">Оборудование и запчасти</p></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 shrink-0 mb-0.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></div>
       </a>
       <a href="#podbor" class="relative md:col-span-1 rounded-2xl overflow-hidden bg-deep text-cream flex flex-col justify-between gap-4 p-5 min-h-[200px] md:min-h-[220px] transition-colors hover:bg-[#1f3323] group">
-        <img src="assets/img/cow-tape.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-right opacity-40 transition-opacity duration-300 group-hover:opacity-50" loading="lazy" width="900" height="675" aria-hidden="true">
+        <img decoding="async" src="assets/img/opt/cow-tape-800.webp" srcset="assets/img/opt/cow-tape-480.webp 480w, assets/img/opt/cow-tape-640.webp 640w, assets/img/opt/cow-tape-800.webp 800w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="900" height="675" alt="" class="absolute inset-0 w-full h-full object-cover object-right opacity-40 transition-opacity duration-300 group-hover:opacity-50" loading="lazy" aria-hidden="true">
         <div class="absolute inset-0 bg-gradient-to-r from-deep via-deep/80 to-deep/20" aria-hidden="true"></div>
         <div class="relative"><p class="font-extrabold text-[20px] leading-tight">Не знаете, что выбрать?</p><p class="text-cream/75 text-[14px] mt-2 max-w-[24ch]">Поможем подобрать комплект под ваших животных, площадь и условия.</p></div>
         <span class="relative btn-primary h-11 px-4 self-start text-[15px]">Получить консультацию</span>
@@ -358,12 +246,12 @@ tailwind.config = {
 
       <div class="lg:col-span-5 lg:pl-10 lg:border-l lg:border-line flex flex-col gap-5">
         <div>
-          <button id="pickGo" class="btn-primary btn-lg w-full">Показать решение<i data-lucide="arrow-right" class="w-5 h-5" aria-hidden="true"></i></button>
+          <button id="pickGo" class="btn-primary btn-lg w-full">Показать решение<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></button>
           <p class="mt-3 text-[14px] text-muted">Результат ориентировочный, точный состав подтвердит менеджер.</p>
         </div>
         <div id="pickResult" aria-live="polite" tabindex="-1" class="flex-1 rounded-2xl bg-white border border-line md:bg-cream md:border-brand/30 p-5 md:p-6 outline-none">
           <div id="resEmpty" class="h-full min-h-[200px] hidden md:flex flex-col items-center justify-center text-center gap-3 text-muted">
-            <i data-lucide="sliders-horizontal" class="w-8 h-8 text-brand-dark" aria-hidden="true"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-8 h-8 text-brand-dark" aria-hidden="true" focusable="false"><line x1="21" x2="14" y1="4" y2="4" /><line x1="10" x2="3" y1="4" y2="4" /><line x1="21" x2="12" y1="12" y2="12" /><line x1="8" x2="3" y1="12" y2="12" /><line x1="21" x2="16" y1="20" y2="20" /><line x1="12" x2="3" y1="20" y2="20" /><line x1="14" x2="14" y1="2" y2="6" /><line x1="8" x2="8" y1="10" y2="14" /><line x1="16" x2="16" y1="18" y2="22" /></svg>
             <p class="text-[15px] max-w-[26ch]">Выберите животных, площадь и питание — здесь появится модель, комплект и цена.</p>
           </div>
           <div id="resBody" hidden>
@@ -375,7 +263,7 @@ tailwind.config = {
             <p id="resPower" class="mt-1 text-muted"></p>
             <p id="resWhy" class="mt-2 text-[14px] text-muted"></p>
             <div class="mt-5 flex flex-col gap-2">
-              <a href="#konsultaciya" class="btn-primary">Заказать</a>
+              <a id="resOrder" href="#konsultaciya" class="btn-primary">Заказать</a>
               <a id="resWa" href="#" target="_blank" rel="noopener" class="btn-secondary"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Обсудить в WhatsApp</a>
             </div>
           </div>
@@ -397,7 +285,7 @@ tailwind.config = {
     <div class="rv-stagger mt-10 grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-6">
       <article class="card lift overflow-hidden flex flex-col">
         <div class="bg-white aspect-[16/10] relative">
-          <img src="assets/img/product-gigant15.jpg" alt="Электропастух GIGANT 15&nbsp;Дж с адаптером, пультом и клеммами" class="absolute inset-0 w-full h-full object-contain p-6" loading="lazy" width="800" height="533">
+          <img decoding="async" src="assets/img/opt/product-gigant15-800.webp" srcset="assets/img/opt/product-gigant15-480.webp 480w, assets/img/opt/product-gigant15-640.webp 640w, assets/img/opt/product-gigant15-800.webp 800w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="800" height="533" alt="Электропастух GIGANT 15&nbsp;Дж с адаптером, пультом и клеммами" class="absolute inset-0 w-full h-full object-contain p-6" loading="lazy">
           <span class="absolute left-4 top-4 rounded-full bg-cream text-brand-dark text-[13px] font-bold px-2.5 py-1">Собственная марка</span>
         </div>
         <div class="p-6 md:p-7 flex flex-col flex-1 border-t border-line">
@@ -415,14 +303,14 @@ tailwind.config = {
             <div><dt class="text-[13px] text-muted">Гарантия</dt><dd class="font-bold">1 год</dd></div>
           </dl>
           <div class="mt-auto pt-6 flex flex-wrap gap-3">
-            <a href="#konsultaciya" class="btn-primary h-11 px-5">Заказать</a>
+            <a href="#konsultaciya" data-tovar="GIGANT 15 Дж" class="btn-primary h-11 px-5">Заказать</a>
             <a href="https://wa.me/77054285707?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20GIGANT%2015%20%D0%94%D0%B6" target="_blank" rel="noopener" class="btn-outline h-11 px-4"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5" width="20" height="20">WhatsApp</a>
           </div>
         </div>
       </article>
       <article class="card lift overflow-hidden flex flex-col">
         <div class="bg-white aspect-[16/10] relative">
-          <img src="assets/img/product-bekci25.jpg" alt="Электропастух Bekci 25&nbsp;Дж" class="absolute inset-0 w-full h-full object-contain p-6" loading="lazy" width="800" height="1073">
+          <img decoding="async" src="assets/img/opt/product-bekci25-800.webp" srcset="assets/img/opt/product-bekci25-480.webp 480w, assets/img/opt/product-bekci25-640.webp 640w, assets/img/opt/product-bekci25-800.webp 800w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="800" height="1073" alt="Электропастух Bekci 25&nbsp;Дж" class="absolute inset-0 w-full h-full object-contain p-6" loading="lazy">
           <span class="absolute left-4 top-4 rounded-full bg-pulse text-ink text-[13px] font-bold px-2.5 py-1">Максимальная мощность</span>
         </div>
         <div class="p-6 md:p-7 flex flex-col flex-1 border-t border-line">
@@ -440,7 +328,7 @@ tailwind.config = {
             <div><dt class="text-[13px] text-muted">Гарантия</dt><dd class="font-bold">2 года</dd></div>
           </dl>
           <div class="mt-auto pt-6 flex flex-wrap gap-3">
-            <a href="#konsultaciya" class="btn-primary h-11 px-5">Заказать</a>
+            <a href="#konsultaciya" data-tovar="Bekci 25 Дж" class="btn-primary h-11 px-5">Заказать</a>
             <a href="https://wa.me/77054285707?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20Bekci%2025%20%D0%94%D0%B6" target="_blank" rel="noopener" class="btn-outline h-11 px-4"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5" width="20" height="20">WhatsApp</a>
           </div>
         </div>
@@ -449,7 +337,7 @@ tailwind.config = {
 
     <p class="rv mt-6 flex flex-col md:flex-row md:items-center gap-3 md:gap-6 text-[15px] text-muted">
       <span><strong class="text-ink">Какой выбрать?</strong> 15&nbsp;Дж — стандартные хозяйства и средние периметры. 25&nbsp;Дж — большие периметры, густая растительность, крупные и дикие животные.</span>
-      <a href="catalog-elektropastuhi.html" class="link md:ml-auto whitespace-nowrap">Вся линейка: 6,9 · 14,5 · 15 · 25&nbsp;Дж<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+      <a href="catalog-elektropastuhi.html" class="link md:ml-auto whitespace-nowrap">Вся линейка: 6,9 · 14,5 · 15 · 25&nbsp;Дж<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
     </p>
   </div>
 </section>
@@ -460,17 +348,17 @@ tailwind.config = {
     <div class="lg:col-span-7 section px-5 md:px-12 lg:pr-12 lg:pl-[max(1.25rem,calc((100vw-1400px)/2+1.25rem))]">
       <p class="rv flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.12em] text-cream/70"><span class="w-2 h-2 rounded-full bg-pulse" aria-hidden="true"></span>Почему GIGANT Agro</p>
       <h2 class="rv h2 mt-3 max-w-[18ch]">Рабочие решения, а&nbsp;не просто товары</h2>
-      <ul class="rv-stagger mt-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-8">
-        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="zap" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Мощность 15 и 25&nbsp;Дж</p><p class="text-cream/70 text-[14px] mt-1">Держат любое стадо и большие периметры</p></div></li>
-        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="package" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Готовые комплекты</p><p class="text-cream/70 text-[14px] mt-1">Под вид животных и площадь</p></div></li>
-        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="sliders-horizontal" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Профессиональный подбор</p><p class="text-cream/70 text-[14px] mt-1">За минуту на сайте и консультация специалиста</p></div></li>
-        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="sun" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Автономность</p><p class="text-cream/70 text-[14px] mt-1">Солнечная панель + АКБ, работает без розетки</p></div></li>
-        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="layers" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Широкий ассортимент</p><p class="text-cream/70 text-[14px] mt-1">Комплектующих и расходников со склада в Алматы</p></div></li>
-        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><i data-lucide="shield-check" class="w-5 h-5 text-pulse" aria-hidden="true"></i></span><div><p class="font-extrabold">Гарантия и сервис</p><p class="text-cream/70 text-[14px] mt-1">Доставка по Казахстану и в РФ</p></div></li>
+      <ul class="rv-stagger mt-10 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8 max-w-[760px]">
+        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 text-pulse" aria-hidden="true" focusable="false"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></svg></span><div><p class="font-extrabold">Мощность 15 и 25&nbsp;Дж</p><p class="text-cream/75 text-[15px] leading-snug mt-1">Держат любое стадо и большие периметры</p></div></li>
+        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 text-pulse" aria-hidden="true" focusable="false"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /><path d="M12 22V12" /><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7" /><path d="m7.5 4.27 9 5.15" /></svg></span><div><p class="font-extrabold">Готовые комплекты</p><p class="text-cream/75 text-[15px] leading-snug mt-1">Под вид животных и площадь</p></div></li>
+        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 text-pulse" aria-hidden="true" focusable="false"><line x1="21" x2="14" y1="4" y2="4" /><line x1="10" x2="3" y1="4" y2="4" /><line x1="21" x2="12" y1="12" y2="12" /><line x1="8" x2="3" y1="12" y2="12" /><line x1="21" x2="16" y1="20" y2="20" /><line x1="12" x2="3" y1="20" y2="20" /><line x1="14" x2="14" y1="2" y2="6" /><line x1="8" x2="8" y1="10" y2="14" /><line x1="16" x2="16" y1="18" y2="22" /></svg></span><div><p class="font-extrabold">Профессиональный подбор</p><p class="text-cream/75 text-[15px] leading-snug mt-1">За минуту на сайте и консультация специалиста</p></div></li>
+        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 text-pulse" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" /></svg></span><div><p class="font-extrabold">Автономность</p><p class="text-cream/75 text-[15px] leading-snug mt-1">Солнечная панель + АКБ, работает без розетки</p></div></li>
+        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 text-pulse" aria-hidden="true" focusable="false"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></svg></span><div><p class="font-extrabold">Широкий ассортимент</p><p class="text-cream/75 text-[15px] leading-snug mt-1">Комплектующих и расходников со склада в Алматы</p></div></li>
+        <li class="flex gap-4"><span class="w-11 h-11 rounded-full border border-pulse/60 flex items-center justify-center shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 text-pulse" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></svg></span><div><p class="font-extrabold">Гарантия и сервис</p><p class="text-cream/75 text-[15px] leading-snug mt-1">Доставка по Казахстану и в РФ</p></div></li>
       </ul>
     </div>
     <div class="lg:col-span-5 relative min-h-[300px] lg:min-h-0">
-      <img src="assets/img/why-cow-fence.jpg" alt="Коровы на пастбище за линиями электроизгороди" class="absolute inset-0 w-full h-full object-cover object-[70%_50%]" loading="lazy" width="1920" height="1115">
+      <img decoding="async" src="assets/img/opt/why-cow-fence-1440.webp" srcset="assets/img/opt/why-cow-fence-480.webp 480w, assets/img/opt/why-cow-fence-640.webp 640w, assets/img/opt/why-cow-fence-960.webp 960w, assets/img/opt/why-cow-fence-1440.webp 1440w, assets/img/opt/why-cow-fence-1920.webp 1920w" sizes="100vw" width="1920" height="1115" alt="Коровы на пастбище за линиями электроизгороди" class="absolute inset-0 w-full h-full object-cover object-[70%_50%]" loading="lazy">
       <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-deep/70 lg:from-deep via-transparent lg:via-deep/10 to-transparent" aria-hidden="true"></div>
     </div>
   </div>
@@ -495,7 +383,7 @@ tailwind.config = {
     </div>
     <div class="mt-6">
       <div id="tab-krs" role="tabpanel" tabindex="0" aria-labelledby="tabbtn-krs" class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/cattle-meadow.jpg" alt="Коровы на пастбище" class="w-full h-full object-cover" loading="lazy" width="900" height="600"></div>
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img decoding="async" src="assets/img/opt/cattle-meadow-800.webp" srcset="assets/img/opt/cattle-meadow-480.webp 480w, assets/img/opt/cattle-meadow-640.webp 640w, assets/img/opt/cattle-meadow-800.webp 800w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="900" height="599" alt="Коровы на пастбище" class="w-full h-full object-cover" loading="lazy"></div>
         <div class="lg:col-span-6">
           <h3 class="h3">Крупный рогатый скот</h3>
           <p class="mt-3 text-muted">Спокойные и крупные животные: достаточно одной-двух линий на уровне груди. Главное — заметный проводник и стабильный импульс на длинном периметре.</p>
@@ -505,11 +393,11 @@ tailwind.config = {
             <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Прибор</dt><dd class="font-bold">GIGANT 15 · Bekci 25</dd></div>
             <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Готовый комплект</dt><dd class="font-bold">«Для КРС», 5&nbsp;га</dd></div>
           </dl>
-          <a href="#komplekty" class="link mt-5">Комплект для КРС — 145 000 ₸<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+          <a href="#komplekty" class="link mt-5">Комплект для КРС — 145 000 ₸<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
         </div>
       </div>
       <div id="tab-horse" role="tabpanel" tabindex="0" aria-labelledby="tabbtn-horse" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/horses-steppe.jpg" alt="Лошади на пастбище в казахстанской степи" class="w-full h-full object-cover" loading="lazy" width="900" height="458"></div>
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img decoding="async" src="assets/img/opt/horses-steppe-800.webp" srcset="assets/img/opt/horses-steppe-480.webp 480w, assets/img/opt/horses-steppe-640.webp 640w, assets/img/opt/horses-steppe-800.webp 800w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="900" height="457" alt="Лошади на пастбище в казахстанской степи" class="w-full h-full object-cover" loading="lazy"></div>
         <div class="lg:col-span-6">
           <h3 class="h3">Лошади</h3>
           <p class="mt-3 text-muted">Лошадь должна хорошо видеть границу: используют широкую ленту или яркий шнур в две-три линии. Прибор — с запасом на большой табунный периметр.</p>
@@ -519,11 +407,11 @@ tailwind.config = {
             <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Прибор</dt><dd class="font-bold">GIGANT 15 · Bekci 25</dd></div>
             <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Готовый комплект</dt><dd class="font-bold">«Для лошадей», 6&nbsp;га</dd></div>
           </dl>
-          <a href="#komplekty" class="link mt-5">Комплект для лошадей — 125 000 ₸<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+          <a href="#komplekty" class="link mt-5">Комплект для лошадей — 125 000 ₸<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
         </div>
       </div>
       <div id="tab-sheep" role="tabpanel" tabindex="0" aria-labelledby="tabbtn-sheep" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/animal-sheep.jpg" alt="Овцы за зелёной электросеткой на пастбище" class="w-full h-full object-cover" loading="lazy" width="900" height="631"></div>
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img decoding="async" src="assets/img/opt/animal-sheep-640.webp" srcset="assets/img/opt/animal-sheep-480.webp 480w, assets/img/opt/animal-sheep-640.webp 640w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="720" height="540" alt="Овцы за зелёной электросеткой на пастбище" class="w-full h-full object-cover" loading="lazy"></div>
         <div class="lg:col-span-6">
           <h3 class="h3">Овцы и козы</h3>
           <p class="mt-3 text-muted">Шерсть изолирует, а козы любят пролезать снизу, поэтому линий нужно больше и ниже к земле — либо готовая электросетка.</p>
@@ -533,11 +421,11 @@ tailwind.config = {
             <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Прибор</dt><dd class="font-bold">Bekci 14,5 · GIGANT 15</dd></div>
             <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Готовый комплект</dt><dd class="font-bold">«Для овец», 1&nbsp;га</dd></div>
           </dl>
-          <a href="#komplekty" class="link mt-5">Комплект для овец — 125 000 ₸<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+          <a href="#komplekty" class="link mt-5">Комплект для овец — 125 000 ₸<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
         </div>
       </div>
       <div id="tab-pig" role="tabpanel" tabindex="0" aria-labelledby="tabbtn-pig" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/animal-pigs.jpg" alt="Свиньи на выгуле в поле" class="w-full h-full object-cover" loading="lazy" width="900" height="296"></div>
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img decoding="async" src="assets/img/opt/animal-pigs-800.webp" srcset="assets/img/opt/animal-pigs-480.webp 480w, assets/img/opt/animal-pigs-640.webp 640w, assets/img/opt/animal-pigs-800.webp 800w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="900" height="599" alt="Свиньи на выгуле в поле" class="w-full h-full object-cover" loading="lazy"></div>
         <div class="lg:col-span-6">
           <h3 class="h3">Свиньи</h3>
           <p class="mt-3 text-muted">Свиньи проверяют границу носом — линии ставят низко, у самой земли, и следят, чтобы трава не замыкала проводник.</p>
@@ -547,11 +435,11 @@ tailwind.config = {
             <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Прибор</dt><dd class="font-bold">GIGANT 15</dd></div>
             <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Готовый комплект</dt><dd class="font-bold">Собираем под периметр</dd></div>
           </dl>
-          <a href="#podbor" class="link mt-5">Подобрать комплект<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+          <a href="#podbor" class="link mt-5">Подобрать комплект<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
         </div>
       </div>
       <div id="tab-bird" role="tabpanel" tabindex="0" aria-labelledby="tabbtn-bird" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/animal-poultry.jpg" alt="Стадо гусей на траве за линией ограждения" class="w-full h-full object-cover" loading="lazy" width="900" height="675"></div>
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img decoding="async" src="assets/img/opt/animal-poultry-800.webp" srcset="assets/img/opt/animal-poultry-480.webp 480w, assets/img/opt/animal-poultry-640.webp 640w, assets/img/opt/animal-poultry-800.webp 800w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="900" height="599" alt="Стадо гусей на траве за линией ограждения" class="w-full h-full object-cover" loading="lazy"></div>
         <div class="lg:col-span-6">
           <h3 class="h3">Птица</h3>
           <p class="mt-3 text-muted">Для кур, гусей и индеек работает только электросетка: она держит птицу внутри и не пускает лис и собак снаружи.</p>
@@ -561,11 +449,11 @@ tailwind.config = {
             <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Прибор</dt><dd class="font-bold">Bekci 6.9 · GIGANT 15</dd></div>
             <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Готовый комплект</dt><dd class="font-bold">Собираем под периметр</dd></div>
           </dl>
-          <a href="#podbor" class="link mt-5">Подобрать комплект<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+          <a href="#podbor" class="link mt-5">Подобрать комплект<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
         </div>
       </div>
       <div id="tab-wild" role="tabpanel" tabindex="0" aria-labelledby="tabbtn-wild" hidden class="tabpanel grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/animal-boar.jpg" alt="Дикие кабаны на краю поля" class="w-full h-full object-cover" loading="lazy" width="900" height="512"></div>
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3]"><img decoding="async" src="assets/img/opt/animal-boar-800.webp" srcset="assets/img/opt/animal-boar-480.webp 480w, assets/img/opt/animal-boar-640.webp 640w, assets/img/opt/animal-boar-800.webp 800w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="900" height="675" alt="Дикие кабаны на краю поля" class="w-full h-full object-cover" loading="lazy"></div>
         <div class="lg:col-span-6">
           <h3 class="h3">Защита от диких животных</h3>
           <p class="mt-3 text-muted">Кабаны, волки и собаки идут снизу, лоси и косули — сверху. Нужны низкие линии, хорошее заземление и прибор с запасом мощности.</p>
@@ -575,7 +463,7 @@ tailwind.config = {
             <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Прибор</dt><dd class="font-bold">Bekci 25</dd></div>
             <div class="border-t border-line pt-3"><dt class="text-[13px] text-muted">Готовый комплект</dt><dd class="font-bold">Собираем под периметр</dd></div>
           </dl>
-          <a href="#podbor" class="link mt-5">Подобрать комплект<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+          <a href="#podbor" class="link mt-5">Подобрать комплект<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
         </div>
       </div>
     </div>
@@ -587,61 +475,61 @@ tailwind.config = {
   <div class="container-site">
     <div class="rv flex flex-col md:flex-row md:items-end md:justify-between gap-4">
       <div><h2 class="h2">Распаковал и поставил</h2><p class="lead mt-3">Всё нужное в одной коробке. При покупке полного комплекта аккумулятор — в подарок.</p></div>
-      <a href="catalog-komplekty.html" class="link whitespace-nowrap">Все комплекты<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+      <a href="catalog-komplekty.html" class="link whitespace-nowrap">Все комплекты<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
     </div>
     <div id="kitScroll" class="m-slider rv-stagger mt-10 md:grid md:grid-cols-2 xl:grid-cols-4 md:gap-5" role="group" aria-label="Готовые комплекты, прокрутка по горизонтали">
       <article class="card lift overflow-hidden flex flex-col">
-        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/sheep.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="631"><span class="absolute left-3 top-3 rounded-full bg-pulse text-ink text-[13px] font-bold px-2.5 py-1">Аккумулятор в подарок</span></div>
+        <div class="relative aspect-[4/3] overflow-hidden"><img decoding="async" src="assets/img/opt/sheep-800.webp" srcset="assets/img/opt/sheep-480.webp 480w, assets/img/opt/sheep-640.webp 640w, assets/img/opt/sheep-800.webp 800w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="900" height="631" alt="" class="w-full h-full object-cover" loading="lazy"><span class="absolute left-3 top-3 rounded-full bg-pulse text-ink text-[13px] font-bold px-2.5 py-1">Аккумулятор в подарок</span></div>
         <div class="p-5 flex flex-col flex-1">
           <p class="text-[13px] text-muted">Овцы и козы · до 1&nbsp;га</p>
           <h3 class="font-extrabold text-[20px] leading-tight mt-1">Комплект «Для овец»</h3>
           <ul class="mt-3 space-y-1.5 text-[14px] text-muted">
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Генератор импульсов</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Проводник, изоляторы</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Ворота</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Аккумулятор 12&nbsp;В</li>
+            <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Генератор импульсов</li>
+            <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Проводник, изоляторы</li>
+            <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Ворота</li>
+            <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Аккумулятор 12&nbsp;В</li>
           </ul>
-          <div class="mt-auto pt-5 flex items-center justify-between gap-3"><p class="font-black text-[22px] leading-none tabular-nums">125 000 ₸</p><a href="#konsultaciya" class="btn-primary h-10 px-4 text-[15px]">Заказать</a></div>
+          <div class="mt-auto pt-5 flex items-center justify-between gap-3"><p class="font-black text-[22px] leading-none tabular-nums">125 000 ₸</p><a href="#konsultaciya" data-tovar="Комплект «Для овец»" class="btn-primary h-10 px-4 text-[15px]">Заказать</a></div>
         </div>
       </article>
       <article class="card lift overflow-hidden flex flex-col">
-        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/cattle-meadow.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="600"><span class="absolute left-3 top-3 rounded-full bg-pulse text-ink text-[13px] font-bold px-2.5 py-1">Аккумулятор в подарок</span></div>
+        <div class="relative aspect-[4/3] overflow-hidden"><img decoding="async" src="assets/img/opt/cattle-meadow-800.webp" srcset="assets/img/opt/cattle-meadow-480.webp 480w, assets/img/opt/cattle-meadow-640.webp 640w, assets/img/opt/cattle-meadow-800.webp 800w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="900" height="599" alt="" class="w-full h-full object-cover" loading="lazy"><span class="absolute left-3 top-3 rounded-full bg-pulse text-ink text-[13px] font-bold px-2.5 py-1">Аккумулятор в подарок</span></div>
         <div class="p-5 flex flex-col flex-1">
           <p class="text-[13px] text-muted">КРС · до 5&nbsp;га</p>
           <h3 class="font-extrabold text-[20px] leading-tight mt-1">Комплект «Для КРС»</h3>
           <ul class="mt-3 space-y-1.5 text-[14px] text-muted">
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Генератор импульсов</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Аккумулятор 12&nbsp;В, 7&nbsp;Ач</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Проводник 1000 м, изоляторы</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Предупреждающие таблички</li>
+            <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Генератор импульсов</li>
+            <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Аккумулятор 12&nbsp;В, 7&nbsp;Ач</li>
+            <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Проводник 1000 м, изоляторы</li>
+            <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Предупреждающие таблички</li>
           </ul>
-          <div class="mt-auto pt-5 flex items-center justify-between gap-3"><p class="font-black text-[22px] leading-none tabular-nums">145 000 ₸</p><a href="#konsultaciya" class="btn-primary h-10 px-4 text-[15px]">Заказать</a></div>
+          <div class="mt-auto pt-5 flex items-center justify-between gap-3"><p class="font-black text-[22px] leading-none tabular-nums">145 000 ₸</p><a href="#konsultaciya" data-tovar="Комплект «Для КРС»" class="btn-primary h-10 px-4 text-[15px]">Заказать</a></div>
         </div>
       </article>
       <article class="card lift overflow-hidden flex flex-col">
-        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/horses-steppe-2.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="675"><span class="absolute left-3 top-3 rounded-full bg-pulse text-ink text-[13px] font-bold px-2.5 py-1">Аккумулятор в подарок</span></div>
+        <div class="relative aspect-[4/3] overflow-hidden"><img decoding="async" src="assets/img/opt/horses-steppe-2-800.webp" srcset="assets/img/opt/horses-steppe-2-480.webp 480w, assets/img/opt/horses-steppe-2-640.webp 640w, assets/img/opt/horses-steppe-2-800.webp 800w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="900" height="675" alt="" class="w-full h-full object-cover" loading="lazy"><span class="absolute left-3 top-3 rounded-full bg-pulse text-ink text-[13px] font-bold px-2.5 py-1">Аккумулятор в подарок</span></div>
         <div class="p-5 flex flex-col flex-1">
           <p class="text-[13px] text-muted">Лошади · до 6&nbsp;га</p>
           <h3 class="font-extrabold text-[20px] leading-tight mt-1">Комплект «Для лошадей»</h3>
           <ul class="mt-3 space-y-1.5 text-[14px] text-muted">
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Генератор импульсов</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Проволока, шнур, верёвка</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Ворота, изоляторы</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Аккумулятор 12&nbsp;В</li>
+            <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Генератор импульсов</li>
+            <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Проволока, шнур, верёвка</li>
+            <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Ворота, изоляторы</li>
+            <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Аккумулятор 12&nbsp;В</li>
           </ul>
-          <div class="mt-auto pt-5 flex items-center justify-between gap-3"><p class="font-black text-[22px] leading-none tabular-nums">125 000 ₸</p><a href="#konsultaciya" class="btn-primary h-10 px-4 text-[15px]">Заказать</a></div>
+          <div class="mt-auto pt-5 flex items-center justify-between gap-3"><p class="font-black text-[22px] leading-none tabular-nums">125 000 ₸</p><a href="#konsultaciya" data-tovar="Комплект «Для лошадей»" class="btn-primary h-10 px-4 text-[15px]">Заказать</a></div>
         </div>
       </article>
       <article class="card lift overflow-hidden flex flex-col">
-        <div class="relative aspect-[4/3] overflow-hidden"><img src="assets/img/solar-energizer.jpg" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="586"><span class="absolute left-3 top-3 rounded-full bg-deep text-cream text-[13px] font-bold px-2.5 py-1">Без розетки</span></div>
+        <div class="relative aspect-[4/3] overflow-hidden"><img decoding="async" src="assets/img/opt/solar-energizer-800.webp" srcset="assets/img/opt/solar-energizer-480.webp 480w, assets/img/opt/solar-energizer-640.webp 640w, assets/img/opt/solar-energizer-800.webp 800w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="900" height="585" alt="" class="w-full h-full object-cover" loading="lazy"><span class="absolute left-3 top-3 rounded-full bg-deep text-cream text-[13px] font-bold px-2.5 py-1">Без розетки</span></div>
         <div class="p-5 flex flex-col flex-1">
           <p class="text-[13px] text-muted">Любые животные · дальние пастбища</p>
           <h3 class="font-extrabold text-[20px] leading-tight mt-1">Автономный комплект</h3>
           <ul class="mt-3 space-y-1.5 text-[14px] text-muted">
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Электропастух 15 или 25&nbsp;Дж</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Солнечная панель</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>MPPT-контроллер</li>
-            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>Аккумулятор 12&nbsp;В</li>
+            <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Электропастух 15 или 25&nbsp;Дж</li>
+            <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Солнечная панель</li>
+            <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>MPPT-контроллер</li>
+            <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Аккумулятор 12&nbsp;В</li>
           </ul>
           <div class="mt-auto pt-5 flex items-center justify-between gap-3"><p class="font-extrabold text-[17px] leading-tight">Цена по запросу</p><a href="#podbor" class="btn-secondary h-10 px-4 text-[15px]" data-preset-power="sun">Собрать</a></div>
         </div>
@@ -660,8 +548,8 @@ tailwind.config = {
       <div class="lg:sticky lg:top-28">
         <h2 class="h2 rv">Как это работает</h2>
         <p class="lead mt-3 rv">Электроизгородь — не стена, а граница, которую животное запоминает после первого касания. Импульс идёт по кругу: прибор, линия, животное, земля.</p>
-        <div class="rv mt-6 rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/insulator.jpg" alt="Изолятор на столбе держит проволоку электроизгороди" class="w-full h-full object-cover" loading="lazy" width="900" height="900"></div>
-        <a href="instrukcii.html" class="rv btn-outline mt-6">Схемы подключения<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+        <div class="rv mt-6 rounded-2xl overflow-hidden aspect-[4/3]"><img decoding="async" src="assets/img/opt/insulator-800.webp" srcset="assets/img/opt/insulator-480.webp 480w, assets/img/opt/insulator-640.webp 640w, assets/img/opt/insulator-800.webp 800w" sizes="(min-width:1024px) 50vw, (min-width:640px) 60vw, 88vw" width="900" height="900" alt="Изолятор на столбе держит проволоку электроизгороди" class="w-full h-full object-cover" loading="lazy"></div>
+        <a href="instrukcii.html" class="rv btn-outline mt-6">Схемы подключения<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
       </div>
     </div>
     <div class="lg:col-span-7 relative">
@@ -696,19 +584,19 @@ tailwind.config = {
 <section id="avtonomno" class="relative bg-deep text-cream scroll-mt-24 overflow-hidden">
   <div class="grid grid-cols-1 lg:grid-cols-2">
     <div class="relative min-h-[320px] lg:min-h-0">
-      <img src="assets/img/solar-line.jpg" alt="Солнечная панель на линии электроизгороди" class="absolute inset-0 w-full h-full object-cover" loading="lazy" width="1100" height="736">
+      <img decoding="async" src="assets/img/opt/solar-line-960.webp" srcset="assets/img/opt/solar-line-480.webp 480w, assets/img/opt/solar-line-640.webp 640w, assets/img/opt/solar-line-960.webp 960w" sizes="100vw" width="1100" height="736" alt="Солнечная панель на линии электроизгороди" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
       <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-deep/70 lg:from-transparent via-transparent lg:via-transparent lg:to-deep/80" aria-hidden="true"></div>
     </div>
     <div class="section px-5 md:px-12 lg:px-10 xl:px-20 2xl:px-24">
       <h2 class="h2 rv">Работает там, где нет розетки</h2>
       <p class="rv mt-4 text-cream/80 text-[17px] md:text-[18px] leading-[1.6] max-w-[52ch]">Дальнее пастбище, летняя стоянка, участок без сети — прибор питается от аккумулятора, а солнечная панель заряжает его днём. Возить аккумулятор на зарядку не нужно.</p>
       <dl class="rv-stagger mt-8 divide-y divide-cream/15 border-y border-cream/15">
-        <div class="py-4"><dt class="font-extrabold flex items-center gap-3"><i data-lucide="battery-charging" class="w-6 h-6 text-pulse shrink-0" aria-hidden="true"></i>Аккумулятор 12&nbsp;В</dt><dd class="text-cream/75 text-[15px] mt-1 pl-9">Запас энергии на ночь и пасмурные дни.</dd></div>
-        <div class="py-4"><dt class="font-extrabold flex items-center gap-3"><i data-lucide="sun" class="w-6 h-6 text-pulse shrink-0" aria-hidden="true"></i>Солнечная панель</dt><dd class="text-cream/75 text-[15px] mt-1 pl-9">Восполняет заряд, пока прибор работает.</dd></div>
-        <div class="py-4"><dt class="font-extrabold flex items-center gap-3"><i data-lucide="gauge" class="w-6 h-6 text-pulse shrink-0" aria-hidden="true"></i>MPPT-контроллер</dt><dd class="text-cream/75 text-[15px] mt-1 pl-9">Бережёт аккумулятор от перезаряда и глубокого разряда.</dd></div>
+        <div class="py-4"><dt class="font-extrabold flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-6 h-6 text-pulse shrink-0" aria-hidden="true" focusable="false"><path d="M15 7h1a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2" /><path d="M6 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h1" /><path d="m11 7-3 5h4l-3 5" /><line x1="22" x2="22" y1="11" y2="13" /></svg>Аккумулятор 12&nbsp;В</dt><dd class="text-cream/75 text-[15px] mt-1 pl-9">Запас энергии на ночь и пасмурные дни.</dd></div>
+        <div class="py-4"><dt class="font-extrabold flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-6 h-6 text-pulse shrink-0" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" /></svg>Солнечная панель</dt><dd class="text-cream/75 text-[15px] mt-1 pl-9">Восполняет заряд, пока прибор работает.</dd></div>
+        <div class="py-4"><dt class="font-extrabold flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-6 h-6 text-pulse shrink-0" aria-hidden="true" focusable="false"><path d="m12 14 4-4" /><path d="M3.34 19a10 10 0 1 1 17.32 0" /></svg>MPPT-контроллер</dt><dd class="text-cream/75 text-[15px] mt-1 pl-9">Бережёт аккумулятор от перезаряда и глубокого разряда.</dd></div>
       </dl>
       <div class="rv mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-3">
-        <a href="#podbor" class="btn-primary btn-lg" data-preset-power="sun">Собрать автономный комплект<i data-lucide="arrow-right" class="w-5 h-5" aria-hidden="true"></i></a>
+        <a href="#podbor" class="btn-primary btn-lg" data-preset-power="sun">Собрать автономный комплект<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
         <a href="https://wa.me/77054285707?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D0%B0%D0%B2%D1%82%D0%BE%D0%BD%D0%BE%D0%BC%D0%BD%D1%8B%D0%B9%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%20%D1%81%20%D1%81%D0%BE%D0%BB%D0%BD%D0%B5%D1%87%D0%BD%D0%BE%D0%B9%20%D0%BF%D0%B0%D0%BD%D0%B5%D0%BB%D1%8C%D1%8E" target="_blank" rel="noopener" class="btn-glass btn-lg"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Спросить в WhatsApp</a>
       </div>
       <div class="fence on-dark relative mt-10 mr-6" aria-hidden="true"><span class="post" style="left:0"></span><span class="post" style="left:50%"></span><span class="post" style="right:0"></span></div>
@@ -722,13 +610,13 @@ tailwind.config = {
     <div class="lg:col-span-5 rv">
       <h2 class="h2">Забрать в Алматы или получить в регионе</h2>
       <p class="lead mt-3">Основной ассортимент в наличии — отгружаем в день заказа.</p>
-      <a href="dostavka.html" class="link mt-5">Подробнее о доставке<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
+      <a href="dostavka.html" class="link mt-5">Подробнее о доставке<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-4 h-4" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
     </div>
     <dl class="lg:col-span-7 rv-stagger grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2">
-      <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><i data-lucide="map-pin" class="w-5 h-5 text-brand-dark" aria-hidden="true"></i>Самовывоз</dt><dd class="text-muted text-[15px] mt-2">Алматы, мкр. Атырау, 159/8, склад №&nbsp;1. Пн–Пт 10–18, Сб 10–16.</dd></div>
-      <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><i data-lucide="truck" class="w-5 h-5 text-brand-dark" aria-hidden="true"></i>Доставка по Казахстану и СНГ</dt><dd class="text-muted text-[15px] mt-2">Транспортными компаниями во все регионы, а также в Россию и страны СНГ. Стоимость считаем индивидуально, отправка после оплаты.</dd></div>
-      <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><i data-lucide="credit-card" class="w-5 h-5 text-brand-dark" aria-hidden="true"></i>Оплата</dt><dd class="text-muted text-[15px] mt-2">Наличными на складе или безналичным переводом по реквизитам для ИП и юрлиц.</dd></div>
-      <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><i data-lucide="store" class="w-5 h-5 text-brand-dark" aria-hidden="true"></i>На маркетплейсах</dt><dd class="text-muted text-[15px] mt-2">Привычнее покупать там? Мы есть на площадках:</dd>
+      <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 text-brand-dark" aria-hidden="true" focusable="false"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>Самовывоз</dt><dd class="text-muted text-[15px] mt-2">Алматы, мкр. Атырау, 159/8, склад №&nbsp;1. Пн–Пт 10–18, Сб 10–16.</dd></div>
+      <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 text-brand-dark" aria-hidden="true" focusable="false"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><path d="M15 18H9" /><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" /><circle cx="17" cy="18" r="2" /><circle cx="7" cy="18" r="2" /></svg>Доставка по Казахстану и СНГ</dt><dd class="text-muted text-[15px] mt-2">Транспортными компаниями во все регионы, а также в Россию и страны СНГ. Стоимость считаем индивидуально, отправка после оплаты.</dd></div>
+      <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 text-brand-dark" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" x2="22" y1="10" y2="10" /></svg>Оплата</dt><dd class="text-muted text-[15px] mt-2">Наличными на складе или безналичным переводом по реквизитам для ИП и юрлиц.</dd></div>
+      <div class="border-t border-line py-5"><dt class="flex items-center gap-2 font-extrabold text-[17px]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 text-brand-dark" aria-hidden="true" focusable="false"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" /></svg>На маркетплейсах</dt><dd class="text-muted text-[15px] mt-2">Привычнее покупать там? Мы есть на площадках:</dd>
         <dd class="mt-3 flex flex-wrap gap-2">
           <a href="https://elektropastuh.satu.kz/" target="_blank" rel="noopener" class="rounded-full border border-line px-3 py-1.5 text-[13px] font-bold hover:border-ink">Satu.kz</a>
           <a href="https://www.ozon.ru/product/elektropastuh-gigant-15-dzh-dlya-korov-ovets-loshadey-kabanov-1632680883/" target="_blank" rel="noopener" class="rounded-full border border-line px-3 py-1.5 text-[13px] font-bold hover:border-ink">Ozon · 4,8</a>
@@ -748,34 +636,35 @@ tailwind.config = {
       <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="btn-secondary mt-5"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Задать вопрос</a>
     </div>
     <div class="lg:col-span-7 rv divide-y divide-line border-y border-line">
-      <details open class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Какую мощность выбрать?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true"></i></summary><p class="pb-5 text-muted max-w-[70ch]">Для небольших загонов и спокойных животных достаточно 6,9&nbsp;Дж. Для стандартных хозяйств с КРС, лошадьми, овцами — 14,5–15&nbsp;Дж. Для больших периметров, густой травы и защиты от диких животных — 25&nbsp;Дж. Сомневаетесь — напишите нам площадь и вид животных.</p></details>
-      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Как рассчитать периметр по площади?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true"></i></summary><p class="pb-5 text-muted max-w-[70ch]">Периметр зависит от формы участка. Для квадратного участка 1&nbsp;га это около 400 м, 5&nbsp;га — около 900 м, 6&nbsp;га — около 980 м. Умножьте периметр на число линий — получите длину проводника. Вытянутый участок потребует больше.</p></details>
-      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Сколько линий нужно?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true"></i></summary><p class="pb-5 text-muted max-w-[70ch]">Крупным спокойным животным обычно хватает одной-двух линий. Мелким и активным — овцам, козам, свиньям — нужно больше линий и ниже к земле, либо готовая электросетка. Точное число и высоты подскажем при подборе.</p></details>
-      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Как сделать заземление?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true"></i></summary><p class="pb-5 text-muted max-w-[70ch]">Заземление — половина успеха: без него импульс слабый. Металлические штыри вбивают во влажный грунт и соединяют с клеммой заземления прибора. В сухом или каменистом грунте штырей нужно больше. Схема есть в инструкции к каждому прибору.</p></details>
-      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">12&nbsp;В, 220&nbsp;В или солнечная панель?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true"></i></summary><p class="pb-5 text-muted max-w-[70ch]">Есть розетка рядом — 220&nbsp;В. Нет — аккумулятор 12&nbsp;В. Пастбище далеко и надолго — аккумулятор плюс солнечная панель, чтобы не возить его на зарядку. Приборы 14,5–25&nbsp;Дж работают от обоих источников.</p></details>
-      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Сложно ли установить самому?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true"></i></summary><p class="pb-5 text-muted max-w-[70ch]">Нет. Стандартный комплект ставится за несколько часов: столбики, изоляторы, проводник, заземление, прибор. Мы консультируем по телефону и в WhatsApp на каждом этапе.</p></details>
-      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Какая гарантия и возврат?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true"></i></summary><p class="pb-5 text-muted max-w-[70ch]">GIGANT 15 — 1 год, Bekci — 2 года. Возврат и обмен в течение 14 дней по закону РК «О защите прав потребителей» при наличии чека и товарного вида.</p></details>
-      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Как и сколько идёт доставка?<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true"></i></summary><p class="pb-5 text-muted max-w-[70ch]">Самовывоз со склада в Алматы — в день заказа. По регионам Казахстана — транспортными компаниями после полной оплаты, стоимость и срок рассчитываем индивидуально. Отправляем также в Россию и страны СНГ.</p></details>
+      <details open class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Какую мощность выбрать?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="M12 5v14" /></svg></summary><p class="pb-5 text-muted max-w-[70ch]">Для небольших загонов и спокойных животных достаточно 6,9&nbsp;Дж. Для стандартных хозяйств с КРС, лошадьми, овцами — 14,5–15&nbsp;Дж. Для больших периметров, густой травы и защиты от диких животных — 25&nbsp;Дж. Сомневаетесь — напишите нам площадь и вид животных.</p></details>
+      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Как рассчитать периметр по площади?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="M12 5v14" /></svg></summary><p class="pb-5 text-muted max-w-[70ch]">Периметр зависит от формы участка. Для квадратного участка 1&nbsp;га это около 400 м, 5&nbsp;га — около 900 м, 6&nbsp;га — около 980 м. Умножьте периметр на число линий — получите длину проводника. Вытянутый участок потребует больше.</p></details>
+      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Сколько линий нужно?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="M12 5v14" /></svg></summary><p class="pb-5 text-muted max-w-[70ch]">Крупным спокойным животным обычно хватает одной-двух линий. Мелким и активным — овцам, козам, свиньям — нужно больше линий и ниже к земле, либо готовая электросетка. Точное число и высоты подскажем при подборе.</p></details>
+      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Как сделать заземление?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="M12 5v14" /></svg></summary><p class="pb-5 text-muted max-w-[70ch]">Заземление — половина успеха: без него импульс слабый. Металлические штыри вбивают во влажный грунт и соединяют с клеммой заземления прибора. В сухом или каменистом грунте штырей нужно больше. Схема есть в инструкции к каждому прибору.</p></details>
+      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">12&nbsp;В, 220&nbsp;В или солнечная панель?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="M12 5v14" /></svg></summary><p class="pb-5 text-muted max-w-[70ch]">Есть розетка рядом — 220&nbsp;В. Нет — аккумулятор 12&nbsp;В. Пастбище далеко и надолго — аккумулятор плюс солнечная панель, чтобы не возить его на зарядку. Приборы 14,5–25&nbsp;Дж работают от обоих источников.</p></details>
+      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Сложно ли установить самому?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="M12 5v14" /></svg></summary><p class="pb-5 text-muted max-w-[70ch]">Нет. Стандартный комплект ставится за несколько часов: столбики, изоляторы, проводник, заземление, прибор. Мы консультируем по телефону и в WhatsApp на каждом этапе.</p></details>
+      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Какая гарантия и возврат?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="M12 5v14" /></svg></summary><p class="pb-5 text-muted max-w-[70ch]">GIGANT 15 — 1 год, Bekci — 2 года. Возврат и обмен в течение 14 дней по закону РК «О защите прав потребителей» при наличии чека и товарного вида.</p></details>
+      <details class="py-1"><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">Как и сколько идёт доставка?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true" focusable="false"><path d="M5 12h14" /><path d="M12 5v14" /></svg></summary><p class="pb-5 text-muted max-w-[70ch]">Самовывоз со склада в Алматы — в день заказа. По регионам Казахстана — транспортными компаниями после полной оплаты, стоимость и срок рассчитываем индивидуально. Отправляем также в Россию и страны СНГ.</p></details>
     </div>
   </div>
 </section>
 
 <!-- ================= ФИНАЛЬНЫЙ CTA + ФОРМА ================= -->
 <section id="konsultaciya" class="relative bg-deep text-cream scroll-mt-24 overflow-hidden">
-  <img src="assets/img/steppe-horses-1920.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40" loading="lazy" width="1920" height="976" aria-hidden="true">
+  <img decoding="async" src="assets/img/opt/steppe-horses-1920-1440.webp" srcset="assets/img/opt/steppe-horses-1920-480.webp 480w, assets/img/opt/steppe-horses-1920-640.webp 640w, assets/img/opt/steppe-horses-1920-960.webp 960w, assets/img/opt/steppe-horses-1920-1440.webp 1440w, assets/img/opt/steppe-horses-1920-1920.webp 1920w" sizes="100vw" width="1920" height="976" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40" loading="lazy" aria-hidden="true">
   <div class="absolute inset-0 bg-gradient-to-b from-deep/70 via-deep/60 to-deep" aria-hidden="true"></div>
   <div class="relative container-site section grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
     <div class="lg:col-span-5 rv">
       <h2 class="h2">Опишите хозяйство&nbsp;— <span class="accent text-pulse font-bold tracking-normal">подберём</span> за один разговор</h2>
       <p class="mt-4 text-cream/80 text-[17px] md:text-[18px] leading-[1.6] max-w-[48ch]">Модель, число линий, проводник и питание. Перезвоним в рабочее время: Пн–Пт 10–18, Сб 10–16.</p>
       <ul class="mt-6 space-y-2 text-[15px] text-cream/85">
-        <li class="flex gap-2"><i data-lucide="check" class="w-5 h-5 text-pulse shrink-0" aria-hidden="true"></i>Без обязательств и предоплаты</li>
-        <li class="flex gap-2"><i data-lucide="check" class="w-5 h-5 text-pulse shrink-0" aria-hidden="true"></i>Ответ в рабочее время в течение часа</li>
-        <li class="flex gap-2"><i data-lucide="check" class="w-5 h-5 text-pulse shrink-0" aria-hidden="true"></i>Или сразу в WhatsApp: +7 (705) 428-57-07</li>
+        <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 text-pulse shrink-0" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Без обязательств и предоплаты</li>
+        <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 text-pulse shrink-0" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Ответ в рабочее время в течение часа</li>
+        <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-5 h-5 text-pulse shrink-0" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5" /></svg>Или сразу в WhatsApp: +7 (705) 428-57-07</li>
       </ul>
       <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="btn-glass mt-6"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Написать в WhatsApp</a>
     </div>
     <form id="leadForm" class="lg:col-span-7 rv bg-white text-ink rounded-2xl p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 gap-4" novalidate>
+      <div id="formTovar" hidden class="sm:col-span-2 flex items-center justify-between gap-3 rounded-xl bg-cream border border-brand/30 px-4 py-3 text-[15px]"><span>Товар: <strong data-tovar-name></strong></span><button type="button" id="formTovarClear" class="text-[14px] font-semibold text-brand-dark hover:underline">Убрать</button><input type="hidden" name="tovar" id="formTovarValue" value=""></div>
       <div><label for="fName" class="block text-[14px] font-semibold">Имя</label><input id="fName" type="text" name="name" class="input mt-1.5" placeholder="Как к вам обращаться…" required autocomplete="name" aria-describedby="nameErr"><p id="nameErr" class="mt-1.5 text-[14px] text-danger" hidden></p></div>
       <div><label for="fPhone" class="block text-[14px] font-semibold">Телефон</label><input id="fPhone" type="tel" name="phone" class="input mt-1.5" placeholder="+7 (705) 000-00-00" required inputmode="tel" autocomplete="tel" aria-describedby="phoneErr"><p id="phoneErr" class="mt-1.5 text-[14px] text-danger" hidden></p></div>
       <div class="sm:col-span-2">
@@ -794,10 +683,10 @@ tailwind.config = {
       <div><label for="fPower" class="block text-[14px] font-semibold">Питание</label><select id="fPower" name="power" class="input mt-1.5" autocomplete="off"><option>220&nbsp;В</option><option>12&nbsp;В аккумулятор</option><option>Солнечная панель</option><option>Не знаю</option></select></div>
       <div class="sm:col-span-2"><label class="flex items-start gap-3 text-[14px] text-muted cursor-pointer"><input type="checkbox" name="consent" class="mt-1 w-4 h-4 accent-[#3E7A34] shrink-0" required aria-describedby="consentErr"><span>Согласен на обработку персональных данных. <a href="policy.html" class="underline hover:text-ink">Политика конфиденциальности</a></span></label><p id="consentErr" class="mt-1.5 text-[14px] text-danger" hidden></p></div>
       <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-3">
-        <button type="submit" class="btn-primary btn-lg">Получить подбор</button>
-        <span class="text-[14px] text-muted">Перезвоним в рабочее время</span>
+        <button type="submit" class="btn-primary btn-lg"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5" width="20" height="20">Отправить в WhatsApp</button>
+        <span class="text-[14px] text-muted">Заявка придёт менеджеру в WhatsApp, ответим в рабочее время</span>
       </div>
-      <p id="formOk" hidden aria-live="polite" tabindex="-1" class="sm:col-span-2 rounded-xl bg-cream border border-brand/40 p-4 text-[15px]"><strong>Спасибо!</strong> Заявка принята. Перезвоним в рабочее время: Пн–Пт 10–18, Сб 10–16.</p>
+      <p id="formOk" hidden aria-live="polite" tabindex="-1" class="sm:col-span-2 rounded-xl bg-cream border border-brand/40 p-4 text-[15px]"><strong>Открываем WhatsApp.</strong> Сообщение с вашими данными уже набрано — нажмите «Отправить». Если WhatsApp не открылся, позвоните: <a href="tel:+77054285707" class="font-semibold underline">+7 (705) 428-57-07</a>.</p>
     </form>
   </div>
 </section>
@@ -807,7 +696,7 @@ tailwind.config = {
 <footer class="bg-deep text-cream/80 border-t border-cream/10">
   <div class="container-site py-12 md:py-16 grid grid-cols-2 md:grid-cols-4 gap-8">
     <div class="col-span-2 md:col-span-1">
-      <a href="#top" class="flex items-center gap-3"><img src="assets/img/logo-gigant.png" alt="" width="44" height="44" class="w-11 h-11 rounded-full"><span class="font-black text-[18px] text-cream">GIGANT Agro</span></a>
+      <a href="#top" class="flex items-center gap-3"><img decoding="async" src="assets/img/opt/logo-gigant-160.webp" width="160" height="160" alt="" class="w-11 h-11 rounded-full"><span class="font-black text-[18px] text-cream">GIGANT Agro</span></a>
       <ul class="mt-4 text-[15px]">
         <li><a href="tel:+77054285707" class="block py-1.5 hover:text-cream">+7 (705) 428-57-07</a></li>
         <li><a href="tel:+77757716024" class="block py-1.5 hover:text-cream">+7 (775) 771-60-24</a></li>
@@ -870,139 +759,12 @@ tailwind.config = {
 
 <!-- липкая панель действий (mobile) -->
 <nav class="md:hidden fixed bottom-0 inset-x-0 z-bar bg-white/95 backdrop-blur-xl border-t border-line grid grid-cols-4 pb-[env(safe-area-inset-bottom)]" aria-label="Быстрые действия">
-  <a href="#catalog" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[13px] font-medium"><i data-lucide="layout-grid" class="w-6 h-6" aria-hidden="true"></i>Каталог</a>
-  <a href="#podbor" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[13px] font-medium"><i data-lucide="sliders-horizontal" class="w-6 h-6" aria-hidden="true"></i>Подбор</a>
+  <a href="#catalog" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[13px] font-medium"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-6 h-6" aria-hidden="true" focusable="false"><rect width="7" height="7" x="3" y="3" rx="1" /><rect width="7" height="7" x="14" y="3" rx="1" /><rect width="7" height="7" x="14" y="14" rx="1" /><rect width="7" height="7" x="3" y="14" rx="1" /></svg>Каталог</a>
+  <a href="#podbor" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[13px] font-medium"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-6 h-6" aria-hidden="true" focusable="false"><line x1="21" x2="14" y1="4" y2="4" /><line x1="10" x2="3" y1="4" y2="4" /><line x1="21" x2="12" y1="12" y2="12" /><line x1="8" x2="3" y1="12" y2="12" /><line x1="21" x2="16" y1="20" y2="20" /><line x1="12" x2="3" y1="20" y2="20" /><line x1="14" x2="14" y1="2" y2="6" /><line x1="8" x2="8" y1="10" y2="14" /><line x1="16" x2="16" y1="18" y2="22" /></svg>Подбор</a>
   <a href="https://wa.me/77054285707" target="_blank" rel="noopener" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[13px] font-medium text-brand-dark"><img src="assets/icons/whatsapp-3E7A34.svg" alt="" class="w-6 h-6" width="24" height="24">WhatsApp</a>
-  <a href="tel:+77054285707" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[13px] font-semibold bg-pulse"><i data-lucide="phone" class="w-6 h-6" aria-hidden="true"></i>Позвонить</a>
+  <a href="tel:+77054285707" class="flex flex-col items-center justify-center gap-1 h-[68px] text-[13px] font-semibold bg-pulse"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide w-6 h-6" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>Позвонить</a>
 </nav>
 
-<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
-<script>
-(function(){
-  lucide.createIcons();
-  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // --- навигация: состояние при прокрутке + параллакс-гашение hero
-  const nav=document.getElementById('nav'), hero=document.getElementById('heroContent');
-  let ticking=false;
-  const onScroll=()=>{ if(ticking) return; ticking=true; requestAnimationFrame(()=>{
-    const y=window.scrollY; nav.classList.toggle('scrolled',y>24);
-    if(hero&&!reduce){ const p=Math.min(y/700,1); hero.style.transform='translateY('+(y*0.18)+'px)'; hero.style.opacity=String(1-p*0.9); }
-    ticking=false; }); };
-  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
-
-  // --- слайдеры на мобильном: индикатор прокрутки
-  [['catScroll','catProgress'],['kitScroll','kitProgress']].forEach(function(pair){
-    var cs=document.getElementById(pair[0]), pg=document.getElementById(pair[1]);
-    if(!cs||!pg) return;
-    var upd=function(){
-      if(cs.scrollWidth<=cs.clientWidth+1){ pg.style.width='100%'; pg.style.transform='none'; return; }
-      var ratio=cs.clientWidth/cs.scrollWidth;
-      pg.style.width=(ratio*100)+'%';
-      pg.style.transform='translateX('+((cs.scrollLeft/cs.scrollWidth)/ratio*100)+'%)';
-    };
-    upd(); cs.addEventListener('scroll',upd,{passive:true}); window.addEventListener('resize',upd);
-  });
-
-  // --- бегущая строка: пауза
-  const mq=document.querySelector('.marquee'), mqBtn=document.getElementById('marqueeToggle');
-  if(mq&&mqBtn) mqBtn.addEventListener('click',()=>{const paused=mq.classList.toggle('paused'); mqBtn.setAttribute('aria-pressed',String(paused)); mqBtn.setAttribute('aria-label',paused?'Запустить бегущую строку':'Остановить бегущую строку'); mqBtn.innerHTML='<i data-lucide="'+(paused?'play':'pause')+'" class="w-4 h-4" aria-hidden="true"></i>'; lucide.createIcons();});
-
-  // --- мобильное меню
-  const burger=document.getElementById('burger'), mobileMenu=document.getElementById('mobileMenu');
-  if(burger&&mobileMenu){
-  const setMenu=open=>{mobileMenu.hidden=!open;burger.setAttribute('aria-expanded',String(open)); if(open){mobileMenu.querySelector('a').focus();} else {burger.focus();}};
-  burger.addEventListener('click',()=>setMenu(mobileMenu.hidden));
-  mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.hidden=true;burger.setAttribute('aria-expanded','false');}));
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!mobileMenu.hidden) setMenu(false);});
-  document.addEventListener('click',e=>{if(!mobileMenu.hidden&&!mobileMenu.contains(e.target)&&!burger.contains(e.target)){mobileMenu.hidden=true;burger.setAttribute('aria-expanded','false');}});
-  }
-
-  // --- scroll reveal (контент видим без JS; JS только добавляет вход)
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}}),{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
-  document.querySelectorAll('.rv,.rv-stagger').forEach(el=>io.observe(el));
-  // страховка: всё, что не попало в наблюдатель за 2,5 с, показать
-  setTimeout(()=>document.querySelectorAll('.rv:not(.is-in),.rv-stagger:not(.is-in)').forEach(el=>{const r=el.getBoundingClientRect(); if(r.top<innerHeight) el.classList.add('is-in');}),2500);
-
-  // --- группы чипов (одиночный выбор)
-  function singleSelect(groupId,onChange){
-    const g=document.getElementById(groupId); if(!g) return;
-    g.addEventListener('click',e=>{const b=e.target.closest('button[data-v]'); if(!b) return;
-      g.querySelectorAll('button[data-v]').forEach(x=>x.setAttribute('aria-pressed','false'));
-      b.setAttribute('aria-pressed','true'); onChange&&onChange(b.dataset.v);});
-  }
-  const pick={animal:'krs',unit:'ha',power:'220'};
-  singleSelect('pickAnimal',v=>pick.animal=v);
-  singleSelect('pickPower',v=>pick.power=v);
-  const unitGroup=document.getElementById('pickUnit');
-  if(unitGroup) unitGroup.addEventListener('click',e=>{const b=e.target.closest('button[data-v]'); if(!b) return;
-    unitGroup.querySelectorAll('button').forEach(x=>{x.setAttribute('aria-pressed','false');x.classList.remove('bg-ink','text-white');});
-    b.setAttribute('aria-pressed','true'); b.classList.add('bg-ink','text-white'); pick.unit=b.dataset.v;
-    document.getElementById('pickArea').value=pick.unit==='ha'?5:900;});
-  document.querySelectorAll('[data-preset-power]').forEach(a=>a.addEventListener('click',()=>{
-    const btn=document.querySelector('#pickPower button[data-v="'+a.dataset.presetPower+'"]'); btn&&btn.click();}));
-
-  // --- правила подбора (стартовые, подтвердить у заказчика)
-  const ANIMAL={krs:'КРС',horse:'лошади',sheep:'овцы и козы',pig:'свиньи',bird:'птица',wild:'защита от диких животных'};
-  const POWER={'220':'220 В','12':'12\u00a0В аккумулятор','sun':'солнечная панель'};
-  function recommend(a,ha,power){
-    let r;
-    if(a==='wild'||ha>6) r={model:'Bekci 25\u00a0Дж + комплектующие',price:'от 145 000 ₸',kit:'Прибор, проволока 1,6\u00a0мм, изоляторы и заземление под ваш периметр.',why:'Большой периметр или дикие животные — нужен запас мощности.'};
-    else if(a==='sheep'&&ha<=1) r={model:'Комплект «Для овец», 1\u00a0га',price:'125 000 ₸',kit:'Генератор, проводник, изоляторы, ворота, аккумулятор в подарок.',why:''};
-    else if(a==='krs'&&ha<=5) r={model:'Комплект «Для КРС», 5\u00a0га',price:'145 000 ₸',kit:'Генератор, аккумулятор 12\u00a0В 7\u00a0Ач, проводник 1000 м, изоляторы, предупреждающие таблички.',why:''};
-    else if(a==='horse'&&ha<=6) r={model:'Комплект «Для лошадей», 6\u00a0га',price:'125 000 ₸',kit:'Генератор, проволока, шнур, верёвка, ворота, изоляторы, аккумулятор в подарок.',why:''};
-    else if(a==='pig'||a==='bird') r={model:'GIGANT 15\u00a0Дж + сетка или шнур',price:'от 105 000 ₸',kit:'Прибор, электросетка или шнур 6 жил, изоляторы — количество посчитаем по периметру.',why:''};
-    else r={model:'GIGANT 15\u00a0Дж + комплектующие',price:'от 105 000 ₸',kit:'Прибор, проводник, изоляторы, заземление под ваш участок.',why:'Площадь больше стандартного комплекта — соберём под периметр.'};
-    r.power=power==='sun'?'Питание: аккумулятор 12\u00a0В + солнечная панель и MPPT-контроллер — мощность панели подберём.':power==='12'?'Питание: аккумулятор 12\u00a0В (в готовых комплектах уже есть).':'Питание: от сети 220\u00a0В, адаптер в комплекте.';
-    return r;
-  }
-  const pickGo=document.getElementById('pickGo');
-  if(pickGo) pickGo.addEventListener('click',()=>{
-    const val=parseFloat(document.getElementById('pickArea').value)||0;
-    const ha=pick.unit==='ha'?val:Math.pow(val/4,2)/10000;
-    const r=recommend(pick.animal,ha,pick.power);
-    document.getElementById('resModel').textContent=r.model;
-    document.getElementById('resKit').textContent=r.kit;
-    document.getElementById('resPower').textContent=r.power;
-    document.getElementById('resWhy').textContent=r.why;
-    document.getElementById('resPrice').textContent=r.price;
-    const areaTxt=pick.unit==='ha'?val+' га':val+' м периметра';
-    const msg='Здравствуйте! Хочу подобрать электропастух. Животные: '+ANIMAL[pick.animal]+', '+areaTxt+', питание: '+POWER[pick.power]+'. Сайт предложил: '+r.model+'.';
-    document.getElementById('resWa').href='https://wa.me/77054285707?text='+encodeURIComponent(msg);
-    const res=document.getElementById('pickResult'); res.classList.add('has-result'); document.getElementById('resEmpty').hidden=true; document.getElementById('resBody').hidden=false;
-    if(window.innerWidth<1024) res.scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'}); res.focus({preventScroll:true});
-  });
-
-  // --- табы по животным
-  const tabs=document.getElementById('animalTabs');
-  if(tabs) tabs.addEventListener('keydown',e=>{const list=[...tabs.querySelectorAll('[role="tab"]')]; const i=list.indexOf(document.activeElement); if(i<0) return;
-    if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault(); const j=(i+(e.key==='ArrowRight'?1:-1)+list.length)%list.length; list[j].focus(); list[j].click();}});
-  if(tabs) tabs.addEventListener('click',e=>{const b=e.target.closest('[role="tab"]'); if(!b) return;
-    tabs.querySelectorAll('[role="tab"]').forEach(t=>{t.setAttribute('aria-selected','false');t.setAttribute('tabindex','-1');document.getElementById(t.getAttribute('aria-controls')).hidden=true;});
-    b.setAttribute('aria-selected','true'); b.setAttribute('tabindex','0'); const p=document.getElementById(b.getAttribute('aria-controls')); p.hidden=false;
-    p.classList.remove('tabpanel'); void p.offsetWidth; p.classList.add('tabpanel');});
-
-  // --- чипы в форме (множественный выбор) → скрытое поле
-  const fa=document.getElementById('formAnimals'), faVal=document.getElementById('formAnimalsValue');
-  if(fa&&faVal) fa.addEventListener('click',e=>{const b=e.target.closest('button[data-v]'); if(!b) return;
-    b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');
-    faVal.value=[...fa.querySelectorAll('[aria-pressed="true"]')].map(x=>x.dataset.v).join(', ');});
-
-  // --- форма: инлайн-ошибки, состояние отправки (прототип, без бэкенда)
-  const form=document.getElementById('leadForm'), formOk=document.getElementById('formOk');
-  if(form&&formOk){
-  const setErr=(el,id,msg)=>{const err=document.getElementById(id); if(msg){el.setAttribute('aria-invalid','true'); err.textContent=msg; err.hidden=false;} else {el.removeAttribute('aria-invalid'); err.hidden=true;}};
-  const validate=()=>{const f=form.elements; const digits=f.phone.value.replace(/\D/g,''); let first=null;
-    [[f.name,'nameErr',f.name.value.trim()?'':'Укажите имя — так мы будем к вам обращаться.'],
-     [f.phone,'phoneErr',digits.length>=10?'':'Введите номер телефона, например +7 705 000-00-00.'],
-     [f.consent,'consentErr',f.consent.checked?'':'Нужно согласие на обработку данных.']
-    ].forEach(([el,id,msg])=>{setErr(el,id,msg); if(msg&&!first) first=el;}); return first;};
-  ['name','phone','consent'].forEach(n=>form.elements[n].addEventListener('input',()=>{if(form.elements[n].getAttribute('aria-invalid')) validate();}));
-  form.addEventListener('submit',e=>{e.preventDefault(); const first=validate(); if(first){first.focus(); return;}
-    const btn=form.querySelector('button[type=submit]'); btn.disabled=true; btn.textContent='Отправляем…';
-    setTimeout(()=>{formOk.hidden=false; btn.textContent='Заявка отправлена'; formOk.focus({preventScroll:true});},700);});
-  }
-})();
-</script>
+<script src="assets/js/site.js?v=38bc390a" defer></script>
 </body>
 </html>

@@ -13,3 +13,7 @@ password.md
 
 # attached skill file (not part of the site)
 premium-web-design-skill.md
+
+# lighthouse reports
+.audit/
+node_modules/

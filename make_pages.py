@@ -6,6 +6,10 @@ os.makedirs(OUT,exist_ok=True)
 def w(name, html): open(os.path.join(OUT,name),'w',encoding='utf-8').write(html.strip()+'\n'); print('  pages/'+name)
 
 WA='https://wa.me/77054285707'
+def order(name):
+    import urllib.parse, html as _h
+    return 'kontakty.html?tovar='+urllib.parse.quote(_h.unescape(name).replace('\xa0',' '))+'#leadForm'
+
 def wa(text): 
     import urllib.parse; return WA+'?text='+urllib.parse.quote(text)
 
@@ -69,7 +73,7 @@ def product_card(img, alt, name, sub, price, specs, href=None, badge=None, badge
     <p class="text-muted text-[14px] mt-2">{sub}</p>
     <dl class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2">{spec_html}</dl>
     <div class="mt-auto pt-5 flex flex-wrap gap-2">
-      <a href="podbor.html" class="btn-primary h-10 px-4 text-[15px]">Заказать</a>
+      <a href="{order(name)}" class="btn-primary h-10 px-4 text-[15px]">Заказать</a>
       <a href="{wa('Здравствуйте! Интересует '+name.replace('&nbsp;',' '))}" target="_blank" rel="noopener" class="btn-outline h-10 px-3 text-[15px]"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5" width="20" height="20">WhatsApp</a>
     </div>
   </div>
@@ -129,7 +133,7 @@ def kit_card(k):
     <ul class="mt-3 space-y-1.5 text-[14px] text-muted">{li}</ul>
     <div class="mt-auto pt-5 flex items-center justify-between gap-3">
       <p class="font-black text-[20px] leading-none tabular-nums">{k['price']}</p>
-      <a href="podbor.html" class="btn-primary h-10 px-4 text-[15px]">Заказать</a>
+      <a href="{order(k['name'])}" class="btn-primary h-10 px-4 text-[15px]">Заказать</a>
     </div>
   </div>
 </article>'''
@@ -160,7 +164,7 @@ w('catalog-elektropastuhi.html', f'''
 {crumbs([('Главная','index.html'),('Каталог','catalog.html'),('Электропастухи',None)])}
 {page_head('Электропастухи', 'Четыре модели от 6,9 до 25&nbsp;Дж. Мощность выбирают по длине линии, густоте травы и виду животных: чем длиннее периметр и плотнее растительность, тем больше джоулей нужно.')}
 <section class="container-site mt-8 md:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
-  <aside class="lg:col-span-3">
+  <div class="lg:col-span-3">
     <div class="lg:sticky lg:top-28 card p-5">
       <p class="font-extrabold text-[17px]">Подобрать по задаче</p>
       <ul class="mt-4 space-y-2.5 text-[15px]">
@@ -171,7 +175,7 @@ w('catalog-elektropastuhi.html', f'''
       <a href="podbor.html" class="btn-primary w-full mt-5">Подобрать за минуту</a>
       <a href="kak-vybrat.html" class="link mt-4">Как выбрать электропастух<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
     </div>
-  </aside>
+  </div>
   <div class="lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
 {cards}{helper_card()}
   </div>
@@ -254,6 +258,7 @@ spec_rows=''.join(f'<div class="flex justify-between gap-6 border-b border-line 
 w('product-gigant-15.html', f'''
 <main id="top">
 {crumbs([('Главная','index.html'),('Каталог','catalog.html'),('Электропастухи','catalog-elektropastuhi.html'),('GIGANT 15&nbsp;Дж',None)])}
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"Product","name":"Электропастух GIGANT 15 Дж","brand":{{"@type":"Brand","name":"GIGANT"}},"category":"Электропастухи","image":"https://farik9797.github.io/gigant-agro-site/assets/img/product-gigant15.jpg","description":"Генератор импульсов для электроизгороди: 15 Дж, 12 000 В, питание 220 В и 12 В, пульт ДУ, гарантия 1 год.","offers":{{"@type":"Offer","price":"105000","priceCurrency":"KZT","availability":"https://schema.org/InStock","url":"https://farik9797.github.io/gigant-agro-site/product-gigant-15.html","seller":{{"@type":"Organization","name":"GIGANT Agro"}}}}}}</script>
 <section class="container-site mt-6 md:mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
   <div class="lg:col-span-7">
     <div class="card overflow-hidden">
@@ -277,7 +282,7 @@ w('product-gigant-15.html', f'''
       <div class="card p-3 text-center"><p class="font-black text-[20px]">220/12</p><p class="text-[12px] text-muted mt-0.5">В, питание</p></div>
     </div>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <a href="podbor.html" class="btn-primary btn-lg">Заказать</a>
+      <a href="{order('Электропастух GIGANT 15 Дж')}" class="btn-primary btn-lg">Заказать</a>
       <a href="{wa('Здравствуйте! Интересует электропастух GIGANT 15 Дж за 105 000 ₸.')}" target="_blank" rel="noopener" class="btn-secondary btn-lg"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Спросить в WhatsApp</a>
     </div>
     <ul class="mt-6 space-y-2 text-[15px] text-muted">
@@ -384,7 +389,7 @@ w('podbor.html', f'''
             <p id="resPower" class="mt-1 text-muted"></p>
             <p id="resWhy" class="mt-2 text-[14px] text-muted"></p>
             <div class="mt-5 flex flex-col gap-2">
-              <a href="kontakty.html" class="btn-primary">Заказать</a>
+              <a id="resOrder" href="kontakty.html#leadForm" class="btn-primary">Заказать</a>
               <a id="resWa" href="#" target="_blank" rel="noopener" class="btn-secondary"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Обсудить в WhatsApp</a>
             </div>
           </div>
@@ -423,13 +428,13 @@ w('kak-vybrat.html', f'''
 {crumbs([('Главная','index.html'),('Как выбрать электропастух',None)])}
 {page_head('Как выбрать электропастух', 'Шесть параметров решают всё: мощность, периметр, число линий, проводник, заземление и питание. Ниже — как их определить для своего хозяйства.')}
 <section class="container-site mt-8 md:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-  <aside class="lg:col-span-3">
+  <div class="lg:col-span-3">
     <nav aria-label="Содержание" class="lg:sticky lg:top-28 card p-5">
       <p class="font-extrabold text-[15px]">Содержание</p>
       <ol class="mt-3 space-y-2 text-[15px] text-muted list-decimal list-inside">{toc_html}</ol>
       <a href="podbor.html" class="btn-primary w-full mt-5">Подобрать за минуту</a>
     </nav>
-  </aside>
+  </div>
   <div class="lg:col-span-9 space-y-10">
     <article id="power" class="scroll-mt-28"><h2 class="h3">Мощность в джоулях</h2>
       {prose('<p class="mt-3">Джоуль — это энергия одного импульса. Чем длиннее линия и гуще трава, которая касается проводника, тем больше энергии теряется по дороге и тем мощнее нужен прибор.</p><p class="mt-3">Ориентир: небольшой загон со спокойными животными — 6,9&nbsp;Дж; стандартное хозяйство с КРС, лошадьми или овцами — 14,5–15&nbsp;Дж; большой периметр, густая растительность и защита от диких животных — 25&nbsp;Дж. Запас мощности лишним не бывает, недостаток — бывает.</p>')}
@@ -580,7 +585,7 @@ w('garantiya.html', f'''
       </div>
     </article>
   </div>
-  <aside class="lg:col-span-5">
+  <div class="lg:col-span-5">
     <div class="lg:sticky lg:top-28 card p-6">
       <p class="font-extrabold text-[17px]">Что подготовить</p>
       <ul class="mt-4 space-y-2.5 text-[15px] text-muted">
@@ -591,7 +596,7 @@ w('garantiya.html', f'''
       </ul>
       <p class="mt-5 text-[14px] text-muted">Точные сроки проверки и порядок возврата денег согласуем с заказчиком и опубликуем здесь.</p>
     </div>
-  </aside>
+  </div>
 </section>
 {cta_band('Прибор не бьёт?','Перед возвратом проверим вместе заземление, изоляторы и траву на линии. Чаще всего проблема решается за один разговор.')}
 </main>''')
@@ -617,7 +622,7 @@ w('o-kompanii.html', f'''
       </ol>
     </article>
   </div>
-  <aside class="lg:col-span-5 space-y-5">
+  <div class="lg:col-span-5 space-y-5">
     <div class="rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/why-cow-fence.jpg" alt="Коровы на пастбище за линиями электроизгороди" class="w-full h-full object-cover" loading="lazy" width="1920" height="1115"></div>
     <div class="card p-6">
       <p class="font-extrabold text-[17px]">Коротко</p>
@@ -638,7 +643,7 @@ w('o-kompanii.html', f'''
         <a href="https://www.wildberries.ru/catalog/694923616/detail.aspx" target="_blank" rel="noopener" class="chip h-10">Wildberries</a>
       </div>
     </div>
-  </aside>
+  </div>
 </section>
 {cta_band('Оптовым покупателям','Работаем с хозяйствами и перепродажей. Напишите объём и позиции — пришлём условия.')}
 </main>''')
@@ -677,6 +682,7 @@ w('kontakty.html', f'''
     <form id="leadForm" class="card p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 gap-4" novalidate>
       <h2 class="sm:col-span-2 h3">Оставить заявку</h2>
       <p class="sm:col-span-2 text-muted text-[15px] -mt-2">Опишите хозяйство — подберём модель, число линий и питание. Перезвоним в рабочее время.</p>
+      <div id="formTovar" hidden class="sm:col-span-2 flex items-center justify-between gap-3 rounded-xl bg-cream border border-brand/30 px-4 py-3 text-[15px]"><span>Товар: <strong data-tovar-name></strong></span><button type="button" id="formTovarClear" class="text-[14px] font-semibold text-brand-dark hover:underline">Убрать</button><input type="hidden" name="tovar" id="formTovarValue" value=""></div>
       <div><label for="fName" class="block text-[14px] font-semibold">Имя</label><input id="fName" type="text" name="name" class="input mt-1.5" placeholder="Как к вам обращаться…" required autocomplete="name" aria-describedby="nameErr"><p id="nameErr" class="mt-1.5 text-[14px] text-danger" hidden></p></div>
       <div><label for="fPhone" class="block text-[14px] font-semibold">Телефон</label><input id="fPhone" type="tel" name="phone" class="input mt-1.5" placeholder="+7 (705) 000-00-00" required inputmode="tel" autocomplete="tel" aria-describedby="phoneErr"><p id="phoneErr" class="mt-1.5 text-[14px] text-danger" hidden></p></div>
       <div class="sm:col-span-2">
@@ -695,10 +701,10 @@ w('kontakty.html', f'''
       <div><label for="fPower" class="block text-[14px] font-semibold">Питание</label><select id="fPower" name="power" class="input mt-1.5" autocomplete="off"><option>220 В</option><option>12 В аккумулятор</option><option>Солнечная панель</option><option>Не знаю</option></select></div>
       <div class="sm:col-span-2"><label class="flex items-start gap-3 text-[14px] text-muted cursor-pointer"><input type="checkbox" name="consent" class="mt-1 w-4 h-4 accent-[#3E7A34] shrink-0" required aria-describedby="consentErr"><span>Согласен на обработку персональных данных. <a href="policy.html" class="underline hover:text-ink">Политика конфиденциальности</a></span></label><p id="consentErr" class="mt-1.5 text-[14px] text-danger" hidden></p></div>
       <div class="sm:col-span-2 flex flex-col sm:flex-row sm:items-center gap-3">
-        <button type="submit" class="btn-primary btn-lg">Отправить заявку</button>
-        <span class="text-[14px] text-muted">Перезвоним в рабочее время</span>
+        <button type="submit" class="btn-primary btn-lg"><img src="assets/icons/whatsapp-16191C.svg" alt="" class="w-5 h-5" width="20" height="20">Отправить в WhatsApp</button>
+        <span class="text-[14px] text-muted">Заявка придёт менеджеру в WhatsApp, ответим в рабочее время</span>
       </div>
-      <p id="formOk" hidden aria-live="polite" tabindex="-1" class="sm:col-span-2 rounded-xl bg-cream border border-brand/40 p-4 text-[15px]"><strong>Спасибо!</strong> Заявка принята. Перезвоним в рабочее время: Пн–Пт 10–18, Сб 10–16.</p>
+      <p id="formOk" hidden aria-live="polite" tabindex="-1" class="sm:col-span-2 rounded-xl bg-cream border border-brand/40 p-4 text-[15px]"><strong>Открываем WhatsApp.</strong> Сообщение с вашими данными уже набрано — нажмите «Отправить». Если WhatsApp не открылся, позвоните: <a href="tel:+77054285707" class="font-semibold underline">+7 (705) 428-57-07</a>.</p>
     </form>
   </div>
 </section>
@@ -726,7 +732,7 @@ w('faq.html', f'''
 {crumbs([('Главная','index.html'),('Вопросы и ответы',None)])}
 {page_head('Вопросы и ответы', 'Что чаще всего спрашивают перед покупкой электропастуха. Не нашли свой вопрос — напишите в WhatsApp, отвечаем в рабочее время в течение часа.')}
 <section class="container-site mt-8 md:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
-  <aside class="lg:col-span-4">
+  <div class="lg:col-span-4">
     <div class="lg:sticky lg:top-28 card p-6">
       <p class="font-extrabold text-[17px]">Спросить напрямую</p>
       <p class="text-muted text-[15px] mt-2">Опишите хозяйство — ответим по вашей ситуации, а не общими словами.</p>
@@ -734,7 +740,7 @@ w('faq.html', f'''
       <a href="tel:+77054285707" class="btn-outline w-full mt-2"><i data-lucide="phone" class="w-5 h-5" aria-hidden="true"></i>+7 (705) 428-57-07</a>
       <a href="kak-vybrat.html" class="link mt-5">Подробный гид по выбору<i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i></a>
     </div>
-  </aside>
+  </div>
   <div class="lg:col-span-8 divide-y divide-line border-y border-line">{faq_items}</div>
 </section>
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{faq_ld}]}}</script>
