@@ -163,28 +163,80 @@ PRIBORY=[
       ld='Генератор импульсов для электроизгороди: 6,9 Дж, 9 200 В, питание 12 В и 220 В, гарантия 2 года.'),
 ]
 
+# Готовые комплекты. Состав и количества — с инфографики заказчика на витрине Satu («В комплект входит»), цены и опт — оттуда же.
+_GEN4=[('Генератор','GIGANT SHQ-Q4, 4 Дж, 12 000 В'),('Питание генератора','Аккумулятор 12 В или сеть 220 В'),('Управление','Пульт ДУ, регулировка мощности'),
+       ('Индикация','Световая: питание и импульс'),('Шнур','6 жил, 6 × 0,16 мм, проводник Zn'),('Сопротивление шнура','5,5 Ом/м'),('Нагрузка на разрыв','75 кг')]
+_SHOT_GEN=('assets/img/kit-generator-4j.jpg','Генератор импульсов GIGANT 4 Дж: разъёмы, индикация, пульт, адаптер и зажимы')
+_SHOT_INSTALL=('assets/img/kit-ustanovka.jpg','Принцип установки: изоляторы на столбах, шнур по периметру, генератор и табличка')
 KITS=[
- dict(img='assets/img/animal-sheep.jpg',alt='Овцы за электросеткой',name='Комплект «Для овец»',sub='Овцы и козы · до 1 га',price='125 000 ₸',
-      items=['Генератор импульсов','Проводник и изоляторы','Ворота','Аккумулятор 12 В']),
- dict(img='assets/img/cattle-meadow.jpg',alt='Коровы на пастбище',name='Комплект «Для КРС»',sub='КРС · до 5 га',price='145 000 ₸',
-      items=['Генератор импульсов','Аккумулятор 12 В, 7 Ач','Проводник 1000 м, изоляторы','Предупреждающие таблички']),
- dict(img='assets/img/horses-steppe-2.jpg',alt='Лошади на пастбище',name='Комплект «Для лошадей»',sub='Лошади · до 6 га',price='125 000 ₸',
-      items=['Генератор импульсов','Проволока, шнур, верёвка','Ворота и изоляторы','Аккумулятор 12 В']),
- dict(img='assets/img/solar-energizer.jpg',alt='Электропастух с солнечной панелью',name='Автономный комплект',sub='Любые животные · дальние пастбища',price='Цена по запросу',
-      items=['Электропастух 15 или 25 Дж','Солнечная панель','MPPT-контроллер','Аккумулятор 12 В']),
+ dict(slug='kit-dlya-ovec',brand='GIGANT',short='Комплект «Для овец», 1 га',href='kit-dlya-ovec.html',
+      img='assets/img/animal-sheep.jpg',alt='Овцы за электросеткой',name='Комплект «Для овец»',sub='Овцы и козы · до 1 га',price='125 000 ₸',price_num='125000',
+      items=['Генератор 4 Дж, 12 000 В','Шнур 6 жил, 2 × 500 м','Ворота × 2, изоляторы × 100','Аккумулятор 12 В'],
+      h1='Комплект электропастуха для овец и коз, 1&nbsp;га',
+      lead='Всё для загона до одного гектара в одной коробке. Два мотка шнура по 500 м дают несколько линий на небольшом периметре, как и нужно овцам и козам, двое пружинных ворот — для двух проходов.',
+      facts=[('1','га'),('2 × 500','м шнура'),('4','Дж')],
+      shots=[('assets/img/kit-ovcy-box.jpg','Комплект электропастуха GIGANT для коз и овец: генератор, два мотка шнура, аккумулятор, ворота, изоляторы, табличка'),
+             ('assets/img/kit-ovcy-sostav.jpg','Состав комплекта для овец: шнур 500 м 2 шт, генератор, аккумулятор, ворота 2 шт, табличка, изоляторы 100 шт, кабель'),
+             ('assets/img/kit-shnur-500.jpg','Шнур шестижильный GIGANT, 500 м'),_SHOT_GEN,_SHOT_INSTALL],
+      table=[('Шнур 6-жильный, 500 м','2 шт'),('Генератор импульсов GIGANT, 4 Дж','1 шт'),('Аккумулятор 12 В, 7 Ач','1 шт'),('Пружинные ворота','2 шт'),
+             ('Изоляторы для стеклоарматуры','100 шт'),('Табличка предупреждения','1 шт'),('Кабель подключения','1 шт')],
+      kit=_GEN4,opt='110 000 ₸ за комплект при заказе от 2 комплектов',
+      ld='Готовый комплект электроизгороди для овец и коз на 1 га: генератор 4 Дж, шнур 2 × 500 м, аккумулятор 12 В, ворота, изоляторы.'),
+ dict(slug='kit-dlya-krs',brand='GIGANT',short='Комплект «Для КРС», 5 га',href='kit-dlya-krs.html',
+      img='assets/img/cattle-meadow.jpg',alt='Коровы на пастбище',name='Комплект «Для КРС»',sub='КРС · до 5 га',price='145 000 ₸',price_num='145000',
+      items=['Генератор 4 Дж, 12 000 В','Шнур 6 жил, 1000 м','Ворота, изоляторы × 100','Аккумулятор 12 В, 7 Ач'],
+      h1='Комплект электропастуха для КРС, 5&nbsp;га',
+      lead='Комплект для коров на участке до пяти гектаров. Километр шнура закрывает периметр в одну линию, генератор работает от аккумулятора из комплекта или от сети 220 В.',
+      facts=[('5','га'),('1000','м шнура'),('4','Дж')],
+      shots=[('assets/img/kit-krs-box.jpg','Комплект электропастуха GIGANT для лошадей и коров на 5 га: генератор, шнур 1000 м, аккумулятор, ворота, изоляторы, табличка'),
+             ('assets/img/kit-krs-sostav.jpg','Состав комплекта для КРС: шнур 1000 м, генератор, аккумулятор, ворота, табличка, изоляторы 100 шт, кабель'),
+             ('assets/img/kit-shnur-1000.jpg','Шнур шестижильный GIGANT, 1000 м'),_SHOT_GEN,_SHOT_INSTALL],
+      table=[('Шнур 6-жильный, 1000 м','1 шт'),('Генератор импульсов GIGANT, 4 Дж','1 шт'),('Аккумулятор 12 В, 7 Ач','1 шт'),('Пружинные ворота','1 шт'),
+             ('Изоляторы для стеклоарматуры','100 шт'),('Табличка предупреждения','1 шт'),('Кабель подключения','1 шт')],
+      kit=_GEN4,opt='125 000 ₸ за комплект при заказе от 2 комплектов',
+      ld='Готовый комплект электроизгороди для КРС на 5 га: генератор 4 Дж, шнур 1000 м, аккумулятор 12 В 7 Ач, ворота, изоляторы.'),
+ dict(slug='kit-dlya-loshadej',brand='GIGANT',short='Комплект «Для лошадей», 6 га',href='kit-dlya-loshadej.html',
+      img='assets/img/horses-steppe-2.jpg',alt='Лошади на пастбище',name='Комплект «Для лошадей»',sub='Лошади · до 6 га',price='125 000 ₸',price_num='125000',
+      items=['Генератор 2,5 Дж, 12 000 В','Шнур 6 жил, 1000 м','Ворота, изоляторы × 100','Адаптер 220 В и зажимы'],
+      h1='Комплект электропастуха для лошадей, 6&nbsp;га',
+      lead='Комплект для лошадей и коров на участке до шести гектаров. Изоляторы с саморезом вкручиваются прямо в деревянные столбы, заметный чёрно-белый шнур лошадь видит издалека.',
+      facts=[('6','га'),('1000','м шнура'),('2,5','Дж')],
+      shots=[('assets/img/kit-loshadi-box.jpg','Комплект электропастуха для лошадей и коров на 6 га: генератор LIDER, шнур, ворота, изоляторы, табличка'),
+             ('assets/img/kit-loshadi-sostav.jpg','Состав комплекта для лошадей: изоляторы с саморезом 100 шт, ворота, табличка, генератор 2,5 Дж, шнур 1000 м, адаптер, зажимы'),
+             ('assets/img/kit-shnur-1000.jpg','Шнур шестижильный GIGANT, 1000 м'),_SHOT_INSTALL],
+      table=[('Шнур 6 × 0,16 мм, проводник Zn, 1000 м','1 шт'),('Генератор импульсов LIDER SHQ-A6, 2,5 Дж','1 шт'),('Изоляторы с саморезом','100 шт'),
+             ('Комплект пружинных ворот','1 шт'),('Предупредительная табличка','1 шт'),('Адаптер питания 220 В','1 шт'),('Кабель с зажимами для аккумулятора','1 шт')],
+      kit=[('Генератор','LIDER SHQ-A6, 2,5 Дж, 12 000 В'),('Питание генератора','Аккумулятор 12 В или сеть 220 В'),('Индикация','Цифровой дисплей, питание и импульс'),
+           ('Шнур','6 жил, 6 × 0,16 мм, проводник Zn'),('Сопротивление шнура','5,5 Ом/м'),('Нагрузка на разрыв','75 кг')],
+      ld='Готовый комплект электроизгороди для лошадей на 6 га: генератор 2,5 Дж, шнур 1000 м, изоляторы с саморезом, ворота.'),
+ dict(slug='kit-avtonomnyj',brand='GIGANT',short='Автономный комплект с солнечной панелью',href='kit-avtonomnyj.html',
+      img='assets/img/solar-energizer.jpg',alt='Электропастух с солнечной панелью',name='Автономный комплект',sub='Любые животные · дальние пастбища',price='Цена по запросу',price_num=None,
+      items=['Электропастух 15 или 25 Дж','Солнечная панель','MPPT-контроллер','Аккумулятор 12 В'],card_badge='Без розетки',card_cta='Собрать',
+      h1='Автономный комплект с солнечной панелью',
+      lead='Для дальних пастбищ и летних стоянок без сети. Прибор питается от аккумулятора, панель заряжает его днём, контроллер бережёт от перезаряда. Собираем под ваш периметр и животных.',
+      facts=[('12','В, аккумулятор'),('MPPT','контроллер'),('15 / 25','Дж на выбор')],
+      shots=[('assets/img/solar-energizer.jpg','Электропастух с солнечной панелью на столбе у пастбища')],
+      table=[('Электропастух GIGANT 15 Дж или Bekci 25 Дж','1 шт'),('Солнечная панель','под прибор'),('MPPT-контроллер заряда','1 шт'),('Аккумулятор 12 В','1 шт'),
+             ('Проводник, изоляторы, заземление','под периметр')],
+      kit=[('Когда нужен','Нет розетки рядом с участком'),('Как работает','Панель заряжает аккумулятор днём, прибор работает круглосуточно'),('Что подбираем','Мощность панели и ёмкость аккумулятора под прибор')],
+      stock='Собираем под заказ',cta='Запросить цену',ld=None),
 ]
 
 def kit_card(k):
     li=''.join(f'<li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-dark shrink-0 mt-1" aria-hidden="true"></i>{i}</li>' for i in k['items'])
+    badge=k.get('card_badge','Аккумулятор в подарок')
+    badge_cls='bg-deep text-cream' if k.get('card_badge') else 'bg-pulse text-ink'
+    btn=f'<a href="{k["href"]}" class="btn-secondary h-11 sm:h-10 px-5 sm:px-4 text-[15px]">{k["card_cta"]}</a>' if k.get('card_cta') else f'<a href="{order(k["short"])}" class="btn-primary h-11 sm:h-10 px-5 sm:px-4 text-[15px]">Заказать</a>'
+    price_cls='font-extrabold text-[17px] leading-tight' if not k.get('price_num') else 'font-black text-[20px] leading-none tabular-nums'
     return f'''<article class="card lift overflow-hidden flex flex-col">
-  <div class="relative aspect-[4/3] overflow-hidden"><img src="{k['img']}" alt="{k['alt']}" class="w-full h-full object-cover" loading="lazy" width="900" height="675"><span class="absolute left-3 top-3 rounded-full bg-pulse text-ink text-[13px] font-bold px-2.5 py-1">Аккумулятор в подарок</span></div>
+  <a href="{k['href']}" class="relative block aspect-[4/3] overflow-hidden" tabindex="-1" aria-hidden="true"><img src="{k['img']}" alt="" class="w-full h-full object-cover" loading="lazy" width="900" height="675"><span class="absolute left-3 top-3 rounded-full {badge_cls} text-[13px] font-bold px-2.5 py-1">{badge}</span></a>
   <div class="p-5 flex flex-col flex-1">
     <p class="text-[13px] text-muted">{k['sub']}</p>
-    <h2 class="font-extrabold text-[20px] leading-tight mt-1">{k['name']}</h2>
+    <h2 class="font-extrabold text-[20px] leading-tight mt-1"><a href="{k['href']}" class="hover:underline underline-offset-4">{k['name']}</a></h2>
     <ul class="mt-3 space-y-1.5 text-[14px] text-muted">{li}</ul>
     <div class="mt-auto pt-5 flex items-center justify-between gap-3">
-      <p class="font-black text-[20px] leading-none tabular-nums">{k['price']}</p>
-      <a href="{order(k['name'])}" class="btn-primary h-11 sm:h-10 px-5 sm:px-4 text-[15px]">Заказать</a>
+      <p class="{price_cls}">{k['price']}</p>
+      {btn}
     </div>
   </div>
 </article>'''
@@ -307,70 +359,58 @@ for fname,(title,lead,items) in SIMPLE.items():
 def card_of(p):
     return product_card(p['img'],p['alt'],p['name'],p['sub'],p['price'],p['specs'],p.get('href'),p.get('badge'),p.get('badge_style','bg-cream text-brand-dark'))
 
-def product_page(d):
+def product_page(d, kind='pribor'):
+    # kind: 'pribor' — электропастух, 'kit' — готовый комплект
     import json
+    kit=kind=='kit'
     base='https://farik9797.github.io/gigant-agro-site/'
-    full='Электропастух '+d['short']
-    ld=json.dumps({"@context":"https://schema.org","@type":"Product","name":full,"brand":{"@type":"Brand","name":d['brand']},
-        "category":"Электропастухи","image":base+d['img'],"description":d['ld'],
-        "offers":{"@type":"Offer","price":d['price_num'],"priceCurrency":"KZT","availability":"https://schema.org/InStock",
-                  "url":base+d['slug']+'.html',"seller":{"@type":"Organization","name":"GIGANT Agro"}}},ensure_ascii=False)
-    badge=f'<span class="absolute left-4 top-4 rounded-full {d.get("badge_style","bg-cream text-brand-dark")} text-[13px] font-bold px-2.5 py-1">{d["badge"]}</span>' if d.get('badge') else ''
-    shots=[(d['img'],d['alt'])]+d['gallery']
+    full=d['short'] if kit else 'Электропастух '+d['short']
+    shots=d.get('shots') or [(d['img'],d['alt'])]+d.get('gallery',[])
+    ld=''
+    if d.get('ld'):
+        ld='<script type="application/ld+json">'+json.dumps({"@context":"https://schema.org","@type":"Product","name":full,"brand":{"@type":"Brand","name":d['brand']},
+            "category":"Готовые комплекты электроизгороди" if kit else "Электропастухи","image":base+shots[0][0],"description":d['ld'],
+            "offers":{"@type":"Offer","price":d['price_num'],"priceCurrency":"KZT","availability":"https://schema.org/InStock",
+                      "url":base+d['slug']+'.html',"seller":{"@type":"Organization","name":"GIGANT Agro"}}},ensure_ascii=False)+'</script>'
+    badge_text=d.get('badge') or ('Аккумулятор в подарок' if kit and d.get('price_num') else '')
+    badge_style=d.get('badge_style','bg-pulse text-ink' if kit else 'bg-cream text-brand-dark')
+    badge=f'<span class="absolute left-4 top-4 rounded-full {badge_style} text-[13px] font-bold px-2.5 py-1">{badge_text}</span>' if badge_text else ''
     thumbs=''
     if len(shots)>1:
-        thumbs='<div class="mt-3 flex gap-2.5" role="group" aria-label="Фотографии товара">'+''.join(
+        thumbs='<div class="no-scrollbar mt-3 flex gap-2.5 overflow-x-auto -mx-5 px-5 sm:mx-0 sm:px-0 py-1" role="group" aria-label="Фотографии товара">'+''.join(
             f'<button type="button" data-gallery-thumb aria-pressed="{"true" if i==0 else "false"}" aria-label="Фото {i+1}: {alt}" class="gallery-thumb w-[76px] h-[76px] sm:w-[88px] sm:h-[88px] rounded-xl border border-line bg-white overflow-hidden shrink-0"><img src="{src}" alt="" data-sizes="96px" class="w-full h-full object-contain p-1.5" width="200" height="200"></button>'
             for i,(src,alt) in enumerate(shots))+'</div>'
-    spec_rows=''.join(f'<div class="flex justify-between gap-6 border-b border-line py-3"><dt class="text-muted">{k}</dt><dd class="font-bold text-right">{v}</dd></div>' for k,v in d['table'])
-    kit=''.join(f'<li class="flex gap-2.5"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>{x}</li>' for x in d['kit'])
+    dd_cls='font-bold text-right whitespace-nowrap shrink-0' if kit else 'font-bold text-right'   # количество в составе не переносим
+    spec_rows=''.join(f'<div class="flex justify-between gap-6 border-b border-line py-3"><dt class="text-muted">{k}</dt><dd class="{dd_cls}">{v}</dd></div>' for k,v in d['table'])
+    if d['kit'] and isinstance(d['kit'][0],tuple):
+        side='<dl class="mt-4 text-[15px]">'+''.join(f'<div class="border-b border-line py-2.5"><dt class="text-[13px] text-muted">{k}</dt><dd class="font-bold mt-0.5">{v}</dd></div>' for k,v in d['kit'])+'</dl>'
+    else:
+        side='<ul class="mt-4 space-y-2 text-[15px]">'+''.join(f'<li class="flex gap-2.5"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>{x}</li>' for x in d['kit'])+'</ul>'
     facts=''.join(f'<div class="card p-3 text-center"><p class="font-black text-[20px] tabular-nums">{a}</p><p class="text-[12px] text-muted mt-0.5">{b}</p></div>' for a,b in d['facts'])
     opt=f'<p class="mt-3 text-[15px] text-muted"><strong class="text-ink">Оптом:</strong> {d["opt"]}.</p>' if d.get('opt') else ''
-    others=[p for p in PRIBORY if p['slug']!=d['slug']]
-    w(d['slug']+'.html', f'''
-<main id="top">
-{crumbs([('Главная','index.html'),('Каталог','catalog.html'),('Электропастухи','catalog-elektropastuhi.html'),(d['name'],None)])}
-<script type="application/ld+json">{ld}</script>
-<section class="container-site mt-6 md:mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-  <div class="lg:col-span-7" data-gallery>
-    <div class="card overflow-hidden">
-      <div class="relative bg-white aspect-[4/3]">
-        <img data-gallery-main src="{d['img']}" alt="{d['alt']}" class="absolute inset-0 w-full h-full object-contain p-6" fetchpriority="high" width="800" height="600">
-        {badge}
+    has_price=bool(d.get('price_num'))
+    price_html=f'<p class="font-black text-[32px] leading-none tabular-nums">{d["price"]}</p>' if has_price else f'<p class="font-black text-[24px] leading-none">{d["price"]}</p>'
+    wa_text='Здравствуйте! Интересует '+(full[0].lower()+full[1:] if kit else 'электропастух '+d['short'])+(' за '+d['price']+'.' if has_price else '. Подскажите цену.')
+    if kit:
+        parent=('Готовые комплекты','catalog-komplekty.html'); h1=d['h1']
+        table_title,side_title='Состав комплекта', d.get('side_title','Генератор и шнур' if has_price else 'Как это работает')
+        warranty=d.get('warranty_line','Гарантия на генератор 1 год, возврат 14 дней по закону РК' if has_price else 'Гарантия на приборы: GIGANT 1 год, Bekci 2 года')
+        side_card='''<div class="card p-5 mt-6">
+      <p class="font-extrabold">Другой периметр?</p>
+      <p class="text-muted text-[15px] mt-2">Площадь в названии — ориентир для участка, близкого к квадрату. Вытянутый участок или больше линий потребуют больше шнура и изоляторов. Пересчитаем под ваш участок.</p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        <a href="podbor.html" class="chip h-10">Подбор за минуту</a>
+        <a href="catalog-setki.html" class="chip h-10">Шнур и сетки</a>
+        <a href="catalog-izolyatory.html" class="chip h-10">Изоляторы</a>
       </div>
-    </div>
-    {thumbs}
-  </div>
-  <div class="lg:col-span-5">
-    <h1 class="font-black text-[clamp(1.8rem,3vw,2.4rem)] leading-[1.05] tracking-[-0.02em]">Электропастух {d['name']}</h1>
-    <p class="lead mt-3">{d['lead']}</p>
-    <div class="mt-6 flex flex-wrap items-center gap-3">
-      <p class="font-black text-[32px] leading-none tabular-nums">{d['price']}</p>
-      <span class="inline-flex items-center gap-1.5 rounded-full bg-cream text-brand-dark text-[14px] font-bold px-3 py-1.5"><i data-lucide="check" class="w-4 h-4" aria-hidden="true"></i>В наличии</span>
-    </div>
-    {opt}
-    <div class="mt-6 grid grid-cols-3 gap-3">{facts}</div>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <a href="{order(full)}" class="btn-primary btn-lg">Заказать</a>
-      <a href="{wa('Здравствуйте! Интересует электропастух '+d['short']+' за '+d['price']+'.')}" target="_blank" rel="noopener" class="btn-secondary btn-lg"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Спросить в WhatsApp</a>
-    </div>
-    <ul class="mt-6 space-y-2 text-[15px] text-muted">
-      <li class="flex gap-2.5"><i data-lucide="truck" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Самовывоз в Алматы в день заказа, доставка по Казахстану и СНГ</li>
-      <li class="flex gap-2.5"><i data-lucide="shield-check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Гарантия {WARRANTY_SHORT[d['brand']]}, возврат 14 дней по закону РК</li>
-      <li class="flex gap-2.5"><i data-lucide="wrench" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Поможем с монтажом и заземлением по телефону и в WhatsApp</li>
-    </ul>
-  </div>
-</section>
-
-<section class="container-site mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-  <div class="lg:col-span-7">
-    <h2 class="h3">Характеристики</h2>
-    <dl class="mt-4 text-[15px]">{spec_rows}</dl>
-  </div>
-  <div class="lg:col-span-5">
-    <h2 class="h3">Комплектация</h2>
-    <ul class="mt-4 space-y-2 text-[15px]">{kit}</ul>
-    <div class="card p-5 mt-6">
+    </div>'''
+        others=[k for k in KITS if k['slug']!=d['slug']]; rel_title='Другие комплекты'; rel=''.join(kit_card(k) for k in others)
+        band=cta_band('Нужен комплект под другой периметр?','Скажите вид животных и площадь — посчитаем шнур, изоляторы и ворота под ваш участок.')
+    else:
+        parent=('Электропастухи','catalog-elektropastuhi.html'); h1='Электропастух '+d['name']
+        table_title,side_title='Характеристики','Комплектация'
+        warranty=f"Гарантия {WARRANTY_SHORT[d['brand']]}, возврат 14 дней по закону РК"
+        side_card='''<div class="card p-5 mt-6">
       <p class="font-extrabold">Что докупить</p>
       <p class="text-muted text-[15px] mt-2">Прибор — это только источник импульса. К нему нужен проводник, изоляторы и заземление.</p>
       <div class="mt-4 flex flex-wrap gap-2">
@@ -379,20 +419,67 @@ def product_page(d):
         <a href="catalog-kabeli.html" class="chip h-10">Заземление</a>
         <a href="catalog-solnce.html" class="chip h-10">Солнечная панель</a>
       </div>
+    </div>'''
+        others=[p for p in PRIBORY if p['slug']!=d['slug']]; rel_title='Похожие приборы'; rel=''.join(card_of(p) for p in others)
+        band=cta_band('Подобрать комплект с этим прибором','Скажите вид животных и площадь — посчитаем проводник, изоляторы и заземление под ваш периметр.')
+    w(d['slug']+'.html', f'''
+<main id="top">
+{crumbs([('Главная','index.html'),('Каталог','catalog.html'),parent,(d['name'],None)])}
+{ld}
+<section class="container-site mt-6 md:mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+  <div class="lg:col-span-7" data-gallery>
+    <div class="card overflow-hidden">
+      <div class="relative bg-white aspect-[4/3]">
+        <img data-gallery-main src="{shots[0][0]}" alt="{shots[0][1]}" class="absolute inset-0 w-full h-full object-contain p-4 md:p-6" fetchpriority="high" width="800" height="600">
+        {badge}
+      </div>
     </div>
+    {thumbs}
+  </div>
+  <div class="lg:col-span-5">
+    <h1 class="font-black text-[clamp(1.8rem,3vw,2.4rem)] leading-[1.05] tracking-[-0.02em]">{h1}</h1>
+    <p class="lead mt-3">{d['lead']}</p>
+    <div class="mt-6 flex flex-wrap items-center gap-3">
+      {price_html}
+      <span class="inline-flex items-center gap-1.5 rounded-full bg-cream text-brand-dark text-[14px] font-bold px-3 py-1.5"><i data-lucide="check" class="w-4 h-4" aria-hidden="true"></i>{d.get('stock','В наличии')}</span>
+    </div>
+    {opt}
+    <div class="mt-6 grid grid-cols-3 gap-3">{facts}</div>
+    <div class="mt-6 flex flex-col sm:flex-row sm:flex-wrap gap-3">
+      <a href="{order(full)}" class="btn-primary btn-lg">{d.get('cta','Заказать')}</a>
+      <a href="{wa(wa_text)}" target="_blank" rel="noopener" class="btn-secondary btn-lg"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Спросить в WhatsApp</a>
+    </div>
+    <ul class="mt-6 space-y-2 text-[15px] text-muted">
+      <li class="flex gap-2.5"><i data-lucide="truck" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Самовывоз в Алматы в день заказа, доставка по Казахстану и СНГ</li>
+      <li class="flex gap-2.5"><i data-lucide="shield-check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>{warranty}</li>
+      <li class="flex gap-2.5"><i data-lucide="wrench" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Поможем с монтажом и заземлением по телефону и в WhatsApp</li>
+    </ul>
+  </div>
+</section>
+
+<section class="container-site mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+  <div class="lg:col-span-7">
+    <h2 class="h3">{table_title}</h2>
+    <dl class="mt-4 text-[15px]">{spec_rows}</dl>
+  </div>
+  <div class="lg:col-span-5">
+    <h2 class="h3">{side_title}</h2>
+    {side}
+    {side_card}
   </div>
 </section>
 
 <section class="container-site mt-12 md:mt-16">
-  <h2 class="h2">Похожие приборы</h2>
-  <div id="relScroll" class="m-slider mt-6 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5" role="group" aria-label="Похожие приборы, прокрутка по горизонтали">
-{''.join(card_of(p) for p in others)}  </div>
+  <h2 class="h2">{rel_title}</h2>
+  <div id="relScroll" class="m-slider mt-6 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5" role="group" aria-label="{rel_title}, прокрутка по горизонтали">
+{rel}  </div>
   <div class="md:hidden mt-4 h-1 rounded-full bg-line overflow-hidden" aria-hidden="true"><div id="relProgress" class="h-full rounded-full bg-brand-dark" style="width:34%"></div></div>
 </section>
-{cta_band('Подобрать комплект с этим прибором','Скажите вид животных и площадь — посчитаем проводник, изоляторы и заземление под ваш периметр.')}
+{band}
 </main>''')
 
 for d in PRIBORY: product_page(d)
+for d in KITS: product_page(d, kind='kit')
 
 # ---------- подбор комплекта (страница-конфигуратор) ----------
 w('podbor.html', f'''

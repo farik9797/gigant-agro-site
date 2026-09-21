@@ -419,6 +419,216 @@
    }
   ]
  },
+ "kit-generator-4j.jpg": {
+  "width": 960,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 640,
+    "file": "assets/img/opt/kit-generator-4j-480.webp",
+    "kb": 32
+   },
+   {
+    "w": 640,
+    "h": 853,
+    "file": "assets/img/opt/kit-generator-4j-640.webp",
+    "kb": 47
+   },
+   {
+    "w": 800,
+    "h": 1067,
+    "file": "assets/img/opt/kit-generator-4j-800.webp",
+    "kb": 63
+   },
+   {
+    "w": 960,
+    "h": 1280,
+    "file": "assets/img/opt/kit-generator-4j-960.webp",
+    "kb": 80
+   }
+  ]
+ },
+ "kit-krs-box.jpg": {
+  "width": 960,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 640,
+    "file": "assets/img/opt/kit-krs-box-480.webp",
+    "kb": 55
+   },
+   {
+    "w": 640,
+    "h": 853,
+    "file": "assets/img/opt/kit-krs-box-640.webp",
+    "kb": 80
+   },
+   {
+    "w": 800,
+    "h": 1067,
+    "file": "assets/img/opt/kit-krs-box-800.webp",
+    "kb": 107
+   },
+   {
+    "w": 960,
+    "h": 1280,
+    "file": "assets/img/opt/kit-krs-box-960.webp",
+    "kb": 138
+   }
+  ]
+ },
+ "kit-krs-sostav.jpg": {
+  "width": 960,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 640,
+    "file": "assets/img/opt/kit-krs-sostav-480.webp",
+    "kb": 44
+   },
+   {
+    "w": 640,
+    "h": 853,
+    "file": "assets/img/opt/kit-krs-sostav-640.webp",
+    "kb": 67
+   },
+   {
+    "w": 800,
+    "h": 1067,
+    "file": "assets/img/opt/kit-krs-sostav-800.webp",
+    "kb": 91
+   },
+   {
+    "w": 960,
+    "h": 1280,
+    "file": "assets/img/opt/kit-krs-sostav-960.webp",
+    "kb": 119
+   }
+  ]
+ },
+ "kit-loshadi-box.jpg": {
+  "width": 960,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 640,
+    "file": "assets/img/opt/kit-loshadi-box-480.webp",
+    "kb": 55
+   },
+   {
+    "w": 640,
+    "h": 853,
+    "file": "assets/img/opt/kit-loshadi-box-640.webp",
+    "kb": 83
+   },
+   {
+    "w": 800,
+    "h": 1067,
+    "file": "assets/img/opt/kit-loshadi-box-800.webp",
+    "kb": 112
+   },
+   {
+    "w": 960,
+    "h": 1280,
+    "file": "assets/img/opt/kit-loshadi-box-960.webp",
+    "kb": 146
+   }
+  ]
+ },
+ "kit-loshadi-sostav.jpg": {
+  "width": 960,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 640,
+    "file": "assets/img/opt/kit-loshadi-sostav-480.webp",
+    "kb": 56
+   },
+   {
+    "w": 640,
+    "h": 853,
+    "file": "assets/img/opt/kit-loshadi-sostav-640.webp",
+    "kb": 83
+   },
+   {
+    "w": 800,
+    "h": 1067,
+    "file": "assets/img/opt/kit-loshadi-sostav-800.webp",
+    "kb": 111
+   },
+   {
+    "w": 960,
+    "h": 1280,
+    "file": "assets/img/opt/kit-loshadi-sostav-960.webp",
+    "kb": 146
+   }
+  ]
+ },
+ "kit-ovcy-box.jpg": {
+  "width": 960,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 640,
+    "file": "assets/img/opt/kit-ovcy-box-480.webp",
+    "kb": 58
+   },
+   {
+    "w": 640,
+    "h": 853,
+    "file": "assets/img/opt/kit-ovcy-box-640.webp",
+    "kb": 86
+   },
+   {
+    "w": 800,
+    "h": 1067,
+    "file": "assets/img/opt/kit-ovcy-box-800.webp",
+    "kb": 117
+   },
+   {
+    "w": 960,
+    "h": 1280,
+    "file": "assets/img/opt/kit-ovcy-box-960.webp",
+    "kb": 150
+   }
+  ]
+ },
+ "kit-ovcy-sostav.jpg": {
+  "width": 960,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 640,
+    "file": "assets/img/opt/kit-ovcy-sostav-480.webp",
+    "kb": 46
+   },
+   {
+    "w": 640,
+    "h": 853,
+    "file": "assets/img/opt/kit-ovcy-sostav-640.webp",
+    "kb": 72
+   },
+   {
+    "w": 800,
+    "h": 1067,
+    "file": "assets/img/opt/kit-ovcy-sostav-800.webp",
+    "kb": 99
+   },
+   {
+    "w": 960,
+    "h": 1280,
+    "file": "assets/img/opt/kit-ovcy-sostav-960.webp",
+    "kb": 132
+   }
+  ]
+ },
  "kit-sheep-poultry.jpg": {
   "width": 1200,
   "height": 896,
@@ -446,6 +656,96 @@
     "h": 896,
     "file": "assets/img/opt/kit-sheep-poultry-1200.webp",
     "kb": 147
+   }
+  ]
+ },
+ "kit-shnur-1000.jpg": {
+  "width": 960,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 640,
+    "file": "assets/img/opt/kit-shnur-1000-480.webp",
+    "kb": 54
+   },
+   {
+    "w": 640,
+    "h": 853,
+    "file": "assets/img/opt/kit-shnur-1000-640.webp",
+    "kb": 83
+   },
+   {
+    "w": 800,
+    "h": 1067,
+    "file": "assets/img/opt/kit-shnur-1000-800.webp",
+    "kb": 112
+   },
+   {
+    "w": 960,
+    "h": 1280,
+    "file": "assets/img/opt/kit-shnur-1000-960.webp",
+    "kb": 143
+   }
+  ]
+ },
+ "kit-shnur-500.jpg": {
+  "width": 960,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 640,
+    "file": "assets/img/opt/kit-shnur-500-480.webp",
+    "kb": 55
+   },
+   {
+    "w": 640,
+    "h": 853,
+    "file": "assets/img/opt/kit-shnur-500-640.webp",
+    "kb": 86
+   },
+   {
+    "w": 800,
+    "h": 1067,
+    "file": "assets/img/opt/kit-shnur-500-800.webp",
+    "kb": 116
+   },
+   {
+    "w": 960,
+    "h": 1280,
+    "file": "assets/img/opt/kit-shnur-500-960.webp",
+    "kb": 149
+   }
+  ]
+ },
+ "kit-ustanovka.jpg": {
+  "width": 960,
+  "height": 1280,
+  "variants": [
+   {
+    "w": 480,
+    "h": 640,
+    "file": "assets/img/opt/kit-ustanovka-480.webp",
+    "kb": 36
+   },
+   {
+    "w": 640,
+    "h": 853,
+    "file": "assets/img/opt/kit-ustanovka-640.webp",
+    "kb": 53
+   },
+   {
+    "w": 800,
+    "h": 1067,
+    "file": "assets/img/opt/kit-ustanovka-800.webp",
+    "kb": 72
+   },
+   {
+    "w": 960,
+    "h": 1280,
+    "file": "assets/img/opt/kit-ustanovka-960.webp",
+    "kb": 91
    }
   ]
  },

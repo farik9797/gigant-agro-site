@@ -1,6 +1,6 @@
 # Источники изображений (временные, для прототипа)
 
-Фото со склада/маркетплейса заказчика (Satu): product-gigant15.jpg, product-bekci25.jpg, product-bekci25-box.jpg, product-bekci25-back.jpg, product-bekci145.jpg, product-bekci145-back.jpg, product-bekci69.jpg, product-bekci69-kit.jpg, logo-gigant.png, favicon-64.png.
+Фото со склада/маркетплейса заказчика (Satu): product-gigant15.jpg, product-bekci25.jpg, product-bekci25-box.jpg, product-bekci25-back.jpg, product-bekci145.jpg, product-bekci145-back.jpg, product-bekci69.jpg, product-bekci69-kit.jpg, kit-ovcy-box.jpg, kit-ovcy-sostav.jpg, kit-krs-box.jpg, kit-krs-sostav.jpg, kit-loshadi-box.jpg, kit-loshadi-sostav.jpg, kit-shnur-500.jpg, kit-shnur-1000.jpg, kit-generator-4j.jpg, kit-ustanovka.jpg, logo-gigant.png, favicon-64.png.
 
 Фото с Wikimedia Commons — заменить на собственную съёмку до запуска. При публикации прототипа требуется указание автора и лицензии:
 
