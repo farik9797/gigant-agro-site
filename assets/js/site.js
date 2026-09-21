@@ -10,6 +10,22 @@
     ticking=false; }); };
   onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
 
+  // --- подвал: на мобильном колонки ссылок свёрнуты в аккордеон, на ПК открыты всегда
+  (function(){
+    var toggles=[].slice.call(document.querySelectorAll('.ft-toggle')); if(!toggles.length) return;
+    var mq=window.matchMedia('(max-width: 767px)');
+    var sync=function(){
+      toggles.forEach(function(b){
+        var panel=document.getElementById(b.getAttribute('aria-controls')); if(!panel) return;
+        if(mq.matches){ var open=b.dataset.open==='1'; b.removeAttribute('tabindex'); b.setAttribute('aria-expanded',open?'true':'false'); panel.hidden=!open; }
+        else { b.setAttribute('tabindex','-1'); b.removeAttribute('aria-expanded'); panel.hidden=false; }
+      });
+    };
+    toggles.forEach(function(b){ b.addEventListener('click',function(){ if(!mq.matches) return; b.dataset.open=b.dataset.open==='1'?'0':'1'; sync(); }); });
+    if(mq.addEventListener) mq.addEventListener('change',sync); else mq.addListener(sync);
+    sync();
+  })();
+
   // --- слайдеры на мобильном: индикатор прокрутки
   [['catScroll','catProgress'],['kitScroll','kitProgress'],['relScroll','relProgress']].forEach(function(pair){
     var cs=document.getElementById(pair[0]), pg=document.getElementById(pair[1]);

@@ -58,6 +58,8 @@ def helper_card():
 </article>'''
 
 def product_card(img, alt, name, sub, price, specs, href=None, badge=None, badge_style='bg-cream text-brand-dark'):
+    specs=[(k,'уточняйте' if k=='Наличие' and '[уточнить' in v else v) for k,v in specs]
+    specs=[(k,v) for k,v in specs if '[уточнить' not in v]   # пометки для заказчика на сайт не выводим
     spec_html=''.join(f'<div class="border-t border-line pt-2"><dt class="text-[12px] text-muted">{k}</dt><dd class="font-bold text-[14px]">{v}</dd></div>' for k,v in specs)
     title=f'<a href="{href}" class="hover:underline underline-offset-4">{name}</a>' if href else name
     return f'''<article class="card lift overflow-hidden flex flex-col">
@@ -247,14 +249,14 @@ for fname,(title,lead,items) in SIMPLE.items():
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
 {cards}{helper_card()}
   </div>
-  <p class="mt-6 text-[15px] text-muted max-w-[70ch]">Цены и наличие по части позиций уточняем у заказчика — отмечено как «[уточнить]». Напишите в WhatsApp, что нужно: посчитаем количество под ваш периметр и назовём цену.</p>
+  <p class="mt-6 text-[15px] text-muted max-w-[70ch]">Цены и наличие по части позиций уточняйте у менеджера. Напишите в WhatsApp, что нужно: посчитаем количество под ваш периметр и назовём цену.</p>
 </section>
 {cta_band()}
 </main>''')
 
 # ---------- карточка товара ----------
 SPEC_TABLE=[('Импульс, Дж','15'),('Максимальное напряжение','12 000 В'),('Питание','Сеть 220 В или аккумулятор 12 В'),
- ('Управление','Пульт дистанционного управления'),('Длина ограждения','[уточнить у заказчика]'),
+ ('Управление','Пульт дистанционного управления'),
  ('Габариты','250 × 200 × 50 мм'),('Вес','5 кг'),('Для кого','КРС, овцы, козы'),
  ('Производство','Россия'),('Гарантия','1 год')]
 spec_rows=''.join(f'<div class="flex justify-between gap-6 border-b border-line py-3"><dt class="text-muted">{k}</dt><dd class="font-bold text-right">{v}</dd></div>' for k,v in SPEC_TABLE)
@@ -271,7 +273,6 @@ w('product-gigant-15.html', f'''
         <span class="absolute left-4 top-4 rounded-full bg-cream text-brand-dark text-[13px] font-bold px-2.5 py-1">Собственная марка</span>
       </div>
     </div>
-    <p class="mt-3 text-[13px] text-muted">Фото с витрины на Satu. Для сайта нужна съёмка прибора на нейтральном фоне.</p>
   </div>
   <div class="lg:col-span-5">
     <h1 class="font-black text-[clamp(1.8rem,3vw,2.4rem)] leading-[1.05] tracking-[-0.02em]">Электропастух GIGANT 15&nbsp;Дж</h1>
@@ -301,7 +302,6 @@ w('product-gigant-15.html', f'''
   <div class="lg:col-span-7">
     <h2 class="h3">Характеристики</h2>
     <dl class="mt-4 text-[15px]">{spec_rows}</dl>
-    <p class="mt-4 text-[14px] text-muted max-w-[62ch]">Длину ограждения указываем только после подтверждения заказчиком: на витрине Satu стоит 0,25 км, в карточках на маркетплейсах — до 80 км. Пока значение не подтверждено, мы его не публикуем.</p>
   </div>
   <div class="lg:col-span-5">
     <h2 class="h3">Комплектация</h2>
@@ -411,7 +411,6 @@ w('podbor.html', f'''
     <div class="card p-5"><p class="font-extrabold">Длина проводника</p><p class="text-muted text-[15px] mt-2">Периметр умножаем на число линий. Крупным спокойным животным хватает одной-двух, овцам и козам нужно четыре-пять или готовая сетка.</p></div>
     <div class="card p-5"><p class="font-extrabold">Запас мощности</p><p class="text-muted text-[15px] mt-2">Густая трава и длинная линия съедают импульс. Поэтому для больших периметров и защиты от диких животных берут 25&nbsp;Дж, а не 15.</p></div>
   </div>
-  <p class="mt-6 text-[15px] text-muted max-w-[70ch]">Правила подбора на этой странице — стартовые, по данным с витрины на Satu. Финальные правила и состав комплектов согласуем с заказчиком.</p>
 </section>
 {cta_band('Хотите обсудить голосом?','Позвоните или напишите в WhatsApp: уточним вид животных, форму участка и подберём комплект без формы.')}
 </main>''')
@@ -498,8 +497,8 @@ w('instrukcii.html', f'''
     <div class="lg:sticky lg:top-28">
       <div class="rounded-2xl overflow-hidden aspect-[4/3]"><img src="assets/img/insulator.jpg" alt="Изолятор на столбе держит проволоку электроизгороди" class="w-full h-full object-cover" loading="lazy" width="900" height="900"></div>
       <div class="card p-5 mt-5">
-        <p class="font-extrabold">Нужны файлы инструкций</p>
-        <p class="text-muted text-[15px] mt-2">PDF-инструкции и схемы подключения по каждому прибору получим у заказчика и выложим сюда для скачивания.</p>
+        <p class="font-extrabold">Нужна инструкция к прибору?</p>
+        <p class="text-muted text-[15px] mt-2">Напишите модель прибора — пришлём инструкцию и схему подключения в WhatsApp.</p>
         <a href="{wa('Здравствуйте! Нужна инструкция по подключению электропастуха.')}" target="_blank" rel="noopener" class="btn-secondary w-full mt-4"><img src="assets/icons/whatsapp-FFFFFF.svg" alt="" class="w-5 h-5" width="20" height="20">Спросить в WhatsApp</a>
       </div>
     </div>
@@ -538,7 +537,6 @@ w('dostavka.html', f'''
   <div class="card p-6"><i data-lucide="credit-card" class="w-7 h-7 text-brand-dark" aria-hidden="true"></i>
     <h2 class="h3 mt-4">Оплата</h2>
     <p class="text-muted mt-2">Наличными на складе или безналичным переводом по реквизитам — для ИП и юридических лиц выставляем счёт.</p>
-    <p class="text-muted mt-2 text-[15px]">Оплата через Kaspi — [уточнить у заказчика].</p>
   </div>
   <div class="card p-6"><i data-lucide="store" class="w-7 h-7 text-brand-dark" aria-hidden="true"></i>
     <h2 class="h3 mt-4">Покупка на маркетплейсах</h2>
@@ -575,7 +573,6 @@ w('garantiya.html', f'''
       <dl class="mt-4 text-[15px]">
         <div class="flex justify-between gap-6 border-b border-line py-3"><dt class="text-muted">Электропастухи GIGANT</dt><dd class="font-bold">1 год</dd></div>
         <div class="flex justify-between gap-6 border-b border-line py-3"><dt class="text-muted">Электропастухи Bekci</dt><dd class="font-bold">2 года</dd></div>
-        <div class="flex justify-between gap-6 border-b border-line py-3"><dt class="text-muted">Комплектующие и расходники</dt><dd class="font-bold">[уточнить]</dd></div>
       </dl>
     </article>
     <article><h2 class="h3">Что покрывает гарантия</h2>
@@ -601,7 +598,6 @@ w('garantiya.html', f'''
         <li class="flex gap-2.5"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Описание: не бьёт совсем, слабо или на части линии</li>
         <li class="flex gap-2.5"><i data-lucide="check" class="w-5 h-5 text-brand-dark shrink-0" aria-hidden="true"></i>Сколько штырей заземления и какой грунт</li>
       </ul>
-      <p class="mt-5 text-[14px] text-muted">Точные сроки проверки и порядок возврата денег согласуем с заказчиком и опубликуем здесь.</p>
     </div>
   </div>
 </section>
@@ -640,7 +636,6 @@ w('o-kompanii.html', f'''
         <div class="flex justify-between gap-6 border-b border-line py-2.5"><dt class="text-muted">Продажи</dt><dd class="font-bold">Опт и розница</dd></div>
         <div class="flex justify-between gap-6 border-b border-line py-2.5"><dt class="text-muted">География</dt><dd class="font-bold text-right">Казахстан, РФ и СНГ</dd></div>
       </dl>
-      <p class="mt-4 text-[14px] text-muted">Реквизиты компании и год основания опубликуем после согласования с заказчиком.</p>
     </div>
     <div class="card p-6">
       <p class="font-extrabold text-[17px]">Мы на площадках</p>
@@ -673,16 +668,12 @@ w('kontakty.html', f'''
           <dd class="mt-1 font-bold">Алматы, мкр. Атырау, 159/8,<br>склад №&nbsp;1</dd></div>
         <div><dt class="text-[13px] text-muted">Часы работы</dt>
           <dd class="mt-1">Пн–Пт 10:00–18:00<br>Сб 10:00–16:00<br>Вс — выходной</dd></div>
-        <div><dt class="text-[13px] text-muted">E-mail</dt><dd class="mt-1 text-muted">[уточнить у заказчика]</dd></div>
       </dl>
     </div>
     <div class="card p-6">
       <p class="font-extrabold">Как добраться</p>
       <p class="text-muted text-[15px] mt-2">Микрорайон Атырау, дом 159/8, склад №&nbsp;1. Перед выездом напишите в WhatsApp — подскажем ориентиры и проверим наличие.</p>
-      <div class="mt-4 rounded-xl bg-[#EEF1EA] border border-line h-[220px] flex flex-col items-center justify-center text-center gap-2 text-muted">
-        <i data-lucide="map-pin" class="w-8 h-8 text-brand-dark" aria-hidden="true"></i>
-        <p class="text-[15px] max-w-[30ch]">Здесь будет карта. Подключим после согласования точки на 2ГИС или Яндекс Картах.</p>
-      </div>
+      <a href="https://2gis.kz/almaty/search/%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%20%D0%90%D1%82%D1%8B%D1%80%D0%B0%D1%83%20159%2F8" target="_blank" rel="noopener" class="btn-outline w-full mt-4"><i data-lucide="map-pin" class="w-5 h-5 text-brand-dark" aria-hidden="true"></i>Открыть адрес в 2ГИС</a>
     </div>
   </div>
   <div class="lg:col-span-7">
@@ -729,7 +720,6 @@ FAQ=[('Какую мощность выбрать?','Для небольших �
  ('Безопасна ли изгородь для животных и людей?','Да, при правильном монтаже. Импульс короткий и повторяется примерно раз в секунду — животное успевает отойти. Стадо запоминает границу за один-два дня. По периметру ставят предупреждающие таблички.'),
  ('Работает ли изгородь зимой?','Работает, но заземление в мёрзлом грунте хуже проводит ток. Штырей ставят больше и вбивают глубже, ниже уровня промерзания. Снег на нижней линии тоже сажает импульс.'),
  ('Что делать, если линия бьёт слабо?','Проверьте по порядку: заземление, траву на нижней линии, целостность изоляторов и соединений. В девяти случаях из десяти дело в заземлении или в касании растительности. Напишите нам — разберём по фото.'),
- ('Можно ли купить в рассрочку?','[уточнить у заказчика]'),
 ]
 faq_items=''.join(f'''<details class="py-1{' ' if i else ''}"{' open' if i==0 else ''}><summary class="flex items-center justify-between gap-4 py-4 font-extrabold text-[17px] md:text-[18px]">{q}<i data-lucide="plus" class="faq-icon w-5 h-5 shrink-0 text-brand-dark" aria-hidden="true"></i></summary><p class="pb-5 text-muted max-w-[70ch]">{a}</p></details>''' for i,(q,a) in enumerate(FAQ))
 faq_ld=','.join('{"@type":"Question","name":"%s","acceptedAnswer":{"@type":"Answer","text":"%s"}}'%(q.replace('&nbsp;',' ').replace('"','\\"'), a.replace('&nbsp;',' ').replace('«','"').replace('»','"').replace('"','\\"')) for q,a in FAQ)
@@ -791,10 +781,6 @@ w('policy.html', f'''
 <p class="mt-4"><strong>Аналитика.</strong> Сайт использует сервисы веб-аналитики, которые собирают обезличенные данные о посещениях: страницы, источник перехода, тип устройства. Эти данные не позволяют вас идентифицировать.</p>
 <p class="mt-4"><strong>Ваши права.</strong> Вы можете запросить сведения о своих данных, потребовать их исправления или удаления. Напишите нам или позвоните по номерам, указанным в контактах.</p>
 <p class="mt-4"><strong>Как с нами связаться.</strong> Алматы, мкр. Атырау, 159/8, склад №&nbsp;1. Телефоны +7 (705) 428-57-07 и +7 (775) 771-60-24.</p>''')}
-  <div class="mt-8 rounded-2xl bg-cream border border-brand/25 p-6 max-w-[70ch]">
-    <p class="font-extrabold">Черновик документа</p>
-    <p class="text-muted text-[15px] mt-2">Текст подготовлен как основа. Перед публикацией его нужно согласовать с заказчиком и юристом: добавить реквизиты компании, дату вступления в силу и порядок отзыва согласия.</p>
-  </div>
 </section>
 </main>''')
 
