@@ -63,7 +63,7 @@ python3 build.py catalog   # собрать одну
 
 **Скорость (Lighthouse mobile, главная)**
 До (Pages, Play CDN): Performance 63, FCP 4,7 с, LCP 5,9 с, TBT 120 мс, вес 1650 KB.
-После (локально, без gzip): Performance 87, FCP 2,3 с, LCP 3,7 с, TBT 0 мс, CLS 0,006, вес 635 KB. A11y / Best Practices / SEO = 100.
+После (Pages, коммит e7187ac): Performance 99, FCP 1,2 с, LCP 1,5 с, TBT 0 мс, CLS 0,015, вес 493 KB. A11y / Best Practices / SEO = 100. Отчёты: `.audit/` (не в git).
 
 **Что изменено**
 - Убраны все CDN: Tailwind Play CDN → статическая сборка Tailwind CLI (`assets/css/site.css`, ~46 KB min); Lucide runtime → SVG встраиваются при сборке из `lucide-static`; Google Fonts → свои woff2 (`assets/fonts/`, вариативный Golos Text + Vollkorn Italic, preload кириллицы и латиницы).
